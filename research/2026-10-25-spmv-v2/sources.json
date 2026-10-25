@@ -1,0 +1,258 @@
+{
+  "accessed_on": "2026-10-25",
+  "status": "Design and v1 reanalysis only; no v2 implementation or v2 timing samples.",
+  "sources": [
+    {
+      "id": "R1",
+      "title": "Optimization of Sparse Matrix-Vector Multiplication on Emerging Multicore Platforms",
+      "authors": "Williams et al.",
+      "publication": "SC 2007",
+      "urls": [
+        "https://people.eecs.berkeley.edu/~yelick/papers/spmv-multicore.pdf",
+        "https://escholarship.org/content/qt2x68p885/qt2x68p885.pdf"
+      ],
+      "read_scope": "This round: sections 4.1 and 4.6-4.10, including the negative result for software pipelining on the studied out-of-order CPUs.",
+      "use": "Nonzero-oriented row partitioning and bounded kernel/prefetch experiments; old hardware parameters do not predict Zen 4 performance."
+    },
+    {
+      "id": "R2",
+      "title": "Software Prefetching for Indirect Memory Accesses",
+      "authors": "Sam Ainsworth and Timothy M. Jones",
+      "publication": "CGO 2017",
+      "urls": [
+        "https://www.cl.cam.ac.uk/~tmj32/papers/docs/ainsworth17-cgo.pdf"
+      ],
+      "read_scope": "This round: abstract, section 1, section 3 and listing 1, not all experiments.",
+      "use": "Controlled indirect lookahead; the listing is not this SpMV kernel, and instruction/TLB/bandwidth overhead can outweigh benefit."
+    },
+    {
+      "id": "R3",
+      "title": "Merge-based SpMV",
+      "authors": "Duane Merrill and Michael Garland",
+      "publication": "SC 2016 author page and fixed CPU source",
+      "urls": [
+        "https://mgarland.org/papers/2016/spmv/",
+        "https://github.com/dumerrill/merge-spmv/blob/18895571ce9af960ee207dae541b0ffc701ea4bb/cpu_spmv.cpp#L211-L352"
+      ],
+      "read_scope": "This round: author summary plus cached MergePathSearch and OmpMergeCsrmv source. No claim of a new full-paper reading.",
+      "use": "Direct CSR merge-path partitioning; planned adaptation needs f32/int64, actual-team scratch and y+=Ax semantics."
+    },
+    {
+      "id": "R4",
+      "title": "Bringing Order to Sparsity: A Sparse Matrix Reordering Study on Multicore CPUs",
+      "authors": "James D. Trotter",
+      "publication": "SC23 software archive, Zenodo record 7837264",
+      "urls": [
+        "https://zenodo.org/records/7837264",
+        "https://zenodo.org/records/7837264/files/spmv-1.5.zip?download=1"
+      ],
+      "read_scope": "This round: re-read csrspmv.c:1187-1234 (csrgemvrp) and ellspmv.c:1018-1059 (ellgemv16sd) from the previously verified archive.",
+      "use": "Explicit row ranges and fixed-width unrolling method; not a ready-made f32 CSR8 kernel."
+    },
+    {
+      "id": "R5",
+      "title": "GCC 11.4 Other Builtins: __builtin_prefetch",
+      "urls": [
+        "https://gcc.gnu.org/onlinedocs/gcc-11.4.0/gcc/Other-Builtins.html"
+      ],
+      "read_scope": "This round: prefetch semantics and valid address expression requirement.",
+      "use": "Check future index before loading it; prefetch itself being nonfaulting does not legalize invalid C expressions."
+    },
+    {
+      "id": "R6",
+      "title": "OpenMP wait policy, nowait and worksharing semantics",
+      "urls": [
+        "https://www.openmp.org/spec-html/5.1/openmpse64.html",
+        "https://www.openmp.org/spec-html/5.2/openmpse94.html",
+        "https://www.openmp.org/spec-html/5.2/openmpse66.html",
+        "https://www.openmp.org/spec-html/5.1/openmpse58.html"
+      ],
+      "read_scope": "This round: WAIT_POLICY and nowait; worksharing-loop and OMP_SCHEDULE reused from earlier review.",
+      "use": "Serial/parallel controls and required completion; wait policy is an implementation-dependent hint, not a measured barrier duration."
+    },
+    {
+      "id": "R7",
+      "title": "AMD AOCL API guide: aoclsparse_set_*_hint",
+      "urls": [
+        "https://docs.amd.com/r/en-US/68552-AOCL-api-guide/aoclsparse_set_-_hint?contentId=_yplp7sQP6BHC7KEXyUokw"
+      ],
+      "read_scope": "This round: expected_no_of_calls and memory hint. Dynamic page version labels differed across cached views; no exact page version asserted.",
+      "use": "Interface inspiration only; AOCL not linked, and no assumption that all optimize paths support f32."
+    },
+    {
+      "id": "R8",
+      "title": "A unified sparse matrix data format for efficient general sparse matrix-vector multiplication on modern processors with wide SIMD units",
+      "authors": "Kreutzer et al.",
+      "urls": [
+        "https://arxiv.org/html/1307.6209"
+      ],
+      "read_scope": "Reused previous SELL-C-sigma reading, not a new full-paper review.",
+      "use": "Retained optional SELL method and padding/locality tradeoffs; no predicted local conversion speedup."
+    },
+    {
+      "id": "R9",
+      "title": "STREAM reference information",
+      "authors": "John D. McCalpin",
+      "urls": [
+        "https://www.cs.virginia.edu/stream/ref.html"
+      ],
+      "read_scope": "This round: indexed author reference page describing STREAM scope and indirect-addressing limitations.",
+      "use": "Possible streaming bandwidth reference, not a random-gather ceiling. No STREAM measurement this round."
+    },
+    {
+      "id": "R10",
+      "title": "Compiler numerical controls and Matrix Market input semantics",
+      "urls": [
+        "https://gcc.gnu.org/onlinedocs/gcc-11.4.0/gcc/Optimize-Options.html",
+        "https://math.nist.gov/MatrixMarket/formats.html"
+      ],
+      "read_scope": "Reused earlier compiler and Matrix Market verification.",
+      "use": "Matched vectorization/FP controls; field and symmetry handling, not new performance evidence."
+    }
+  ],
+  "fixed_source_repositories": [
+    {
+      "repository": "https://github.com/dumerrill/merge-spmv",
+      "commit": "18895571ce9af960ee207dae541b0ffc701ea4bb",
+      "license_read": "BSD-3-Clause text",
+      "license_file": "LICENSE.TXT",
+      "files": [
+        {
+          "path": "cpu_spmv.cpp",
+          "sha256": "0afec976ff6fcf68b81d8b8996ee1fcbdd82802862fbb5a8104b2bce5af7744a",
+          "url": "https://github.com/dumerrill/merge-spmv/blob/18895571ce9af960ee207dae541b0ffc701ea4bb/cpu_spmv.cpp"
+        },
+        {
+          "path": "Makefile",
+          "sha256": "d2d9024043ecac1b238862138ccd794046e297a384e4585b9cd5999a5414f91e",
+          "url": "https://github.com/dumerrill/merge-spmv/blob/18895571ce9af960ee207dae541b0ffc701ea4bb/Makefile"
+        },
+        {
+          "path": "LICENSE.TXT",
+          "sha256": "9ea7cfdb5541f7b61a21b8877e2a939a1a66e8d665cd813d6ff1a47a64ae4a11",
+          "url": "https://github.com/dumerrill/merge-spmv/blob/18895571ce9af960ee207dae541b0ffc701ea4bb/LICENSE.TXT"
+        }
+      ],
+      "usage_status": "Source/metadata reviewed only in v2; no new third-party code copied into core.",
+      "previous_id": "C3",
+      "source_id": "R3"
+    },
+    {
+      "repository": "https://github.com/amd/aocl-sparse",
+      "commit": "d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c",
+      "license_read": "MIT (AMD files; consult per-file headers)",
+      "license_file": "LICENSE.md",
+      "files": [
+        {
+          "path": "library/src/level2/aoclsparse_csrmv_kt.cpp",
+          "sha256": "2045e5c896b7f97ab7500bcacc228389fee917be571da32affe89e6ee3ee44e1",
+          "url": "https://github.com/amd/aocl-sparse/blob/d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c/library/src/level2/aoclsparse_csrmv_kt.cpp"
+        },
+        {
+          "path": "library/src/include/kernel-templates/kt_l0_avx2.hpp",
+          "sha256": "4e7eae578a98fef952fada4435e7f52f41dd8082d4e1b726e2c1c215e2e9633f",
+          "url": "https://github.com/amd/aocl-sparse/blob/d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c/library/src/include/kernel-templates/kt_l0_avx2.hpp"
+        },
+        {
+          "path": "library/src/include/kernel-templates/kt_l0_avx512.hpp",
+          "sha256": "08449817bd390e86ad3a6c085a4f3e7c990b6ef0d8a15fa4c04063be066efca0",
+          "url": "https://github.com/amd/aocl-sparse/blob/d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c/library/src/include/kernel-templates/kt_l0_avx512.hpp"
+        },
+        {
+          "path": "library/src/analysis/aoclsparse_analysis.cpp",
+          "sha256": "1eca1ca95c66392211af7f3f343c36e10766fc8e2ef566b9091c6076b0955ba9",
+          "url": "https://github.com/amd/aocl-sparse/blob/d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c/library/src/analysis/aoclsparse_analysis.cpp"
+        },
+        {
+          "path": "LICENSE.md",
+          "sha256": "657a00dc8ebd57da2feaa716a470a0e2fe1636954f207f75500888bedc9db5eb",
+          "url": "https://github.com/amd/aocl-sparse/blob/d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c/LICENSE.md"
+        }
+      ],
+      "usage_status": "Source/metadata reviewed only in v2; no new third-party code copied into core.",
+      "previous_id": "C2",
+      "source_id": "R7"
+    },
+    {
+      "repository": "https://github.com/RRZE-HPC/GHOST",
+      "commit": "22a004dbbfb604d7b04b0bde813c8100d403cfcc",
+      "license_read": "BSD-3-Clause",
+      "license_file": "LICENSE.md",
+      "files": [
+        {
+          "path": "src/autogen/sell_spmv_plain.c.in",
+          "sha256": "2027a876918991faad9590f02ec924fd3b7423a369694fc78294fd2a0f962325",
+          "url": "https://github.com/RRZE-HPC/GHOST/blob/22a004dbbfb604d7b04b0bde813c8100d403cfcc/src/autogen/sell_spmv_plain.c.in"
+        },
+        {
+          "path": "src/autogen/sell_spmv_avx2.c.in",
+          "sha256": "cc49fba8e5facd06ce249f6f7e856de0af3ae010ccba7b104629e0ea469f3be2",
+          "url": "https://github.com/RRZE-HPC/GHOST/blob/22a004dbbfb604d7b04b0bde813c8100d403cfcc/src/autogen/sell_spmv_avx2.c.in"
+        },
+        {
+          "path": "src/sell.c",
+          "sha256": "c48b3bd57ef52a5508686a746b36929e7c12cb2648e6dc933503ff49f7e63cb8",
+          "url": "https://github.com/RRZE-HPC/GHOST/blob/22a004dbbfb604d7b04b0bde813c8100d403cfcc/src/sell.c"
+        },
+        {
+          "path": "include/ghost/sparsemat.h",
+          "sha256": "5547f9547ca6577060d09de7550ca02da960d94fa572d66ef2fae70e15569c7b",
+          "url": "https://github.com/RRZE-HPC/GHOST/blob/22a004dbbfb604d7b04b0bde813c8100d403cfcc/include/ghost/sparsemat.h"
+        },
+        {
+          "path": "LICENSE.md",
+          "sha256": "0c91d72c035ed6529ddc25e9e4dc992dbcb58d03305f547cc7e00c5d45cd32dd",
+          "url": "https://github.com/RRZE-HPC/GHOST/blob/22a004dbbfb604d7b04b0bde813c8100d403cfcc/LICENSE.md"
+        }
+      ],
+      "usage_status": "Source/metadata reviewed only in v2; no new third-party code copied into core.",
+      "previous_id": "C1",
+      "source_id": "R8"
+    }
+  ],
+  "archive": {
+    "source_id": "R4",
+    "name": "spmv-1.5.zip",
+    "version": "1.0.0 Zenodo record; internal package version in filename",
+    "url": "https://zenodo.org/records/7837264/files/spmv-1.5.zip?download=1",
+    "publisher_md5": "b816b7372f2d284d4c96edc3ab3e0861",
+    "sha256": "33268b89c61c8eeb2c00bbbf871132104885222225562b9b5d43eda622362ed6",
+    "internal_directory": "ellspmv-1.5",
+    "files": [
+      {
+        "path": "README",
+        "sha256": "499d261293e4ed132494c2c0a46fd682be18f5781d83cdc4a691a5746ffed91f"
+      },
+      {
+        "path": "COPYING",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+      },
+      {
+        "path": "csrspmv.c",
+        "sha256": "aa0caccca52da2f8e18b40cfef025748234ae7c32cc9fc23a39dc8a86a0f7c80"
+      },
+      {
+        "path": "ellspmv.c",
+        "sha256": "76decd571f3668ddc2697dd3e34465200a30f6999bd78d3c9f63cde3f0b8e78e"
+      },
+      {
+        "path": "Makefile",
+        "sha256": "f26dfca43ac36350b365de64045ce8f07617e5aee601e2d761f071d00a83c7a0"
+      }
+    ],
+    "usage_status": "Re-read cached source only in v2; not a newly ported or benchmarked implementation.",
+    "license_read": "GPL-3.0-or-later"
+  },
+  "cache_validation": "This round verified cached repository HEADs and all listed source/archive SHA-256 values against the earlier manifest.",
+  "previous_manifest_sha256": "530ff1a4eabd53ac9867f261cfa5ee6bccc06e4496b04d377b970b7a1e830e1b",
+  "cache_location": "spmv-course-materials/.git/research-cache (local, excluded from Git)",
+  "engineering_choices_not_paper_optima": [
+    "lambda=1 row weight",
+    "L=8 short-row prototype",
+    "prefetch D=0/32/128 nonzeros",
+    "5 percent admission threshold",
+    "O(T) delayed split-row fragment writeback",
+    "versioned plan invalidation"
+  ],
+  "third_party_code_copied_to_core_this_round": false
+}
