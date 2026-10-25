@@ -1,0 +1,2 @@
+[ perf record: Woken up 2 times to write data ]
+[ perf record: Captured and wrote 2.727 MB /home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/raw/baseline-perf.data (59514 samples) ]

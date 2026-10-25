@@ -1,0 +1,26 @@
+{
+  "audited_at": "2026-10-25T14:56:12.711034+08:00",
+  "checks": {
+    "original_core_commit_and_clean_worktree_preserved": true,
+    "all_three_build_sources_makefiles_and_binary_hashes_match": true,
+    "large_matrix_and_reference_and_generator_checksums_match": true,
+    "all_24_formal_records_match_raw_commands_stdout_resources_and_work": true,
+    "all_15_correctness_records_pass": true,
+    "measured_thread_row_and_nonzero_loads_are_equal": true,
+    "large_inputs_builds_perf_binary_ignored_and_tracked_diff_has_no_whitespace_errors": true,
+    "separate_perf_profile_and_readable_reports_succeeded": true
+  },
+  "artifact_sha256": {
+    "run_baseline.py": "9178b2dfe6226a27a096aa4eb766c538b77ecb2fed131b042ff95aec3f3be160",
+    "generate_matrix.c": "7b747249efa447e406058e4efa0b5ecaacefc615b66af3d6f9b49719b94cbf1c",
+    "omp_probe.c": "dc7784d4db0b208ac8336ed194eb8f2104a958e052a4353e7c53c9cb45cd5709",
+    "profile_baseline.py": "c6d6a1efb45d92bd305a7c5dc557f57f6d00a571fda37c3ad52a4094f145dc40",
+    "measurements.csv": "a09820b3cf5a0117d40a875bc56051ba0fb66837e89c21b29553360f37fcc466",
+    "summary.csv": "429f261a1ec981c82da34f9408885604d043aa367f0ca8c9ca44383c52dbbd1c",
+    "protocol.json": "9dee087456b907e75401cee3e7c1db5d39d64673cea7c5b75a97cb67aa89a243",
+    "provenance.json": "5166bdae5ae93dd8ccf66574bca951ab96c4efb4463404592d2b4a6653a17fc6"
+  },
+  "core_status_after": "",
+  "materials_git_status": " M \"\\351\\241\\271\\347\\233\\256\\346\\227\\245\\345\\277\\227.md\"\n?? experiments/\n",
+  "note": "Read-only Git inspection only; no add, commit, branch, push or remote writes performed."
+}

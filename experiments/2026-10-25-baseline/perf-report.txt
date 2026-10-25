@@ -1,0 +1,26 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 30K of event 'cycles:u'
+# Event count (approx.): 642927383758
+#
+# Overhead        Period  Shared Object         Symbol                                             IPC   [IPC Coverage]
+# ........  ............  ....................  .................................................  ....................
+#
+    94.52%   607715502689  csrspmv               [.] csr_matrix_int32_spmv                          -      -            
+
+
+# Samples: 29K of event 'cache-misses:u'
+# Event count (approx.): 13576207131
+#
+# Overhead        Period  Shared Object         Symbol                              IPC   [IPC Coverage]
+# ........  ............  ....................  ..................................  ....................
+#
+    99.94%   13567682530  csrspmv               [.] csr_matrix_int32_spmv           -      -            
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

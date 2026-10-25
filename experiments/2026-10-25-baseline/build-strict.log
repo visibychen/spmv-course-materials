@@ -1,0 +1,7 @@
+gcc -c -O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/vectorization-strict.txt src/csr.c -o src/csr.o
+gcc -c -O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/vectorization-strict.txt src/main.c -o src/main.o
+gcc -c -O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/vectorization-strict.txt src/matrix_market.c -o src/matrix_market.o
+gcc -c -O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/vectorization-strict.txt src/parse.c -o src/parse.o
+gcc -c -O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/vectorization-strict.txt src/program_options.c -o src/program_options.o
+gcc -c -O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/vectorization-strict.txt src/vector.c -o src/vector.o
+gcc -O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/vectorization-strict.txt src/csr.o src/main.o src/matrix_market.o src/parse.o src/program_options.o src/vector.o  -o csrspmv

@@ -1,0 +1,59 @@
+{
+  "started_at": "2026-10-25T14:52:58.745812+08:00",
+  "command": [
+    "perf",
+    "record",
+    "-e",
+    "cycles:u",
+    "-e",
+    "cache-misses:u",
+    "-F",
+    "199",
+    "-o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/raw/baseline-perf.data",
+    "--",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/strict/csrspmv",
+    "--verbose",
+    "--matrix-format=f32",
+    "--source-vector-format=f32",
+    "--destination-vector-format=f32",
+    "--repeat=128",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/data/large_random.mtx"
+  ],
+  "threads": 12,
+  "scope": "whole-process user-space sampling; annotation isolates SpMV; no measured DRAM bandwidth",
+  "returncode": 0,
+  "perf-report.txt": {
+    "command": [
+      "perf",
+      "report",
+      "--stdio",
+      "--no-children",
+      "--percent-limit",
+      "0.5",
+      "--sort",
+      "dso,symbol",
+      "--show-total-period",
+      "-i",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/raw/baseline-perf.data"
+    ],
+    "returncode": 0
+  },
+  "perf-annotate-spmv.txt": {
+    "command": [
+      "perf",
+      "annotate",
+      "--stdio",
+      "--symbol",
+      "csr_matrix_int32_spmv",
+      "--percent-type",
+      "local-hits",
+      "--stdio-color",
+      "never",
+      "-i",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/raw/baseline-perf.data"
+    ],
+    "returncode": 0
+  },
+  "finished_at": "2026-10-25T14:53:22.143395+08:00"
+}

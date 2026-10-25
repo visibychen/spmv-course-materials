@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/csrspmv",
+    "--verbose",
+    "--matrix-format=f32",
+    "--source-vector-format=f32",
+    "--destination-vector-format=f32",
+    "--repeat=9",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/data/large_random.mtx"
+  ],
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PLACES": "cores",
+    "OMP_PROC_BIND": "spread",
+    "OMP_WAIT_POLICY": "PASSIVE",
+    "LC_ALL": "C"
+  },
+  "started_at": "2026-10-25T14:49:08.219747+08:00",
+  "finished_at": "2026-10-25T14:49:24.521711+08:00",
+  "returncode": 0
+}

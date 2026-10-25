@@ -1,0 +1,80 @@
+[
+  {
+    "case": "check-strict-t1-r1",
+    "elements": 5,
+    "max_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "case": "check-strict-t1-r7",
+    "elements": 5,
+    "max_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "case": "check-strict-t12-r1",
+    "elements": 5,
+    "max_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "case": "check-strict-t12-r7",
+    "elements": 5,
+    "max_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "case": "check-novec-t1-r1",
+    "elements": 5,
+    "max_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "case": "check-novec-t1-r7",
+    "elements": 5,
+    "max_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "case": "check-novec-t12-r1",
+    "elements": 5,
+    "max_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "case": "check-novec-t12-r7",
+    "elements": 5,
+    "max_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "case": "check-fastmath_diagnostic-t1-r1",
+    "elements": 5,
+    "max_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "case": "check-fastmath_diagnostic-t1-r7",
+    "elements": 5,
+    "max_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "case": "check-fastmath_diagnostic-t12-r1",
+    "elements": 5,
+    "max_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "case": "check-fastmath_diagnostic-t12-r7",
+    "elements": 5,
+    "max_absolute_error": 0.0,
+    "passed": true
+  },
+  {
+    "case": "independent_generator_check",
+    "elements": 101,
+    "max_absolute_error": 0,
+    "passed": true
+  }
+]

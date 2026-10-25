@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-10-25T14:47:30.869467+08:00",
+  "samples": 3,
+  "threads": [
+    1,
+    2,
+    4,
+    8,
+    12,
+    24
+  ],
+  "common_repeat": 9,
+  "pilot": [
+    {
+      "tag": "pilot-t1",
+      "variant": "strict",
+      "threads": 1,
+      "repeat": 4,
+      "kernel_seconds": 3.533884,
+      "seconds_per_spmv": 0.883471,
+      "gflops": 0.21732462072892036,
+      "flops": 768000000,
+      "process_wall_seconds": 14.1,
+      "max_rss_kib": 1970304,
+      "major_faults": 0,
+      "started_at": "2026-10-25T14:46:58.331280+08:00"
+    },
+    {
+      "tag": "pilot-t12",
+      "variant": "strict",
+      "threads": 12,
+      "repeat": 4,
+      "kernel_seconds": 0.457738,
+      "seconds_per_spmv": 0.1144345,
+      "gflops": 1.6778156936937725,
+      "flops": 768000000,
+      "process_wall_seconds": 10.02,
+      "max_rss_kib": 1970112,
+      "major_faults": 0,
+      "started_at": "2026-10-25T14:47:12.442652+08:00"
+    },
+    {
+      "tag": "pilot-t24",
+      "variant": "strict",
+      "threads": 24,
+      "repeat": 4,
+      "kernel_seconds": 0.370198,
+      "seconds_per_spmv": 0.0925495,
+      "gflops": 2.074565502784996,
+      "flops": 768000000,
+      "process_wall_seconds": 8.4,
+      "max_rss_kib": 1970304,
+      "major_faults": 0,
+      "started_at": "2026-10-25T14:47:22.466509+08:00"
+    }
+  ],
+  "target_fastest_kernel_seconds": 0.75,
+  "random_order_seed": 539365413,
+  "timing_scope": "original main.c SpMV timer; excludes load/conversion/output; includes parallel-region entry/exit, per-iteration barriers and first iteration",
+  "warmup": "no inserted warmup; original upstream execution retained; first iteration amortized by common repeats",
+  "thread_policy": "OpenMP cores/spread, dynamic=false, wait=passive",
+  "floating_point": "primary strict uses -O3 -march=native, no -ffast-math; original compiler fp-contract default recorded",
+  "ablations": "novec at 1 and 12 threads; fastmath build is diagnostic only, never part of the timed baseline"
+}

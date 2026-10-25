@@ -1,0 +1,2104 @@
+
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/csrspmv:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .plt.sec:
+
+Disassembly of section .text:
+
+0000000000005040 <csr_matrix_int32_spmv>:
+csr_matrix_int32_spmv():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1733
+    5040:	f3 0f 1e fa          	endbr64 
+    5044:	41 56                	push   %r14
+    5046:	41 55                	push   %r13
+    5048:	41 54                	push   %r12
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    504a:	b8 16 00 00 00       	mov    $0x16,%eax
+csr_matrix_int32_spmv():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1733
+    504f:	55                   	push   %rbp
+    5050:	53                   	push   %rbx
+    5051:	48 83 ec 10          	sub    $0x10,%rsp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1734
+    5055:	44 8b 27             	mov    (%rdi),%r12d
+    5058:	44 3b 22             	cmp    (%rdx),%r12d
+    505b:	0f 85 22 01 00 00    	jne    5183 <csr_matrix_int32_spmv+0x143>
+    5061:	48 89 fb             	mov    %rdi,%rbx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1736
+    5064:	8b 3e                	mov    (%rsi),%edi
+    5066:	39 7b 04             	cmp    %edi,0x4(%rbx)
+    5069:	0f 85 14 01 00 00    	jne    5183 <csr_matrix_int32_spmv+0x143>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1739
+    506f:	83 7b 20 05          	cmpl   $0x5,0x20(%rbx)
+    5073:	0f 87 0a 01 00 00    	ja     5183 <csr_matrix_int32_spmv+0x143>
+    5079:	8b 43 20             	mov    0x20(%rbx),%eax
+    507c:	48 89 d5             	mov    %rdx,%rbp
+    507f:	48 8d 15 f2 80 00 00 	lea    0x80f2(%rip),%rdx        # d178 <_IO_stdin_used+0x178>
+    5086:	49 89 ce             	mov    %rcx,%r14
+    5089:	48 63 04 82          	movslq (%rdx,%rax,4),%rax
+    508d:	48 01 d0             	add    %rdx,%rax
+    5090:	3e ff e0             	notrack jmp *%rax
+    5093:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    509a:	00 00 00 00 
+    509e:	66 90                	xchg   %ax,%ax
+csr_matrix_int32_spmv_binary():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:831
+    50a0:	8b 46 04             	mov    0x4(%rsi),%eax
+    50a3:	85 c0                	test   %eax,%eax
+    50a5:	0f 84 c5 05 00 00    	je     5670 <csr_matrix_int32_spmv+0x630>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:843
+    50ab:	83 f8 01             	cmp    $0x1,%eax
+    50ae:	0f 85 bc 09 00 00    	jne    5a70 <csr_matrix_int32_spmv+0xa30>
+    50b4:	8b 55 04             	mov    0x4(%rbp),%edx
+    50b7:	83 fa 01             	cmp    $0x1,%edx
+    50ba:	0f 84 a6 10 00 00    	je     6166 <csr_matrix_int32_spmv+0x1126>
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    50c0:	b8 16 00 00 00       	mov    $0x16,%eax
+csr_matrix_int32_spmv_binary():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:847
+    50c5:	83 fa 02             	cmp    $0x2,%edx
+    50c8:	0f 85 b5 00 00 00    	jne    5183 <csr_matrix_int32_spmv+0x143>
+    50ce:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_binary_f32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:753
+    50d3:	e8 58 d3 ff ff       	call   2430 <omp_get_num_threads@plt>
+    50d8:	41 89 c5             	mov    %eax,%r13d
+    50db:	e8 a0 d2 ff ff       	call   2380 <omp_get_thread_num@plt>
+    50e0:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    50e4:	89 c7                	mov    %eax,%edi
+    50e6:	44 89 e0             	mov    %r12d,%eax
+    50e9:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    50ee:	99                   	cltd   
+    50ef:	41 f7 fd             	idiv   %r13d
+    50f2:	39 d7                	cmp    %edx,%edi
+    50f4:	0f 8c 91 15 00 00    	jl     668b <csr_matrix_int32_spmv+0x164b>
+    50fa:	0f af f8             	imul   %eax,%edi
+    50fd:	01 d7                	add    %edx,%edi
+    50ff:	01 f8                	add    %edi,%eax
+    5101:	39 c7                	cmp    %eax,%edi
+    5103:	7d 6b                	jge    5170 <csr_matrix_int32_spmv+0x130>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:748
+    5105:	4c 8b 5b 08          	mov    0x8(%rbx),%r11
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:749
+    5109:	4c 8b 63 18          	mov    0x18(%rbx),%r12
+    510d:	48 63 ff             	movslq %edi,%rdi
+    5110:	c5 e1 57 db          	vxorpd %xmm3,%xmm3,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:750
+    5114:	4c 8b 4e 08          	mov    0x8(%rsi),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:751
+    5118:	4c 8b 55 08          	mov    0x8(%rbp),%r10
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:755
+    511c:	49 8b 14 fb          	mov    (%r11,%rdi,8),%rdx
+    5120:	49 8b 4c fb 08       	mov    0x8(%r11,%rdi,8),%rcx
+    5125:	48 39 ca             	cmp    %rcx,%rdx
+    5128:	0f 8d fa 14 00 00    	jge    6628 <csr_matrix_int32_spmv+0x15e8>
+    512e:	49 8d 14 94          	lea    (%r12,%rdx,4),%rdx
+    5132:	49 8d 34 8c          	lea    (%r12,%rcx,4),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:754
+    5136:	c5 e3 10 d3          	vmovsd %xmm3,%xmm3,%xmm2
+    513a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:756
+    5140:	48 63 0a             	movslq (%rdx),%rcx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:755
+    5143:	48 83 c2 04          	add    $0x4,%rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:756
+    5147:	c4 c1 7a 5a 0c 89    	vcvtss2sd (%r9,%rcx,4),%xmm0,%xmm1
+    514d:	c5 eb 58 d1          	vaddsd %xmm1,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:755
+    5151:	48 39 d6             	cmp    %rdx,%rsi
+    5154:	75 ea                	jne    5140 <csr_matrix_int32_spmv+0x100>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:757
+    5156:	c4 c1 6b 58 14 fa    	vaddsd (%r10,%rdi,8),%xmm2,%xmm2
+    515c:	c4 c1 7b 11 14 fa    	vmovsd %xmm2,(%r10,%rdi,8)
+    5162:	48 ff c7             	inc    %rdi
+    5165:	39 f8                	cmp    %edi,%eax
+    5167:	7f b3                	jg     511c <csr_matrix_int32_spmv+0xdc>
+    5169:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    5170:	e8 eb d1 ff ff       	call   2360 <GOMP_barrier@plt>
+csr_matrix_int32_spmv_binary():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:862
+    5175:	4d 85 f6             	test   %r14,%r14
+    5178:	74 07                	je     5181 <csr_matrix_int32_spmv+0x141>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:863
+    517a:	48 8b 43 10          	mov    0x10(%rbx),%rax
+    517e:	49 01 06             	add    %rax,(%r14)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:864
+    5181:	31 c0                	xor    %eax,%eax
+csr_matrix_int32_spmv():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1755
+    5183:	48 83 c4 10          	add    $0x10,%rsp
+    5187:	5b                   	pop    %rbx
+    5188:	5d                   	pop    %rbp
+    5189:	41 5c                	pop    %r12
+    518b:	41 5d                	pop    %r13
+    518d:	41 5e                	pop    %r14
+    518f:	c3                   	ret    
+csr_matrix_int32_spmv_int32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1084
+    5190:	8b 46 04             	mov    0x4(%rsi),%eax
+    5193:	85 c0                	test   %eax,%eax
+    5195:	0f 84 a5 05 00 00    	je     5740 <csr_matrix_int32_spmv+0x700>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1096
+    519b:	83 f8 01             	cmp    $0x1,%eax
+    519e:	0f 85 97 09 00 00    	jne    5b3b <csr_matrix_int32_spmv+0xafb>
+    51a4:	8b 55 04             	mov    0x4(%rbp),%edx
+    51a7:	83 fa 01             	cmp    $0x1,%edx
+    51aa:	0f 84 eb 12 00 00    	je     649b <csr_matrix_int32_spmv+0x145b>
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    51b0:	b8 16 00 00 00       	mov    $0x16,%eax
+csr_matrix_int32_spmv_int32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1100
+    51b5:	83 fa 02             	cmp    $0x2,%edx
+    51b8:	75 c9                	jne    5183 <csr_matrix_int32_spmv+0x143>
+    51ba:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_int32_f32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1003
+    51bf:	e8 6c d2 ff ff       	call   2430 <omp_get_num_threads@plt>
+    51c4:	41 89 c5             	mov    %eax,%r13d
+    51c7:	e8 b4 d1 ff ff       	call   2380 <omp_get_thread_num@plt>
+    51cc:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    51d0:	89 c7                	mov    %eax,%edi
+    51d2:	44 89 e0             	mov    %r12d,%eax
+    51d5:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    51da:	99                   	cltd   
+    51db:	41 f7 fd             	idiv   %r13d
+    51de:	39 d7                	cmp    %edx,%edi
+    51e0:	0f 8c c9 14 00 00    	jl     66af <csr_matrix_int32_spmv+0x166f>
+    51e6:	0f af f8             	imul   %eax,%edi
+    51e9:	01 d7                	add    %edx,%edi
+    51eb:	01 f8                	add    %edi,%eax
+    51ed:	39 c7                	cmp    %eax,%edi
+    51ef:	0f 8d 4b 03 00 00    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:997
+    51f5:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:998
+    51f9:	4c 8b 53 18          	mov    0x18(%rbx),%r10
+    51fd:	48 63 ff             	movslq %edi,%rdi
+    5200:	c5 e1 57 db          	vxorpd %xmm3,%xmm3,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:999
+    5204:	4c 8b 4b 28          	mov    0x28(%rbx),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1000
+    5208:	4c 8b 46 08          	mov    0x8(%rsi),%r8
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1001
+    520c:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1005
+    5210:	49 8b 14 fc          	mov    (%r12,%rdi,8),%rdx
+    5214:	49 8b 74 fc 08       	mov    0x8(%r12,%rdi,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1004
+    5219:	c5 e3 10 d3          	vmovsd %xmm3,%xmm3,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1005
+    521d:	48 39 d6             	cmp    %rdx,%rsi
+    5220:	7e 2e                	jle    5250 <csr_matrix_int32_spmv+0x210>
+    5222:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    5229:	00 00 00 00 
+    522d:	0f 1f 00             	nopl   (%rax)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1006
+    5230:	49 63 0c 92          	movslq (%r10,%rdx,4),%rcx
+    5234:	c4 c1 7a 2a 0c 91    	vcvtsi2ssl (%r9,%rdx,4),%xmm0,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1005
+    523a:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1006
+    523d:	c4 c1 72 59 0c 88    	vmulss (%r8,%rcx,4),%xmm1,%xmm1
+    5243:	c5 f2 5a c9          	vcvtss2sd %xmm1,%xmm1,%xmm1
+    5247:	c5 eb 58 d1          	vaddsd %xmm1,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1005
+    524b:	48 39 d6             	cmp    %rdx,%rsi
+    524e:	75 e0                	jne    5230 <csr_matrix_int32_spmv+0x1f0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1007
+    5250:	c5 eb 58 54 fd 00    	vaddsd 0x0(%rbp,%rdi,8),%xmm2,%xmm2
+    5256:	c5 fb 11 54 fd 00    	vmovsd %xmm2,0x0(%rbp,%rdi,8)
+    525c:	48 ff c7             	inc    %rdi
+    525f:	39 f8                	cmp    %edi,%eax
+    5261:	7f ad                	jg     5210 <csr_matrix_int32_spmv+0x1d0>
+    5263:	e9 d8 02 00 00       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+    5268:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    526f:	00 
+csr_matrix_int32_spmv_int64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1249
+    5270:	8b 56 04             	mov    0x4(%rsi),%edx
+    5273:	83 fa 01             	cmp    $0x1,%edx
+    5276:	0f 84 54 06 00 00    	je     58d0 <csr_matrix_int32_spmv+0x890>
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    527c:	b8 16 00 00 00       	mov    $0x16,%eax
+csr_matrix_int32_spmv_int64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1257
+    5281:	83 fa 02             	cmp    $0x2,%edx
+    5284:	0f 85 f9 fe ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+    528a:	8b 55 04             	mov    0x4(%rbp),%edx
+    528d:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+    5292:	83 fa 01             	cmp    $0x1,%edx
+    5295:	0f 84 16 10 00 00    	je     62b1 <csr_matrix_int32_spmv+0x1271>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1261
+    529b:	83 fa 02             	cmp    $0x2,%edx
+    529e:	0f 85 df fe ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+csr_matrix_int32_spmv_int64_f64_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1227
+    52a4:	e8 87 d1 ff ff       	call   2430 <omp_get_num_threads@plt>
+    52a9:	41 89 c5             	mov    %eax,%r13d
+    52ac:	e8 cf d0 ff ff       	call   2380 <omp_get_thread_num@plt>
+    52b1:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    52b6:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    52ba:	41 89 c0             	mov    %eax,%r8d
+    52bd:	44 89 e0             	mov    %r12d,%eax
+    52c0:	99                   	cltd   
+    52c1:	41 f7 fd             	idiv   %r13d
+    52c4:	41 39 d0             	cmp    %edx,%r8d
+    52c7:	0f 8c 90 0e 00 00    	jl     615d <csr_matrix_int32_spmv+0x111d>
+    52cd:	44 0f af c0          	imul   %eax,%r8d
+    52d1:	41 01 d0             	add    %edx,%r8d
+    52d4:	44 01 c0             	add    %r8d,%eax
+    52d7:	41 39 c0             	cmp    %eax,%r8d
+    52da:	0f 8d 60 02 00 00    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1221
+    52e0:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1222
+    52e4:	4c 8b 5b 18          	mov    0x18(%rbx),%r11
+    52e8:	4d 63 c0             	movslq %r8d,%r8
+    52eb:	c5 e1 57 db          	vxorpd %xmm3,%xmm3,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1223
+    52ef:	4c 8b 53 28          	mov    0x28(%rbx),%r10
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1224
+    52f3:	4c 8b 4e 08          	mov    0x8(%rsi),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1225
+    52f7:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+    52fb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1229
+    5300:	4b 8b 14 c4          	mov    (%r12,%r8,8),%rdx
+    5304:	4b 8b 74 c4 08       	mov    0x8(%r12,%r8,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1228
+    5309:	c5 e3 10 d3          	vmovsd %xmm3,%xmm3,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1229
+    530d:	48 39 d6             	cmp    %rdx,%rsi
+    5310:	7e 2a                	jle    533c <csr_matrix_int32_spmv+0x2fc>
+    5312:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    5319:	00 00 00 00 
+    531d:	0f 1f 00             	nopl   (%rax)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1230
+    5320:	49 63 0c 93          	movslq (%r11,%rdx,4),%rcx
+    5324:	c4 c1 fb 2a 0c d2    	vcvtsi2sdq (%r10,%rdx,8),%xmm0,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1229
+    532a:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1230
+    532d:	c4 c1 73 59 0c c9    	vmulsd (%r9,%rcx,8),%xmm1,%xmm1
+    5333:	c5 eb 58 d1          	vaddsd %xmm1,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1229
+    5337:	48 39 d6             	cmp    %rdx,%rsi
+    533a:	75 e4                	jne    5320 <csr_matrix_int32_spmv+0x2e0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1231
+    533c:	c4 a1 6b 58 54 c5 00 	vaddsd 0x0(%rbp,%r8,8),%xmm2,%xmm2
+    5343:	c4 a1 7b 11 54 c5 00 	vmovsd %xmm2,0x0(%rbp,%r8,8)
+    534a:	49 ff c0             	inc    %r8
+    534d:	44 39 c0             	cmp    %r8d,%eax
+    5350:	7f ae                	jg     5300 <csr_matrix_int32_spmv+0x2c0>
+    5352:	e9 e9 01 00 00       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+    5357:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    535e:	00 00 
+csr_matrix_int32_spmv_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1402
+    5360:	8b 56 04             	mov    0x4(%rsi),%edx
+    5363:	83 fa 01             	cmp    $0x1,%edx
+    5366:	0f 84 94 04 00 00    	je     5800 <csr_matrix_int32_spmv+0x7c0>
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    536c:	b8 16 00 00 00       	mov    $0x16,%eax
+csr_matrix_int32_spmv_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1410
+    5371:	83 fa 02             	cmp    $0x2,%edx
+    5374:	0f 85 09 fe ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+    537a:	8b 55 04             	mov    0x4(%rbp),%edx
+    537d:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+    5382:	83 fa 01             	cmp    $0x1,%edx
+    5385:	0f 84 7f 0e 00 00    	je     620a <csr_matrix_int32_spmv+0x11ca>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1414
+    538b:	83 fa 02             	cmp    $0x2,%edx
+    538e:	0f 85 ef fd ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+csr_matrix_int32_spmv_f32_f64_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1380
+    5394:	e8 97 d0 ff ff       	call   2430 <omp_get_num_threads@plt>
+    5399:	41 89 c5             	mov    %eax,%r13d
+    539c:	e8 df cf ff ff       	call   2380 <omp_get_thread_num@plt>
+    53a1:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    53a6:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    53aa:	41 89 c0             	mov    %eax,%r8d
+    53ad:	44 89 e0             	mov    %r12d,%eax
+    53b0:	99                   	cltd   
+    53b1:	41 f7 fd             	idiv   %r13d
+    53b4:	41 39 d0             	cmp    %edx,%r8d
+    53b7:	0f 8c 27 0c 00 00    	jl     5fe4 <csr_matrix_int32_spmv+0xfa4>
+    53bd:	44 0f af c0          	imul   %eax,%r8d
+    53c1:	41 01 d0             	add    %edx,%r8d
+    53c4:	44 01 c0             	add    %r8d,%eax
+    53c7:	41 39 c0             	cmp    %eax,%r8d
+    53ca:	0f 8d 70 01 00 00    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1374
+    53d0:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1375
+    53d4:	4c 8b 5b 18          	mov    0x18(%rbx),%r11
+    53d8:	4d 63 c0             	movslq %r8d,%r8
+    53db:	c5 e1 57 db          	vxorpd %xmm3,%xmm3,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1376
+    53df:	4c 8b 53 28          	mov    0x28(%rbx),%r10
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1377
+    53e3:	4c 8b 4e 08          	mov    0x8(%rsi),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1378
+    53e7:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+    53eb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1382
+    53f0:	4b 8b 14 c4          	mov    (%r12,%r8,8),%rdx
+    53f4:	4b 8b 74 c4 08       	mov    0x8(%r12,%r8,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1381
+    53f9:	c5 e3 10 d3          	vmovsd %xmm3,%xmm3,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1382
+    53fd:	48 39 d6             	cmp    %rdx,%rsi
+    5400:	7e 2a                	jle    542c <csr_matrix_int32_spmv+0x3ec>
+    5402:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    5409:	00 00 00 00 
+    540d:	0f 1f 00             	nopl   (%rax)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1383
+    5410:	49 63 0c 93          	movslq (%r11,%rdx,4),%rcx
+    5414:	c4 c1 7a 5a 0c 92    	vcvtss2sd (%r10,%rdx,4),%xmm0,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1382
+    541a:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1383
+    541d:	c4 c1 73 59 0c c9    	vmulsd (%r9,%rcx,8),%xmm1,%xmm1
+    5423:	c5 eb 58 d1          	vaddsd %xmm1,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1382
+    5427:	48 39 d6             	cmp    %rdx,%rsi
+    542a:	75 e4                	jne    5410 <csr_matrix_int32_spmv+0x3d0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1384
+    542c:	c4 a1 6b 58 54 c5 00 	vaddsd 0x0(%rbp,%r8,8),%xmm2,%xmm2
+    5433:	c4 a1 7b 11 54 c5 00 	vmovsd %xmm2,0x0(%rbp,%r8,8)
+    543a:	49 ff c0             	inc    %r8
+    543d:	44 39 c0             	cmp    %r8d,%eax
+    5440:	7f ae                	jg     53f0 <csr_matrix_int32_spmv+0x3b0>
+    5442:	e9 f9 00 00 00       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+    5447:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    544e:	00 00 
+csr_matrix_int32_spmv_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1555
+    5450:	8b 56 04             	mov    0x4(%rsi),%edx
+    5453:	83 fa 01             	cmp    $0x1,%edx
+    5456:	0f 84 44 05 00 00    	je     59a0 <csr_matrix_int32_spmv+0x960>
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    545c:	b8 16 00 00 00       	mov    $0x16,%eax
+csr_matrix_int32_spmv_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1563
+    5461:	83 fa 02             	cmp    $0x2,%edx
+    5464:	0f 85 19 fd ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+    546a:	8b 55 04             	mov    0x4(%rbp),%edx
+    546d:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+    5472:	83 fa 01             	cmp    $0x1,%edx
+    5475:	0f 84 dd 0e 00 00    	je     6358 <csr_matrix_int32_spmv+0x1318>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1567
+    547b:	83 fa 02             	cmp    $0x2,%edx
+    547e:	0f 85 ff fc ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+csr_matrix_int32_spmv_f64_f64_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1533
+    5484:	e8 a7 cf ff ff       	call   2430 <omp_get_num_threads@plt>
+    5489:	41 89 c5             	mov    %eax,%r13d
+    548c:	e8 ef ce ff ff       	call   2380 <omp_get_thread_num@plt>
+    5491:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    5496:	41 89 c0             	mov    %eax,%r8d
+    5499:	44 89 e0             	mov    %r12d,%eax
+    549c:	99                   	cltd   
+    549d:	41 f7 fd             	idiv   %r13d
+    54a0:	41 39 d0             	cmp    %edx,%r8d
+    54a3:	0f 8c fa 0b 00 00    	jl     60a3 <csr_matrix_int32_spmv+0x1063>
+    54a9:	44 0f af c0          	imul   %eax,%r8d
+    54ad:	41 01 d0             	add    %edx,%r8d
+    54b0:	44 01 c0             	add    %r8d,%eax
+    54b3:	41 39 c0             	cmp    %eax,%r8d
+    54b6:	0f 8d 84 00 00 00    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1527
+    54bc:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1528
+    54c0:	4c 8b 5b 18          	mov    0x18(%rbx),%r11
+    54c4:	4d 63 c0             	movslq %r8d,%r8
+    54c7:	c5 e1 57 db          	vxorpd %xmm3,%xmm3,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1529
+    54cb:	4c 8b 53 28          	mov    0x28(%rbx),%r10
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1530
+    54cf:	4c 8b 4e 08          	mov    0x8(%rsi),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1531
+    54d3:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+    54d7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    54de:	00 00 
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1535
+    54e0:	4b 8b 14 c4          	mov    (%r12,%r8,8),%rdx
+    54e4:	4b 8b 74 c4 08       	mov    0x8(%r12,%r8,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1534
+    54e9:	c5 e3 10 cb          	vmovsd %xmm3,%xmm3,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1535
+    54ed:	48 39 f2             	cmp    %rsi,%rdx
+    54f0:	7d 2a                	jge    551c <csr_matrix_int32_spmv+0x4dc>
+    54f2:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    54f9:	00 00 00 00 
+    54fd:	0f 1f 00             	nopl   (%rax)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1536
+    5500:	49 63 0c 93          	movslq (%r11,%rdx,4),%rcx
+    5504:	c4 c1 7b 10 04 c9    	vmovsd (%r9,%rcx,8),%xmm0
+    550a:	c4 c1 7b 59 04 d2    	vmulsd (%r10,%rdx,8),%xmm0,%xmm0
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1535
+    5510:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1536
+    5513:	c5 f3 58 c8          	vaddsd %xmm0,%xmm1,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1535
+    5517:	48 39 f2             	cmp    %rsi,%rdx
+    551a:	75 e4                	jne    5500 <csr_matrix_int32_spmv+0x4c0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1537
+    551c:	c4 a1 73 58 4c c5 00 	vaddsd 0x0(%rbp,%r8,8),%xmm1,%xmm1
+    5523:	c4 a1 7b 11 4c c5 00 	vmovsd %xmm1,0x0(%rbp,%r8,8)
+    552a:	49 ff c0             	inc    %r8
+    552d:	44 39 c0             	cmp    %r8d,%eax
+    5530:	7f ae                	jg     54e0 <csr_matrix_int32_spmv+0x4a0>
+    5532:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    5539:	00 00 00 00 
+    553d:	0f 1f 00             	nopl   (%rax)
+    5540:	e8 1b ce ff ff       	call   2360 <GOMP_barrier@plt>
+csr_matrix_int32_spmv_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1574
+    5545:	4d 85 f6             	test   %r14,%r14
+    5548:	0f 84 33 fc ff ff    	je     5181 <csr_matrix_int32_spmv+0x141>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1575
+    554e:	48 8b 43 10          	mov    0x10(%rbx),%rax
+    5552:	48 01 c0             	add    %rax,%rax
+    5555:	49 01 06             	add    %rax,(%r14)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1576
+    5558:	31 c0                	xor    %eax,%eax
+    555a:	e9 24 fc ff ff       	jmp    5183 <csr_matrix_int32_spmv+0x143>
+    555f:	90                   	nop
+csr_matrix_int32_spmv_complex32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1694
+    5560:	83 7d 04 03          	cmpl   $0x3,0x4(%rbp)
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    5564:	b8 16 00 00 00       	mov    $0x16,%eax
+csr_matrix_int32_spmv_complex32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1694
+    5569:	0f 85 14 fc ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1697
+    556f:	8b 56 04             	mov    0x4(%rsi),%edx
+    5572:	83 fa 02             	cmp    $0x2,%edx
+    5575:	0f 84 3f 08 00 00    	je     5dba <csr_matrix_int32_spmv+0xd7a>
+    557b:	83 fa 03             	cmp    $0x3,%edx
+    557e:	0f 84 37 07 00 00    	je     5cbb <csr_matrix_int32_spmv+0xc7b>
+    5584:	83 fa 01             	cmp    $0x1,%edx
+    5587:	0f 85 f6 fb ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+    558d:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_complex32_f32_complex32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1600
+    5592:	e8 99 ce ff ff       	call   2430 <omp_get_num_threads@plt>
+    5597:	41 89 c5             	mov    %eax,%r13d
+    559a:	e8 e1 cd ff ff       	call   2380 <omp_get_thread_num@plt>
+    559f:	41 89 c0             	mov    %eax,%r8d
+    55a2:	44 89 e0             	mov    %r12d,%eax
+    55a5:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    55aa:	99                   	cltd   
+    55ab:	41 f7 fd             	idiv   %r13d
+    55ae:	41 39 d0             	cmp    %edx,%r8d
+    55b1:	0f 8c 4d 10 00 00    	jl     6604 <csr_matrix_int32_spmv+0x15c4>
+    55b7:	44 0f af c0          	imul   %eax,%r8d
+    55bb:	41 01 d0             	add    %edx,%r8d
+    55be:	44 01 c0             	add    %r8d,%eax
+    55c1:	41 39 c0             	cmp    %eax,%r8d
+    55c4:	7d 7d                	jge    5643 <csr_matrix_int32_spmv+0x603>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1594
+    55c6:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1595
+    55ca:	4c 8b 5b 18          	mov    0x18(%rbx),%r11
+    55ce:	4d 63 c0             	movslq %r8d,%r8
+    55d1:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1596
+    55d5:	48 8b 7b 28          	mov    0x28(%rbx),%rdi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1597
+    55d9:	4c 8b 56 08          	mov    0x8(%rsi),%r10
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1598
+    55dd:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1603
+    55e1:	4b 8b 14 c4          	mov    (%r12,%r8,8),%rdx
+    55e5:	4b 8b 74 c4 08       	mov    0x8(%r12,%r8,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1602
+    55ea:	c5 f8 28 cd          	vmovaps %xmm5,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1601
+    55ee:	c5 f8 28 d5          	vmovaps %xmm5,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1603
+    55f2:	48 39 d6             	cmp    %rdx,%rsi
+    55f5:	7e 28                	jle    561f <csr_matrix_int32_spmv+0x5df>
+    55f7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    55fe:	00 00 
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1604
+    5600:	49 63 0c 93          	movslq (%r11,%rdx,4),%rcx
+    5604:	c4 c1 7a 10 04 8a    	vmovss (%r10,%rcx,4),%xmm0
+    560a:	c4 e2 79 b9 14 d7    	vfmadd231ss (%rdi,%rdx,8),%xmm0,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1605
+    5610:	c4 e2 79 b9 4c d7 04 	vfmadd231ss 0x4(%rdi,%rdx,8),%xmm0,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1603
+    5617:	48 ff c2             	inc    %rdx
+    561a:	48 39 d6             	cmp    %rdx,%rsi
+    561d:	75 e1                	jne    5600 <csr_matrix_int32_spmv+0x5c0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1607
+    561f:	c4 a1 6a 58 54 c5 00 	vaddss 0x0(%rbp,%r8,8),%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1608
+    5626:	c4 a1 72 58 4c c5 04 	vaddss 0x4(%rbp,%r8,8),%xmm1,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1607
+    562d:	c4 a1 7a 11 54 c5 00 	vmovss %xmm2,0x0(%rbp,%r8,8)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1608
+    5634:	c4 a1 7a 11 4c c5 04 	vmovss %xmm1,0x4(%rbp,%r8,8)
+    563b:	49 ff c0             	inc    %r8
+    563e:	44 39 c0             	cmp    %r8d,%eax
+    5641:	7f 9e                	jg     55e1 <csr_matrix_int32_spmv+0x5a1>
+    5643:	e8 18 cd ff ff       	call   2360 <GOMP_barrier@plt>
+csr_matrix_int32_spmv_complex32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1709
+    5648:	4d 85 f6             	test   %r14,%r14
+    564b:	0f 84 30 fb ff ff    	je     5181 <csr_matrix_int32_spmv+0x141>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1710
+    5651:	48 8b 43 10          	mov    0x10(%rbx),%rax
+    5655:	48 c1 e0 02          	shl    $0x2,%rax
+    5659:	49 01 06             	add    %rax,(%r14)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1722
+    565c:	31 c0                	xor    %eax,%eax
+    565e:	e9 20 fb ff ff       	jmp    5183 <csr_matrix_int32_spmv+0x143>
+    5663:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    566a:	00 00 00 00 
+    566e:	66 90                	xchg   %ax,%ax
+csr_matrix_int32_spmv_binary():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:831
+    5670:	8b 55 04             	mov    0x4(%rbp),%edx
+    5673:	85 d2                	test   %edx,%edx
+    5675:	0f 84 8c 05 00 00    	je     5c07 <csr_matrix_int32_spmv+0xbc7>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:835
+    567b:	83 fa 01             	cmp    $0x1,%edx
+    567e:	0f 84 09 08 00 00    	je     5e8d <csr_matrix_int32_spmv+0xe4d>
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    5684:	b8 16 00 00 00       	mov    $0x16,%eax
+csr_matrix_int32_spmv_binary():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:839
+    5689:	83 fa 02             	cmp    $0x2,%edx
+    568c:	0f 85 f1 fa ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+    5692:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_binary_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:697
+    5697:	e8 94 cd ff ff       	call   2430 <omp_get_num_threads@plt>
+    569c:	41 89 c5             	mov    %eax,%r13d
+    569f:	e8 dc cc ff ff       	call   2380 <omp_get_thread_num@plt>
+    56a4:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    56a8:	41 89 c0             	mov    %eax,%r8d
+    56ab:	44 89 e0             	mov    %r12d,%eax
+    56ae:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    56b3:	99                   	cltd   
+    56b4:	41 f7 fd             	idiv   %r13d
+    56b7:	41 39 d0             	cmp    %edx,%r8d
+    56ba:	0f 8c 56 0f 00 00    	jl     6616 <csr_matrix_int32_spmv+0x15d6>
+    56c0:	44 0f af c0          	imul   %eax,%r8d
+    56c4:	41 01 d0             	add    %edx,%r8d
+    56c7:	44 01 c0             	add    %r8d,%eax
+    56ca:	41 39 c0             	cmp    %eax,%r8d
+    56cd:	0f 8d 9d fa ff ff    	jge    5170 <csr_matrix_int32_spmv+0x130>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:692
+    56d3:	4c 8b 5b 08          	mov    0x8(%rbx),%r11
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:693
+    56d7:	4c 8b 63 18          	mov    0x18(%rbx),%r12
+    56db:	4d 63 c0             	movslq %r8d,%r8
+    56de:	c5 e1 57 db          	vxorpd %xmm3,%xmm3,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:694
+    56e2:	4c 8b 4e 08          	mov    0x8(%rsi),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:695
+    56e6:	4c 8b 55 08          	mov    0x8(%rbp),%r10
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:699
+    56ea:	4b 8b 14 c3          	mov    (%r11,%r8,8),%rdx
+    56ee:	4b 8b 4c c3 08       	mov    0x8(%r11,%r8,8),%rcx
+    56f3:	48 39 ca             	cmp    %rcx,%rdx
+    56f6:	0f 8d 58 0a 00 00    	jge    6154 <csr_matrix_int32_spmv+0x1114>
+    56fc:	49 8d 14 94          	lea    (%r12,%rdx,4),%rdx
+    5700:	49 8d 34 8c          	lea    (%r12,%rcx,4),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:698
+    5704:	c5 e3 10 d3          	vmovsd %xmm3,%xmm3,%xmm2
+    5708:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    570f:	00 
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:700
+    5710:	48 63 0a             	movslq (%rdx),%rcx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:699
+    5713:	48 83 c2 04          	add    $0x4,%rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:700
+    5717:	c4 c1 7b 2a 0c 89    	vcvtsi2sdl (%r9,%rcx,4),%xmm0,%xmm1
+    571d:	c5 eb 58 d1          	vaddsd %xmm1,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:699
+    5721:	48 39 d6             	cmp    %rdx,%rsi
+    5724:	75 ea                	jne    5710 <csr_matrix_int32_spmv+0x6d0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:701
+    5726:	c4 81 6b 58 14 c2    	vaddsd (%r10,%r8,8),%xmm2,%xmm2
+    572c:	c4 81 7b 11 14 c2    	vmovsd %xmm2,(%r10,%r8,8)
+    5732:	49 ff c0             	inc    %r8
+    5735:	44 39 c0             	cmp    %r8d,%eax
+    5738:	7f b0                	jg     56ea <csr_matrix_int32_spmv+0x6aa>
+    573a:	e9 31 fa ff ff       	jmp    5170 <csr_matrix_int32_spmv+0x130>
+    573f:	90                   	nop
+csr_matrix_int32_spmv_int32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1084
+    5740:	8b 55 04             	mov    0x4(%rbp),%edx
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    5743:	b8 16 00 00 00       	mov    $0x16,%eax
+csr_matrix_int32_spmv_int32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1084
+    5748:	85 d2                	test   %edx,%edx
+    574a:	0f 85 33 fa ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+    5750:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_int32_int32_int32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:887
+    5755:	e8 d6 cc ff ff       	call   2430 <omp_get_num_threads@plt>
+    575a:	41 89 c5             	mov    %eax,%r13d
+    575d:	e8 1e cc ff ff       	call   2380 <omp_get_thread_num@plt>
+    5762:	41 89 c1             	mov    %eax,%r9d
+    5765:	44 89 e0             	mov    %r12d,%eax
+    5768:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    576d:	99                   	cltd   
+    576e:	41 f7 fd             	idiv   %r13d
+    5771:	41 39 d1             	cmp    %edx,%r9d
+    5774:	0f 8c 2e 0b 00 00    	jl     62a8 <csr_matrix_int32_spmv+0x1268>
+    577a:	44 0f af c8          	imul   %eax,%r9d
+    577e:	41 01 d1             	add    %edx,%r9d
+    5781:	44 01 c8             	add    %r9d,%eax
+    5784:	41 39 c1             	cmp    %eax,%r9d
+    5787:	0f 8d b3 fd ff ff    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:881
+    578d:	4c 8b 6b 08          	mov    0x8(%rbx),%r13
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:882
+    5791:	4c 8b 63 18          	mov    0x18(%rbx),%r12
+    5795:	4d 63 c9             	movslq %r9d,%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:883
+    5798:	4c 8b 5b 28          	mov    0x28(%rbx),%r11
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:884
+    579c:	4c 8b 56 08          	mov    0x8(%rsi),%r10
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:885
+    57a0:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+    57a4:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    57ab:	00 00 00 00 
+    57af:	90                   	nop
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:889
+    57b0:	4b 8b 54 cd 00       	mov    0x0(%r13,%r9,8),%rdx
+    57b5:	4b 8b 7c cd 08       	mov    0x8(%r13,%r9,8),%rdi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:888
+    57ba:	31 f6                	xor    %esi,%esi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:889
+    57bc:	48 39 fa             	cmp    %rdi,%rdx
+    57bf:	7d 26                	jge    57e7 <csr_matrix_int32_spmv+0x7a7>
+    57c1:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    57c8:	00 00 00 00 
+    57cc:	0f 1f 40 00          	nopl   0x0(%rax)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:890
+    57d0:	49 63 0c 94          	movslq (%r12,%rdx,4),%rcx
+    57d4:	41 8b 0c 8a          	mov    (%r10,%rcx,4),%ecx
+    57d8:	41 0f af 0c 93       	imul   (%r11,%rdx,4),%ecx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:889
+    57dd:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:890
+    57e0:	01 ce                	add    %ecx,%esi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:889
+    57e2:	48 39 fa             	cmp    %rdi,%rdx
+    57e5:	75 e9                	jne    57d0 <csr_matrix_int32_spmv+0x790>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:891
+    57e7:	42 01 74 8d 00       	add    %esi,0x0(%rbp,%r9,4)
+    57ec:	49 ff c1             	inc    %r9
+    57ef:	44 39 c8             	cmp    %r9d,%eax
+    57f2:	7f bc                	jg     57b0 <csr_matrix_int32_spmv+0x770>
+    57f4:	e9 47 fd ff ff       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+    57f9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+csr_matrix_int32_spmv_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1402
+    5800:	8b 55 04             	mov    0x4(%rbp),%edx
+    5803:	83 fa 01             	cmp    $0x1,%edx
+    5806:	0f 84 3b 07 00 00    	je     5f47 <csr_matrix_int32_spmv+0xf07>
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    580c:	b8 16 00 00 00       	mov    $0x16,%eax
+csr_matrix_int32_spmv_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1406
+    5811:	83 fa 02             	cmp    $0x2,%edx
+    5814:	0f 85 69 f9 ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+    581a:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_f32_f32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1322
+    581f:	e8 0c cc ff ff       	call   2430 <omp_get_num_threads@plt>
+    5824:	41 89 c5             	mov    %eax,%r13d
+    5827:	e8 54 cb ff ff       	call   2380 <omp_get_thread_num@plt>
+    582c:	41 89 c2             	mov    %eax,%r10d
+    582f:	44 89 e0             	mov    %r12d,%eax
+    5832:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    5837:	99                   	cltd   
+    5838:	41 f7 fd             	idiv   %r13d
+    583b:	41 39 d2             	cmp    %edx,%r10d
+    583e:	0f 8c 08 0e 00 00    	jl     664c <csr_matrix_int32_spmv+0x160c>
+    5844:	44 0f af d0          	imul   %eax,%r10d
+    5848:	41 01 d2             	add    %edx,%r10d
+    584b:	44 01 d0             	add    %r10d,%eax
+    584e:	41 39 c2             	cmp    %eax,%r10d
+    5851:	0f 8d e9 fc ff ff    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1316
+    5857:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1317
+    585b:	4c 8b 4b 18          	mov    0x18(%rbx),%r9
+    585f:	4d 63 d2             	movslq %r10d,%r10
+    5862:	c5 e1 57 db          	vxorpd %xmm3,%xmm3,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1318
+    5866:	4c 8b 43 28          	mov    0x28(%rbx),%r8
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1319
+    586a:	48 8b 7e 08          	mov    0x8(%rsi),%rdi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1320
+    586e:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1324
+    5872:	4b 8b 14 d4          	mov    (%r12,%r10,8),%rdx
+    5876:	4b 8b 74 d4 08       	mov    0x8(%r12,%r10,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1323
+    587b:	c5 e3 10 cb          	vmovsd %xmm3,%xmm3,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1324
+    587f:	48 39 d6             	cmp    %rdx,%rsi
+    5882:	7e 2b                	jle    58af <csr_matrix_int32_spmv+0x86f>
+    5884:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    588b:	00 00 00 00 
+    588f:	90                   	nop
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1325
+    5890:	49 63 0c 91          	movslq (%r9,%rdx,4),%rcx
+    5894:	c5 fa 10 04 8f       	vmovss (%rdi,%rcx,4),%xmm0
+    5899:	c4 c1 7a 59 04 90    	vmulss (%r8,%rdx,4),%xmm0,%xmm0
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1324
+    589f:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1325
+    58a2:	c5 fa 5a c0          	vcvtss2sd %xmm0,%xmm0,%xmm0
+    58a6:	c5 f3 58 c8          	vaddsd %xmm0,%xmm1,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1324
+    58aa:	48 39 d6             	cmp    %rdx,%rsi
+    58ad:	75 e1                	jne    5890 <csr_matrix_int32_spmv+0x850>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1326
+    58af:	c4 a1 73 58 4c d5 00 	vaddsd 0x0(%rbp,%r10,8),%xmm1,%xmm1
+    58b6:	c4 a1 7b 11 4c d5 00 	vmovsd %xmm1,0x0(%rbp,%r10,8)
+    58bd:	49 ff c2             	inc    %r10
+    58c0:	44 39 d0             	cmp    %r10d,%eax
+    58c3:	7f ad                	jg     5872 <csr_matrix_int32_spmv+0x832>
+    58c5:	e9 76 fc ff ff       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+    58ca:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+csr_matrix_int32_spmv_int64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1249
+    58d0:	8b 55 04             	mov    0x4(%rbp),%edx
+    58d3:	83 fa 01             	cmp    $0x1,%edx
+    58d6:	0f 84 d0 07 00 00    	je     60ac <csr_matrix_int32_spmv+0x106c>
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    58dc:	b8 16 00 00 00       	mov    $0x16,%eax
+csr_matrix_int32_spmv_int64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1253
+    58e1:	83 fa 02             	cmp    $0x2,%edx
+    58e4:	0f 85 99 f8 ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+    58ea:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_int64_f32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1169
+    58ef:	e8 3c cb ff ff       	call   2430 <omp_get_num_threads@plt>
+    58f4:	41 89 c5             	mov    %eax,%r13d
+    58f7:	e8 84 ca ff ff       	call   2380 <omp_get_thread_num@plt>
+    58fc:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    5900:	41 89 c2             	mov    %eax,%r10d
+    5903:	44 89 e0             	mov    %r12d,%eax
+    5906:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    590b:	99                   	cltd   
+    590c:	41 f7 fd             	idiv   %r13d
+    590f:	41 39 d2             	cmp    %edx,%r10d
+    5912:	0f 8c 61 0d 00 00    	jl     6679 <csr_matrix_int32_spmv+0x1639>
+    5918:	44 0f af d0          	imul   %eax,%r10d
+    591c:	41 01 d2             	add    %edx,%r10d
+    591f:	44 01 d0             	add    %r10d,%eax
+    5922:	41 39 c2             	cmp    %eax,%r10d
+    5925:	0f 8d 15 fc ff ff    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1163
+    592b:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1164
+    592f:	4c 8b 4b 18          	mov    0x18(%rbx),%r9
+    5933:	4d 63 d2             	movslq %r10d,%r10
+    5936:	c5 e1 57 db          	vxorpd %xmm3,%xmm3,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1165
+    593a:	4c 8b 43 28          	mov    0x28(%rbx),%r8
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1166
+    593e:	48 8b 7e 08          	mov    0x8(%rsi),%rdi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1167
+    5942:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1171
+    5946:	4b 8b 14 d4          	mov    (%r12,%r10,8),%rdx
+    594a:	4b 8b 74 d4 08       	mov    0x8(%r12,%r10,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1170
+    594f:	c5 e3 10 d3          	vmovsd %xmm3,%xmm3,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1171
+    5953:	48 39 d6             	cmp    %rdx,%rsi
+    5956:	7e 27                	jle    597f <csr_matrix_int32_spmv+0x93f>
+    5958:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    595f:	00 
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1172
+    5960:	49 63 0c 91          	movslq (%r9,%rdx,4),%rcx
+    5964:	c4 c1 fa 2a 0c d0    	vcvtsi2ssq (%r8,%rdx,8),%xmm0,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1171
+    596a:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1172
+    596d:	c5 f2 59 0c 8f       	vmulss (%rdi,%rcx,4),%xmm1,%xmm1
+    5972:	c5 f2 5a c9          	vcvtss2sd %xmm1,%xmm1,%xmm1
+    5976:	c5 eb 58 d1          	vaddsd %xmm1,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1171
+    597a:	48 39 d6             	cmp    %rdx,%rsi
+    597d:	75 e1                	jne    5960 <csr_matrix_int32_spmv+0x920>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1173
+    597f:	c4 a1 6b 58 54 d5 00 	vaddsd 0x0(%rbp,%r10,8),%xmm2,%xmm2
+    5986:	c4 a1 7b 11 54 d5 00 	vmovsd %xmm2,0x0(%rbp,%r10,8)
+    598d:	49 ff c2             	inc    %r10
+    5990:	44 39 d0             	cmp    %r10d,%eax
+    5993:	7f b1                	jg     5946 <csr_matrix_int32_spmv+0x906>
+    5995:	e9 a6 fb ff ff       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+    599a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+csr_matrix_int32_spmv_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1555
+    59a0:	8b 55 04             	mov    0x4(%rbp),%edx
+    59a3:	83 fa 01             	cmp    $0x1,%edx
+    59a6:	0f 84 41 06 00 00    	je     5fed <csr_matrix_int32_spmv+0xfad>
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    59ac:	b8 16 00 00 00       	mov    $0x16,%eax
+csr_matrix_int32_spmv_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1559
+    59b1:	83 fa 02             	cmp    $0x2,%edx
+    59b4:	0f 85 c9 f7 ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+    59ba:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_f64_f32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1475
+    59bf:	e8 6c ca ff ff       	call   2430 <omp_get_num_threads@plt>
+    59c4:	41 89 c5             	mov    %eax,%r13d
+    59c7:	e8 b4 c9 ff ff       	call   2380 <omp_get_thread_num@plt>
+    59cc:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    59d0:	89 c7                	mov    %eax,%edi
+    59d2:	44 89 e0             	mov    %r12d,%eax
+    59d5:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    59da:	99                   	cltd   
+    59db:	41 f7 fd             	idiv   %r13d
+    59de:	39 d7                	cmp    %edx,%edi
+    59e0:	0f 8c 4b 0c 00 00    	jl     6631 <csr_matrix_int32_spmv+0x15f1>
+    59e6:	0f af f8             	imul   %eax,%edi
+    59e9:	01 d7                	add    %edx,%edi
+    59eb:	01 f8                	add    %edi,%eax
+    59ed:	39 c7                	cmp    %eax,%edi
+    59ef:	0f 8d 4b fb ff ff    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1469
+    59f5:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1470
+    59f9:	4c 8b 53 18          	mov    0x18(%rbx),%r10
+    59fd:	48 63 ff             	movslq %edi,%rdi
+    5a00:	c5 e1 57 db          	vxorpd %xmm3,%xmm3,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1471
+    5a04:	4c 8b 4b 28          	mov    0x28(%rbx),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1472
+    5a08:	4c 8b 46 08          	mov    0x8(%rsi),%r8
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1473
+    5a0c:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1477
+    5a10:	49 8b 14 fc          	mov    (%r12,%rdi,8),%rdx
+    5a14:	49 8b 74 fc 08       	mov    0x8(%r12,%rdi,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1476
+    5a19:	c5 e3 10 d3          	vmovsd %xmm3,%xmm3,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1477
+    5a1d:	48 39 d6             	cmp    %rdx,%rsi
+    5a20:	7e 2a                	jle    5a4c <csr_matrix_int32_spmv+0xa0c>
+    5a22:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    5a29:	00 00 00 00 
+    5a2d:	0f 1f 00             	nopl   (%rax)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1478
+    5a30:	49 63 0c 92          	movslq (%r10,%rdx,4),%rcx
+    5a34:	c4 c1 7a 5a 0c 88    	vcvtss2sd (%r8,%rcx,4),%xmm0,%xmm1
+    5a3a:	c4 c1 73 59 0c d1    	vmulsd (%r9,%rdx,8),%xmm1,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1477
+    5a40:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1478
+    5a43:	c5 eb 58 d1          	vaddsd %xmm1,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1477
+    5a47:	48 39 d6             	cmp    %rdx,%rsi
+    5a4a:	75 e4                	jne    5a30 <csr_matrix_int32_spmv+0x9f0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1479
+    5a4c:	c5 eb 58 54 fd 00    	vaddsd 0x0(%rbp,%rdi,8),%xmm2,%xmm2
+    5a52:	c5 fb 11 54 fd 00    	vmovsd %xmm2,0x0(%rbp,%rdi,8)
+    5a58:	48 ff c7             	inc    %rdi
+    5a5b:	39 f8                	cmp    %edi,%eax
+    5a5d:	7f b1                	jg     5a10 <csr_matrix_int32_spmv+0x9d0>
+    5a5f:	e9 dc fa ff ff       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+    5a64:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    5a6b:	00 00 00 00 
+    5a6f:	90                   	nop
+csr_matrix_int32_spmv_binary():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:851
+    5a70:	83 f8 02             	cmp    $0x2,%eax
+    5a73:	0f 85 3f 0c 00 00    	jne    66b8 <csr_matrix_int32_spmv+0x1678>
+    5a79:	8b 55 04             	mov    0x4(%rbp),%edx
+    5a7c:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+    5a81:	83 fa 01             	cmp    $0x1,%edx
+    5a84:	0f 84 6e 09 00 00    	je     63f8 <csr_matrix_int32_spmv+0x13b8>
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    5a8a:	b8 16 00 00 00       	mov    $0x16,%eax
+csr_matrix_int32_spmv_binary():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:855
+    5a8f:	83 fa 02             	cmp    $0x2,%edx
+    5a92:	0f 85 eb f6 ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+csr_matrix_int32_spmv_binary_f64_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:809
+    5a98:	e8 93 c9 ff ff       	call   2430 <omp_get_num_threads@plt>
+    5a9d:	41 89 c5             	mov    %eax,%r13d
+    5aa0:	e8 db c8 ff ff       	call   2380 <omp_get_thread_num@plt>
+    5aa5:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    5aaa:	41 89 c0             	mov    %eax,%r8d
+    5aad:	44 89 e0             	mov    %r12d,%eax
+    5ab0:	99                   	cltd   
+    5ab1:	41 f7 fd             	idiv   %r13d
+    5ab4:	41 39 d0             	cmp    %edx,%r8d
+    5ab7:	0f 8c dd 05 00 00    	jl     609a <csr_matrix_int32_spmv+0x105a>
+    5abd:	44 0f af c0          	imul   %eax,%r8d
+    5ac1:	41 01 d0             	add    %edx,%r8d
+    5ac4:	44 01 c0             	add    %r8d,%eax
+    5ac7:	41 39 c0             	cmp    %eax,%r8d
+    5aca:	0f 8d a0 f6 ff ff    	jge    5170 <csr_matrix_int32_spmv+0x130>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:804
+    5ad0:	4c 8b 5b 08          	mov    0x8(%rbx),%r11
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:805
+    5ad4:	4c 8b 63 18          	mov    0x18(%rbx),%r12
+    5ad8:	4d 63 c0             	movslq %r8d,%r8
+    5adb:	c5 e1 57 db          	vxorpd %xmm3,%xmm3,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:806
+    5adf:	4c 8b 4e 08          	mov    0x8(%rsi),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:807
+    5ae3:	4c 8b 55 08          	mov    0x8(%rbp),%r10
+    5ae7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    5aee:	00 00 
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:811
+    5af0:	4b 8b 14 c3          	mov    (%r11,%r8,8),%rdx
+    5af4:	4b 8b 4c c3 08       	mov    0x8(%r11,%r8,8),%rcx
+    5af9:	48 39 ca             	cmp    %rcx,%rdx
+    5afc:	0f 8d 2d 04 00 00    	jge    5f2f <csr_matrix_int32_spmv+0xeef>
+    5b02:	49 8d 14 94          	lea    (%r12,%rdx,4),%rdx
+    5b06:	49 8d 34 8c          	lea    (%r12,%rcx,4),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:810
+    5b0a:	c5 e3 10 c3          	vmovsd %xmm3,%xmm3,%xmm0
+    5b0e:	66 90                	xchg   %ax,%ax
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:812
+    5b10:	48 63 0a             	movslq (%rdx),%rcx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:811
+    5b13:	48 83 c2 04          	add    $0x4,%rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:812
+    5b17:	c4 c1 7b 58 04 c9    	vaddsd (%r9,%rcx,8),%xmm0,%xmm0
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:811
+    5b1d:	48 39 d6             	cmp    %rdx,%rsi
+    5b20:	75 ee                	jne    5b10 <csr_matrix_int32_spmv+0xad0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:813
+    5b22:	c4 81 7b 58 04 c2    	vaddsd (%r10,%r8,8),%xmm0,%xmm0
+    5b28:	c4 81 7b 11 04 c2    	vmovsd %xmm0,(%r10,%r8,8)
+    5b2e:	49 ff c0             	inc    %r8
+    5b31:	44 39 c0             	cmp    %r8d,%eax
+    5b34:	7f ba                	jg     5af0 <csr_matrix_int32_spmv+0xab0>
+    5b36:	e9 35 f6 ff ff       	jmp    5170 <csr_matrix_int32_spmv+0x130>
+csr_matrix_int32_spmv_int32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1104
+    5b3b:	83 f8 02             	cmp    $0x2,%eax
+    5b3e:	0f 85 74 0b 00 00    	jne    66b8 <csr_matrix_int32_spmv+0x1678>
+    5b44:	8b 55 04             	mov    0x4(%rbp),%edx
+    5b47:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+    5b4c:	83 fa 01             	cmp    $0x1,%edx
+    5b4f:	0f 84 ef 09 00 00    	je     6544 <csr_matrix_int32_spmv+0x1504>
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    5b55:	b8 16 00 00 00       	mov    $0x16,%eax
+csr_matrix_int32_spmv_int32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1108
+    5b5a:	83 fa 02             	cmp    $0x2,%edx
+    5b5d:	0f 85 20 f6 ff ff    	jne    5183 <csr_matrix_int32_spmv+0x143>
+csr_matrix_int32_spmv_int32_f64_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1061
+    5b63:	e8 c8 c8 ff ff       	call   2430 <omp_get_num_threads@plt>
+    5b68:	41 89 c5             	mov    %eax,%r13d
+    5b6b:	e8 10 c8 ff ff       	call   2380 <omp_get_thread_num@plt>
+    5b70:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    5b75:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    5b79:	41 89 c0             	mov    %eax,%r8d
+    5b7c:	44 89 e0             	mov    %r12d,%eax
+    5b7f:	99                   	cltd   
+    5b80:	41 f7 fd             	idiv   %r13d
+    5b83:	41 39 d0             	cmp    %edx,%r8d
+    5b86:	0f 8c 06 09 00 00    	jl     6492 <csr_matrix_int32_spmv+0x1452>
+    5b8c:	44 0f af c0          	imul   %eax,%r8d
+    5b90:	41 01 d0             	add    %edx,%r8d
+    5b93:	44 01 c0             	add    %r8d,%eax
+    5b96:	41 39 c0             	cmp    %eax,%r8d
+    5b99:	0f 8d a1 f9 ff ff    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1055
+    5b9f:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1056
+    5ba3:	4c 8b 5b 18          	mov    0x18(%rbx),%r11
+    5ba7:	4d 63 c0             	movslq %r8d,%r8
+    5baa:	c5 e1 57 db          	vxorpd %xmm3,%xmm3,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1057
+    5bae:	4c 8b 53 28          	mov    0x28(%rbx),%r10
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1058
+    5bb2:	4c 8b 4e 08          	mov    0x8(%rsi),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1059
+    5bb6:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1063
+    5bba:	4b 8b 14 c4          	mov    (%r12,%r8,8),%rdx
+    5bbe:	4b 8b 74 c4 08       	mov    0x8(%r12,%r8,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1062
+    5bc3:	c5 e3 10 d3          	vmovsd %xmm3,%xmm3,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1063
+    5bc7:	48 39 d6             	cmp    %rdx,%rsi
+    5bca:	7e 20                	jle    5bec <csr_matrix_int32_spmv+0xbac>
+    5bcc:	0f 1f 40 00          	nopl   0x0(%rax)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1064
+    5bd0:	49 63 0c 93          	movslq (%r11,%rdx,4),%rcx
+    5bd4:	c4 c1 7b 2a 0c 92    	vcvtsi2sdl (%r10,%rdx,4),%xmm0,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1063
+    5bda:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1064
+    5bdd:	c4 c1 73 59 0c c9    	vmulsd (%r9,%rcx,8),%xmm1,%xmm1
+    5be3:	c5 eb 58 d1          	vaddsd %xmm1,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1063
+    5be7:	48 39 d6             	cmp    %rdx,%rsi
+    5bea:	75 e4                	jne    5bd0 <csr_matrix_int32_spmv+0xb90>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1065
+    5bec:	c4 a1 6b 58 54 c5 00 	vaddsd 0x0(%rbp,%r8,8),%xmm2,%xmm2
+    5bf3:	c4 a1 7b 11 54 c5 00 	vmovsd %xmm2,0x0(%rbp,%r8,8)
+    5bfa:	49 ff c0             	inc    %r8
+    5bfd:	44 39 c0             	cmp    %r8d,%eax
+    5c00:	7f b8                	jg     5bba <csr_matrix_int32_spmv+0xb7a>
+    5c02:	e9 39 f9 ff ff       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+    5c07:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_binary_int32_int32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:641
+    5c0c:	e8 1f c8 ff ff       	call   2430 <omp_get_num_threads@plt>
+    5c11:	41 89 c5             	mov    %eax,%r13d
+    5c14:	e8 67 c7 ff ff       	call   2380 <omp_get_thread_num@plt>
+    5c19:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    5c1d:	41 89 c0             	mov    %eax,%r8d
+    5c20:	44 89 e0             	mov    %r12d,%eax
+    5c23:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    5c28:	99                   	cltd   
+    5c29:	41 f7 fd             	idiv   %r13d
+    5c2c:	41 39 d0             	cmp    %edx,%r8d
+    5c2f:	0f 8c 03 03 00 00    	jl     5f38 <csr_matrix_int32_spmv+0xef8>
+    5c35:	44 0f af c0          	imul   %eax,%r8d
+    5c39:	41 01 d0             	add    %edx,%r8d
+    5c3c:	44 01 c0             	add    %r8d,%eax
+    5c3f:	41 39 c0             	cmp    %eax,%r8d
+    5c42:	0f 8d 28 f5 ff ff    	jge    5170 <csr_matrix_int32_spmv+0x130>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:636
+    5c48:	4c 8b 5b 08          	mov    0x8(%rbx),%r11
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:637
+    5c4c:	4c 8b 63 18          	mov    0x18(%rbx),%r12
+    5c50:	4d 63 c0             	movslq %r8d,%r8
+    5c53:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:638
+    5c57:	4c 8b 4e 08          	mov    0x8(%rsi),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:639
+    5c5b:	4c 8b 55 08          	mov    0x8(%rbp),%r10
+    5c5f:	90                   	nop
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:643
+    5c60:	4b 8b 14 c3          	mov    (%r11,%r8,8),%rdx
+    5c64:	4b 8b 4c c3 08       	mov    0x8(%r11,%r8,8),%rcx
+    5c69:	48 39 ca             	cmp    %rcx,%rdx
+    5c6c:	7d 47                	jge    5cb5 <csr_matrix_int32_spmv+0xc75>
+    5c6e:	49 8d 14 94          	lea    (%r12,%rdx,4),%rdx
+    5c72:	49 8d 34 8c          	lea    (%r12,%rcx,4),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:642
+    5c76:	c5 f8 28 d5          	vmovaps %xmm5,%xmm2
+    5c7a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:644
+    5c80:	48 63 0a             	movslq (%rdx),%rcx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:643
+    5c83:	48 83 c2 04          	add    $0x4,%rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:644
+    5c87:	c4 c1 7a 2a 0c 89    	vcvtsi2ssl (%r9,%rcx,4),%xmm0,%xmm1
+    5c8d:	c5 ea 58 d1          	vaddss %xmm1,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:643
+    5c91:	48 39 f2             	cmp    %rsi,%rdx
+    5c94:	75 ea                	jne    5c80 <csr_matrix_int32_spmv+0xc40>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:645
+    5c96:	c4 81 7a 2a 0c 82    	vcvtsi2ssl (%r10,%r8,4),%xmm0,%xmm1
+    5c9c:	c5 f2 58 ca          	vaddss %xmm2,%xmm1,%xmm1
+    5ca0:	c5 fa 2c d1          	vcvttss2si %xmm1,%edx
+    5ca4:	43 89 14 82          	mov    %edx,(%r10,%r8,4)
+    5ca8:	49 ff c0             	inc    %r8
+    5cab:	44 39 c0             	cmp    %r8d,%eax
+    5cae:	7f b0                	jg     5c60 <csr_matrix_int32_spmv+0xc20>
+    5cb0:	e9 bb f4 ff ff       	jmp    5170 <csr_matrix_int32_spmv+0x130>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:642
+    5cb5:	c5 f8 28 d5          	vmovaps %xmm5,%xmm2
+    5cb9:	eb db                	jmp    5c96 <csr_matrix_int32_spmv+0xc56>
+    5cbb:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_complex32_complex32_complex32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1668
+    5cc0:	e8 6b c7 ff ff       	call   2430 <omp_get_num_threads@plt>
+    5cc5:	41 89 c5             	mov    %eax,%r13d
+    5cc8:	e8 b3 c6 ff ff       	call   2380 <omp_get_thread_num@plt>
+    5ccd:	89 c7                	mov    %eax,%edi
+    5ccf:	44 89 e0             	mov    %r12d,%eax
+    5cd2:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    5cd7:	99                   	cltd   
+    5cd8:	41 f7 fd             	idiv   %r13d
+    5cdb:	39 d7                	cmp    %edx,%edi
+    5cdd:	41 89 c4             	mov    %eax,%r12d
+    5ce0:	0f 8c 14 09 00 00    	jl     65fa <csr_matrix_int32_spmv+0x15ba>
+    5ce6:	41 0f af fc          	imul   %r12d,%edi
+    5cea:	01 fa                	add    %edi,%edx
+    5cec:	41 01 d4             	add    %edx,%r12d
+    5cef:	44 39 e2             	cmp    %r12d,%edx
+    5cf2:	0f 8d a2 00 00 00    	jge    5d9a <csr_matrix_int32_spmv+0xd5a>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1662
+    5cf8:	4c 8b 6b 08          	mov    0x8(%rbx),%r13
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1663
+    5cfc:	4c 8b 53 18          	mov    0x18(%rbx),%r10
+    5d00:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1664
+    5d04:	4c 8b 4b 28          	mov    0x28(%rbx),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1666
+    5d08:	4c 8b 5d 08          	mov    0x8(%rbp),%r11
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1665
+    5d0c:	4c 8b 46 08          	mov    0x8(%rsi),%r8
+    5d10:	48 63 f2             	movslq %edx,%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1671
+    5d13:	49 8b 54 f5 00       	mov    0x0(%r13,%rsi,8),%rdx
+    5d18:	49 8b 4c f5 08       	mov    0x8(%r13,%rsi,8),%rcx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1670
+    5d1d:	c5 f8 28 f5          	vmovaps %xmm5,%xmm6
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1669
+    5d21:	c5 f8 28 fd          	vmovaps %xmm5,%xmm7
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1671
+    5d25:	48 39 ca             	cmp    %rcx,%rdx
+    5d28:	7d 4a                	jge    5d74 <csr_matrix_int32_spmv+0xd34>
+    5d2a:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1672
+    5d30:	41 8b 04 92          	mov    (%r10,%rdx,4),%eax
+    5d34:	c4 c1 7a 10 64 d1 04 	vmovss 0x4(%r9,%rdx,8),%xmm4
+    5d3b:	c4 c1 7a 10 04 d1    	vmovss (%r9,%rdx,8),%xmm0
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1671
+    5d41:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1672
+    5d44:	01 c0                	add    %eax,%eax
+    5d46:	48 98                	cltq   
+    5d48:	c4 c1 7a 10 5c 80 04 	vmovss 0x4(%r8,%rax,4),%xmm3
+    5d4f:	c4 c1 7a 10 0c 80    	vmovss (%r8,%rax,4),%xmm1
+    5d55:	c5 da 59 d3          	vmulss %xmm3,%xmm4,%xmm2
+    5d59:	c4 e2 79 bb d1       	vfmsub231ss %xmm1,%xmm0,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1673
+    5d5e:	c5 f2 59 cc          	vmulss %xmm4,%xmm1,%xmm1
+    5d62:	c4 e2 71 99 c3       	vfmadd132ss %xmm3,%xmm1,%xmm0
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1672
+    5d67:	c5 c2 58 fa          	vaddss %xmm2,%xmm7,%xmm7
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1673
+    5d6b:	c5 ca 58 f0          	vaddss %xmm0,%xmm6,%xmm6
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1671
+    5d6f:	48 39 ca             	cmp    %rcx,%rdx
+    5d72:	75 bc                	jne    5d30 <csr_matrix_int32_spmv+0xcf0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1675
+    5d74:	c4 c1 42 58 3c f3    	vaddss (%r11,%rsi,8),%xmm7,%xmm7
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1676
+    5d7a:	c4 c1 4a 58 74 f3 04 	vaddss 0x4(%r11,%rsi,8),%xmm6,%xmm6
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1675
+    5d81:	c4 c1 7a 11 3c f3    	vmovss %xmm7,(%r11,%rsi,8)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1676
+    5d87:	c4 c1 7a 11 74 f3 04 	vmovss %xmm6,0x4(%r11,%rsi,8)
+    5d8e:	48 ff c6             	inc    %rsi
+    5d91:	41 39 f4             	cmp    %esi,%r12d
+    5d94:	0f 8f 79 ff ff ff    	jg     5d13 <csr_matrix_int32_spmv+0xcd3>
+    5d9a:	e8 c1 c5 ff ff       	call   2360 <GOMP_barrier@plt>
+csr_matrix_int32_spmv_complex32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1716
+    5d9f:	4d 85 f6             	test   %r14,%r14
+    5da2:	0f 84 d9 f3 ff ff    	je     5181 <csr_matrix_int32_spmv+0x141>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1717
+    5da8:	48 8b 43 10          	mov    0x10(%rbx),%rax
+    5dac:	48 c1 e0 03          	shl    $0x3,%rax
+    5db0:	49 01 06             	add    %rax,(%r14)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1722
+    5db3:	31 c0                	xor    %eax,%eax
+    5db5:	e9 c9 f3 ff ff       	jmp    5183 <csr_matrix_int32_spmv+0x143>
+    5dba:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_complex32_f64_complex32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1634
+    5dbf:	e8 6c c6 ff ff       	call   2430 <omp_get_num_threads@plt>
+    5dc4:	41 89 c5             	mov    %eax,%r13d
+    5dc7:	e8 b4 c5 ff ff       	call   2380 <omp_get_thread_num@plt>
+    5dcc:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    5dd0:	89 c7                	mov    %eax,%edi
+    5dd2:	44 89 e0             	mov    %r12d,%eax
+    5dd5:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    5dda:	99                   	cltd   
+    5ddb:	41 f7 fd             	idiv   %r13d
+    5dde:	39 d7                	cmp    %edx,%edi
+    5de0:	0f 8c 27 08 00 00    	jl     660d <csr_matrix_int32_spmv+0x15cd>
+    5de6:	0f af f8             	imul   %eax,%edi
+    5de9:	01 fa                	add    %edi,%edx
+    5deb:	01 d0                	add    %edx,%eax
+    5ded:	39 c2                	cmp    %eax,%edx
+    5def:	0f 8d 4e f8 ff ff    	jge    5643 <csr_matrix_int32_spmv+0x603>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1628
+    5df5:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1629
+    5df9:	4c 8b 5b 18          	mov    0x18(%rbx),%r11
+    5dfd:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1630
+    5e01:	4c 8b 43 28          	mov    0x28(%rbx),%r8
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1632
+    5e05:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1631
+    5e09:	4c 8b 56 08          	mov    0x8(%rsi),%r10
+    5e0d:	48 63 f2             	movslq %edx,%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1637
+    5e10:	49 8b 14 f4          	mov    (%r12,%rsi,8),%rdx
+    5e14:	49 8b 7c f4 08       	mov    0x8(%r12,%rsi,8),%rdi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1636
+    5e19:	c5 f8 28 dd          	vmovaps %xmm5,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1635
+    5e1d:	c5 f8 28 e5          	vmovaps %xmm5,%xmm4
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1637
+    5e21:	48 39 fa             	cmp    %rdi,%rdx
+    5e24:	7d 43                	jge    5e69 <csr_matrix_int32_spmv+0xe29>
+    5e26:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    5e2d:	00 00 00 
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1638
+    5e30:	49 63 0c 93          	movslq (%r11,%rdx,4),%rcx
+    5e34:	c4 c1 7a 5a 0c d0    	vcvtss2sd (%r8,%rdx,8),%xmm0,%xmm1
+    5e3a:	c5 da 5a e4          	vcvtss2sd %xmm4,%xmm4,%xmm4
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1639
+    5e3e:	c5 e2 5a db          	vcvtss2sd %xmm3,%xmm3,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1638
+    5e42:	c4 c1 7b 10 14 ca    	vmovsd (%r10,%rcx,8),%xmm2
+    5e48:	c4 e2 f1 b9 e2       	vfmadd231sd %xmm2,%xmm1,%xmm4
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1639
+    5e4d:	c4 c1 7a 5a 4c d0 04 	vcvtss2sd 0x4(%r8,%rdx,8),%xmm0,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1637
+    5e54:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1639
+    5e57:	c4 e2 e9 b9 d9       	vfmadd231sd %xmm1,%xmm2,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1638
+    5e5c:	c5 db 5a e4          	vcvtsd2ss %xmm4,%xmm4,%xmm4
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1639
+    5e60:	c5 e3 5a db          	vcvtsd2ss %xmm3,%xmm3,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1637
+    5e64:	48 39 fa             	cmp    %rdi,%rdx
+    5e67:	75 c7                	jne    5e30 <csr_matrix_int32_spmv+0xdf0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1641
+    5e69:	c5 da 58 64 f5 00    	vaddss 0x0(%rbp,%rsi,8),%xmm4,%xmm4
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1642
+    5e6f:	c5 e2 58 5c f5 04    	vaddss 0x4(%rbp,%rsi,8),%xmm3,%xmm3
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1641
+    5e75:	c5 fa 11 64 f5 00    	vmovss %xmm4,0x0(%rbp,%rsi,8)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1642
+    5e7b:	c5 fa 11 5c f5 04    	vmovss %xmm3,0x4(%rbp,%rsi,8)
+    5e81:	48 ff c6             	inc    %rsi
+    5e84:	39 f0                	cmp    %esi,%eax
+    5e86:	7f 88                	jg     5e10 <csr_matrix_int32_spmv+0xdd0>
+    5e88:	e9 b6 f7 ff ff       	jmp    5643 <csr_matrix_int32_spmv+0x603>
+    5e8d:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_binary_int32_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:669
+    5e92:	e8 99 c5 ff ff       	call   2430 <omp_get_num_threads@plt>
+    5e97:	41 89 c5             	mov    %eax,%r13d
+    5e9a:	e8 e1 c4 ff ff       	call   2380 <omp_get_thread_num@plt>
+    5e9f:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    5ea3:	41 89 c0             	mov    %eax,%r8d
+    5ea6:	44 89 e0             	mov    %r12d,%eax
+    5ea9:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    5eae:	99                   	cltd   
+    5eaf:	41 f7 fd             	idiv   %r13d
+    5eb2:	41 39 d0             	cmp    %edx,%r8d
+    5eb5:	0f 8c 36 07 00 00    	jl     65f1 <csr_matrix_int32_spmv+0x15b1>
+    5ebb:	44 0f af c0          	imul   %eax,%r8d
+    5ebf:	41 01 d0             	add    %edx,%r8d
+    5ec2:	44 01 c0             	add    %r8d,%eax
+    5ec5:	41 39 c0             	cmp    %eax,%r8d
+    5ec8:	0f 8d a2 f2 ff ff    	jge    5170 <csr_matrix_int32_spmv+0x130>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:664
+    5ece:	4c 8b 5b 08          	mov    0x8(%rbx),%r11
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:665
+    5ed2:	4c 8b 63 18          	mov    0x18(%rbx),%r12
+    5ed6:	4d 63 c0             	movslq %r8d,%r8
+    5ed9:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:666
+    5edd:	4c 8b 4e 08          	mov    0x8(%rsi),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:667
+    5ee1:	4c 8b 55 08          	mov    0x8(%rbp),%r10
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:671
+    5ee5:	4b 8b 14 c3          	mov    (%r11,%r8,8),%rdx
+    5ee9:	4b 8b 4c c3 08       	mov    0x8(%r11,%r8,8),%rcx
+    5eee:	48 39 ca             	cmp    %rcx,%rdx
+    5ef1:	7d 4e                	jge    5f41 <csr_matrix_int32_spmv+0xf01>
+    5ef3:	49 8d 14 94          	lea    (%r12,%rdx,4),%rdx
+    5ef7:	49 8d 34 8c          	lea    (%r12,%rcx,4),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:670
+    5efb:	c5 f8 28 d5          	vmovaps %xmm5,%xmm2
+    5eff:	90                   	nop
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:672
+    5f00:	48 63 0a             	movslq (%rdx),%rcx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:671
+    5f03:	48 83 c2 04          	add    $0x4,%rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:672
+    5f07:	c4 c1 7a 2a 0c 89    	vcvtsi2ssl (%r9,%rcx,4),%xmm0,%xmm1
+    5f0d:	c5 ea 58 d1          	vaddss %xmm1,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:671
+    5f11:	48 39 f2             	cmp    %rsi,%rdx
+    5f14:	75 ea                	jne    5f00 <csr_matrix_int32_spmv+0xec0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:673
+    5f16:	c4 81 6a 58 14 82    	vaddss (%r10,%r8,4),%xmm2,%xmm2
+    5f1c:	c4 81 7a 11 14 82    	vmovss %xmm2,(%r10,%r8,4)
+    5f22:	49 ff c0             	inc    %r8
+    5f25:	44 39 c0             	cmp    %r8d,%eax
+    5f28:	7f bb                	jg     5ee5 <csr_matrix_int32_spmv+0xea5>
+    5f2a:	e9 41 f2 ff ff       	jmp    5170 <csr_matrix_int32_spmv+0x130>
+csr_matrix_int32_spmv_binary_f64_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:810
+    5f2f:	c5 e3 10 c3          	vmovsd %xmm3,%xmm3,%xmm0
+    5f33:	e9 ea fb ff ff       	jmp    5b22 <csr_matrix_int32_spmv+0xae2>
+    5f38:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_binary():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:831
+    5f3a:	31 d2                	xor    %edx,%edx
+    5f3c:	e9 f4 fc ff ff       	jmp    5c35 <csr_matrix_int32_spmv+0xbf5>
+csr_matrix_int32_spmv_binary_int32_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:670
+    5f41:	c5 f8 28 d5          	vmovaps %xmm5,%xmm2
+    5f45:	eb cf                	jmp    5f16 <csr_matrix_int32_spmv+0xed6>
+    5f47:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_f32_f32_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1293
+    5f4c:	e8 df c4 ff ff       	call   2430 <omp_get_num_threads@plt>
+    5f51:	41 89 c5             	mov    %eax,%r13d
+    5f54:	e8 27 c4 ff ff       	call   2380 <omp_get_thread_num@plt>
+    5f59:	89 c7                	mov    %eax,%edi
+    5f5b:	44 89 e0             	mov    %r12d,%eax
+    5f5e:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    5f63:	99                   	cltd   
+    5f64:	41 f7 fd             	idiv   %r13d
+    5f67:	39 d7                	cmp    %edx,%edi
+    5f69:	0f 8c cb 06 00 00    	jl     663a <csr_matrix_int32_spmv+0x15fa>
+    5f6f:	0f af f8             	imul   %eax,%edi
+    5f72:	01 d7                	add    %edx,%edi
+    5f74:	01 f8                	add    %edi,%eax
+    5f76:	39 c7                	cmp    %eax,%edi
+    5f78:	0f 8d c2 f5 ff ff    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1287
+    5f7e:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1288
+    5f82:	4c 8b 53 18          	mov    0x18(%rbx),%r10
+    5f86:	48 63 ff             	movslq %edi,%rdi
+    5f89:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1289
+    5f8d:	4c 8b 4b 28          	mov    0x28(%rbx),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1290
+    5f91:	4c 8b 46 08          	mov    0x8(%rsi),%r8
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1291
+    5f95:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1295
+    5f99:	49 8b 14 fc          	mov    (%r12,%rdi,8),%rdx
+    5f9d:	49 8b 74 fc 08       	mov    0x8(%r12,%rdi,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1294
+    5fa2:	c5 f8 28 cd          	vmovaps %xmm5,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1295
+    5fa6:	48 39 d6             	cmp    %rdx,%rsi
+    5fa9:	7e 21                	jle    5fcc <csr_matrix_int32_spmv+0xf8c>
+    5fab:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1296
+    5fb0:	49 63 0c 92          	movslq (%r10,%rdx,4),%rcx
+    5fb4:	c4 c1 7a 10 04 88    	vmovss (%r8,%rcx,4),%xmm0
+    5fba:	c4 c1 7a 59 04 91    	vmulss (%r9,%rdx,4),%xmm0,%xmm0
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1295
+    5fc0:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1296
+    5fc3:	c5 f2 58 c8          	vaddss %xmm0,%xmm1,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1295
+    5fc7:	48 39 d6             	cmp    %rdx,%rsi
+    5fca:	75 e4                	jne    5fb0 <csr_matrix_int32_spmv+0xf70>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1297
+    5fcc:	c5 f2 58 4c bd 00    	vaddss 0x0(%rbp,%rdi,4),%xmm1,%xmm1
+    5fd2:	c5 fa 11 4c bd 00    	vmovss %xmm1,0x0(%rbp,%rdi,4)
+    5fd8:	48 ff c7             	inc    %rdi
+    5fdb:	39 f8                	cmp    %edi,%eax
+    5fdd:	7f ba                	jg     5f99 <csr_matrix_int32_spmv+0xf59>
+    5fdf:	e9 5c f5 ff ff       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+    5fe4:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1414
+    5fe6:	31 d2                	xor    %edx,%edx
+    5fe8:	e9 d0 f3 ff ff       	jmp    53bd <csr_matrix_int32_spmv+0x37d>
+    5fed:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_f64_f32_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1446
+    5ff2:	e8 39 c4 ff ff       	call   2430 <omp_get_num_threads@plt>
+    5ff7:	41 89 c5             	mov    %eax,%r13d
+    5ffa:	e8 81 c3 ff ff       	call   2380 <omp_get_thread_num@plt>
+    5fff:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    6003:	41 89 c2             	mov    %eax,%r10d
+    6006:	44 89 e0             	mov    %r12d,%eax
+    6009:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    600e:	99                   	cltd   
+    600f:	41 f7 fd             	idiv   %r13d
+    6012:	41 39 d2             	cmp    %edx,%r10d
+    6015:	0f 8c 4c 06 00 00    	jl     6667 <csr_matrix_int32_spmv+0x1627>
+    601b:	44 0f af d0          	imul   %eax,%r10d
+    601f:	41 01 d2             	add    %edx,%r10d
+    6022:	44 01 d0             	add    %r10d,%eax
+    6025:	41 39 c2             	cmp    %eax,%r10d
+    6028:	0f 8d 12 f5 ff ff    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1440
+    602e:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1441
+    6032:	4c 8b 4b 18          	mov    0x18(%rbx),%r9
+    6036:	4d 63 d2             	movslq %r10d,%r10
+    6039:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1442
+    603d:	4c 8b 43 28          	mov    0x28(%rbx),%r8
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1443
+    6041:	48 8b 7e 08          	mov    0x8(%rsi),%rdi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1444
+    6045:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1448
+    6049:	4b 8b 14 d4          	mov    (%r12,%r10,8),%rdx
+    604d:	4b 8b 74 d4 08       	mov    0x8(%r12,%r10,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1447
+    6052:	c5 f8 28 d5          	vmovaps %xmm5,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1448
+    6056:	48 39 d6             	cmp    %rdx,%rsi
+    6059:	7e 24                	jle    607f <csr_matrix_int32_spmv+0x103f>
+    605b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1449
+    6060:	49 63 0c 91          	movslq (%r9,%rdx,4),%rcx
+    6064:	c5 ea 5a d2          	vcvtss2sd %xmm2,%xmm2,%xmm2
+    6068:	c5 fa 5a 0c 8f       	vcvtss2sd (%rdi,%rcx,4),%xmm0,%xmm1
+    606d:	c4 c2 f1 b9 14 d0    	vfmadd231sd (%r8,%rdx,8),%xmm1,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1448
+    6073:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1449
+    6076:	c5 eb 5a d2          	vcvtsd2ss %xmm2,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1448
+    607a:	48 39 d6             	cmp    %rdx,%rsi
+    607d:	75 e1                	jne    6060 <csr_matrix_int32_spmv+0x1020>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1450
+    607f:	c4 a1 6a 58 54 95 00 	vaddss 0x0(%rbp,%r10,4),%xmm2,%xmm2
+    6086:	c4 a1 7a 11 54 95 00 	vmovss %xmm2,0x0(%rbp,%r10,4)
+    608d:	49 ff c2             	inc    %r10
+    6090:	44 39 d0             	cmp    %r10d,%eax
+    6093:	7f b4                	jg     6049 <csr_matrix_int32_spmv+0x1009>
+    6095:	e9 a6 f4 ff ff       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+    609a:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_binary():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:855
+    609c:	31 d2                	xor    %edx,%edx
+    609e:	e9 1a fa ff ff       	jmp    5abd <csr_matrix_int32_spmv+0xa7d>
+    60a3:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1567
+    60a5:	31 d2                	xor    %edx,%edx
+    60a7:	e9 fd f3 ff ff       	jmp    54a9 <csr_matrix_int32_spmv+0x469>
+    60ac:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_int64_f32_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1140
+    60b1:	e8 7a c3 ff ff       	call   2430 <omp_get_num_threads@plt>
+    60b6:	41 89 c5             	mov    %eax,%r13d
+    60b9:	e8 c2 c2 ff ff       	call   2380 <omp_get_thread_num@plt>
+    60be:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    60c2:	89 c7                	mov    %eax,%edi
+    60c4:	44 89 e0             	mov    %r12d,%eax
+    60c7:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    60cc:	99                   	cltd   
+    60cd:	41 f7 fd             	idiv   %r13d
+    60d0:	39 d7                	cmp    %edx,%edi
+    60d2:	0f 8c 98 05 00 00    	jl     6670 <csr_matrix_int32_spmv+0x1630>
+    60d8:	0f af f8             	imul   %eax,%edi
+    60db:	01 d7                	add    %edx,%edi
+    60dd:	01 f8                	add    %edi,%eax
+    60df:	39 c7                	cmp    %eax,%edi
+    60e1:	0f 8d 59 f4 ff ff    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1134
+    60e7:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1135
+    60eb:	4c 8b 53 18          	mov    0x18(%rbx),%r10
+    60ef:	48 63 ff             	movslq %edi,%rdi
+    60f2:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1136
+    60f6:	4c 8b 4b 28          	mov    0x28(%rbx),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1137
+    60fa:	4c 8b 46 08          	mov    0x8(%rsi),%r8
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1138
+    60fe:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1142
+    6102:	49 8b 14 fc          	mov    (%r12,%rdi,8),%rdx
+    6106:	49 8b 74 fc 08       	mov    0x8(%r12,%rdi,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1141
+    610b:	c5 f8 28 d5          	vmovaps %xmm5,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1142
+    610f:	48 39 d6             	cmp    %rdx,%rsi
+    6112:	7e 28                	jle    613c <csr_matrix_int32_spmv+0x10fc>
+    6114:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    611b:	00 00 00 00 
+    611f:	90                   	nop
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1143
+    6120:	49 63 0c 92          	movslq (%r10,%rdx,4),%rcx
+    6124:	c4 c1 fa 2a 0c d1    	vcvtsi2ssq (%r9,%rdx,8),%xmm0,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1142
+    612a:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1143
+    612d:	c4 c1 72 59 0c 88    	vmulss (%r8,%rcx,4),%xmm1,%xmm1
+    6133:	c5 ea 58 d1          	vaddss %xmm1,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1142
+    6137:	48 39 d6             	cmp    %rdx,%rsi
+    613a:	75 e4                	jne    6120 <csr_matrix_int32_spmv+0x10e0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1144
+    613c:	c5 ea 58 54 bd 00    	vaddss 0x0(%rbp,%rdi,4),%xmm2,%xmm2
+    6142:	c5 fa 11 54 bd 00    	vmovss %xmm2,0x0(%rbp,%rdi,4)
+    6148:	48 ff c7             	inc    %rdi
+    614b:	39 f8                	cmp    %edi,%eax
+    614d:	7f b3                	jg     6102 <csr_matrix_int32_spmv+0x10c2>
+    614f:	e9 ec f3 ff ff       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+csr_matrix_int32_spmv_binary_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:698
+    6154:	c5 e3 10 d3          	vmovsd %xmm3,%xmm3,%xmm2
+    6158:	e9 c9 f5 ff ff       	jmp    5726 <csr_matrix_int32_spmv+0x6e6>
+    615d:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_int64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1261
+    615f:	31 d2                	xor    %edx,%edx
+    6161:	e9 67 f1 ff ff       	jmp    52cd <csr_matrix_int32_spmv+0x28d>
+    6166:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_binary_f32_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:725
+    616b:	e8 c0 c2 ff ff       	call   2430 <omp_get_num_threads@plt>
+    6170:	41 89 c5             	mov    %eax,%r13d
+    6173:	e8 08 c2 ff ff       	call   2380 <omp_get_thread_num@plt>
+    6178:	89 c7                	mov    %eax,%edi
+    617a:	44 89 e0             	mov    %r12d,%eax
+    617d:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    6182:	99                   	cltd   
+    6183:	41 f7 fd             	idiv   %r13d
+    6186:	39 d7                	cmp    %edx,%edi
+    6188:	0f 8c f4 04 00 00    	jl     6682 <csr_matrix_int32_spmv+0x1642>
+    618e:	0f af f8             	imul   %eax,%edi
+    6191:	01 d7                	add    %edx,%edi
+    6193:	01 f8                	add    %edi,%eax
+    6195:	39 c7                	cmp    %eax,%edi
+    6197:	0f 8d d3 ef ff ff    	jge    5170 <csr_matrix_int32_spmv+0x130>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:720
+    619d:	4c 8b 5b 08          	mov    0x8(%rbx),%r11
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:721
+    61a1:	4c 8b 63 18          	mov    0x18(%rbx),%r12
+    61a5:	48 63 ff             	movslq %edi,%rdi
+    61a8:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:722
+    61ac:	4c 8b 4e 08          	mov    0x8(%rsi),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:723
+    61b0:	4c 8b 55 08          	mov    0x8(%rbp),%r10
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:727
+    61b4:	49 8b 14 fb          	mov    (%r11,%rdi,8),%rdx
+    61b8:	49 8b 4c fb 08       	mov    0x8(%r11,%rdi,8),%rcx
+    61bd:	48 39 ca             	cmp    %rcx,%rdx
+    61c0:	0f 8d 22 04 00 00    	jge    65e8 <csr_matrix_int32_spmv+0x15a8>
+    61c6:	49 8d 14 94          	lea    (%r12,%rdx,4),%rdx
+    61ca:	49 8d 34 8c          	lea    (%r12,%rcx,4),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:726
+    61ce:	c5 f8 28 c5          	vmovaps %xmm5,%xmm0
+    61d2:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    61d9:	00 00 00 00 
+    61dd:	0f 1f 00             	nopl   (%rax)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:728
+    61e0:	48 63 0a             	movslq (%rdx),%rcx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:727
+    61e3:	48 83 c2 04          	add    $0x4,%rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:728
+    61e7:	c4 c1 7a 58 04 89    	vaddss (%r9,%rcx,4),%xmm0,%xmm0
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:727
+    61ed:	48 39 d6             	cmp    %rdx,%rsi
+    61f0:	75 ee                	jne    61e0 <csr_matrix_int32_spmv+0x11a0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:729
+    61f2:	c4 c1 7a 58 04 ba    	vaddss (%r10,%rdi,4),%xmm0,%xmm0
+    61f8:	c4 c1 7a 11 04 ba    	vmovss %xmm0,(%r10,%rdi,4)
+    61fe:	48 ff c7             	inc    %rdi
+    6201:	39 f8                	cmp    %edi,%eax
+    6203:	7f af                	jg     61b4 <csr_matrix_int32_spmv+0x1174>
+    6205:	e9 66 ef ff ff       	jmp    5170 <csr_matrix_int32_spmv+0x130>
+csr_matrix_int32_spmv_f32_f64_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1351
+    620a:	e8 21 c2 ff ff       	call   2430 <omp_get_num_threads@plt>
+    620f:	41 89 c5             	mov    %eax,%r13d
+    6212:	e8 69 c1 ff ff       	call   2380 <omp_get_thread_num@plt>
+    6217:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    621c:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    6220:	89 c7                	mov    %eax,%edi
+    6222:	44 89 e0             	mov    %r12d,%eax
+    6225:	99                   	cltd   
+    6226:	41 f7 fd             	idiv   %r13d
+    6229:	39 d7                	cmp    %edx,%edi
+    622b:	0f 8c 63 04 00 00    	jl     6694 <csr_matrix_int32_spmv+0x1654>
+    6231:	0f af f8             	imul   %eax,%edi
+    6234:	01 d7                	add    %edx,%edi
+    6236:	01 f8                	add    %edi,%eax
+    6238:	39 c7                	cmp    %eax,%edi
+    623a:	0f 8d 00 f3 ff ff    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1345
+    6240:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1346
+    6244:	4c 8b 53 18          	mov    0x18(%rbx),%r10
+    6248:	48 63 ff             	movslq %edi,%rdi
+    624b:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1347
+    624f:	4c 8b 4b 28          	mov    0x28(%rbx),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1348
+    6253:	4c 8b 46 08          	mov    0x8(%rsi),%r8
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1349
+    6257:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1353
+    625b:	49 8b 14 fc          	mov    (%r12,%rdi,8),%rdx
+    625f:	49 8b 74 fc 08       	mov    0x8(%r12,%rdi,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1352
+    6264:	c5 f8 28 d5          	vmovaps %xmm5,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1353
+    6268:	48 39 d6             	cmp    %rdx,%rsi
+    626b:	7e 23                	jle    6290 <csr_matrix_int32_spmv+0x1250>
+    626d:	0f 1f 00             	nopl   (%rax)
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1354
+    6270:	49 63 0c 92          	movslq (%r10,%rdx,4),%rcx
+    6274:	c4 c1 7a 5a 0c 91    	vcvtss2sd (%r9,%rdx,4),%xmm0,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1353
+    627a:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1354
+    627d:	c5 ea 5a d2          	vcvtss2sd %xmm2,%xmm2,%xmm2
+    6281:	c4 c2 f1 b9 14 c8    	vfmadd231sd (%r8,%rcx,8),%xmm1,%xmm2
+    6287:	c5 eb 5a d2          	vcvtsd2ss %xmm2,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1353
+    628b:	48 39 d6             	cmp    %rdx,%rsi
+    628e:	75 e0                	jne    6270 <csr_matrix_int32_spmv+0x1230>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1355
+    6290:	c5 ea 58 54 bd 00    	vaddss 0x0(%rbp,%rdi,4),%xmm2,%xmm2
+    6296:	c5 fa 11 54 bd 00    	vmovss %xmm2,0x0(%rbp,%rdi,4)
+    629c:	48 ff c7             	inc    %rdi
+    629f:	39 f8                	cmp    %edi,%eax
+    62a1:	7f b8                	jg     625b <csr_matrix_int32_spmv+0x121b>
+    62a3:	e9 98 f2 ff ff       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+    62a8:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_int32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1084
+    62aa:	31 d2                	xor    %edx,%edx
+    62ac:	e9 c9 f4 ff ff       	jmp    577a <csr_matrix_int32_spmv+0x73a>
+csr_matrix_int32_spmv_int64_f64_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1198
+    62b1:	e8 7a c1 ff ff       	call   2430 <omp_get_num_threads@plt>
+    62b6:	41 89 c5             	mov    %eax,%r13d
+    62b9:	e8 c2 c0 ff ff       	call   2380 <omp_get_thread_num@plt>
+    62be:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    62c3:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    62c7:	89 c7                	mov    %eax,%edi
+    62c9:	44 89 e0             	mov    %r12d,%eax
+    62cc:	99                   	cltd   
+    62cd:	41 f7 fd             	idiv   %r13d
+    62d0:	39 d7                	cmp    %edx,%edi
+    62d2:	0f 8c 6b 03 00 00    	jl     6643 <csr_matrix_int32_spmv+0x1603>
+    62d8:	0f af f8             	imul   %eax,%edi
+    62db:	01 d7                	add    %edx,%edi
+    62dd:	01 f8                	add    %edi,%eax
+    62df:	39 c7                	cmp    %eax,%edi
+    62e1:	0f 8d 59 f2 ff ff    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1192
+    62e7:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1193
+    62eb:	4c 8b 53 18          	mov    0x18(%rbx),%r10
+    62ef:	48 63 ff             	movslq %edi,%rdi
+    62f2:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1194
+    62f6:	4c 8b 4b 28          	mov    0x28(%rbx),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1195
+    62fa:	4c 8b 46 08          	mov    0x8(%rsi),%r8
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1196
+    62fe:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1200
+    6302:	49 8b 14 fc          	mov    (%r12,%rdi,8),%rdx
+    6306:	49 8b 74 fc 08       	mov    0x8(%r12,%rdi,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1199
+    630b:	c5 f8 28 d5          	vmovaps %xmm5,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1200
+    630f:	48 39 d6             	cmp    %rdx,%rsi
+    6312:	7e 2c                	jle    6340 <csr_matrix_int32_spmv+0x1300>
+    6314:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    631b:	00 00 00 00 
+    631f:	90                   	nop
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1201
+    6320:	49 63 0c 92          	movslq (%r10,%rdx,4),%rcx
+    6324:	c4 c1 fb 2a 0c d1    	vcvtsi2sdq (%r9,%rdx,8),%xmm0,%xmm1
+    632a:	c5 ea 5a d2          	vcvtss2sd %xmm2,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1200
+    632e:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1201
+    6331:	c4 c2 f1 b9 14 c8    	vfmadd231sd (%r8,%rcx,8),%xmm1,%xmm2
+    6337:	c5 eb 5a d2          	vcvtsd2ss %xmm2,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1200
+    633b:	48 39 d6             	cmp    %rdx,%rsi
+    633e:	75 e0                	jne    6320 <csr_matrix_int32_spmv+0x12e0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1202
+    6340:	c5 ea 58 54 bd 00    	vaddss 0x0(%rbp,%rdi,4),%xmm2,%xmm2
+    6346:	c5 fa 11 54 bd 00    	vmovss %xmm2,0x0(%rbp,%rdi,4)
+    634c:	48 ff c7             	inc    %rdi
+    634f:	39 f8                	cmp    %edi,%eax
+    6351:	7f af                	jg     6302 <csr_matrix_int32_spmv+0x12c2>
+    6353:	e9 e8 f1 ff ff       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+csr_matrix_int32_spmv_f64_f64_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1504
+    6358:	e8 d3 c0 ff ff       	call   2430 <omp_get_num_threads@plt>
+    635d:	41 89 c5             	mov    %eax,%r13d
+    6360:	e8 1b c0 ff ff       	call   2380 <omp_get_thread_num@plt>
+    6365:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    636a:	89 c7                	mov    %eax,%edi
+    636c:	44 89 e0             	mov    %r12d,%eax
+    636f:	99                   	cltd   
+    6370:	41 f7 fd             	idiv   %r13d
+    6373:	39 d7                	cmp    %edx,%edi
+    6375:	0f 8c e3 02 00 00    	jl     665e <csr_matrix_int32_spmv+0x161e>
+    637b:	0f af f8             	imul   %eax,%edi
+    637e:	01 d7                	add    %edx,%edi
+    6380:	01 f8                	add    %edi,%eax
+    6382:	39 c7                	cmp    %eax,%edi
+    6384:	0f 8d b6 f1 ff ff    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1498
+    638a:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1499
+    638e:	4c 8b 53 18          	mov    0x18(%rbx),%r10
+    6392:	48 63 ff             	movslq %edi,%rdi
+    6395:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1500
+    6399:	4c 8b 4b 28          	mov    0x28(%rbx),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1501
+    639d:	4c 8b 46 08          	mov    0x8(%rsi),%r8
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1502
+    63a1:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1506
+    63a5:	49 8b 14 fc          	mov    (%r12,%rdi,8),%rdx
+    63a9:	49 8b 74 fc 08       	mov    0x8(%r12,%rdi,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1505
+    63ae:	c5 f8 28 c5          	vmovaps %xmm5,%xmm0
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1506
+    63b2:	48 39 d6             	cmp    %rdx,%rsi
+    63b5:	7e 29                	jle    63e0 <csr_matrix_int32_spmv+0x13a0>
+    63b7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    63be:	00 00 
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1507
+    63c0:	49 63 0c 92          	movslq (%r10,%rdx,4),%rcx
+    63c4:	c4 c1 7b 10 34 d1    	vmovsd (%r9,%rdx,8),%xmm6
+    63ca:	c5 fa 5a c0          	vcvtss2sd %xmm0,%xmm0,%xmm0
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1506
+    63ce:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1507
+    63d1:	c4 c2 c9 b9 04 c8    	vfmadd231sd (%r8,%rcx,8),%xmm6,%xmm0
+    63d7:	c5 fb 5a c0          	vcvtsd2ss %xmm0,%xmm0,%xmm0
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1506
+    63db:	48 39 d6             	cmp    %rdx,%rsi
+    63de:	75 e0                	jne    63c0 <csr_matrix_int32_spmv+0x1380>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1508
+    63e0:	c5 fa 58 44 bd 00    	vaddss 0x0(%rbp,%rdi,4),%xmm0,%xmm0
+    63e6:	c5 fa 11 44 bd 00    	vmovss %xmm0,0x0(%rbp,%rdi,4)
+    63ec:	48 ff c7             	inc    %rdi
+    63ef:	39 f8                	cmp    %edi,%eax
+    63f1:	7f b2                	jg     63a5 <csr_matrix_int32_spmv+0x1365>
+    63f3:	e9 48 f1 ff ff       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+csr_matrix_int32_spmv_binary_f64_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:781
+    63f8:	e8 33 c0 ff ff       	call   2430 <omp_get_num_threads@plt>
+    63fd:	41 89 c5             	mov    %eax,%r13d
+    6400:	e8 7b bf ff ff       	call   2380 <omp_get_thread_num@plt>
+    6405:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    640a:	89 c7                	mov    %eax,%edi
+    640c:	44 89 e0             	mov    %r12d,%eax
+    640f:	99                   	cltd   
+    6410:	41 f7 fd             	idiv   %r13d
+    6413:	39 d7                	cmp    %edx,%edi
+    6415:	0f 8c 3a 02 00 00    	jl     6655 <csr_matrix_int32_spmv+0x1615>
+    641b:	0f af f8             	imul   %eax,%edi
+    641e:	01 d7                	add    %edx,%edi
+    6420:	01 f8                	add    %edi,%eax
+    6422:	39 c7                	cmp    %eax,%edi
+    6424:	0f 8d 46 ed ff ff    	jge    5170 <csr_matrix_int32_spmv+0x130>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:776
+    642a:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:777
+    642e:	4c 8b 5b 18          	mov    0x18(%rbx),%r11
+    6432:	48 63 ff             	movslq %edi,%rdi
+    6435:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:778
+    6439:	4c 8b 4e 08          	mov    0x8(%rsi),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:779
+    643d:	4c 8b 55 08          	mov    0x8(%rbp),%r10
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:783
+    6441:	49 8b 14 fc          	mov    (%r12,%rdi,8),%rdx
+    6445:	49 8b 4c fc 08       	mov    0x8(%r12,%rdi,8),%rcx
+    644a:	48 39 ca             	cmp    %rcx,%rdx
+    644d:	0f 8d cc 01 00 00    	jge    661f <csr_matrix_int32_spmv+0x15df>
+    6453:	49 8d 14 93          	lea    (%r11,%rdx,4),%rdx
+    6457:	49 8d 34 8b          	lea    (%r11,%rcx,4),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:782
+    645b:	c5 f8 28 c5          	vmovaps %xmm5,%xmm0
+    645f:	90                   	nop
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:784
+    6460:	48 63 0a             	movslq (%rdx),%rcx
+    6463:	c5 fa 5a c0          	vcvtss2sd %xmm0,%xmm0,%xmm0
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:783
+    6467:	48 83 c2 04          	add    $0x4,%rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:784
+    646b:	c4 c1 7b 58 04 c9    	vaddsd (%r9,%rcx,8),%xmm0,%xmm0
+    6471:	c5 fb 5a c0          	vcvtsd2ss %xmm0,%xmm0,%xmm0
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:783
+    6475:	48 39 d6             	cmp    %rdx,%rsi
+    6478:	75 e6                	jne    6460 <csr_matrix_int32_spmv+0x1420>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:785
+    647a:	c4 c1 7a 58 04 ba    	vaddss (%r10,%rdi,4),%xmm0,%xmm0
+    6480:	c4 c1 7a 11 04 ba    	vmovss %xmm0,(%r10,%rdi,4)
+    6486:	48 ff c7             	inc    %rdi
+    6489:	39 f8                	cmp    %edi,%eax
+    648b:	7f b4                	jg     6441 <csr_matrix_int32_spmv+0x1401>
+    648d:	e9 de ec ff ff       	jmp    5170 <csr_matrix_int32_spmv+0x130>
+    6492:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_int32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1108
+    6494:	31 d2                	xor    %edx,%edx
+    6496:	e9 f1 f6 ff ff       	jmp    5b8c <csr_matrix_int32_spmv+0xb4c>
+    649b:	48 89 74 24 08       	mov    %rsi,0x8(%rsp)
+csr_matrix_int32_spmv_int32_f32_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:974
+    64a0:	e8 8b bf ff ff       	call   2430 <omp_get_num_threads@plt>
+    64a5:	41 89 c5             	mov    %eax,%r13d
+    64a8:	e8 d3 be ff ff       	call   2380 <omp_get_thread_num@plt>
+    64ad:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    64b1:	89 c7                	mov    %eax,%edi
+    64b3:	44 89 e0             	mov    %r12d,%eax
+    64b6:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    64bb:	99                   	cltd   
+    64bc:	41 f7 fd             	idiv   %r13d
+    64bf:	39 d7                	cmp    %edx,%edi
+    64c1:	0f 8c df 01 00 00    	jl     66a6 <csr_matrix_int32_spmv+0x1666>
+    64c7:	0f af f8             	imul   %eax,%edi
+    64ca:	01 d7                	add    %edx,%edi
+    64cc:	01 f8                	add    %edi,%eax
+    64ce:	39 c7                	cmp    %eax,%edi
+    64d0:	0f 8d 6a f0 ff ff    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:968
+    64d6:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:969
+    64da:	4c 8b 53 18          	mov    0x18(%rbx),%r10
+    64de:	48 63 ff             	movslq %edi,%rdi
+    64e1:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:970
+    64e5:	4c 8b 4b 28          	mov    0x28(%rbx),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:971
+    64e9:	4c 8b 46 08          	mov    0x8(%rsi),%r8
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:972
+    64ed:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:976
+    64f1:	49 8b 14 fc          	mov    (%r12,%rdi,8),%rdx
+    64f5:	49 8b 74 fc 08       	mov    0x8(%r12,%rdi,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:975
+    64fa:	c5 f8 28 d5          	vmovaps %xmm5,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:976
+    64fe:	48 39 d6             	cmp    %rdx,%rsi
+    6501:	7e 29                	jle    652c <csr_matrix_int32_spmv+0x14ec>
+    6503:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    650a:	00 00 00 00 
+    650e:	66 90                	xchg   %ax,%ax
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:977
+    6510:	49 63 0c 92          	movslq (%r10,%rdx,4),%rcx
+    6514:	c4 c1 7a 2a 0c 91    	vcvtsi2ssl (%r9,%rdx,4),%xmm0,%xmm1
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:976
+    651a:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:977
+    651d:	c4 c1 72 59 0c 88    	vmulss (%r8,%rcx,4),%xmm1,%xmm1
+    6523:	c5 ea 58 d1          	vaddss %xmm1,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:976
+    6527:	48 39 d6             	cmp    %rdx,%rsi
+    652a:	75 e4                	jne    6510 <csr_matrix_int32_spmv+0x14d0>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:978
+    652c:	c5 ea 58 54 bd 00    	vaddss 0x0(%rbp,%rdi,4),%xmm2,%xmm2
+    6532:	c5 fa 11 54 bd 00    	vmovss %xmm2,0x0(%rbp,%rdi,4)
+    6538:	48 ff c7             	inc    %rdi
+    653b:	39 f8                	cmp    %edi,%eax
+    653d:	7f b2                	jg     64f1 <csr_matrix_int32_spmv+0x14b1>
+    653f:	e9 fc ef ff ff       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+csr_matrix_int32_spmv_int32_f64_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1032
+    6544:	e8 e7 be ff ff       	call   2430 <omp_get_num_threads@plt>
+    6549:	41 89 c5             	mov    %eax,%r13d
+    654c:	e8 2f be ff ff       	call   2380 <omp_get_thread_num@plt>
+    6551:	48 8b 74 24 08       	mov    0x8(%rsp),%rsi
+    6556:	c5 f8 57 c0          	vxorps %xmm0,%xmm0,%xmm0
+    655a:	89 c7                	mov    %eax,%edi
+    655c:	44 89 e0             	mov    %r12d,%eax
+    655f:	99                   	cltd   
+    6560:	41 f7 fd             	idiv   %r13d
+    6563:	39 d7                	cmp    %edx,%edi
+    6565:	0f 8c 32 01 00 00    	jl     669d <csr_matrix_int32_spmv+0x165d>
+    656b:	0f af f8             	imul   %eax,%edi
+    656e:	01 d7                	add    %edx,%edi
+    6570:	01 f8                	add    %edi,%eax
+    6572:	39 c7                	cmp    %eax,%edi
+    6574:	0f 8d c6 ef ff ff    	jge    5540 <csr_matrix_int32_spmv+0x500>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1026
+    657a:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1027
+    657e:	4c 8b 53 18          	mov    0x18(%rbx),%r10
+    6582:	48 63 ff             	movslq %edi,%rdi
+    6585:	c5 d0 57 ed          	vxorps %xmm5,%xmm5,%xmm5
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1028
+    6589:	4c 8b 4b 28          	mov    0x28(%rbx),%r9
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1029
+    658d:	4c 8b 46 08          	mov    0x8(%rsi),%r8
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1030
+    6591:	48 8b 6d 08          	mov    0x8(%rbp),%rbp
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1034
+    6595:	49 8b 14 fc          	mov    (%r12,%rdi,8),%rdx
+    6599:	49 8b 74 fc 08       	mov    0x8(%r12,%rdi,8),%rsi
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1033
+    659e:	c5 f8 28 d5          	vmovaps %xmm5,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1034
+    65a2:	48 39 d6             	cmp    %rdx,%rsi
+    65a5:	7e 29                	jle    65d0 <csr_matrix_int32_spmv+0x1590>
+    65a7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    65ae:	00 00 
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1035
+    65b0:	49 63 0c 92          	movslq (%r10,%rdx,4),%rcx
+    65b4:	c4 c1 7b 2a 0c 91    	vcvtsi2sdl (%r9,%rdx,4),%xmm0,%xmm1
+    65ba:	c5 ea 5a d2          	vcvtss2sd %xmm2,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1034
+    65be:	48 ff c2             	inc    %rdx
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1035
+    65c1:	c4 c2 f1 b9 14 c8    	vfmadd231sd (%r8,%rcx,8),%xmm1,%xmm2
+    65c7:	c5 eb 5a d2          	vcvtsd2ss %xmm2,%xmm2,%xmm2
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1034
+    65cb:	48 39 d6             	cmp    %rdx,%rsi
+    65ce:	75 e0                	jne    65b0 <csr_matrix_int32_spmv+0x1570>
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1036
+    65d0:	c5 ea 58 54 bd 00    	vaddss 0x0(%rbp,%rdi,4),%xmm2,%xmm2
+    65d6:	c5 fa 11 54 bd 00    	vmovss %xmm2,0x0(%rbp,%rdi,4)
+    65dc:	48 ff c7             	inc    %rdi
+    65df:	39 f8                	cmp    %edi,%eax
+    65e1:	7f b2                	jg     6595 <csr_matrix_int32_spmv+0x1555>
+    65e3:	e9 58 ef ff ff       	jmp    5540 <csr_matrix_int32_spmv+0x500>
+csr_matrix_int32_spmv_binary_f32_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:726
+    65e8:	c5 f8 28 c5          	vmovaps %xmm5,%xmm0
+    65ec:	e9 01 fc ff ff       	jmp    61f2 <csr_matrix_int32_spmv+0x11b2>
+    65f1:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_binary():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:835
+    65f3:	31 d2                	xor    %edx,%edx
+    65f5:	e9 c1 f8 ff ff       	jmp    5ebb <csr_matrix_int32_spmv+0xe7b>
+    65fa:	41 ff c4             	inc    %r12d
+csr_matrix_int32_spmv_complex32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1697
+    65fd:	31 d2                	xor    %edx,%edx
+    65ff:	e9 e2 f6 ff ff       	jmp    5ce6 <csr_matrix_int32_spmv+0xca6>
+    6604:	ff c0                	inc    %eax
+    6606:	31 d2                	xor    %edx,%edx
+    6608:	e9 aa ef ff ff       	jmp    55b7 <csr_matrix_int32_spmv+0x577>
+    660d:	ff c0                	inc    %eax
+    660f:	31 d2                	xor    %edx,%edx
+    6611:	e9 d0 f7 ff ff       	jmp    5de6 <csr_matrix_int32_spmv+0xda6>
+    6616:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_binary():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:839
+    6618:	31 d2                	xor    %edx,%edx
+    661a:	e9 a1 f0 ff ff       	jmp    56c0 <csr_matrix_int32_spmv+0x680>
+csr_matrix_int32_spmv_binary_f64_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:782
+    661f:	c5 f8 28 c5          	vmovaps %xmm5,%xmm0
+    6623:	e9 52 fe ff ff       	jmp    647a <csr_matrix_int32_spmv+0x143a>
+csr_matrix_int32_spmv_binary_f32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:754
+    6628:	c5 e3 10 d3          	vmovsd %xmm3,%xmm3,%xmm2
+    662c:	e9 25 eb ff ff       	jmp    5156 <csr_matrix_int32_spmv+0x116>
+    6631:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1559
+    6633:	31 d2                	xor    %edx,%edx
+    6635:	e9 ac f3 ff ff       	jmp    59e6 <csr_matrix_int32_spmv+0x9a6>
+    663a:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1402
+    663c:	31 d2                	xor    %edx,%edx
+    663e:	e9 2c f9 ff ff       	jmp    5f6f <csr_matrix_int32_spmv+0xf2f>
+    6643:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_int64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1257
+    6645:	31 d2                	xor    %edx,%edx
+    6647:	e9 8c fc ff ff       	jmp    62d8 <csr_matrix_int32_spmv+0x1298>
+    664c:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1406
+    664e:	31 d2                	xor    %edx,%edx
+    6650:	e9 ef f1 ff ff       	jmp    5844 <csr_matrix_int32_spmv+0x804>
+    6655:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_binary():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:851
+    6657:	31 d2                	xor    %edx,%edx
+    6659:	e9 bd fd ff ff       	jmp    641b <csr_matrix_int32_spmv+0x13db>
+    665e:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1563
+    6660:	31 d2                	xor    %edx,%edx
+    6662:	e9 14 fd ff ff       	jmp    637b <csr_matrix_int32_spmv+0x133b>
+    6667:	ff c0                	inc    %eax
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1555
+    6669:	31 d2                	xor    %edx,%edx
+    666b:	e9 ab f9 ff ff       	jmp    601b <csr_matrix_int32_spmv+0xfdb>
+    6670:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_int64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1249
+    6672:	31 d2                	xor    %edx,%edx
+    6674:	e9 5f fa ff ff       	jmp    60d8 <csr_matrix_int32_spmv+0x1098>
+    6679:	ff c0                	inc    %eax
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1253
+    667b:	31 d2                	xor    %edx,%edx
+    667d:	e9 96 f2 ff ff       	jmp    5918 <csr_matrix_int32_spmv+0x8d8>
+    6682:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_binary():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:843
+    6684:	31 d2                	xor    %edx,%edx
+    6686:	e9 03 fb ff ff       	jmp    618e <csr_matrix_int32_spmv+0x114e>
+    668b:	ff c0                	inc    %eax
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:847
+    668d:	31 d2                	xor    %edx,%edx
+    668f:	e9 66 ea ff ff       	jmp    50fa <csr_matrix_int32_spmv+0xba>
+    6694:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_f32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1410
+    6696:	31 d2                	xor    %edx,%edx
+    6698:	e9 94 fb ff ff       	jmp    6231 <csr_matrix_int32_spmv+0x11f1>
+    669d:	ff c0                	inc    %eax
+csr_matrix_int32_spmv_int32():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1104
+    669f:	31 d2                	xor    %edx,%edx
+    66a1:	e9 c5 fe ff ff       	jmp    656b <csr_matrix_int32_spmv+0x152b>
+    66a6:	ff c0                	inc    %eax
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1096
+    66a8:	31 d2                	xor    %edx,%edx
+    66aa:	e9 18 fe ff ff       	jmp    64c7 <csr_matrix_int32_spmv+0x1487>
+    66af:	ff c0                	inc    %eax
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:1100
+    66b1:	31 d2                	xor    %edx,%edx
+    66b3:	e9 2e eb ff ff       	jmp    51e6 <csr_matrix_int32_spmv+0x1a6>
+csr_matrix_int32_spmv_int32_int32_f64():
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec/src/csr.c:938
+    66b8:	b8 16 00 00 00       	mov    $0x16,%eax
+    66bd:	e9 c1 ea ff ff       	jmp    5183 <csr_matrix_int32_spmv+0x143>
+
+Disassembly of section .fini:

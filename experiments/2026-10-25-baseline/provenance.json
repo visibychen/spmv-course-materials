@@ -1,0 +1,110 @@
+{
+  "recorded_at": "2026-10-25T14:44:42.389591+08:00",
+  "source_commit": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "source_status_before": "",
+  "remote_urls": "origin\thttps://github.com/visibychen/csrspmv.git (fetch)\norigin\thttps://github.com/visibychen/csrspmv.git (push)\nupstream\thttps://github.com/jamtrott/csrspmv.git (fetch)\nupstream\thttps://github.com/jamtrott/csrspmv.git (push)\n",
+  "builds": {
+    "strict": {
+      "command": [
+        "make",
+        "-B",
+        "CC=gcc",
+        "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/vectorization-strict.txt"
+      ],
+      "cwd": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/strict",
+      "flags": [
+        "-O3",
+        "-march=native",
+        "-g",
+        "-Wall",
+        "-iquote",
+        "src",
+        "-fopenmp",
+        "-fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/vectorization-strict.txt"
+      ],
+      "binary_sha256": "1744ad2344c4c40147c0ebe82057e08127fec07a7e3768a97ec951f05a364acd",
+      "source_sha256": {
+        "src/csr.c": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+        "src/csr.h": "cf5234aaf6820d7158aaab96c2ffa0016497bf0c205983d7da09403987197c22",
+        "src/main.c": "081e4cb7d44ca0e7d22c6f2eacadd04176db2b8c7d13d8fe1276bfda3b8cfada",
+        "src/matrix_market.c": "b492e4583a9f168dd8665acfbe3b3078e22c755f7d49e58b54e37ddb6cd45cc3",
+        "src/matrix_market.h": "532853be15bfd294d847f6599bd1281900acf10dd8325e34f275a3c5dab67b29",
+        "src/parse.c": "8549704ed14cc23ab1f417bae1931ec02b4d29089c1ff6ee4d7e9b7553f682d6",
+        "src/parse.h": "4437a7a6a7f9ae07adc11a761f15784e0f76c8a9426a6681522dd57976568341",
+        "src/program_options.c": "187f2abbc3d7723cfc4b10c6ae6e37fdcc40ef4c9d5a6e31b3fb14a243883eed",
+        "src/program_options.h": "c19aa669cbed5f73aa066999b378e24fcff386632e69cbf9725721c2f5141d25",
+        "src/vector.c": "22f71d918b0086adcce263d81729ce3e45bb778a32bcc79e5a767516eaba3ada",
+        "src/vector.h": "a3c0e032f7e7c08f2d77d43c4894fa37f036cea9e29a01eab0c9dbf4c891d45c"
+      }
+    },
+    "novec": {
+      "command": [
+        "make",
+        "-B",
+        "CC=gcc",
+        "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -fno-tree-loop-vectorize -fno-tree-slp-vectorize -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/vectorization-novec.txt"
+      ],
+      "cwd": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/novec",
+      "flags": [
+        "-O3",
+        "-march=native",
+        "-g",
+        "-Wall",
+        "-iquote",
+        "src",
+        "-fopenmp",
+        "-fno-tree-loop-vectorize",
+        "-fno-tree-slp-vectorize",
+        "-fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/vectorization-novec.txt"
+      ],
+      "binary_sha256": "d4c685e7728b1167b7c080d0d3bbe9afdc5622b1ce7695a09faa68f39fc86909",
+      "source_sha256": {
+        "src/csr.c": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+        "src/csr.h": "cf5234aaf6820d7158aaab96c2ffa0016497bf0c205983d7da09403987197c22",
+        "src/main.c": "081e4cb7d44ca0e7d22c6f2eacadd04176db2b8c7d13d8fe1276bfda3b8cfada",
+        "src/matrix_market.c": "b492e4583a9f168dd8665acfbe3b3078e22c755f7d49e58b54e37ddb6cd45cc3",
+        "src/matrix_market.h": "532853be15bfd294d847f6599bd1281900acf10dd8325e34f275a3c5dab67b29",
+        "src/parse.c": "8549704ed14cc23ab1f417bae1931ec02b4d29089c1ff6ee4d7e9b7553f682d6",
+        "src/parse.h": "4437a7a6a7f9ae07adc11a761f15784e0f76c8a9426a6681522dd57976568341",
+        "src/program_options.c": "187f2abbc3d7723cfc4b10c6ae6e37fdcc40ef4c9d5a6e31b3fb14a243883eed",
+        "src/program_options.h": "c19aa669cbed5f73aa066999b378e24fcff386632e69cbf9725721c2f5141d25",
+        "src/vector.c": "22f71d918b0086adcce263d81729ce3e45bb778a32bcc79e5a767516eaba3ada",
+        "src/vector.h": "a3c0e032f7e7c08f2d77d43c4894fa37f036cea9e29a01eab0c9dbf4c891d45c"
+      }
+    },
+    "fastmath_diagnostic": {
+      "command": [
+        "make",
+        "-B",
+        "CC=gcc",
+        "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -ffast-math -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/vectorization-fastmath_diagnostic.txt"
+      ],
+      "cwd": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/fastmath_diagnostic",
+      "flags": [
+        "-O3",
+        "-march=native",
+        "-g",
+        "-Wall",
+        "-iquote",
+        "src",
+        "-fopenmp",
+        "-ffast-math",
+        "-fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/vectorization-fastmath_diagnostic.txt"
+      ],
+      "binary_sha256": "0ce8de27574aa9832d7a6990fef93b7de973a59a4fda7568196704218b80d9da",
+      "source_sha256": {
+        "src/csr.c": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+        "src/csr.h": "cf5234aaf6820d7158aaab96c2ffa0016497bf0c205983d7da09403987197c22",
+        "src/main.c": "081e4cb7d44ca0e7d22c6f2eacadd04176db2b8c7d13d8fe1276bfda3b8cfada",
+        "src/matrix_market.c": "b492e4583a9f168dd8665acfbe3b3078e22c755f7d49e58b54e37ddb6cd45cc3",
+        "src/matrix_market.h": "532853be15bfd294d847f6599bd1281900acf10dd8325e34f275a3c5dab67b29",
+        "src/parse.c": "8549704ed14cc23ab1f417bae1931ec02b4d29089c1ff6ee4d7e9b7553f682d6",
+        "src/parse.h": "4437a7a6a7f9ae07adc11a761f15784e0f76c8a9426a6681522dd57976568341",
+        "src/program_options.c": "187f2abbc3d7723cfc4b10c6ae6e37fdcc40ef4c9d5a6e31b3fb14a243883eed",
+        "src/program_options.h": "c19aa669cbed5f73aa066999b378e24fcff386632e69cbf9725721c2f5141d25",
+        "src/vector.c": "22f71d918b0086adcce263d81729ce3e45bb778a32bcc79e5a767516eaba3ada",
+        "src/vector.h": "a3c0e032f7e7c08f2d77d43c4894fa37f036cea9e29a01eab0c9dbf4c891d45c"
+      }
+    }
+  }
+}

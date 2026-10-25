@@ -1,0 +1,16 @@
+[
+  {
+    "case": "check-large-t1-r1",
+    "elements": 12000000,
+    "max_absolute_error": 0,
+    "passed": true,
+    "output_sha256": "d8500a69e6638e71f63e7e425e7bcded2c273a3e67222aef53d55491c9dc9388"
+  },
+  {
+    "case": "check-large-t12-r3",
+    "elements": 12000000,
+    "max_absolute_error": 0,
+    "passed": true,
+    "output_sha256": "12f614fb8a795109e3dd3b73c0e6bd6c4c0d3598ccde083dc77c1cab8ccae5f0"
+  }
+]

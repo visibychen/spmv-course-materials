@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/strict/csrspmv",
+    "--matrix-format=f32",
+    "--count-nonzeros",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/data/large_random.mtx"
+  ],
+  "threads": 12
+}

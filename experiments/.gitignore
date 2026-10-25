@@ -1,0 +1,7 @@
+# Reproducible local artifacts: keep inputs, build products and perf binaries out of Git.
+*/build/
+*/data/
+*/raw/*.data
+*/raw/*.data.old
+__pycache__/
+*.pyc
