@@ -1,0 +1,24 @@
+{
+  "original_commit": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "branch": "optimization/v1",
+  "source_sha256": {
+    "src/csr.c": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+    "src/csr.h": "cf5234aaf6820d7158aaab96c2ffa0016497bf0c205983d7da09403987197c22",
+    "src/main.c": "d835c0987fb333c540456e20883ce84bb3e8897b65d4c61db6e0cb5c6610644e",
+    "src/matrix_market.c": "b492e4583a9f168dd8665acfbe3b3078e22c755f7d49e58b54e37ddb6cd45cc3",
+    "src/matrix_market.h": "532853be15bfd294d847f6599bd1281900acf10dd8325e34f275a3c5dab67b29",
+    "src/parse.c": "8549704ed14cc23ab1f417bae1931ec02b4d29089c1ff6ee4d7e9b7553f682d6",
+    "src/parse.h": "4437a7a6a7f9ae07adc11a761f15784e0f76c8a9426a6681522dd57976568341",
+    "src/program_options.c": "74dc67971de6f0c261f17b392f020bdec38b3989acc4e56180aae9ff31d32c3b",
+    "src/program_options.h": "15473f5fd57defbd168520ee3940cfa09f2ee32ac8c69caa02b7b848e596e6ea",
+    "src/spmv_csr_pack.c": "ab8ed0c01bb735f75b728e11f4d494bc7091f735ca7d472c97bbb00e822f7a71",
+    "src/spmv_csr_scalar.c": "e344f103d058f67f81104e2baec13a621255e3e8ee9f00b3218ea99e65dd436e",
+    "src/spmv_plan.c": "134b7d970b8c09b1a5be54fbfcc0e1ec9ad48912ba60a99a653dec4922c5ceec",
+    "src/spmv_plan.h": "6476d6ab14466e2140ab8db2f57b8a7996d3ec86e46da903db09859e1f883699",
+    "src/spmv_sell.c": "7543e1915b019254c2c5f549db1dd380c0c48605b76132f4b465b8298ea59cf6",
+    "src/vector.c": "22f71d918b0086adcce263d81729ce3e45bb778a32bcc79e5a767516eaba3ada",
+    "src/vector.h": "a3c0e032f7e7c08f2d77d43c4894fa37f036cea9e29a01eab0c9dbf4c891d45c",
+    "Makefile": "24c42ec4924be3a225c866aa722bd731c412e9d40706ad2bb4bc008cf3bed7e1"
+  },
+  "generator_sha256": "5f96d4cf7b50b95ed9804a935009e1087043a95e804d105ce677fcc9ed59beca"
+}

@@ -1,0 +1,128 @@
+
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/v1/csrspmv:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .plt.sec:
+
+Disassembly of section .text:
+
+0000000000011030 <spmv_sell16_f32>:
+   11030:	f3 0f 1e fa          	endbr64 
+   11034:	55                   	push   rbp
+   11035:	48 89 e5             	mov    rbp,rsp
+   11038:	41 56                	push   r14
+   1103a:	41 55                	push   r13
+   1103c:	41 54                	push   r12
+   1103e:	53                   	push   rbx
+   1103f:	49 89 fc             	mov    r12,rdi
+   11042:	49 89 d5             	mov    r13,rdx
+   11045:	48 89 f3             	mov    rbx,rsi
+   11048:	48 83 e4 c0          	and    rsp,0xffffffffffffffc0
+   1104c:	e8 0f 14 ff ff       	call   2460 <omp_get_num_threads@plt>
+   11051:	4c 63 f0             	movsxd r14,eax
+   11054:	e8 47 13 ff ff       	call   23a0 <omp_get_thread_num@plt>
+   11059:	48 63 c8             	movsxd rcx,eax
+   1105c:	49 8b 44 24 20       	mov    rax,QWORD PTR [r12+0x20]
+   11061:	48 99                	cqo    
+   11063:	49 f7 fe             	idiv   r14
+   11066:	48 39 d1             	cmp    rcx,rdx
+   11069:	0f 8c 8a 01 00 00    	jl     111f9 <spmv_sell16_f32+0x1c9>
+   1106f:	48 0f af c8          	imul   rcx,rax
+   11073:	48 01 ca             	add    rdx,rcx
+   11076:	48 01 d0             	add    rax,rdx
+   11079:	48 39 c2             	cmp    rdx,rax
+   1107c:	0f 8d e4 00 00 00    	jge    11166 <spmv_sell16_f32+0x136>
+   11082:	48 89 d1             	mov    rcx,rdx
+   11085:	4c 8d 1c d5 00 00 00 	lea    r11,[rdx*8+0x0]
+   1108c:	00 
+   1108d:	62 f3 65 48 25 db ff 	vpternlogd zmm3,zmm3,zmm3,0xff
+   11094:	c5 e8 57 d2          	vxorps xmm2,xmm2,xmm2
+   11098:	48 c1 e1 06          	shl    rcx,0x6
+   1109c:	c5 ec 46 d2          	kxnorw k2,k2,k2
+   110a0:	41 b9 01 00 00 00    	mov    r9d,0x1
+   110a6:	49 01 cd             	add    r13,rcx
+   110a9:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+   110b0:	49 8b 74 24 38       	mov    rsi,QWORD PTR [r12+0x38]
+   110b5:	4a 8b 0c 1e          	mov    rcx,QWORD PTR [rsi+r11*1]
+   110b9:	49 83 c3 08          	add    r11,0x8
+   110bd:	4a 8b 34 1e          	mov    rsi,QWORD PTR [rsi+r11*1]
+   110c1:	48 39 f1             	cmp    rcx,rsi
+   110c4:	0f 8d 26 01 00 00    	jge    111f0 <spmv_sell16_f32+0x1c0>
+   110ca:	45 8b 54 24 1c       	mov    r10d,DWORD PTR [r12+0x1c]
+   110cf:	49 8b 7c 24 40       	mov    rdi,QWORD PTR [r12+0x40]
+   110d4:	c5 f0 57 c9          	vxorps xmm1,xmm1,xmm1
+   110d8:	4d 8b 44 24 48       	mov    r8,QWORD PTR [r12+0x48]
+   110dd:	45 85 d2             	test   r10d,r10d
+   110e0:	0f 84 9a 00 00 00    	je     11180 <spmv_sell16_f32+0x150>
+   110e6:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+   110ed:	00 00 00 
+   110f0:	62 f1 7e 48 6f 24 8f 	vmovdqu32 zmm4,ZMMWORD PTR [rdi+rcx*4]
+   110f7:	c5 f8 90 da          	kmovw  k3,k2
+   110fb:	62 f2 7d 4b 92 04 a3 	vgatherdps zmm0{k3},DWORD PTR [rbx+zmm4*4]
+   11102:	62 d1 7c 48 59 04 88 	vmulps zmm0,zmm0,ZMMWORD PTR [r8+rcx*4]
+   11109:	48 83 c1 10          	add    rcx,0x10
+   1110d:	62 f1 74 48 58 c8    	vaddps zmm1,zmm1,zmm0
+   11113:	48 39 ce             	cmp    rsi,rcx
+   11116:	7f d8                	jg     110f0 <spmv_sell16_f32+0xc0>
+   11118:	49 8b 0c 24          	mov    rcx,QWORD PTR [r12]
+   1111c:	48 89 d6             	mov    rsi,rdx
+   1111f:	48 c1 e6 04          	shl    rsi,0x4
+   11123:	48 63 09             	movsxd rcx,DWORD PTR [rcx]
+   11126:	48 29 f1             	sub    rcx,rsi
+   11129:	48 83 f9 0f          	cmp    rcx,0xf
+   1112d:	0f 8f 8d 00 00 00    	jg     111c0 <spmv_sell16_f32+0x190>
+   11133:	c4 c2 71 f7 c9       	shlx   ecx,r9d,ecx
+   11138:	48 ff c2             	inc    rdx
+   1113b:	8d 79 ff             	lea    edi,[rcx-0x1]
+   1113e:	c5 f8 92 cf          	kmovw  k1,edi
+   11142:	62 d1 7c c9 10 45 00 	vmovups zmm0{k1}{z},ZMMWORD PTR [r13+0x0]
+   11149:	62 f1 74 48 58 c8    	vaddps zmm1,zmm1,zmm0
+   1114f:	62 d1 7c 49 11 4d 00 	vmovups ZMMWORD PTR [r13+0x0]{k1},zmm1
+   11156:	49 83 c5 40          	add    r13,0x40
+   1115a:	48 39 c2             	cmp    rdx,rax
+   1115d:	0f 85 4d ff ff ff    	jne    110b0 <spmv_sell16_f32+0x80>
+   11163:	c5 f8 77             	vzeroupper 
+   11166:	48 8d 65 e0          	lea    rsp,[rbp-0x20]
+   1116a:	5b                   	pop    rbx
+   1116b:	41 5c                	pop    r12
+   1116d:	41 5d                	pop    r13
+   1116f:	41 5e                	pop    r14
+   11171:	5d                   	pop    rbp
+   11172:	e9 09 12 ff ff       	jmp    2380 <GOMP_barrier@plt>
+   11177:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+   1117e:	00 00 
+   11180:	62 f1 7e 48 6f 2c 8f 	vmovdqu32 zmm5,ZMMWORD PTR [rdi+rcx*4]
+   11187:	62 f1 7c 48 28 c2    	vmovaps zmm0,zmm2
+   1118d:	62 f3 55 48 1f cb 06 	vpcmpnled k1,zmm5,zmm3
+   11194:	62 f2 7d 49 92 04 ab 	vgatherdps zmm0{k1},DWORD PTR [rbx+zmm5*4]
+   1119b:	62 d1 7c 48 59 04 88 	vmulps zmm0,zmm0,ZMMWORD PTR [r8+rcx*4]
+   111a2:	48 83 c1 10          	add    rcx,0x10
+   111a6:	62 f1 74 48 58 c8    	vaddps zmm1,zmm1,zmm0
+   111ac:	48 39 f1             	cmp    rcx,rsi
+   111af:	7c cf                	jl     11180 <spmv_sell16_f32+0x150>
+   111b1:	e9 62 ff ff ff       	jmp    11118 <spmv_sell16_f32+0xe8>
+   111b6:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+   111bd:	00 00 00 
+   111c0:	62 d1 74 48 58 45 00 	vaddps zmm0,zmm1,ZMMWORD PTR [r13+0x0]
+   111c7:	48 ff c2             	inc    rdx
+   111ca:	49 83 c5 40          	add    r13,0x40
+   111ce:	62 d1 7c 48 11 45 ff 	vmovups ZMMWORD PTR [r13-0x40],zmm0
+   111d5:	48 39 d0             	cmp    rax,rdx
+   111d8:	0f 85 d2 fe ff ff    	jne    110b0 <spmv_sell16_f32+0x80>
+   111de:	e9 80 ff ff ff       	jmp    11163 <spmv_sell16_f32+0x133>
+   111e3:	66 66 2e 0f 1f 84 00 	data16 cs nop WORD PTR [rax+rax*1+0x0]
+   111ea:	00 00 00 00 
+   111ee:	66 90                	xchg   ax,ax
+   111f0:	c5 f0 57 c9          	vxorps xmm1,xmm1,xmm1
+   111f4:	e9 1f ff ff ff       	jmp    11118 <spmv_sell16_f32+0xe8>
+   111f9:	48 ff c0             	inc    rax
+   111fc:	31 d2                	xor    edx,edx
+   111fe:	e9 6c fe ff ff       	jmp    1106f <spmv_sell16_f32+0x3f>
+
+Disassembly of section .fini:

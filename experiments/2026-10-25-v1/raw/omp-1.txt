@@ -1,0 +1,1 @@
+thread=0 team=1 cpu=1 place=0 places=12

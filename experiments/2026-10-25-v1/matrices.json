@@ -1,0 +1,465 @@
+[
+  {
+    "name": "random1",
+    "rows": 1000000,
+    "columns": 12000000,
+    "nonzeros": 1000000,
+    "length": 1,
+    "profile": "random",
+    "file_bytes": 19962719,
+    "sha256": "a01fe909d962b19182e95f7ac504e2a12ad85639767f73e4a09715d1c7a90ade",
+    "expected_sha256": "679599b943091c63c27ce08f526789956600fcbaf505105ea9846ad4714e0078",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/random1",
+      "1000000",
+      "12000000",
+      "1",
+      "random"
+    ]
+  },
+  {
+    "name": "random2",
+    "rows": 1000000,
+    "columns": 12000000,
+    "nonzeros": 2000000,
+    "length": 2,
+    "profile": "random",
+    "file_bytes": 39925575,
+    "sha256": "efa14df968a5d54f4e4d3f9ec988dcb2956482e0bee2699cdcd96f43cfb192d2",
+    "expected_sha256": "d7160505d44cb5d0b140ae1950031910340f02fb57d7494597c1259085c9e43f",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/random2",
+      "1000000",
+      "12000000",
+      "2",
+      "random"
+    ]
+  },
+  {
+    "name": "random4",
+    "rows": 500000,
+    "columns": 12000000,
+    "nonzeros": 2000000,
+    "length": 4,
+    "profile": "random",
+    "file_bytes": 39704586,
+    "sha256": "95e9a1f4110ca86214067a5a14d62646ba7ef13083e4e9fc0520d301aff6bf27",
+    "expected_sha256": "84878c8137c4a9058b273e4470a8f0f8389e2f56d217c3e3fae1e9732d3a5c05",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/random4",
+      "500000",
+      "12000000",
+      "4",
+      "random"
+    ]
+  },
+  {
+    "name": "random7",
+    "rows": 285714,
+    "columns": 12000000,
+    "nonzeros": 1999998,
+    "length": 7,
+    "profile": "random",
+    "file_bytes": 39370206,
+    "sha256": "3be136fa90284d7d26b9cd2f484acc56e9eb5447a0a76c5922d7697f4b24cf51",
+    "expected_sha256": "5232f502e2898c0f19e11c9188ff7c7d5f058efa6a3b37e8a36d039c6dfe96c1",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/random7",
+      "285714",
+      "12000000",
+      "7",
+      "random"
+    ]
+  },
+  {
+    "name": "random8",
+    "rows": 250000,
+    "columns": 12000000,
+    "nonzeros": 2000000,
+    "length": 8,
+    "profile": "random",
+    "file_bytes": 39260314,
+    "sha256": "9b84baddfc10cdcc5c587ec58724bcc2e95c18c260568ce707f96bed211145ce",
+    "expected_sha256": "534a370b0b42148714765815876cee41fd612e7812580f21a54d79c482ffbe55",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/random8",
+      "250000",
+      "12000000",
+      "8",
+      "random"
+    ]
+  },
+  {
+    "name": "random9",
+    "rows": 222222,
+    "columns": 12000000,
+    "nonzeros": 1999998,
+    "length": 9,
+    "profile": "random",
+    "file_bytes": 39147950,
+    "sha256": "9c9aa4ff698558a376f52d75fafe315694858604e36bcdc6fa8429eae998ec48",
+    "expected_sha256": "5c0c0819c41a09e8829ba947afdea959b11e0226cc49dfe17efa0d8c3cf81ce6",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/random9",
+      "222222",
+      "12000000",
+      "9",
+      "random"
+    ]
+  },
+  {
+    "name": "random15",
+    "rows": 133333,
+    "columns": 12000000,
+    "nonzeros": 1999995,
+    "length": 15,
+    "profile": "random",
+    "file_bytes": 38481537,
+    "sha256": "c0c29dda123e14c5699dca642a32cf17f33822b5f5d76309558aeb427e2ead30",
+    "expected_sha256": "1a3b81f21e5e2b4ca2726b5702f98425738ac0b091d3e58673b4b1718e3be3e7",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/random15",
+      "133333",
+      "12000000",
+      "15",
+      "random"
+    ]
+  },
+  {
+    "name": "random16",
+    "rows": 125000,
+    "columns": 12000000,
+    "nonzeros": 2000000,
+    "length": 16,
+    "profile": "random",
+    "file_bytes": 38370900,
+    "sha256": "bd2754fb92ae5272500ef51b792f3cbb5fc366f223168b598f567e9f72b6bf4d",
+    "expected_sha256": "84d62007cb98fff663ec388795a511cebf96811799c43886235bba303927f599",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/random16",
+      "125000",
+      "12000000",
+      "16",
+      "random"
+    ]
+  },
+  {
+    "name": "random17",
+    "rows": 117647,
+    "columns": 12000000,
+    "nonzeros": 1999999,
+    "length": 17,
+    "profile": "random",
+    "file_bytes": 38259238,
+    "sha256": "ada47f7604d252de371ed6e767b51ebffa8dda63f0372ec8eeb6adad727f6d57",
+    "expected_sha256": "e52c734ebf7985bcd9f8b82def74ad8c57548db61bc6bfbc4c7773d7bb201d37",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/random17",
+      "117647",
+      "12000000",
+      "17",
+      "random"
+    ]
+  },
+  {
+    "name": "random32",
+    "rows": 62500,
+    "columns": 12000000,
+    "nonzeros": 2000000,
+    "length": 32,
+    "profile": "random",
+    "file_bytes": 37792778,
+    "sha256": "59f944f029630c206e4d824ebb4516541a82c138c5fd75d98efc0e10666eef99",
+    "expected_sha256": "d935a205f99010b24615cf8cb7e8420e55933233aac280f973d9dd8b8cf9141d",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/random32",
+      "62500",
+      "12000000",
+      "32",
+      "random"
+    ]
+  },
+  {
+    "name": "random64",
+    "rows": 31250,
+    "columns": 12000000,
+    "nonzeros": 2000000,
+    "length": 64,
+    "profile": "random",
+    "file_bytes": 37437193,
+    "sha256": "01bd5510b2fbd43eaccc5c63584c47a7c56ac1a99c83041e4d12295a47c6dea3",
+    "expected_sha256": "ecc63c52b018ac65c1190195854430952bce43f75b243a35f1b9086c28e9279d",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/random64",
+      "31250",
+      "12000000",
+      "64",
+      "random"
+    ]
+  },
+  {
+    "name": "random256",
+    "rows": 8192,
+    "columns": 12000000,
+    "nonzeros": 2097152,
+    "length": 256,
+    "profile": "random",
+    "file_bytes": 37620897,
+    "sha256": "a4f603ed7e4bcbb864a90d7189c5e819595386fc5a911db267c7979ebbfe5359",
+    "expected_sha256": "79b27ded93d5eb29791ec2eaeeb40be104c1d3203b65967d07157252f2c42b38",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/random256",
+      "8192",
+      "12000000",
+      "256",
+      "random"
+    ]
+  },
+  {
+    "name": "banded8",
+    "rows": 250000,
+    "columns": 12000000,
+    "nonzeros": 2000000,
+    "length": 8,
+    "profile": "banded",
+    "file_bytes": 36222561,
+    "sha256": "db2e1cc74c39f6bd5619a4c165a41357da9e0e68d9f6cb3237d14ca8081737b7",
+    "expected_sha256": "534a370b0b42148714765815876cee41fd612e7812580f21a54d79c482ffbe55",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/banded8",
+      "250000",
+      "12000000",
+      "8",
+      "banded"
+    ]
+  },
+  {
+    "name": "hot8",
+    "rows": 250000,
+    "columns": 12000000,
+    "nonzeros": 2000000,
+    "length": 8,
+    "profile": "hot",
+    "file_bytes": 32571035,
+    "sha256": "d359a6124a4626bb6fc80d912955868207a28ffde01605dc69fc2bc1c691b64b",
+    "expected_sha256": "534a370b0b42148714765815876cee41fd612e7812580f21a54d79c482ffbe55",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/hot8",
+      "250000",
+      "12000000",
+      "8",
+      "hot"
+    ]
+  },
+  {
+    "name": "heavy-clustered",
+    "rows": 100000,
+    "columns": 12000000,
+    "nonzeros": 1420000,
+    "length": 4,
+    "profile": "clustered",
+    "file_bytes": 24892157,
+    "sha256": "b8b277569f7f210f5c2efff7937741e8baaf04d527838d872e7a4273ffd1dfb7",
+    "expected_sha256": "0657afd98e8c2878b1a9e65a20fae366b5d78b536936293e7cfa525ebe192981",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/heavy-clustered",
+      "100000",
+      "12000000",
+      "4",
+      "clustered"
+    ]
+  },
+  {
+    "name": "heavy-scattered",
+    "rows": 100000,
+    "columns": 12000000,
+    "nonzeros": 1420000,
+    "length": 4,
+    "profile": "scattered",
+    "file_bytes": 26927141,
+    "sha256": "3105a0ce6e704c95532a18da716d2422ac0051e0c72c2e91b738839cf598500f",
+    "expected_sha256": "362ca6d425add5605e3c929da7ef464b81ee50f33bd89b982afbc39f40893a24",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/heavy-scattered",
+      "100000",
+      "12000000",
+      "4",
+      "scattered"
+    ]
+  },
+  {
+    "name": "giant-row",
+    "rows": 100000,
+    "columns": 2000000,
+    "nonzeros": 1099999,
+    "length": 1,
+    "profile": "giant",
+    "file_bytes": 16277897,
+    "sha256": "d9d82f5f49c3740e9282bfdd405434acca28ec2d5ba268ff11c42d498393f2ec",
+    "expected_sha256": "4c4bb914a94d9282a82e1ffc1097981bf7d84f6ef7b95dda4d71b7bdb860dda7",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/giant-row",
+      "100000",
+      "2000000",
+      "1",
+      "giant"
+    ]
+  },
+  {
+    "name": "empty99",
+    "rows": 1000000,
+    "columns": 12000000,
+    "nonzeros": 80000,
+    "length": 0,
+    "profile": "empty99",
+    "file_bytes": 1597104,
+    "sha256": "e34e3daeccb89224123c157a86fa674f855c39553906445c4fc90388f6877fb6",
+    "expected_sha256": "79983724bd1d0f671a1baacb7b3407e75726e860c6e1e2b0cd67a3b1434d546d",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/empty99",
+      "1000000",
+      "12000000",
+      "0",
+      "empty99"
+    ]
+  },
+  {
+    "name": "zero",
+    "rows": 100000,
+    "columns": 12000000,
+    "nonzeros": 0,
+    "length": 0,
+    "profile": "zero",
+    "file_bytes": 95,
+    "sha256": "f47d245d23fd4604548a5b5bc45d8d1c63e17b2e153862af11e189644e15cada",
+    "expected_sha256": "946cc2661d32ad837bd22fb051ee47ed6012e33a6db1617870fec60691ed7f09",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/zero",
+      "100000",
+      "12000000",
+      "0",
+      "zero"
+    ]
+  },
+  {
+    "name": "cache-small",
+    "rows": 256,
+    "columns": 256,
+    "nonzeros": 2048,
+    "length": 8,
+    "profile": "random",
+    "file_bytes": 24978,
+    "sha256": "7ecfceb43f75db239ef83a98840f274756dd43df342e059bedabd39e72169c7b",
+    "expected_sha256": "6fbe1ebfa9d08c6bcb6b66128b4050613bddd87b2f84ac8bbe85501bcdb0f5da",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/cache-small",
+      "256",
+      "256",
+      "8",
+      "random"
+    ]
+  },
+  {
+    "name": "wide",
+    "rows": 101,
+    "columns": 12000000,
+    "nonzeros": 808,
+    "length": 8,
+    "profile": "random",
+    "file_bytes": 13036,
+    "sha256": "1e1311a769d510c4827877074c723c483e6c5e2ec02cbf156d537eca2cad1d13",
+    "expected_sha256": "ed5d3503673cec38f971d03e9056352fe915004710a0a99f78238b0b1864b148",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/wide",
+      "101",
+      "12000000",
+      "8",
+      "random"
+    ]
+  },
+  {
+    "name": "tall",
+    "rows": 1000000,
+    "columns": 64,
+    "nonzeros": 8000000,
+    "length": 8,
+    "profile": "hot",
+    "file_bytes": 117985831,
+    "sha256": "dafdfaec1f520ff227306ab99c5531812717f6eea2f8b3893ab656b0d4527715",
+    "expected_sha256": "3bab6bc0f152e69bb7b5b16bb0878d17809cf233854df1790388a80ac80d0c13",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/generate_cases",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/tall",
+      "1000000",
+      "64",
+      "8",
+      "hot"
+    ]
+  },
+  {
+    "name": "large",
+    "rows": 12000000,
+    "columns": 12000000,
+    "nonzeros": 96000000,
+    "profile": "8 segment-random entries/row; reused original baseline input",
+    "file_bytes": 2030223365,
+    "sha256": "973866b437cfbd85a863432924093229aa89bed4c12047a0c09c7120504fb373",
+    "expected_sha256": "f2112ee61fb3fd1b10bda644433785eebe3d29df7f2a873b7a42df90d71f32d9",
+    "baseline_metadata": {
+      "created_at": "2026-10-25T14:45:00.932947+08:00",
+      "generator_version": 1,
+      "generator_sha256": "7b747249efa447e406058e4efa0b5ecaacefc615b66af3d6f9b49719b94cbf1c",
+      "command": [
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/build/generate_matrix",
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/data/large_random.mtx",
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-baseline/data/large_expected.f32",
+        "12000000",
+        "8",
+        "539365413"
+      ],
+      "rows": 12000000,
+      "columns": 12000000,
+      "nnz_per_row": 8,
+      "nonzeros": 96000000,
+      "seed_decimal": 539365413,
+      "seed_hex": "0x20261025",
+      "field": "real",
+      "numeric_precision": "f32",
+      "distribution": "one pseudorandom column per equal-width column segment per row; sorted unique columns",
+      "values": "q/4, q=1..7, selected from high bits of mix64; exact binary fractions",
+      "source": "locally generated synthetic data; no external dataset",
+      "generator_license": "MIT (see LICENSE-generator.txt)",
+      "density": 6.666666666666667e-07,
+      "sparsity": 0.9999993333333334,
+      "matrix_bytes": 2030223365,
+      "matrix_sha256": "973866b437cfbd85a863432924093229aa89bed4c12047a0c09c7120504fb373",
+      "expected_sha256": "f2112ee61fb3fd1b10bda644433785eebe3d29df7f2a873b7a42df90d71f32d9",
+      "expected_dtype": "little-endian float32",
+      "csr_bytes": 864000008,
+      "x_bytes": 48000000,
+      "y_bytes": 48000000,
+      "generation_and_hashing_seconds": 11.978705699002603
+    }
+  }
+]

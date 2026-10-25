@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "date_label": "2026-10-25",
+  "baseline_commit": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "seed": 20261025,
+  "formal_processes_per_condition": 5,
+  "pilot_processes_per_condition": 1,
+  "expected_samples": {
+    "pilot": 15,
+    "formal": 1080,
+    "large": 85,
+    "amortization": 30
+  },
+  "order": "fixed-seed shuffle within each complete sample round; sequential processes; no simultaneous benchmarks",
+  "warmup": "none inserted for any variant",
+  "primary_kernels": [
+    "original",
+    "csr-scalar",
+    "csr-pack",
+    "sell8",
+    "sell16"
+  ],
+  "numerical": "f32 A/x/y; no global fast-math; explicit SIMD translation units use ffp-contract=off; pack reassociates row reduction",
+  "timing": {
+    "execute": "original timer includes parallel enter/exit and per-call barriers; no preparation/free/IO",
+    "prepare": "serial validation + inspection + conversion, including inspection before fallback",
+    "compute_total": "median of per-process prepare + execute",
+    "wall": "whole process GNU time, including parsing/conversion/free; no result output in performance runs"
+  },
+  "samples_not_discarded": true,
+  "case_count": 23,
+  "limitations": [
+    "synthetic matrices only",
+    "WSL host activity and frequency not locked",
+    "5-sample min/max separation is descriptive only",
+    "no DRAM bandwidth ceiling measured",
+    "new layout changes cache state naturally during conversion"
+  ]
+}

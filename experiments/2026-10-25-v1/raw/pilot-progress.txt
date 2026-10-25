@@ -1,0 +1,16 @@
+pilot-random8-sell8-t24-r9-s1: 1.789 ms, P=0.008s, sell/selected
+pilot-random8-sell16-t1-r9-s1: 10.057 ms, P=0.008s, sell/selected
+pilot-random8-csr-pack-t1-r9-s1: 15.498 ms, P=0.001s, csr-pack/selected
+pilot-random8-sell8-t1-r9-s1: 8.503 ms, P=0.008s, sell/selected
+pilot-random8-original-t12-r9-s1: 2.234 ms, P=0.000s, original/original-source
+pilot-random8-original-t1-r9-s1: 13.726 ms, P=0.000s, original/original-source
+pilot-random8-csr-scalar-t24-r9-s1: 1.872 ms, P=0.001s, csr-scalar/selected
+pilot-random8-csr-pack-t24-r9-s1: 2.160 ms, P=0.001s, csr-pack/selected
+pilot-random8-sell16-t24-r9-s1: 1.720 ms, P=0.008s, sell/selected
+pilot-random8-csr-scalar-t12-r9-s1: 2.225 ms, P=0.001s, csr-scalar/selected
+pilot-random8-sell16-t12-r9-s1: 1.763 ms, P=0.007s, sell/selected
+pilot-random8-csr-scalar-t1-r9-s1: 10.754 ms, P=0.001s, csr-scalar/selected
+pilot-random8-sell8-t12-r9-s1: 1.762 ms, P=0.008s, sell/selected
+pilot-random8-original-t24-r9-s1: 2.301 ms, P=0.000s, original/original-source
+pilot-random8-csr-pack-t12-r9-s1: 2.056 ms, P=0.001s, csr-pack/selected
+summary: 0 conditions; 15 process records

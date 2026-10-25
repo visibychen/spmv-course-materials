@@ -1,0 +1,4 @@
+matrix_market_read: 0.187499 seconds matrix object coordinate format real field general symmetry 285714 rows 12000000 columns 1999998 nonzeros
+csr_matrix_int32_from_matrix_market: 0.013613 seconds 285714 rows 12000000 columns 1999998 nonzeros
+spmv_prepare: 0.000789698 seconds requested=csr-scalar selected=csr-scalar reason=selected chunk=8 slots=0 extra_bytes=0
+csr_matrix_int32_spmv: 0.025694 seconds 9 multiplications 35999964 flops (1.40 Gflop/s, 0.701 Gnz/s)

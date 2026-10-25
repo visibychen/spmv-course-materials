@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "process_samples": 1210,
+  "conditions": 254,
+  "formal_conditions": 239,
+  "matrices": 23,
+  "source_hashes_checked": 17,
+  "original_master": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "correctness_checks": 93,
+  "source_snapshot_commit": "f089579a489723547a354459d591c551a313c4bb",
+  "additional_compatibility": 35,
+  "sanitizer_checks": 2550,
+  "max_major_faults": 0,
+  "notes": [
+    "5 independent processes per formal condition; 1 per pilot",
+    "interval separation is descriptive, not a statistical hypothesis test",
+    "no benchmark results discarded; no synthetic warm-up inserted"
+  ]
+}

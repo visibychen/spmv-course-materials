@@ -1,0 +1,70 @@
+[
+  {
+    "name": "sanitize",
+    "command": [
+      "gcc",
+      "-g",
+      "-Wall",
+      "-fopenmp",
+      "-ffp-contract=off",
+      "-iquote",
+      "/home/visiby/计算机组成原理课设/csrspmv/src",
+      "/home/visiby/计算机组成原理课设/csrspmv/tests/test_spmv_plan.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/csr.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/matrix_market.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/vector.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/parse.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_plan.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_csr_scalar.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_csr_pack.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_sell.c",
+      "-Wl,--wrap=malloc",
+      "-lm",
+      "-O1",
+      "-march=native",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-o",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/test-sanitize"
+    ],
+    "binary_sha256": "b33b0d01496366f36195107bafdf0682a1a51428e240ff192970cde64f092d1c"
+  },
+  {
+    "name": "portable",
+    "command": [
+      "gcc",
+      "-g",
+      "-Wall",
+      "-fopenmp",
+      "-ffp-contract=off",
+      "-iquote",
+      "/home/visiby/计算机组成原理课设/csrspmv/src",
+      "/home/visiby/计算机组成原理课设/csrspmv/tests/test_spmv_plan.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/csr.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/matrix_market.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/vector.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/parse.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_plan.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_csr_scalar.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_csr_pack.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_sell.c",
+      "-Wl,--wrap=malloc",
+      "-lm",
+      "-O3",
+      "-o",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/test-portable"
+    ],
+    "binary_sha256": "e2f68b27358295f75886428e6dcbac7ae91ccdd70ef2712929b3ea854fa74410"
+  },
+  {
+    "name": "make-check-native",
+    "command": [
+      "make",
+      "-B",
+      "check",
+      "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp"
+    ],
+    "threads": 12,
+    "exit": 0
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "matrix_type": "f32",
+    "x_type": "f32",
+    "y_type": "f32",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "f32",
+    "x_type": "f32",
+    "y_type": "f64",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "f32",
+    "x_type": "f64",
+    "y_type": "f32",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "f32",
+    "x_type": "f64",
+    "y_type": "f64",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "f32",
+    "x_type": "complex32",
+    "y_type": "complex32",
+    "original_exit": 1,
+    "v1_exit": 1,
+    "output_same": false
+  },
+  {
+    "matrix_type": "f64",
+    "x_type": "f32",
+    "y_type": "f32",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "f64",
+    "x_type": "f32",
+    "y_type": "f64",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "f64",
+    "x_type": "f64",
+    "y_type": "f32",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "f64",
+    "x_type": "f64",
+    "y_type": "f64",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "f64",
+    "x_type": "complex32",
+    "y_type": "complex32",
+    "original_exit": 1,
+    "v1_exit": 1,
+    "output_same": false
+  },
+  {
+    "matrix_type": "int32",
+    "x_type": "f32",
+    "y_type": "f32",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "int32",
+    "x_type": "f32",
+    "y_type": "f64",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "int32",
+    "x_type": "f64",
+    "y_type": "f32",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "int32",
+    "x_type": "f64",
+    "y_type": "f64",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "int32",
+    "x_type": "complex32",
+    "y_type": "complex32",
+    "original_exit": 1,
+    "v1_exit": 1,
+    "output_same": false
+  },
+  {
+    "matrix_type": "int64",
+    "x_type": "f32",
+    "y_type": "f32",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "int64",
+    "x_type": "f32",
+    "y_type": "f64",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "int64",
+    "x_type": "f64",
+    "y_type": "f32",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "int64",
+    "x_type": "f64",
+    "y_type": "f64",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "int64",
+    "x_type": "complex32",
+    "y_type": "complex32",
+    "original_exit": 1,
+    "v1_exit": 1,
+    "output_same": false
+  },
+  {
+    "matrix_type": "binary",
+    "x_type": "f32",
+    "y_type": "f32",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "binary",
+    "x_type": "f32",
+    "y_type": "f64",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "binary",
+    "x_type": "f64",
+    "y_type": "f32",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "binary",
+    "x_type": "f64",
+    "y_type": "f64",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "matrix_type": "binary",
+    "x_type": "complex32",
+    "y_type": "complex32",
+    "original_exit": 1,
+    "v1_exit": 1,
+    "output_same": false
+  },
+  {
+    "matrix_type": "complex32",
+    "x_type": "f32",
+    "y_type": "f32",
+    "original_exit": 1,
+    "v1_exit": 1,
+    "output_same": false
+  },
+  {
+    "matrix_type": "complex32",
+    "x_type": "f32",
+    "y_type": "f64",
+    "original_exit": 1,
+    "v1_exit": 1,
+    "output_same": false
+  },
+  {
+    "matrix_type": "complex32",
+    "x_type": "f64",
+    "y_type": "f32",
+    "original_exit": 1,
+    "v1_exit": 1,
+    "output_same": false
+  },
+  {
+    "matrix_type": "complex32",
+    "x_type": "f64",
+    "y_type": "f64",
+    "original_exit": 1,
+    "v1_exit": 1,
+    "output_same": false
+  },
+  {
+    "matrix_type": "complex32",
+    "x_type": "complex32",
+    "y_type": "complex32",
+    "original_exit": 0,
+    "v1_exit": 0,
+    "output_same": true
+  },
+  {
+    "symmetric_full": true,
+    "variant": "original",
+    "max_absolute_error": 0,
+    "stdout": "matrix_market_read: 0.000021 seconds matrix object coordinate format real field symmetric symmetry 64 rows 64 columns 127 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001769 seconds 64 rows 64 columns 190 nonzeros\ncsr_matrix_int32_spmv: 0.000782 seconds 3 multiplications 1140 flops (0.00 Gflop/s, 0.001 Gnz/s)\nvector_to_matrix_market: 0.000295 seconds\nmatrix_market_write: 0.000088 seconds\n"
+  },
+  {
+    "symmetric_full": true,
+    "variant": "csr-scalar",
+    "max_absolute_error": 0,
+    "stdout": "matrix_market_read: 0.000021 seconds matrix object coordinate format real field symmetric symmetry 64 rows 64 columns 127 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001932 seconds 64 rows 64 columns 190 nonzeros\nspmv_prepare: 0.000000276 seconds requested=csr-scalar selected=csr-scalar reason=selected chunk=8 slots=0 extra_bytes=0\ncsr_matrix_int32_spmv: 0.000825 seconds 3 multiplications 1140 flops (0.00 Gflop/s, 0.001 Gnz/s)\nvector_to_matrix_market: 0.000311 seconds\nmatrix_market_write: 0.000106 seconds\n"
+  },
+  {
+    "symmetric_full": true,
+    "variant": "csr-pack",
+    "max_absolute_error": 0,
+    "stdout": "matrix_market_read: 0.000019 seconds matrix object coordinate format real field symmetric symmetry 64 rows 64 columns 127 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001770 seconds 64 rows 64 columns 190 nonzeros\nspmv_prepare: 0.000000266 seconds requested=csr-pack selected=csr-pack reason=selected chunk=8 slots=0 extra_bytes=0\ncsr_matrix_int32_spmv: 0.000751 seconds 3 multiplications 1140 flops (0.00 Gflop/s, 0.001 Gnz/s)\nvector_to_matrix_market: 0.000330 seconds\nmatrix_market_write: 0.000092 seconds\n"
+  },
+  {
+    "symmetric_full": true,
+    "variant": "sell8",
+    "max_absolute_error": 0,
+    "stdout": "matrix_market_read: 0.000018 seconds matrix object coordinate format real field symmetric symmetry 64 rows 64 columns 127 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001759 seconds 64 rows 64 columns 190 nonzeros\nspmv_prepare: 0.000034615 seconds requested=sell selected=sell reason=selected chunk=8 slots=192 extra_bytes=1608\ncsr_matrix_int32_spmv: 0.000786 seconds 3 multiplications 1140 flops (0.00 Gflop/s, 0.001 Gnz/s)\nvector_to_matrix_market: 0.000311 seconds\nmatrix_market_write: 0.000088 seconds\n"
+  },
+  {
+    "symmetric_full": true,
+    "variant": "sell16",
+    "max_absolute_error": 0,
+    "stdout": "matrix_market_read: 0.000018 seconds matrix object coordinate format real field symmetric symmetry 64 rows 64 columns 127 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.002050 seconds 64 rows 64 columns 190 nonzeros\nspmv_prepare: 0.000028824 seconds requested=sell selected=sell reason=selected chunk=16 slots=192 extra_bytes=1576\ncsr_matrix_int32_spmv: 0.000794 seconds 3 multiplications 1140 flops (0.00 Gflop/s, 0.001 Gnz/s)\nvector_to_matrix_market: 0.000312 seconds\nmatrix_market_write: 0.000095 seconds\n"
+  }
+]

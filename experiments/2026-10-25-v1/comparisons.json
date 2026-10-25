@@ -1,0 +1,331 @@
+{
+  "extremes": {
+    "random1": {
+      "sell8": {
+        "original_speedup": 1.4505263157894739,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 1.2764132553606238,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.4710580420686385,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 1.2944804681322155,
+        "interval_classification": "5 次区间均更快"
+      }
+    },
+    "random2": {
+      "sell8": {
+        "original_speedup": 1.3543052837573384,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 1.2016634050880626,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.2595322595322593,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 1.1175721175721174,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "random4": {
+      "sell8": {
+        "original_speedup": 0.9779621208335416,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 0.9521763030333318,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 0.90778365340013,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 0.8838482233973468,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "random7": {
+      "sell8": {
+        "original_speedup": 0.9359643661094881,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 0.9121605440873605,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.112236767216847,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 1.0839499146272054,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "random8": {
+      "sell8": {
+        "original_speedup": 1.506564901793339,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 1.0355999146029033,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.388235872719225,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 0.9542615452712339,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "random9": {
+      "sell8": {
+        "original_speedup": 1.1912612116049508,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 0.9885253294583354,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.2428250300590724,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 1.0313137121647757,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "random15": {
+      "sell8": {
+        "original_speedup": 0.9294607970825735,
+        "strongest_csr": "original",
+        "strongest_csr_speedup": 0.9294607970825735,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 0.9678311815124226,
+        "strongest_csr": "original",
+        "strongest_csr_speedup": 0.9678311815124226,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "random16": {
+      "sell8": {
+        "original_speedup": 1.0025205761316875,
+        "strongest_csr": "original",
+        "strongest_csr_speedup": 1.0025205761316875,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.0524923043689585,
+        "strongest_csr": "original",
+        "strongest_csr_speedup": 1.0524923043689585,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "random17": {
+      "sell8": {
+        "original_speedup": 1.1665416729163542,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 0.9559522023898805,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.2485017123287672,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 1.0231164383561644,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "random32": {
+      "sell8": {
+        "original_speedup": 1.3902372954816342,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 0.9818506880485428,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.5455640546889118,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 1.0915497199301334,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "random64": {
+      "sell8": {
+        "original_speedup": 1.1853429910524074,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 0.9565402641670219,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.3383847495339467,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 1.080040892416862,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "random256": {
+      "sell8": {
+        "original_speedup": 1.2376203061886002,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 0.847952924749414,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.206690329168085,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 0.8267613166723391,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "banded8": {
+      "sell8": {
+        "original_speedup": 1.3135333741579915,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 0.964482547458665,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.417713152676801,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 1.0409781890284202,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "hot8": {
+      "sell8": {
+        "original_speedup": 1.1878688524590164,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 1.0721311475409836,
+        "interval_classification": "5 次区间均更快"
+      },
+      "sell16": {
+        "original_speedup": 1.1378768844221105,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 1.0270100502512562,
+        "interval_classification": "5 次区间均更快"
+      }
+    },
+    "heavy-clustered": {
+      "sell8": {
+        "original_speedup": 1.4927214409079692,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 1.0477087679160217,
+        "interval_classification": "5 次区间均更快"
+      },
+      "sell16": {
+        "original_speedup": 1.7339760291818656,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 1.2170401250651384,
+        "interval_classification": "5 次区间均更快"
+      }
+    },
+    "heavy-scattered": {
+      "sell8": {
+        "original_speedup": 0.970333181195801,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 0.6954016430853492,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.1492668423542132,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 0.823636732211636,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "giant-row": {
+      "sell8": {
+        "original_speedup": 1.180589087397393,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 0.5070014485755675,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.1318134475176487,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 0.4860548547621803,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "empty99": {
+      "sell8": {
+        "original_speedup": 1.0620287034784723,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 0.8905375820968136,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.1627163781624499,
+        "strongest_csr": "csr-scalar",
+        "strongest_csr_speedup": 0.9749667110519308,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "zero": {
+      "sell8": {
+        "original_speedup": 1.0773173593528067,
+        "strongest_csr": "original",
+        "strongest_csr_speedup": 1.0773173593528067,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.1032759929167721,
+        "strongest_csr": "original",
+        "strongest_csr_speedup": 1.1032759929167721,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "cache-small": {
+      "sell8": {
+        "original_speedup": 0.9850783542486108,
+        "strongest_csr": "original",
+        "strongest_csr_speedup": 0.9850783542486108,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 0.9789663088664143,
+        "strongest_csr": "original",
+        "strongest_csr_speedup": 0.9789663088664143,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "wide": {
+      "sell8": {
+        "original_speedup": 0.9859015582488251,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 0.9755132327479593,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.032508742390882,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 1.0216293226266027,
+        "interval_classification": "区间重叠"
+      }
+    },
+    "tall": {
+      "sell8": {
+        "original_speedup": 1.1976611272311617,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 1.0028136815264224,
+        "interval_classification": "区间重叠"
+      },
+      "sell16": {
+        "original_speedup": 1.0920388038162432,
+        "strongest_csr": "csr-pack",
+        "strongest_csr_speedup": 0.9143750501082339,
+        "interval_classification": "区间重叠"
+      }
+    }
+  },
+  "break_even": {
+    "1/original": null,
+    "1/csr-scalar": 1,
+    "1/csr-pack": null,
+    "1/sell8": 2,
+    "1/sell16": 2,
+    "12/original": null,
+    "12/csr-scalar": 2,
+    "12/csr-pack": 3,
+    "12/sell8": 12,
+    "12/sell16": 13,
+    "24/original": null,
+    "24/csr-scalar": null,
+    "24/csr-pack": null,
+    "24/sell8": null,
+    "24/sell16": 174,
+    "24/original-novec": 1,
+    "24/v1-original": null
+  }
+}

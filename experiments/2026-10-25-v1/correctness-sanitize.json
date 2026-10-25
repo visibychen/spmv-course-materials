@@ -1,0 +1,20 @@
+[
+  {
+    "threads": 1,
+    "exit": 0,
+    "stdout": "PASS: 850 checks, max_threads=1\n",
+    "stderr": ""
+  },
+  {
+    "threads": 12,
+    "exit": 0,
+    "stdout": "PASS: 850 checks, max_threads=12\n",
+    "stderr": ""
+  },
+  {
+    "threads": 24,
+    "exit": 0,
+    "stdout": "PASS: 850 checks, max_threads=24\n",
+    "stderr": ""
+  }
+]

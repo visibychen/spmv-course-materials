@@ -1,0 +1,12 @@
+thread=1 team=12 cpu=2 place=1 places=12
+thread=4 team=12 cpu=8 place=4 places=12
+thread=5 team=12 cpu=10 place=5 places=12
+thread=2 team=12 cpu=4 place=2 places=12
+thread=6 team=12 cpu=12 place=6 places=12
+thread=7 team=12 cpu=14 place=7 places=12
+thread=9 team=12 cpu=18 place=9 places=12
+thread=3 team=12 cpu=6 place=3 places=12
+thread=10 team=12 cpu=20 place=10 places=12
+thread=11 team=12 cpu=22 place=11 places=12
+thread=0 team=12 cpu=0 place=0 places=12
+thread=8 team=12 cpu=16 place=8 places=12

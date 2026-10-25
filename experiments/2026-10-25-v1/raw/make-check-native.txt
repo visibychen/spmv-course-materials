@@ -1,0 +1,11 @@
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/csr.c -o src/csr.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/matrix_market.c -o src/matrix_market.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/parse.c -o src/parse.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/spmv_plan.c -o src/spmv_plan.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/spmv_csr_scalar.c -o src/spmv_csr_scalar.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp -ffp-contract=off src/spmv_csr_pack.c -o src/spmv_csr_pack.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp -ffp-contract=off src/spmv_sell.c -o src/spmv_sell.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/vector.c -o src/vector.o
+cc -O3 -march=native -g -Wall -iquote src -fopenmp tests/test_spmv_plan.c src/csr.o src/matrix_market.o src/parse.o src/spmv_plan.o src/spmv_csr_scalar.o src/spmv_csr_pack.o src/spmv_sell.o src/vector.o  -Wl,--wrap=malloc -lm -o tests/test_spmv_plan
+./tests/test_spmv_plan
+PASS: 850 checks, max_threads=12

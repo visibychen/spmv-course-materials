@@ -1,0 +1,77 @@
+
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/build/v1/csrspmv:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .plt.sec:
+
+Disassembly of section .text:
+
+0000000000010900 <spmv_scalar_f32>:
+   10900:	f3 0f 1e fa          	endbr64 
+   10904:	41 55                	push   r13
+   10906:	41 54                	push   r12
+   10908:	55                   	push   rbp
+   10909:	49 89 d4             	mov    r12,rdx
+   1090c:	53                   	push   rbx
+   1090d:	48 89 fd             	mov    rbp,rdi
+   10910:	48 89 f3             	mov    rbx,rsi
+   10913:	48 83 ec 08          	sub    rsp,0x8
+   10917:	e8 44 1b ff ff       	call   2460 <omp_get_num_threads@plt>
+   1091c:	41 89 c5             	mov    r13d,eax
+   1091f:	e8 7c 1a ff ff       	call   23a0 <omp_get_thread_num@plt>
+   10924:	89 c1                	mov    ecx,eax
+   10926:	8b 45 00             	mov    eax,DWORD PTR [rbp+0x0]
+   10929:	99                   	cdq    
+   1092a:	41 f7 fd             	idiv   r13d
+   1092d:	39 d1                	cmp    ecx,edx
+   1092f:	0f 8c 81 00 00 00    	jl     109b6 <spmv_scalar_f32+0xb6>
+   10935:	0f af c8             	imul   ecx,eax
+   10938:	01 ca                	add    edx,ecx
+   1093a:	01 d0                	add    eax,edx
+   1093c:	39 c2                	cmp    edx,eax
+   1093e:	7d 5e                	jge    1099e <spmv_scalar_f32+0x9e>
+   10940:	4c 8b 4d 28          	mov    r9,QWORD PTR [rbp+0x28]
+   10944:	4c 8b 55 08          	mov    r10,QWORD PTR [rbp+0x8]
+   10948:	48 63 d2             	movsxd rdx,edx
+   1094b:	c5 e8 57 d2          	vxorps xmm2,xmm2,xmm2
+   1094f:	90                   	nop
+   10950:	49 8b 0c d2          	mov    rcx,QWORD PTR [r10+rdx*8]
+   10954:	49 8b 7c d2 08       	mov    rdi,QWORD PTR [r10+rdx*8+0x8]
+   10959:	48 39 f9             	cmp    rcx,rdi
+   1095c:	7d 52                	jge    109b0 <spmv_scalar_f32+0xb0>
+   1095e:	4c 8b 45 18          	mov    r8,QWORD PTR [rbp+0x18]
+   10962:	c5 f8 28 ca          	vmovaps xmm1,xmm2
+   10966:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+   1096d:	00 00 00 
+   10970:	49 63 34 88          	movsxd rsi,DWORD PTR [r8+rcx*4]
+   10974:	c5 fa 10 04 b3       	vmovss xmm0,DWORD PTR [rbx+rsi*4]
+   10979:	c4 c1 7a 59 04 89    	vmulss xmm0,xmm0,DWORD PTR [r9+rcx*4]
+   1097f:	48 ff c1             	inc    rcx
+   10982:	c5 f2 58 c8          	vaddss xmm1,xmm1,xmm0
+   10986:	48 39 f9             	cmp    rcx,rdi
+   10989:	75 e5                	jne    10970 <spmv_scalar_f32+0x70>
+   1098b:	c4 c1 72 58 0c 94    	vaddss xmm1,xmm1,DWORD PTR [r12+rdx*4]
+   10991:	c4 c1 7a 11 0c 94    	vmovss DWORD PTR [r12+rdx*4],xmm1
+   10997:	48 ff c2             	inc    rdx
+   1099a:	39 d0                	cmp    eax,edx
+   1099c:	7f b2                	jg     10950 <spmv_scalar_f32+0x50>
+   1099e:	48 83 c4 08          	add    rsp,0x8
+   109a2:	5b                   	pop    rbx
+   109a3:	5d                   	pop    rbp
+   109a4:	41 5c                	pop    r12
+   109a6:	41 5d                	pop    r13
+   109a8:	e9 d3 19 ff ff       	jmp    2380 <GOMP_barrier@plt>
+   109ad:	0f 1f 00             	nop    DWORD PTR [rax]
+   109b0:	c5 f8 28 ca          	vmovaps xmm1,xmm2
+   109b4:	eb d5                	jmp    1098b <spmv_scalar_f32+0x8b>
+   109b6:	ff c0                	inc    eax
+   109b8:	31 d2                	xor    edx,edx
+   109ba:	e9 76 ff ff ff       	jmp    10935 <spmv_scalar_f32+0x35>
+
+Disassembly of section .fini:
