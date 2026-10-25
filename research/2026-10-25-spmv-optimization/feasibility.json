@@ -1,0 +1,112 @@
+{
+  "analysis_date": "2026-10-25",
+  "kind": "analytical_estimate_not_new_benchmark",
+  "source_artifact_sha256": {
+    "matrix.json": "16c2a9c9fd1266971b0d05efed0e9cfacbbcdc6d1bc0f13ba8bd18440e6a1ae9",
+    "summary.csv": "429f261a1ec981c82da34f9408885604d043aa367f0ca8c9ca44383c52dbbd1c"
+  },
+  "existing_controls": [
+    {
+      "threads": 1,
+      "strict_median_ms": 782.045,
+      "novec_median_ms": 660.6659999999999,
+      "observed_time_reduction_percent": 15.520718117243895,
+      "scope": "existing baseline only; not a newly optimized implementation"
+    },
+    {
+      "threads": 12,
+      "strict_median_ms": 114.82355555555556,
+      "novec_median_ms": 103.87044444444444,
+      "observed_time_reduction_percent": 9.53908025066479,
+      "scope": "existing baseline only; not a newly optimized implementation"
+    }
+  ],
+  "uniform_baseline_storage_estimates": [
+    {
+      "chunk": 8,
+      "slices": 1500000,
+      "slots": 96000000,
+      "padding_multiplier": 1.0,
+      "derived_value_index_bytes": 768000000,
+      "modeled_slice_metadata_bytes": 24000008,
+      "modeled_resident_CSR_plus_SELL_plus_xy_bytes": 1752000016,
+      "not_included": "allocator overhead, inspector/tuning temporary arrays; generic unequal-row maps/lengths"
+    },
+    {
+      "chunk": 16,
+      "slices": 750000,
+      "slots": 96000000,
+      "padding_multiplier": 1.0,
+      "derived_value_index_bytes": 768000000,
+      "modeled_slice_metadata_bytes": 12000008,
+      "modeled_resident_CSR_plus_SELL_plus_xy_bytes": 1740000016,
+      "not_included": "allocator overhead, inspector/tuning temporary arrays; generic unequal-row maps/lengths"
+    }
+  ],
+  "padding_counterexamples": {
+    "uniform8_C8": {
+      "rows": 64,
+      "nnz": 512,
+      "chunk": 8,
+      "sorting_scope": 1,
+      "slots": 512,
+      "padding_multiplier": 1.0
+    },
+    "uniform8_C16": {
+      "rows": 64,
+      "nnz": 512,
+      "chunk": 16,
+      "sorting_scope": 1,
+      "slots": 512,
+      "padding_multiplier": 1.0
+    },
+    "one_giant_row_C8": {
+      "rows": 8,
+      "nnz": 1000007,
+      "chunk": 8,
+      "sorting_scope": 1,
+      "slots": 8000000,
+      "padding_multiplier": 7.999944000391997
+    },
+    "mixed_no_sort": {
+      "rows": 64,
+      "nnz": 16576,
+      "chunk": 8,
+      "sorting_scope": 1,
+      "slots": 65536,
+      "padding_multiplier": 3.9536679536679538
+    },
+    "mixed_sort_scope64": {
+      "rows": 64,
+      "nnz": 16576,
+      "chunk": 8,
+      "sorting_scope": 64,
+      "slots": 16576,
+      "padding_multiplier": 1.0
+    },
+    "all_empty": {
+      "rows": 17,
+      "nnz": 0,
+      "chunk": 8,
+      "sorting_scope": 1,
+      "slots": 0,
+      "padding_multiplier": null
+    },
+    "tail_17_rows": {
+      "rows": 17,
+      "nnz": 136,
+      "chunk": 8,
+      "sorting_scope": 1,
+      "slots": 192,
+      "padding_multiplier": 1.411764705882353
+    }
+  },
+  "break_even_condition": "T1<T0 and R>P/(T0-T1); P includes inspect, conversion and tuning",
+  "unmeasured": [
+    "optimized kernel time",
+    "conversion time",
+    "actual peak RSS of an optimized implementation",
+    "performance effect of sorting",
+    "DRAM bandwidth ceiling"
+  ]
+}

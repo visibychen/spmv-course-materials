@@ -1,0 +1,238 @@
+{
+  "sources": [
+    {
+      "id": "P1",
+      "title": "SELL-C-sigma",
+      "url": "https://arxiv.org/html/1307.6209",
+      "read_scope": "paper sections and code listings",
+      "version": "2014; arXiv v2",
+      "doi_url": "https://doi.org/10.1137/130930352",
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "P2",
+      "title": "CSR5",
+      "url": "https://arxiv.org/html/1503.05032",
+      "read_scope": "paper algorithm, conversion and iteration costs",
+      "version": "2015",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "P3",
+      "title": "Merge-based parallel SpMV",
+      "url": "https://mgarland.org/papers/2016/spmv/",
+      "read_scope": "author page and CPU implementation, not full PDF",
+      "version": "SC 2016",
+      "doi_url": "https://doi.org/10.1109/SC.2016.57",
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "P4",
+      "title": "Cache blocking model",
+      "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2004/5535.html",
+      "read_scope": "institutional report abstract and metadata",
+      "version": "UCB/CSD-04-1335 (2004)",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "P5",
+      "title": "Bringing Order to Sparsity",
+      "url": "https://sc23.supercomputing.org/proceedings/tech_paper/tech_paper_pages/pap220.html",
+      "read_scope": "conference/publisher abstract and artifacts, not full paper",
+      "version": "SC 2023",
+      "doi_url": "https://doi.org/10.1145/3581784.3607046",
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "P6",
+      "title": "Author software archive",
+      "url": "https://zenodo.org/records/7837264",
+      "read_scope": "record and two downloaded ZIPs; checksums and selected source reviewed",
+      "version": "1.0.0 (2023)",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "P7",
+      "title": "Author measurement archive",
+      "url": "https://zenodo.org/records/7821491",
+      "read_scope": "record description; data not downloaded",
+      "version": "1.0.0 (2023)",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "P8",
+      "title": "Roofline report",
+      "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/EECS-2008-134.html",
+      "read_scope": "institutional report metadata and model context",
+      "version": "UCB/EECS-2008-134 (2008)",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "D1",
+      "title": "GCC optimization options",
+      "url": "https://gcc.gnu.org/onlinedocs/gcc-11.4.0/gcc/Optimize-Options.html",
+      "read_scope": "relevant flags",
+      "version": "11.4.0",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "D2",
+      "title": "GCC x86 function attributes",
+      "url": "https://gcc.gnu.org/onlinedocs/gcc-11.4.0/gcc/x86-Function-Attributes.html",
+      "read_scope": "target-specific function support",
+      "version": "11.4.0",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "D3",
+      "title": "GCC builtin prefetch",
+      "url": "https://gcc.gnu.org/onlinedocs/gcc-11.4.0/gcc/Other-Builtins.html",
+      "read_scope": "prefetch address-expression requirement",
+      "version": "11.4.0",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "D4",
+      "title": "OpenMP worksharing/schedule/nowait",
+      "url": "https://www.openmp.org/spec-html/5.2/openmpse66.html",
+      "read_scope": "normative sections and related pages",
+      "version": "5.1/5.2",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "D5",
+      "title": "AOCL API documentation",
+      "url": "https://docs.amd.com/r/en-US/68552-AOCL-api-guide/AOCL-Sparse",
+      "read_scope": "hint/optimize framework; support bounded by C2 source",
+      "version": "5.3",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "D6",
+      "title": "Ginkgo Sellp documentation",
+      "url": "https://gko-project.org/user-guide/concepts/formats/sellp.html",
+      "read_scope": "slice layout, padding, limits; GPU defaults not adopted",
+      "version": "accessed 2026-10-25",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "D7",
+      "title": "Matrix Market formats",
+      "url": "https://math.nist.gov/MatrixMarket/formats.html",
+      "read_scope": "coordinate/type/symmetry semantics",
+      "version": "current official page",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "D8",
+      "title": "STREAM",
+      "url": "https://www.cs.virginia.edu/stream/ref.html",
+      "read_scope": "search metadata only; direct page fetch timed out; benchmark not run",
+      "version": "not version-pinned; not used for numerical claims",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "M1",
+      "title": "Freescale/circuit5M",
+      "url": "https://sparse.tamu.edu/Freescale/circuit5M",
+      "read_scope": "official metadata only; not downloaded",
+      "version": "collection ID 2276",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "M2",
+      "title": "Schmid/thermal2",
+      "url": "https://sparse.tamu.edu/Schmid/thermal2",
+      "read_scope": "official metadata only; not downloaded",
+      "version": "collection ID 1403",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "M3",
+      "title": "DIMACS10/road_usa",
+      "url": "https://sparse.tamu.edu/DIMACS10/road_usa",
+      "read_scope": "official metadata only; not downloaded",
+      "version": "collection ID 2459",
+      "doi_url": null,
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_research_or_official_documentation"
+    },
+    {
+      "id": "C1",
+      "title": "GHOST",
+      "url": "https://github.com/RRZE-HPC/GHOST",
+      "version": "22a004dbbfb604d7b04b0bde813c8100d403cfcc",
+      "read_scope": "selected code files listed in code-sources.json; not built or timed",
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_author_or_vendor_code"
+    },
+    {
+      "id": "C2",
+      "title": "aocl-sparse",
+      "url": "https://github.com/amd/aocl-sparse",
+      "version": "d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c",
+      "read_scope": "selected code files listed in code-sources.json; not built or timed",
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_author_or_vendor_code"
+    },
+    {
+      "id": "C3",
+      "title": "merge-spmv",
+      "url": "https://github.com/dumerrill/merge-spmv",
+      "version": "18895571ce9af960ee207dae541b0ffc701ea4bb",
+      "read_scope": "selected code files listed in code-sources.json; not built or timed",
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_author_or_vendor_code"
+    },
+    {
+      "id": "C4",
+      "title": "Benchmark_SpMV_using_CSR5",
+      "url": "https://github.com/weifengliu-ssslab/Benchmark_SpMV_using_CSR5",
+      "version": "4b06ce35e45c3c61a51e249e12e1c4954af443fa",
+      "read_scope": "selected code files listed in code-sources.json; not built or timed",
+      "accessed_on": "2026-10-25",
+      "source_kind": "primary_author_or_vendor_code"
+    }
+  ],
+  "related_primary_urls": [
+    "https://zenodo.org/records/7837367",
+    "https://www.openmp.org/spec-html/5.1/openmpse58.html",
+    "https://www.openmp.org/spec-html/5.2/openmpse94.html",
+    "https://github.com/jeffhammond/STREAM/blob/master/stream.c",
+    "https://docs.amd.com/r/5.2-English/57404-AOCL-user-guide/17.4.-Performance-Tuning"
+  ],
+  "new_performance_claims": false
+}

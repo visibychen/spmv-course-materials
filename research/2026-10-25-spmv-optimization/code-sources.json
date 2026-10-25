@@ -1,0 +1,204 @@
+{
+  "accessed_on": "2026-10-25",
+  "repositories": [
+    {
+      "id": "C1",
+      "repository": "https://github.com/RRZE-HPC/GHOST",
+      "commit": "22a004dbbfb604d7b04b0bde813c8100d403cfcc",
+      "license_read": "BSD-3-Clause",
+      "license_file": "LICENSE.md",
+      "files": [
+        {
+          "path": "src/autogen/sell_spmv_plain.c.in",
+          "sha256": "2027a876918991faad9590f02ec924fd3b7423a369694fc78294fd2a0f962325",
+          "url": "https://github.com/RRZE-HPC/GHOST/blob/22a004dbbfb604d7b04b0bde813c8100d403cfcc/src/autogen/sell_spmv_plain.c.in"
+        },
+        {
+          "path": "src/autogen/sell_spmv_avx2.c.in",
+          "sha256": "cc49fba8e5facd06ce249f6f7e856de0af3ae010ccba7b104629e0ea469f3be2",
+          "url": "https://github.com/RRZE-HPC/GHOST/blob/22a004dbbfb604d7b04b0bde813c8100d403cfcc/src/autogen/sell_spmv_avx2.c.in"
+        },
+        {
+          "path": "src/sell.c",
+          "sha256": "c48b3bd57ef52a5508686a746b36929e7c12cb2648e6dc933503ff49f7e63cb8",
+          "url": "https://github.com/RRZE-HPC/GHOST/blob/22a004dbbfb604d7b04b0bde813c8100d403cfcc/src/sell.c"
+        },
+        {
+          "path": "include/ghost/sparsemat.h",
+          "sha256": "5547f9547ca6577060d09de7550ca02da960d94fa572d66ef2fae70e15569c7b",
+          "url": "https://github.com/RRZE-HPC/GHOST/blob/22a004dbbfb604d7b04b0bde813c8100d403cfcc/include/ghost/sparsemat.h"
+        },
+        {
+          "path": "LICENSE.md",
+          "sha256": "0c91d72c035ed6529ddc25e9e4dc992dbcb58d03305f547cc7e00c5d45cd32dd",
+          "url": "https://github.com/RRZE-HPC/GHOST/blob/22a004dbbfb604d7b04b0bde813c8100d403cfcc/LICENSE.md"
+        }
+      ],
+      "usage_status": "read_only_review; not ported or benchmarked"
+    },
+    {
+      "id": "C2",
+      "repository": "https://github.com/amd/aocl-sparse",
+      "commit": "d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c",
+      "license_read": "MIT (AMD files; consult per-file headers)",
+      "license_file": "LICENSE.md",
+      "files": [
+        {
+          "path": "library/src/level2/aoclsparse_csrmv_kt.cpp",
+          "sha256": "2045e5c896b7f97ab7500bcacc228389fee917be571da32affe89e6ee3ee44e1",
+          "url": "https://github.com/amd/aocl-sparse/blob/d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c/library/src/level2/aoclsparse_csrmv_kt.cpp"
+        },
+        {
+          "path": "library/src/include/kernel-templates/kt_l0_avx2.hpp",
+          "sha256": "4e7eae578a98fef952fada4435e7f52f41dd8082d4e1b726e2c1c215e2e9633f",
+          "url": "https://github.com/amd/aocl-sparse/blob/d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c/library/src/include/kernel-templates/kt_l0_avx2.hpp"
+        },
+        {
+          "path": "library/src/include/kernel-templates/kt_l0_avx512.hpp",
+          "sha256": "08449817bd390e86ad3a6c085a4f3e7c990b6ef0d8a15fa4c04063be066efca0",
+          "url": "https://github.com/amd/aocl-sparse/blob/d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c/library/src/include/kernel-templates/kt_l0_avx512.hpp"
+        },
+        {
+          "path": "library/src/analysis/aoclsparse_analysis.cpp",
+          "sha256": "1eca1ca95c66392211af7f3f343c36e10766fc8e2ef566b9091c6076b0955ba9",
+          "url": "https://github.com/amd/aocl-sparse/blob/d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c/library/src/analysis/aoclsparse_analysis.cpp"
+        },
+        {
+          "path": "LICENSE.md",
+          "sha256": "657a00dc8ebd57da2feaa716a470a0e2fe1636954f207f75500888bedc9db5eb",
+          "url": "https://github.com/amd/aocl-sparse/blob/d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c/LICENSE.md"
+        }
+      ],
+      "usage_status": "read_only_review; not ported or benchmarked"
+    },
+    {
+      "id": "C3",
+      "repository": "https://github.com/dumerrill/merge-spmv",
+      "commit": "18895571ce9af960ee207dae541b0ffc701ea4bb",
+      "license_read": "BSD-3-Clause text",
+      "license_file": "LICENSE.TXT",
+      "files": [
+        {
+          "path": "cpu_spmv.cpp",
+          "sha256": "0afec976ff6fcf68b81d8b8996ee1fcbdd82802862fbb5a8104b2bce5af7744a",
+          "url": "https://github.com/dumerrill/merge-spmv/blob/18895571ce9af960ee207dae541b0ffc701ea4bb/cpu_spmv.cpp"
+        },
+        {
+          "path": "Makefile",
+          "sha256": "d2d9024043ecac1b238862138ccd794046e297a384e4585b9cd5999a5414f91e",
+          "url": "https://github.com/dumerrill/merge-spmv/blob/18895571ce9af960ee207dae541b0ffc701ea4bb/Makefile"
+        },
+        {
+          "path": "LICENSE.TXT",
+          "sha256": "9ea7cfdb5541f7b61a21b8877e2a939a1a66e8d665cd813d6ff1a47a64ae4a11",
+          "url": "https://github.com/dumerrill/merge-spmv/blob/18895571ce9af960ee207dae541b0ffc701ea4bb/LICENSE.TXT"
+        }
+      ],
+      "usage_status": "read_only_review; not ported or benchmarked"
+    },
+    {
+      "id": "C4",
+      "repository": "https://github.com/weifengliu-ssslab/Benchmark_SpMV_using_CSR5",
+      "commit": "4b06ce35e45c3c61a51e249e12e1c4954af443fa",
+      "license_read": "MIT",
+      "license_file": "LICENSE",
+      "files": [
+        {
+          "path": "CSR5_avx2/main.cpp",
+          "sha256": "e1d9ac62285f2ef1ce12fd524a401ee56dfb54dc2b63b48c001ab48103d60dbf",
+          "url": "https://github.com/weifengliu-ssslab/Benchmark_SpMV_using_CSR5/blob/4b06ce35e45c3c61a51e249e12e1c4954af443fa/CSR5_avx2/main.cpp"
+        },
+        {
+          "path": "CSR5_avx2/Makefile",
+          "sha256": "23c45e8604487fb27faa3273c1ac982fb1cb7ffee6e6ed2e0c42b158d9e8aa48",
+          "url": "https://github.com/weifengliu-ssslab/Benchmark_SpMV_using_CSR5/blob/4b06ce35e45c3c61a51e249e12e1c4954af443fa/CSR5_avx2/Makefile"
+        },
+        {
+          "path": "CSR5_avx2/anonymouslib_avx2.h",
+          "sha256": "7dc6c441d92066bbc772620647a725001228a068bc738a631814eda4788e8c04",
+          "url": "https://github.com/weifengliu-ssslab/Benchmark_SpMV_using_CSR5/blob/4b06ce35e45c3c61a51e249e12e1c4954af443fa/CSR5_avx2/anonymouslib_avx2.h"
+        },
+        {
+          "path": "CSR5_avx2/detail/avx2/csr5_spmv_avx2.h",
+          "sha256": "9ceee901d54b599557ea5e557f4b04944ff3fedd107f5bdd079e88ac4ebcdaeb",
+          "url": "https://github.com/weifengliu-ssslab/Benchmark_SpMV_using_CSR5/blob/4b06ce35e45c3c61a51e249e12e1c4954af443fa/CSR5_avx2/detail/avx2/csr5_spmv_avx2.h"
+        },
+        {
+          "path": "CSR5_avx2/detail/avx2/format_avx2.h",
+          "sha256": "4dd053aa3121a3818ce77644e7d33ab09b2733fa73f9d1cf50c454c2dda95b30",
+          "url": "https://github.com/weifengliu-ssslab/Benchmark_SpMV_using_CSR5/blob/4b06ce35e45c3c61a51e249e12e1c4954af443fa/CSR5_avx2/detail/avx2/format_avx2.h"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "2a50d5b85df79a0ad844670b1c93fbbbfa2d243e23109ab04c3b273950efa329",
+          "url": "https://github.com/weifengliu-ssslab/Benchmark_SpMV_using_CSR5/blob/4b06ce35e45c3c61a51e249e12e1c4954af443fa/LICENSE"
+        }
+      ],
+      "usage_status": "read_only_review; not ported or benchmarked"
+    }
+  ],
+  "archives": [
+    {
+      "source_id": "P6",
+      "name": "spmv-1.5.zip",
+      "version": "1.0.0 Zenodo record; internal package version in filename",
+      "url": "https://zenodo.org/records/7837264/files/spmv-1.5.zip?download=1",
+      "publisher_md5": "b816b7372f2d284d4c96edc3ab3e0861",
+      "sha256": "33268b89c61c8eeb2c00bbbf871132104885222225562b9b5d43eda622362ed6",
+      "internal_directory": "ellspmv-1.5",
+      "files": [
+        {
+          "path": "README",
+          "sha256": "499d261293e4ed132494c2c0a46fd682be18f5781d83cdc4a691a5746ffed91f"
+        },
+        {
+          "path": "COPYING",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        {
+          "path": "csrspmv.c",
+          "sha256": "aa0caccca52da2f8e18b40cfef025748234ae7c32cc9fc23a39dc8a86a0f7c80"
+        },
+        {
+          "path": "ellspmv.c",
+          "sha256": "76decd571f3668ddc2697dd3e34465200a30f6999bd78d3c9f63cde3f0b8e78e"
+        },
+        {
+          "path": "Makefile",
+          "sha256": "f26dfca43ac36350b365de64045ce8f07617e5aee601e2d761f071d00a83c7a0"
+        }
+      ],
+      "usage_status": "read_only_review; not ported or benchmarked"
+    },
+    {
+      "source_id": "P6",
+      "name": "libmtx-0.4.0.zip",
+      "version": "1.0.0 Zenodo record; internal package version in filename",
+      "url": "https://zenodo.org/records/7837264/files/libmtx-0.4.0.zip?download=1",
+      "publisher_md5": "90df7e67d79bf5808a8ac16135a9d5ec",
+      "sha256": "09d89f67d0ae35ce88e66da6333cdbffdd737b4712cd4898ebe54a5d3a82c92f",
+      "internal_directory": "libmtx-0.4.0",
+      "files": [
+        {
+          "path": "README",
+          "sha256": "9211559813216b85fe032c02614d1eaa50daeba37f9ee1804b7235336d6dd1a3"
+        },
+        {
+          "path": "COPYING",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        {
+          "path": "src/mtxreorder.c",
+          "sha256": "8c42c7d588bc0b2f3ff0c395b9c3a4f649f2e8f55f2ed289a652f50ed569890c"
+        },
+        {
+          "path": "configure.ac",
+          "sha256": "3953c4adb53c2e861dad071f967bab280f2a51ef95719e076e8ea1a99cf9a400"
+        }
+      ],
+      "usage_status": "read_only_review; not ported or benchmarked"
+    }
+  ],
+  "cache_location": "materials/.git/research-cache (excluded from Git; re-obtain from fixed URLs)",
+  "third_party_code_copied_to_core": false
+}

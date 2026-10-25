@@ -1,0 +1,14 @@
+{
+  "review_date": "2026-10-25",
+  "checks": {
+    "json_files_parse": true,
+    "analysis_script_syntax": true,
+    "local_markdown_links_resolve": true,
+    "four_repository_versions_and_selected_file_hashes_match": true,
+    "two_author_archives_match_publisher_MD5_and_SHA256": true,
+    "source_ids_unique": true,
+    "analysis_is_labeled_and_uniform_padding_matches": true,
+    "original_core_unchanged_and_nothing_staged": true,
+    "new_tracked_candidates_limited_to_research": true
+  }
+}
