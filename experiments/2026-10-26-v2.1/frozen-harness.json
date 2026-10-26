@@ -1,0 +1,11 @@
+{
+  "note": "Hashes of final formal harness and calibration profile; core commit already pushed before first formal sample",
+  "sha256": {
+    "run_experiments.py": "1d4a28e190a15d7008843589800f3c50e486b217991d40eabb67967a05b9225f",
+    "verify_and_inputs.py": "cf99a1d1468252d7c70ffd4b546674dcfb3256ae48becfc9c478b543ac6bb1f4",
+    "calibrate.c": "3f1e4bd8887c49cdf05a06d72aaa684acede4396611fbf0a9accce1c7de1fd49",
+    "fit_profile.py": "75737250dc3592d3c3b962860cecfac37b73b06927f02d0db5f8d255faf8ada0",
+    "profile.txt": "f3579b3f914184a5d9eaad1121b9a6a384fe968f5ac6de49674937423f518151",
+    "protocol.json": "358439cf56383a460fe46f51b50912b74d530e3d2c9a2332c51409514dec2661"
+  }
+}

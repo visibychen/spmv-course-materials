@@ -1,0 +1,24 @@
+{
+  "command": [
+    "gcc",
+    "-O3",
+    "-march=native",
+    "-g",
+    "-Wall",
+    "-fopenmp",
+    "-ffp-contract=off",
+    "-iquote",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/src",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/bench_compare.c",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/src/csr.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/src/matrix_market.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/src/parse.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/src/vector.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/src/spmv_plan.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/src/spmv_v2.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/src/spmv_v21.o",
+    "-o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/bench-compare"
+  ],
+  "sha256": "2e618a35d1ff758360044ca4460b73528015b922695dd030d68505a9ebf12d8a"
+}

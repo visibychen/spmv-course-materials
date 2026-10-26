@@ -1,0 +1,115 @@
+[
+  {
+    "matrix": "sherman3",
+    "exit": 0,
+    "stdout": "matrix_market_read: 0.002375 seconds matrix object coordinate format real field general symmetry 5005 rows 5005 columns 20033 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.002011 seconds 5005 rows 5005 columns 20033 nonzeros\nspmv_prepare: 0.000190542 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=136\nspmv_v21: kernel=csr partition=rows threads=1 prepare_threads=1 calls=3 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=7 validation_s=0.000011420 policy_s=0.000004191 predicted_s=0.000035797 baseline_predicted_s=0.000882220 groups=0\ncsr_matrix_int32_spmv: 0.000043 seconds 3 multiplications 120198 flops (2.79 Gflop/s, 1.395 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000140 seconds\nvector_to_matrix_market: 0.000353 seconds\nmatrix_market_write: 0.002072 seconds\n",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/data/sherman3.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=3",
+      "-v",
+      "--destination-vector=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/data/final-profile-check.mtx",
+      "--destination-vector-prec=9",
+      "--destination-vector-prec=50"
+    ]
+  },
+  {
+    "matrix": "bcsstk18",
+    "exit": 0,
+    "stdout": "matrix_market_read: 0.009735 seconds matrix object coordinate format real field symmetric symmetry 11948 rows 11948 columns 80519 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.002695 seconds 11948 rows 11948 columns 149090 nonzeros\nspmv_prepare: 0.000161314 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=136\nspmv_v21: kernel=csr partition=rows threads=1 prepare_threads=1 calls=3 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000059206 policy_s=0.000004281 predicted_s=0.000240784 baseline_predicted_s=0.000922086 groups=0\ncsr_matrix_int32_spmv: 0.000271 seconds 3 multiplications 894540 flops (3.30 Gflop/s, 1.652 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000161 seconds\nvector_to_matrix_market: 0.000300 seconds\nmatrix_market_write: 0.007163 seconds\n",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/bcsstk18.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=3",
+      "-v",
+      "--include-symmetric-part",
+      "--destination-vector=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/data/final-profile-check.mtx",
+      "--destination-vector-prec=9",
+      "--destination-vector-prec=50"
+    ]
+  },
+  {
+    "matrix": "bcsstk17",
+    "exit": 0,
+    "stdout": "matrix_market_read: 0.027320 seconds matrix object coordinate format real field symmetric symmetry 10974 rows 10974 columns 219812 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004148 seconds 10974 rows 10974 columns 428650 nonzeros\nspmv_prepare: 0.000327002 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=544\nspmv_v21: kernel=csr partition=work threads=4 prepare_threads=1 calls=3 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=150 validation_s=0.000190833 policy_s=0.000007098 predicted_s=0.000493215 baseline_predicted_s=0.001028551 groups=0\ncsr_matrix_int32_spmv: 0.000610 seconds 3 multiplications 2571900 flops (4.22 Gflop/s, 2.109 Gnz/s)\nspmv_team: actual_threads=4\nspmv_cleanup: 0.000000230 seconds\nvector_to_matrix_market: 0.000955 seconds\nmatrix_market_write: 0.006665 seconds\n",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/data/bcsstk17.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=3",
+      "-v",
+      "--include-symmetric-part",
+      "--destination-vector=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/data/final-profile-check.mtx",
+      "--destination-vector-prec=9",
+      "--destination-vector-prec=50"
+    ]
+  },
+  {
+    "matrix": "new-small",
+    "exit": 0,
+    "stdout": "matrix_market_read: 0.001880 seconds matrix object coordinate format real field general symmetry 3001 rows 8009 columns 24008 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001988 seconds 3001 rows 8009 columns 24008 nonzeros\nspmv_prepare: 0.000116877 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=136\nspmv_v21: kernel=short8 partition=rows threads=1 prepare_threads=1 calls=3 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=8 validation_s=0.000010618 policy_s=0.000003920 predicted_s=0.000038195 baseline_predicted_s=0.000880491 groups=0\ncsr_matrix_int32_spmv: 0.000026 seconds 3 multiplications 144048 flops (5.60 Gflop/s, 2.798 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000141 seconds\nvector_to_matrix_market: 0.000322 seconds\nmatrix_market_write: 0.000692 seconds\n",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/data/new-small.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=3",
+      "-v",
+      "--destination-vector=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/data/final-profile-check.mtx",
+      "--destination-vector-prec=9"
+    ]
+  },
+  {
+    "matrix": "new-iid8",
+    "exit": 0,
+    "stdout": "matrix_market_read: 0.083026 seconds matrix object coordinate format real field general symmetry 120017 rows 5000011 columns 960136 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.008098 seconds 120017 rows 5000011 columns 960136 nonzeros\nspmv_prepare: 0.000600772 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=1088\nspmv_v21: kernel=csr partition=rows threads=8 prepare_threads=2 calls=3 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=8 validation_s=0.000460463 policy_s=0.000005544 predicted_s=0.001459606 baseline_predicted_s=0.001751002 groups=0\ncsr_matrix_int32_spmv: 0.002954 seconds 3 multiplications 5760816 flops (1.95 Gflop/s, 0.975 Gnz/s)\nspmv_team: actual_threads=8\nspmv_cleanup: 0.000000281 seconds\nvector_to_matrix_market: 0.000848 seconds\nmatrix_market_write: 0.029209 seconds\n",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/data/new-iid8.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=3",
+      "-v",
+      "--destination-vector=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/data/final-profile-check.mtx",
+      "--destination-vector-prec=9"
+    ]
+  },
+  {
+    "matrix": "new-two-adjacent",
+    "exit": 0,
+    "stdout": "matrix_market_read: 0.026019 seconds matrix object coordinate format real field general symmetry 10007 rows 700001 columns 310019 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003487 seconds 10007 rows 700001 columns 310019 nonzeros\nspmv_prepare: 0.000245717 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=272\nspmv_v21: kernel=merge partition=rows threads=2 prepare_threads=1 calls=3 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=200011 validation_s=0.000113057 policy_s=0.000003980 predicted_s=0.000480270 baseline_predicted_s=0.001932915 groups=1\ncsr_matrix_int32_spmv: 0.000693 seconds 3 multiplications 1860114 flops (2.69 Gflop/s, 1.343 Gnz/s)\nspmv_team: actual_threads=2\nspmv_cleanup: 0.000000171 seconds\nvector_to_matrix_market: 0.001068 seconds\nmatrix_market_write: 0.001302 seconds\n",
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/data/new-two-adjacent.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=3",
+      "-v",
+      "--destination-vector=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/data/final-profile-check.mtx",
+      "--destination-vector-prec=9"
+    ]
+  }
+]

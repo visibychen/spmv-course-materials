@@ -1,0 +1,23 @@
+[
+  {
+    "symbol": "ordered_sum.constprop.0",
+    "assembly_file": "raw/verified-assembly-ordered_sum.constprop.0.txt",
+    "instruction_lines": 13,
+    "calls": []
+  },
+  {
+    "symbol": "row_kernel",
+    "assembly_file": "raw/verified-assembly-row_kernel.txt",
+    "instruction_lines": 259,
+    "calls": [
+      "call   11550 <spmv_v2_row_cut>",
+      "call   11550 <spmv_v2_row_cut>"
+    ]
+  },
+  {
+    "symbol": "rows_f32",
+    "assembly_file": "raw/verified-assembly-rows_f32.txt",
+    "instruction_lines": 124,
+    "calls": []
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "/usr/bin/time",
+    "-f",
+    "{\"wall_s\":%e,\"max_rss_kib\":%M,\"major_faults\":%F}",
+    "-o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/raw/ablations-empty99-v21-csr-t12-r9-s4.resource.json",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/empty99.mtx",
+    "--kernel=v2.1",
+    "--v21-kernel=csr",
+    "--partition=rows",
+    "--execution=parallel",
+    "--matrix-format=f32",
+    "--source-vector-format=f32",
+    "--destination-vector-format=f32",
+    "--repeat=9",
+    "-v"
+  ],
+  "environment": {
+    "OMP_NUM_THREADS": "12",
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PLACES": "cores",
+    "OMP_PROC_BIND": "spread",
+    "OMP_WAIT_POLICY": "PASSIVE"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "source_commit": "aa1ef3d9bfb93002f19d0bfffdb3074225bb7f15",
+  "source_parent": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "source_branch": "optimization/v2.1",
+  "source_upstream": "aa1ef3d9bfb93002f19d0bfffdb3074225bb7f15",
+  "source_pushed_before_formal": true,
+  "current_branch": "optimization/v2",
+  "current_head": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "master": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "v2": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "materials_parent": "356090806c0d4eb8c03062f605ea378dd8dc8640",
+  "code_message": "优化方案v2.1",
+  "materials_message": "2026.10.26v2.1实验结果",
+  "restored_binary_sha256": "d7468c23a2336e7d11eef3a274a0e3eb42427e9bf116fe30fc5ed83f5b41ce4e",
+  "restored_smoke_exit": 0,
+  "core_worktree_clean": true,
+  "branch_action": "switched back to v2 after failed acceptance; remote v2.1 retained; no merge"
+}

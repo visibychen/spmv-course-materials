@@ -1,0 +1,276 @@
+
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .plt.sec:
+
+Disassembly of section .text:
+
+0000000000012760 <row_kernel>:
+   12760:	55                   	push   rbp
+   12761:	48 89 e5             	mov    rbp,rsp
+   12764:	41 57                	push   r15
+   12766:	41 56                	push   r14
+   12768:	41 55                	push   r13
+   1276a:	41 54                	push   r12
+   1276c:	53                   	push   rbx
+   1276d:	48 89 f3             	mov    rbx,rsi
+   12770:	48 63 f1             	movsxd rsi,ecx
+   12773:	48 83 e4 e0          	and    rsp,0xffffffffffffffe0
+   12777:	49 89 d5             	mov    r13,rdx
+   1277a:	49 89 fc             	mov    r12,rdi
+   1277d:	44 89 c2             	mov    edx,r8d
+   12780:	48 83 ec 20          	sub    rsp,0x20
+   12784:	8b 8f 98 00 00 00    	mov    ecx,DWORD PTR [rdi+0x98]
+   1278a:	4c 8b 3f             	mov    r15,QWORD PTR [rdi]
+   1278d:	85 c9                	test   ecx,ecx
+   1278f:	74 19                	je     127aa <row_kernel+0x4a>
+   12791:	48 8b 87 38 01 00 00 	mov    rax,QWORD PTR [rdi+0x138]
+   12798:	48 85 c0             	test   rax,rax
+   1279b:	74 0d                	je     127aa <row_kernel+0x4a>
+   1279d:	44 39 87 cc 00 00 00 	cmp    DWORD PTR [rdi+0xcc],r8d
+   127a4:	0f 84 df 03 00 00    	je     12b89 <row_kernel+0x429>
+   127aa:	41 8b 8c 24 d8 00 00 	mov    ecx,DWORD PTR [r12+0xd8]
+   127b1:	00 
+   127b2:	4c 89 ff             	mov    rdi,r15
+   127b5:	89 54 24 10          	mov    DWORD PTR [rsp+0x10],edx
+   127b9:	89 74 24 1c          	mov    DWORD PTR [rsp+0x1c],esi
+   127bd:	e8 8e ed ff ff       	call   11550 <spmv_v2_row_cut>
+   127c2:	8b 74 24 1c          	mov    esi,DWORD PTR [rsp+0x1c]
+   127c6:	4c 89 ff             	mov    rdi,r15
+   127c9:	41 8b 8c 24 d8 00 00 	mov    ecx,DWORD PTR [r12+0xd8]
+   127d0:	00 
+   127d1:	8b 54 24 10          	mov    edx,DWORD PTR [rsp+0x10]
+   127d5:	49 89 c6             	mov    r14,rax
+   127d8:	ff c6                	inc    esi
+   127da:	e8 71 ed ff ff       	call   11550 <spmv_v2_row_cut>
+   127df:	48 89 44 24 10       	mov    QWORD PTR [rsp+0x10],rax
+   127e4:	49 8b 7f 28          	mov    rdi,QWORD PTR [r15+0x28]
+   127e8:	4d 8b 57 18          	mov    r10,QWORD PTR [r15+0x18]
+   127ec:	4c 39 f0             	cmp    rax,r14
+   127ef:	0f 8e de 01 00 00    	jle    129d3 <row_kernel+0x273>
+   127f5:	48 c1 e0 03          	shl    rax,0x3
+   127f9:	49 8b 4f 08          	mov    rcx,QWORD PTR [r15+0x8]
+   127fd:	4c 89 e6             	mov    rsi,r12
+   12800:	4e 8d 1c f5 00 00 00 	lea    r11,[r14*8+0x0]
+   12807:	00 
+   12808:	c4 e1 f9 6e e8       	vmovq  xmm5,rax
+   1280d:	41 8b 84 24 c8 00 00 	mov    eax,DWORD PTR [r12+0xc8]
+   12814:	00 
+   12815:	c5 e8 57 d2          	vxorps xmm2,xmm2,xmm2
+   12819:	c5 f9 6f e5          	vmovdqa xmm4,xmm5
+   1281d:	49 89 cc             	mov    r12,rcx
+   12820:	89 44 24 1c          	mov    DWORD PTR [rsp+0x1c],eax
+   12824:	66 66 2e 0f 1f 84 00 	data16 cs nop WORD PTR [rax+rax*1+0x0]
+   1282b:	00 00 00 00 
+   1282f:	90                   	nop
+   12830:	83 7c 24 1c 03       	cmp    DWORD PTR [rsp+0x1c],0x3
+   12835:	0f 84 05 02 00 00    	je     12a40 <row_kernel+0x2e0>
+   1283b:	83 7c 24 1c 05       	cmp    DWORD PTR [rsp+0x1c],0x5
+   12840:	4b 8b 04 1c          	mov    rax,QWORD PTR [r12+r11*1]
+   12844:	4f 8b 44 1c 08       	mov    r8,QWORD PTR [r12+r11*1+0x8]
+   12849:	0f 85 a1 01 00 00    	jne    129f0 <row_kernel+0x290>
+   1284f:	8b 96 dc 00 00 00    	mov    edx,DWORD PTR [rsi+0xdc]
+   12855:	85 d2                	test   edx,edx
+   12857:	0f 84 93 01 00 00    	je     129f0 <row_kernel+0x290>
+   1285d:	4c 89 c1             	mov    rcx,r8
+   12860:	48 29 c1             	sub    rcx,rax
+   12863:	48 3b 8e 00 01 00 00 	cmp    rcx,QWORD PTR [rsi+0x100]
+   1286a:	0f 8c 80 01 00 00    	jl     129f0 <row_kernel+0x290>
+   12870:	48 83 f9 07          	cmp    rcx,0x7
+   12874:	0f 8e 27 03 00 00    	jle    12ba1 <row_kernel+0x441>
+   1287a:	c4 41 f9 6e d5       	vmovq  xmm10,r13
+   1287f:	4d 8d 0c 82          	lea    r9,[r10+rax*4]
+   12883:	c5 c8 57 f6          	vxorps xmm6,xmm6,xmm6
+   12887:	c4 c1 f9 6e fa       	vmovq  xmm7,r10
+   1288c:	c4 c1 f9 6e eb       	vmovq  xmm5,r11
+   12891:	c4 41 f9 6e c4       	vmovq  xmm8,r12
+   12896:	c4 61 f9 6e ce       	vmovq  xmm9,rsi
+   1289b:	49 89 fd             	mov    r13,rdi
+   1289e:	66 90                	xchg   ax,ax
+   128a0:	4d 63 51 10          	movsxd r10,DWORD PTR [r9+0x10]
+   128a4:	4d 63 61 18          	movsxd r12,DWORD PTR [r9+0x18]
+   128a8:	49 83 c1 20          	add    r9,0x20
+   128ac:	49 63 79 f4          	movsxd rdi,DWORD PTR [r9-0xc]
+   128b0:	4d 63 59 fc          	movsxd r11,DWORD PTR [r9-0x4]
+   128b4:	49 63 49 e0          	movsxd rcx,DWORD PTR [r9-0x20]
+   128b8:	49 63 71 e8          	movsxd rsi,DWORD PTR [r9-0x18]
+   128bc:	49 63 51 e4          	movsxd rdx,DWORD PTR [r9-0x1c]
+   128c0:	4d 63 79 ec          	movsxd r15,DWORD PTR [r9-0x14]
+   128c4:	c4 a1 7a 10 1c a3    	vmovss xmm3,DWORD PTR [rbx+r12*4]
+   128ca:	c4 a1 7a 10 0c 93    	vmovss xmm1,DWORD PTR [rbx+r10*4]
+   128d0:	c4 a3 61 21 1c 9b 10 	vinsertps xmm3,xmm3,DWORD PTR [rbx+r11*4],0x10
+   128d7:	c4 e3 71 21 0c bb 10 	vinsertps xmm1,xmm1,DWORD PTR [rbx+rdi*4],0x10
+   128de:	c5 fa 10 04 8b       	vmovss xmm0,DWORD PTR [rbx+rcx*4]
+   128e3:	c4 e3 79 21 04 93 10 	vinsertps xmm0,xmm0,DWORD PTR [rbx+rdx*4],0x10
+   128ea:	4c 89 c2             	mov    rdx,r8
+   128ed:	c5 f0 16 cb          	vmovlhps xmm1,xmm1,xmm3
+   128f1:	c5 fa 10 1c b3       	vmovss xmm3,DWORD PTR [rbx+rsi*4]
+   128f6:	c4 a3 61 21 1c bb 10 	vinsertps xmm3,xmm3,DWORD PTR [rbx+r15*4],0x10
+   128fd:	c5 f8 16 c3          	vmovlhps xmm0,xmm0,xmm3
+   12901:	c4 e3 7d 18 c1 01    	vinsertf128 ymm0,ymm0,xmm1,0x1
+   12907:	c4 c1 7c 59 44 85 00 	vmulps ymm0,ymm0,YMMWORD PTR [r13+rax*4+0x0]
+   1290e:	48 83 c0 08          	add    rax,0x8
+   12912:	48 29 c2             	sub    rdx,rax
+   12915:	c5 cc 58 f0          	vaddps ymm6,ymm6,ymm0
+   12919:	48 83 fa 07          	cmp    rdx,0x7
+   1291d:	7f 81                	jg     128a0 <row_kernel+0x140>
+   1291f:	c5 ca 58 c2          	vaddss xmm0,xmm6,xmm2
+   12923:	c5 c8 c6 de 55       	vshufps xmm3,xmm6,xmm6,0x55
+   12928:	4c 89 ef             	mov    rdi,r13
+   1292b:	c4 c1 f9 7e fa       	vmovq  r10,xmm7
+   12930:	c5 c8 c6 ce ff       	vshufps xmm1,xmm6,xmm6,0xff
+   12935:	c4 c1 f9 7e eb       	vmovq  r11,xmm5
+   1293a:	c4 41 f9 7e c4       	vmovq  r12,xmm8
+   1293f:	c4 61 f9 7e ce       	vmovq  rsi,xmm9
+   12944:	c4 41 f9 7e d5       	vmovq  r13,xmm10
+   12949:	c5 fa 58 c3          	vaddss xmm0,xmm0,xmm3
+   1294d:	c5 c8 15 de          	vunpckhps xmm3,xmm6,xmm6
+   12951:	c4 e3 7d 19 f6 01    	vextractf128 xmm6,ymm6,0x1
+   12957:	c5 fa 58 c3          	vaddss xmm0,xmm0,xmm3
+   1295b:	c5 fa 58 c1          	vaddss xmm0,xmm0,xmm1
+   1295f:	c5 c8 c6 ce 55       	vshufps xmm1,xmm6,xmm6,0x55
+   12964:	c5 fa 58 c6          	vaddss xmm0,xmm0,xmm6
+   12968:	c5 fa 58 c1          	vaddss xmm0,xmm0,xmm1
+   1296c:	c5 c8 15 ce          	vunpckhps xmm1,xmm6,xmm6
+   12970:	c5 c8 c6 f6 ff       	vshufps xmm6,xmm6,xmm6,0xff
+   12975:	c5 fa 58 c1          	vaddss xmm0,xmm0,xmm1
+   12979:	c5 fa 58 f6          	vaddss xmm6,xmm0,xmm6
+   1297d:	4c 39 c0             	cmp    rax,r8
+   12980:	7d 2e                	jge    129b0 <row_kernel+0x250>
+   12982:	66 66 2e 0f 1f 84 00 	data16 cs nop WORD PTR [rax+rax*1+0x0]
+   12989:	00 00 00 00 
+   1298d:	0f 1f 00             	nop    DWORD PTR [rax]
+   12990:	49 63 14 82          	movsxd rdx,DWORD PTR [r10+rax*4]
+   12994:	c5 fa 10 04 93       	vmovss xmm0,DWORD PTR [rbx+rdx*4]
+   12999:	c5 fa 59 04 87       	vmulss xmm0,xmm0,DWORD PTR [rdi+rax*4]
+   1299e:	48 ff c0             	inc    rax
+   129a1:	c5 ca 58 f0          	vaddss xmm6,xmm6,xmm0
+   129a5:	4c 39 c0             	cmp    rax,r8
+   129a8:	75 e6                	jne    12990 <row_kernel+0x230>
+   129aa:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+   129b0:	c4 81 4a 58 74 b5 00 	vaddss xmm6,xmm6,DWORD PTR [r13+r14*4+0x0]
+   129b7:	c4 81 7a 11 74 b5 00 	vmovss DWORD PTR [r13+r14*4+0x0],xmm6
+   129be:	49 ff c6             	inc    r14
+   129c1:	49 83 c3 08          	add    r11,0x8
+   129c5:	4c 39 74 24 10       	cmp    QWORD PTR [rsp+0x10],r14
+   129ca:	0f 85 60 fe ff ff    	jne    12830 <row_kernel+0xd0>
+   129d0:	c5 f8 77             	vzeroupper 
+   129d3:	48 8d 65 d8          	lea    rsp,[rbp-0x28]
+   129d7:	5b                   	pop    rbx
+   129d8:	41 5c                	pop    r12
+   129da:	41 5d                	pop    r13
+   129dc:	41 5e                	pop    r14
+   129de:	41 5f                	pop    r15
+   129e0:	5d                   	pop    rbp
+   129e1:	c3                   	ret    
+   129e2:	66 66 2e 0f 1f 84 00 	data16 cs nop WORD PTR [rax+rax*1+0x0]
+   129e9:	00 00 00 00 
+   129ed:	0f 1f 00             	nop    DWORD PTR [rax]
+   129f0:	c4 e1 f9 7e e1       	vmovq  rcx,xmm4
+   129f5:	4c 63 8e b4 00 00 00 	movsxd r9,DWORD PTR [rsi+0xb4]
+   129fc:	4d 8b 3c 0c          	mov    r15,QWORD PTR [r12+rcx*1]
+   12a00:	4c 39 c0             	cmp    rax,r8
+   12a03:	0f 8d 77 01 00 00    	jge    12b80 <row_kernel+0x420>
+   12a09:	45 85 c9             	test   r9d,r9d
+   12a0c:	0f 85 1e 01 00 00    	jne    12b30 <row_kernel+0x3d0>
+   12a12:	c5 f8 28 f2          	vmovaps xmm6,xmm2
+   12a16:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+   12a1d:	00 00 00 
+   12a20:	49 63 14 82          	movsxd rdx,DWORD PTR [r10+rax*4]
+   12a24:	c5 fa 10 04 93       	vmovss xmm0,DWORD PTR [rbx+rdx*4]
+   12a29:	c5 fa 59 04 87       	vmulss xmm0,xmm0,DWORD PTR [rdi+rax*4]
+   12a2e:	48 ff c0             	inc    rax
+   12a31:	c5 ca 58 f0          	vaddss xmm6,xmm6,xmm0
+   12a35:	49 39 c0             	cmp    r8,rax
+   12a38:	75 e6                	jne    12a20 <row_kernel+0x2c0>
+   12a3a:	e9 71 ff ff ff       	jmp    129b0 <row_kernel+0x250>
+   12a3f:	90                   	nop
+   12a40:	48 63 86 b4 00 00 00 	movsxd rax,DWORD PTR [rsi+0xb4]
+   12a47:	85 c0                	test   eax,eax
+   12a49:	74 25                	je     12a70 <row_kernel+0x310>
+   12a4b:	c4 e1 f9 7e e1       	vmovq  rcx,xmm4
+   12a50:	49 8b 0c 0c          	mov    rcx,QWORD PTR [r12+rcx*1]
+   12a54:	4c 29 d9             	sub    rcx,r11
+   12a57:	48 39 c8             	cmp    rax,rcx
+   12a5a:	7d 14                	jge    12a70 <row_kernel+0x310>
+   12a5c:	4c 01 d8             	add    rax,r11
+   12a5f:	49 63 04 82          	movsxd rax,DWORD PTR [r10+rax*4]
+   12a63:	0f 18 1c 83          	prefetcht2 BYTE PTR [rbx+rax*4]
+   12a67:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+   12a6e:	00 00 
+   12a70:	4b 63 04 9a          	movsxd rax,DWORD PTR [r10+r11*4]
+   12a74:	c5 fa 10 0c 83       	vmovss xmm1,DWORD PTR [rbx+rax*4]
+   12a79:	4b 63 44 9a 04       	movsxd rax,DWORD PTR [r10+r11*4+0x4]
+   12a7e:	c4 a1 72 59 0c 9f    	vmulss xmm1,xmm1,DWORD PTR [rdi+r11*4]
+   12a84:	c5 fa 10 04 83       	vmovss xmm0,DWORD PTR [rbx+rax*4]
+   12a89:	4b 63 44 9a 08       	movsxd rax,DWORD PTR [r10+r11*4+0x8]
+   12a8e:	c4 a1 7a 59 44 9f 04 	vmulss xmm0,xmm0,DWORD PTR [rdi+r11*4+0x4]
+   12a95:	c5 f2 58 ca          	vaddss xmm1,xmm1,xmm2
+   12a99:	c5 fa 58 c1          	vaddss xmm0,xmm0,xmm1
+   12a9d:	c5 fa 10 0c 83       	vmovss xmm1,DWORD PTR [rbx+rax*4]
+   12aa2:	4b 63 44 9a 0c       	movsxd rax,DWORD PTR [r10+r11*4+0xc]
+   12aa7:	c4 a1 72 59 4c 9f 08 	vmulss xmm1,xmm1,DWORD PTR [rdi+r11*4+0x8]
+   12aae:	c5 f2 58 c8          	vaddss xmm1,xmm1,xmm0
+   12ab2:	c5 fa 10 04 83       	vmovss xmm0,DWORD PTR [rbx+rax*4]
+   12ab7:	4b 63 44 9a 10       	movsxd rax,DWORD PTR [r10+r11*4+0x10]
+   12abc:	c4 a1 7a 59 44 9f 0c 	vmulss xmm0,xmm0,DWORD PTR [rdi+r11*4+0xc]
+   12ac3:	c5 fa 58 c1          	vaddss xmm0,xmm0,xmm1
+   12ac7:	c5 fa 10 0c 83       	vmovss xmm1,DWORD PTR [rbx+rax*4]
+   12acc:	4b 63 44 9a 14       	movsxd rax,DWORD PTR [r10+r11*4+0x14]
+   12ad1:	c4 a1 72 59 4c 9f 10 	vmulss xmm1,xmm1,DWORD PTR [rdi+r11*4+0x10]
+   12ad8:	c5 f2 58 c8          	vaddss xmm1,xmm1,xmm0
+   12adc:	c5 fa 10 04 83       	vmovss xmm0,DWORD PTR [rbx+rax*4]
+   12ae1:	4b 63 44 9a 18       	movsxd rax,DWORD PTR [r10+r11*4+0x18]
+   12ae6:	c4 a1 7a 59 44 9f 14 	vmulss xmm0,xmm0,DWORD PTR [rdi+r11*4+0x14]
+   12aed:	c5 fa 58 c1          	vaddss xmm0,xmm0,xmm1
+   12af1:	c5 fa 10 0c 83       	vmovss xmm1,DWORD PTR [rbx+rax*4]
+   12af6:	4b 63 44 9a 1c       	movsxd rax,DWORD PTR [r10+r11*4+0x1c]
+   12afb:	c4 a1 72 59 4c 9f 18 	vmulss xmm1,xmm1,DWORD PTR [rdi+r11*4+0x18]
+   12b02:	c5 f2 58 c8          	vaddss xmm1,xmm1,xmm0
+   12b06:	c5 fa 10 04 83       	vmovss xmm0,DWORD PTR [rbx+rax*4]
+   12b0b:	c4 a1 7a 59 44 9f 1c 	vmulss xmm0,xmm0,DWORD PTR [rdi+r11*4+0x1c]
+   12b12:	c5 fa 58 c1          	vaddss xmm0,xmm0,xmm1
+   12b16:	c4 81 7a 58 44 b5 00 	vaddss xmm0,xmm0,DWORD PTR [r13+r14*4+0x0]
+   12b1d:	c4 81 7a 11 44 b5 00 	vmovss DWORD PTR [r13+r14*4+0x0],xmm0
+   12b24:	e9 95 fe ff ff       	jmp    129be <row_kernel+0x25e>
+   12b29:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+   12b30:	4b 8d 0c 8a          	lea    rcx,[r10+r9*4]
+   12b34:	c5 f8 28 f2          	vmovaps xmm6,xmm2
+   12b38:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+   12b3f:	00 
+   12b40:	4c 89 fa             	mov    rdx,r15
+   12b43:	48 29 c2             	sub    rdx,rax
+   12b46:	49 39 d1             	cmp    r9,rdx
+   12b49:	7d 08                	jge    12b53 <row_kernel+0x3f3>
+   12b4b:	48 63 14 81          	movsxd rdx,DWORD PTR [rcx+rax*4]
+   12b4f:	0f 18 1c 93          	prefetcht2 BYTE PTR [rbx+rdx*4]
+   12b53:	49 63 14 82          	movsxd rdx,DWORD PTR [r10+rax*4]
+   12b57:	c5 fa 10 04 93       	vmovss xmm0,DWORD PTR [rbx+rdx*4]
+   12b5c:	c5 fa 59 04 87       	vmulss xmm0,xmm0,DWORD PTR [rdi+rax*4]
+   12b61:	48 ff c0             	inc    rax
+   12b64:	c5 ca 58 f0          	vaddss xmm6,xmm6,xmm0
+   12b68:	4c 39 c0             	cmp    rax,r8
+   12b6b:	75 d3                	jne    12b40 <row_kernel+0x3e0>
+   12b6d:	e9 3e fe ff ff       	jmp    129b0 <row_kernel+0x250>
+   12b72:	66 66 2e 0f 1f 84 00 	data16 cs nop WORD PTR [rax+rax*1+0x0]
+   12b79:	00 00 00 00 
+   12b7d:	0f 1f 00             	nop    DWORD PTR [rax]
+   12b80:	c5 f8 28 f2          	vmovaps xmm6,xmm2
+   12b84:	e9 27 fe ff ff       	jmp    129b0 <row_kernel+0x250>
+   12b89:	48 6b f6 68          	imul   rsi,rsi,0x68
+   12b8d:	48 01 f0             	add    rax,rsi
+   12b90:	4c 8b 30             	mov    r14,QWORD PTR [rax]
+   12b93:	48 8b 40 10          	mov    rax,QWORD PTR [rax+0x10]
+   12b97:	48 89 44 24 10       	mov    QWORD PTR [rsp+0x10],rax
+   12b9c:	e9 43 fc ff ff       	jmp    127e4 <row_kernel+0x84>
+   12ba1:	c5 f8 28 f2          	vmovaps xmm6,xmm2
+   12ba5:	e9 d3 fd ff ff       	jmp    1297d <row_kernel+0x21d>
+
+Disassembly of section .fini:

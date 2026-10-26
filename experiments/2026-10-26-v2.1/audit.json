@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "formal_processes": 1835,
+  "phase_counts": {
+    "critical": 480,
+    "screen": 375,
+    "heldout": 600,
+    "large": 80,
+    "large-sensitivity": 60,
+    "ablations": 240
+  },
+  "unique_measurement_keys": 1835,
+  "adjacent_process_pairs": 280,
+  "inputs_hashed": 52,
+  "raw_stdout_and_total_time_verified": true,
+  "frozen_harness_matches": true,
+  "archive_sources_and_binary_hashes_match": true,
+  "source_pushed_before_formal": true,
+  "git_parent_is_v2": true,
+  "master_v2_unchanged": true,
+  "core_worktree_clean": true,
+  "earlier_experiments_unchanged": true,
+  "relative_links_checked": 17,
+  "actual_checked_out_branch": "optimization/v2",
+  "limits": [
+    "no DRAM bandwidth/host frequency control",
+    "calibration and within-process diagnostics are not independent formal repetitions",
+    "FP regrouping uses error bounds, not universal bitwise equality"
+  ]
+}

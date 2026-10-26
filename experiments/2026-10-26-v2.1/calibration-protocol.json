@@ -1,0 +1,33 @@
+{
+  "command": [
+    "gcc",
+    "-O3",
+    "-march=native",
+    "-g",
+    "-Wall",
+    "-fopenmp",
+    "-ffp-contract=off",
+    "-iquote",
+    "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/src",
+    "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/spmv-course-materials/experiments/2026-10-26-v2.1/calibrate.c",
+    "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/src/csr.o",
+    "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/src/matrix_market.o",
+    "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/src/parse.o",
+    "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/src/vector.o",
+    "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/src/spmv_plan.o",
+    "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/src/spmv_v2.o",
+    "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/src/spmv_v21.o",
+    "-o",
+    "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/spmv-course-materials/experiments/2026-10-26-v2.1/build/calibrate"
+  ],
+  "environment": {
+    "OMP_NUM_THREADS": "24",
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PLACES": "cores",
+    "OMP_PROC_BIND": "spread",
+    "OMP_WAIT_POLICY": "PASSIVE"
+  },
+  "wall_s_including_build": 11.349372863769531,
+  "preliminary_excluded": "raw/calibration-initial-contract-off.csv: original CSR was compiled with contraction disabled, unlike production; excluded from fit",
+  "formal_evaluation_started": false
+}

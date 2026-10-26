@@ -1,0 +1,58 @@
+[
+  {
+    "matrix": "bcsstk18",
+    "backend": "v21",
+    "threads": "2",
+    "mean_thread_compute_ms": 0.4530825,
+    "mean_thread_wait_ms": 0.29191799999999996,
+    "probe_execute_ratio": 0.9706806282722513
+  },
+  {
+    "matrix": "bcsstk18",
+    "backend": "v21-merge",
+    "threads": "12",
+    "mean_thread_compute_ms": 0.09665466666666667,
+    "mean_thread_wait_ms": 3.7412539166666665,
+    "probe_execute_ratio": 1.1559633027522935
+  },
+  {
+    "matrix": "empty99",
+    "backend": "v21-merge",
+    "threads": "12",
+    "mean_thread_compute_ms": 2.904207,
+    "mean_thread_wait_ms": 5.046505916666667,
+    "probe_execute_ratio": 0.9998777954295491
+  },
+  {
+    "matrix": "giant-row",
+    "backend": "v21",
+    "threads": "8",
+    "mean_thread_compute_ms": 1.56724975,
+    "mean_thread_wait_ms": 4.1782345,
+    "probe_execute_ratio": 0.9648757255543979
+  },
+  {
+    "matrix": "giant-row",
+    "backend": "v21-merge",
+    "threads": "12",
+    "mean_thread_compute_ms": 1.05938075,
+    "mean_thread_wait_ms": 4.975812166666667,
+    "probe_execute_ratio": 1.0170281124497993
+  },
+  {
+    "matrix": "heldout-two-giants",
+    "backend": "v21",
+    "threads": "2",
+    "mean_thread_compute_ms": 1.056987,
+    "mean_thread_wait_ms": 0.575291,
+    "probe_execute_ratio": 1.0104395604395604
+  },
+  {
+    "matrix": "heldout-two-giants",
+    "backend": "v21-merge",
+    "threads": "12",
+    "mean_thread_compute_ms": 0.18567,
+    "mean_thread_wait_ms": 3.211414416666667,
+    "probe_execute_ratio": 1.0016211834639286
+  }
+]

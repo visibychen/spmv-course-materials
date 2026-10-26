@@ -1,0 +1,24 @@
+matrix_market_read: 0.107340 seconds matrix object coordinate format real field general symmetry 100000 rows 2000000 columns 1099999 nonzeros
+csr_matrix_int32_from_matrix_market: 0.007307 seconds 100000 rows 2000000 columns 1099999 nonzeros
+spmv_prepare: 0.000622573 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=1088
+spmv_v21: kernel=merge partition=rows threads=8 prepare_threads=2 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000476645 policy_s=0.000008026 predicted_s=0.005159910 baseline_predicted_s=0.052745534 groups=2
+spmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000
+spmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000
+spmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000
+spmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000
+spmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000
+spmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000
+spmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000
+spmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000
+csr_matrix_int32_spmv: 0.006483 seconds 9 multiplications 19799982 flops (3.05 Gflop/s, 1.527 Gnz/s)
+spmv_team: actual_threads=8
+spmv_v21: kernel=merge partition=rows threads=8 prepare_threads=2 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000476645 policy_s=0.000008026 predicted_s=0.005159910 baseline_predicted_s=0.052745534 groups=2
+spmv_v21_thread: thread=0 compute_s=0.001197965 publish_s=0.003255398 fixup_s=0.000001865 complete_s=0.001238823
+spmv_v21_thread: thread=1 compute_s=0.001213538 publish_s=0.003413057 fixup_s=0.000001582 complete_s=0.001155423
+spmv_v21_thread: thread=2 compute_s=0.001112656 publish_s=0.003456862 fixup_s=0.000000362 complete_s=0.001154622
+spmv_v21_thread: thread=3 compute_s=0.001158539 publish_s=0.003470785 fixup_s=0.000000341 complete_s=0.001140906
+spmv_v21_thread: thread=4 compute_s=0.001190141 publish_s=0.003397614 fixup_s=0.000000361 complete_s=0.001145847
+spmv_v21_thread: thread=5 compute_s=0.001131081 publish_s=0.003463703 fixup_s=0.000000351 complete_s=0.001169860
+spmv_v21_thread: thread=6 compute_s=0.002063891 publish_s=0.002644364 fixup_s=0.000000360 complete_s=0.001032894
+spmv_v21_thread: thread=7 compute_s=0.003470187 publish_s=0.001083209 fixup_s=0.000000381 complete_s=0.001202509
+spmv_cleanup: 0.000000351 seconds

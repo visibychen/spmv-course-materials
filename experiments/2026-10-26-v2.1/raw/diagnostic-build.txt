@@ -1,0 +1,7 @@
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/bench_compare.c: In function ‘main’:
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/bench_compare.c:51:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+   51 |     for(int v=0;v<6;v++)spmv_plan_free(&p[v]);vector_free(&x);vector_free(&y);csr_matrix_int32_free(&a);return 0;
+      |     ^~~
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/bench_compare.c:51:47: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   51 |     for(int v=0;v<6;v++)spmv_plan_free(&p[v]);vector_free(&x);vector_free(&y);csr_matrix_int32_free(&a);return 0;
+      |                                               ^~~~~~~~~~~

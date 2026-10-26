@@ -1,0 +1,141 @@
+
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .plt.sec:
+
+Disassembly of section .text:
+
+00000000000112f0 <rows_f32>:
+   112f0:	41 57                	push   r15
+   112f2:	41 56                	push   r14
+   112f4:	41 55                	push   r13
+   112f6:	41 54                	push   r12
+   112f8:	55                   	push   rbp
+   112f9:	53                   	push   rbx
+   112fa:	48 8b 5f 08          	mov    rbx,QWORD PTR [rdi+0x8]
+   112fe:	4c 8b 6f 28          	mov    r13,QWORD PTR [rdi+0x28]
+   11302:	4c 8b 67 18          	mov    r12,QWORD PTR [rdi+0x18]
+   11306:	4e 8b 1c c3          	mov    r11,QWORD PTR [rbx+r8*8]
+   1130a:	49 39 c8             	cmp    r8,rcx
+   1130d:	0f 8e a9 00 00 00    	jle    113bc <rows_f32+0xcc>
+   11313:	48 63 7c 24 38       	movsxd rdi,DWORD PTR [rsp+0x38]
+   11318:	8b 6c 24 38          	mov    ebp,DWORD PTR [rsp+0x38]
+   1131c:	49 89 d6             	mov    r14,rdx
+   1131f:	48 89 ca             	mov    rdx,rcx
+   11322:	48 c1 e2 05          	shl    rdx,0x5
+   11326:	49 89 ca             	mov    r10,rcx
+   11329:	c4 e1 f9 6e db       	vmovq  xmm3,rbx
+   1132e:	c5 e8 57 d2          	vxorps xmm2,xmm2,xmm2
+   11332:	49 8d 4c 15 00       	lea    rcx,[r13+rdx*1+0x0]
+   11337:	44 89 cb             	mov    ebx,r9d
+   1133a:	4c 01 e2             	add    rdx,r12
+   1133d:	49 8d 04 bc          	lea    rax,[r12+rdi*4]
+   11341:	c4 e1 f9 6e e0       	vmovq  xmm4,rax
+   11346:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+   1134d:	00 00 00 
+   11350:	85 db                	test   ebx,ebx
+   11352:	0f 85 b8 00 00 00    	jne    11410 <rows_f32+0x120>
+   11358:	c4 e1 f9 7e d8       	vmovq  rax,xmm3
+   1135d:	c4 c1 f9 7e df       	vmovq  r15,xmm3
+   11362:	c5 f8 28 c2          	vmovaps xmm0,xmm2
+   11366:	4a 8b 04 d0          	mov    rax,QWORD PTR [rax+r10*8]
+   1136a:	4f 8b 7c d7 08       	mov    r15,QWORD PTR [r15+r10*8+0x8]
+   1136f:	4c 39 f8             	cmp    rax,r15
+   11372:	7d 2c                	jge    113a0 <rows_f32+0xb0>
+   11374:	85 ed                	test   ebp,ebp
+   11376:	75 58                	jne    113d0 <rows_f32+0xe0>
+   11378:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+   1137f:	00 
+   11380:	4d 63 0c 84          	movsxd r9,DWORD PTR [r12+rax*4]
+   11384:	c4 a1 7a 10 0c 8e    	vmovss xmm1,DWORD PTR [rsi+r9*4]
+   1138a:	c4 c1 72 59 4c 85 00 	vmulss xmm1,xmm1,DWORD PTR [r13+rax*4+0x0]
+   11391:	48 ff c0             	inc    rax
+   11394:	c5 fa 58 c1          	vaddss xmm0,xmm0,xmm1
+   11398:	49 39 c7             	cmp    r15,rax
+   1139b:	75 e3                	jne    11380 <rows_f32+0x90>
+   1139d:	0f 1f 00             	nop    DWORD PTR [rax]
+   113a0:	c4 81 7a 58 04 96    	vaddss xmm0,xmm0,DWORD PTR [r14+r10*4]
+   113a6:	48 83 c1 20          	add    rcx,0x20
+   113aa:	48 83 c2 20          	add    rdx,0x20
+   113ae:	c4 81 7a 11 04 96    	vmovss DWORD PTR [r14+r10*4],xmm0
+   113b4:	49 ff c2             	inc    r10
+   113b7:	4d 39 d0             	cmp    r8,r10
+   113ba:	75 94                	jne    11350 <rows_f32+0x60>
+   113bc:	5b                   	pop    rbx
+   113bd:	5d                   	pop    rbp
+   113be:	41 5c                	pop    r12
+   113c0:	41 5d                	pop    r13
+   113c2:	41 5e                	pop    r14
+   113c4:	41 5f                	pop    r15
+   113c6:	c3                   	ret    
+   113c7:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+   113ce:	00 00 
+   113d0:	4d 89 d9             	mov    r9,r11
+   113d3:	49 29 c1             	sub    r9,rax
+   113d6:	4c 39 cf             	cmp    rdi,r9
+   113d9:	7d 0e                	jge    113e9 <rows_f32+0xf9>
+   113db:	c4 c1 f9 7e e1       	vmovq  r9,xmm4
+   113e0:	4d 63 0c 81          	movsxd r9,DWORD PTR [r9+rax*4]
+   113e4:	42 0f 18 1c 8e       	prefetcht2 BYTE PTR [rsi+r9*4]
+   113e9:	4d 63 0c 84          	movsxd r9,DWORD PTR [r12+rax*4]
+   113ed:	c4 a1 7a 10 0c 8e    	vmovss xmm1,DWORD PTR [rsi+r9*4]
+   113f3:	c4 c1 72 59 4c 85 00 	vmulss xmm1,xmm1,DWORD PTR [r13+rax*4+0x0]
+   113fa:	48 ff c0             	inc    rax
+   113fd:	c5 fa 58 c1          	vaddss xmm0,xmm0,xmm1
+   11401:	49 39 c7             	cmp    r15,rax
+   11404:	75 ca                	jne    113d0 <rows_f32+0xe0>
+   11406:	eb 98                	jmp    113a0 <rows_f32+0xb0>
+   11408:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+   1140f:	00 
+   11410:	85 ed                	test   ebp,ebp
+   11412:	74 1b                	je     1142f <rows_f32+0x13f>
+   11414:	4e 8d 0c d5 00 00 00 	lea    r9,[r10*8+0x0]
+   1141b:	00 
+   1141c:	4c 89 d8             	mov    rax,r11
+   1141f:	4c 29 c8             	sub    rax,r9
+   11422:	48 39 c7             	cmp    rdi,rax
+   11425:	7d 08                	jge    1142f <rows_f32+0x13f>
+   11427:	48 63 04 ba          	movsxd rax,DWORD PTR [rdx+rdi*4]
+   1142b:	0f 18 1c 86          	prefetcht2 BYTE PTR [rsi+rax*4]
+   1142f:	48 63 02             	movsxd rax,DWORD PTR [rdx]
+   11432:	c5 fa 10 0c 86       	vmovss xmm1,DWORD PTR [rsi+rax*4]
+   11437:	48 63 42 04          	movsxd rax,DWORD PTR [rdx+0x4]
+   1143b:	c5 f2 59 09          	vmulss xmm1,xmm1,DWORD PTR [rcx]
+   1143f:	c5 fa 10 04 86       	vmovss xmm0,DWORD PTR [rsi+rax*4]
+   11444:	48 63 42 08          	movsxd rax,DWORD PTR [rdx+0x8]
+   11448:	c5 fa 59 41 04       	vmulss xmm0,xmm0,DWORD PTR [rcx+0x4]
+   1144d:	c5 f2 58 ca          	vaddss xmm1,xmm1,xmm2
+   11451:	c5 fa 58 c1          	vaddss xmm0,xmm0,xmm1
+   11455:	c5 fa 10 0c 86       	vmovss xmm1,DWORD PTR [rsi+rax*4]
+   1145a:	48 63 42 0c          	movsxd rax,DWORD PTR [rdx+0xc]
+   1145e:	c5 f2 59 49 08       	vmulss xmm1,xmm1,DWORD PTR [rcx+0x8]
+   11463:	c5 f2 58 c8          	vaddss xmm1,xmm1,xmm0
+   11467:	c5 fa 10 04 86       	vmovss xmm0,DWORD PTR [rsi+rax*4]
+   1146c:	48 63 42 10          	movsxd rax,DWORD PTR [rdx+0x10]
+   11470:	c5 fa 59 41 0c       	vmulss xmm0,xmm0,DWORD PTR [rcx+0xc]
+   11475:	c5 fa 58 c1          	vaddss xmm0,xmm0,xmm1
+   11479:	c5 fa 10 0c 86       	vmovss xmm1,DWORD PTR [rsi+rax*4]
+   1147e:	48 63 42 14          	movsxd rax,DWORD PTR [rdx+0x14]
+   11482:	c5 f2 59 49 10       	vmulss xmm1,xmm1,DWORD PTR [rcx+0x10]
+   11487:	c5 f2 58 c8          	vaddss xmm1,xmm1,xmm0
+   1148b:	c5 fa 10 04 86       	vmovss xmm0,DWORD PTR [rsi+rax*4]
+   11490:	48 63 42 18          	movsxd rax,DWORD PTR [rdx+0x18]
+   11494:	c5 fa 59 41 14       	vmulss xmm0,xmm0,DWORD PTR [rcx+0x14]
+   11499:	c5 fa 58 c1          	vaddss xmm0,xmm0,xmm1
+   1149d:	c5 fa 10 0c 86       	vmovss xmm1,DWORD PTR [rsi+rax*4]
+   114a2:	48 63 42 1c          	movsxd rax,DWORD PTR [rdx+0x1c]
+   114a6:	c5 f2 59 49 18       	vmulss xmm1,xmm1,DWORD PTR [rcx+0x18]
+   114ab:	c5 f2 58 c8          	vaddss xmm1,xmm1,xmm0
+   114af:	c5 fa 10 04 86       	vmovss xmm0,DWORD PTR [rsi+rax*4]
+   114b4:	c5 fa 59 41 1c       	vmulss xmm0,xmm0,DWORD PTR [rcx+0x1c]
+   114b9:	c5 fa 58 c1          	vaddss xmm0,xmm0,xmm1
+   114bd:	e9 de fe ff ff       	jmp    113a0 <rows_f32+0xb0>
+
+Disassembly of section .fini:

@@ -1,0 +1,126 @@
+[
+  {
+    "command": [
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/csrspmv",
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/test.mtx",
+      "--kernel=v2.1",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "-v",
+      "--repeat=0"
+    ],
+    "exit": 0,
+    "stdout": "matrix_market_read: 0.000305 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004011 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000008527 seconds requested=v2.1 selected=v2.1 reason=zero-calls extra_bytes=0\nspmv_v21: kernel=csr partition=rows threads=1 prepare_threads=1 calls=0 profile_match=0 fingerprint=0000000000000000 empty_rows=0 longest=0 validation_s=0.000000000 policy_s=0.000000000 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=0\ncsr_matrix_int32_spmv: 0.000000 seconds 0 multiplications 0 flops (0.00 Gflop/s, 0.000 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000084 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/csrspmv",
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/test.mtx",
+      "--kernel=v2.1",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "-v",
+      "--repeat=1",
+      "--flops=100"
+    ],
+    "exit": 0,
+    "stdout": "matrix_market_read: 0.000012 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004195 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000055912 seconds requested=v2.1 selected=v2.1 reason=no-profile extra_bytes=0\nspmv_v21: kernel=original partition=rows threads=24 prepare_threads=1 calls=8 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=3 validation_s=0.000000094 policy_s=0.000000041 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=0\ncsr_matrix_int32_spmv: 0.003442 seconds 8 multiplications 112 flops (0.00 Gflop/s, 0.000 Gnz/s)\nspmv_team: actual_threads=24\nspmv_cleanup: 0.000000167 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/csrspmv",
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/test.mtx",
+      "--kernel=v2.1",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "-v",
+      "--v21-kernel=merge",
+      "--strict-order"
+    ],
+    "exit": 1,
+    "stdout": "matrix_market_read: 0.000012 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003791 seconds 4 rows 5 columns 7 nonzeros\n",
+    "stderr": "csrspmv: prepare: Invalid argument\n"
+  },
+  {
+    "command": [
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/csrspmv",
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/test.mtx",
+      "--kernel=v2.1",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "-v",
+      "--v21-kernel=long",
+      "--strict-order"
+    ],
+    "exit": 1,
+    "stdout": "matrix_market_read: 0.000013 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004049 seconds 4 rows 5 columns 7 nonzeros\n",
+    "stderr": "csrspmv: prepare: Invalid argument\n"
+  },
+  {
+    "command": [
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/csrspmv",
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/test.mtx",
+      "--kernel=v2.1",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "-v",
+      "--v21-threads=25"
+    ],
+    "exit": 1,
+    "stdout": "matrix_market_read: 0.000012 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004031 seconds 4 rows 5 columns 7 nonzeros\n",
+    "stderr": "csrspmv: prepare: Invalid argument\n"
+  },
+  {
+    "command": [
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/csrspmv",
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/test.mtx",
+      "--kernel=v2.1",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "-v",
+      "--v21-cache=2"
+    ],
+    "exit": 1,
+    "stdout": "",
+    "stderr": "csrspmv: Invalid argument --v21-cache=2\n"
+  },
+  {
+    "command": [
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/csrspmv",
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/test.mtx",
+      "--kernel=v2.1",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "-v",
+      "--v21-profile=/no/such/profile"
+    ],
+    "exit": 1,
+    "stdout": "matrix_market_read: 0.000013 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004068 seconds 4 rows 5 columns 7 nonzeros\n",
+    "stderr": "csrspmv: prepare: No such file or directory\n"
+  },
+  {
+    "command": [
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/csrspmv",
+      "/home/visiby/\u8ba1\u7b97\u673a\u7ec4\u6210\u539f\u7406\u8bfe\u8bbe/csrspmv/test.mtx",
+      "--kernel=v2.1",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "-v",
+      "--v21-kernel=csr",
+      "--execution=serial"
+    ],
+    "exit": 0,
+    "stdout": "matrix_market_read: 0.000012 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004041 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000047165 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=136\nspmv_v21: kernel=csr partition=rows threads=1 prepare_threads=1 calls=1 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=3 validation_s=0.000000105 policy_s=0.000000680 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=0\ncsr_matrix_int32_spmv: 0.000000 seconds 1 multiplications 14 flops (0.04 Gflop/s, 0.019 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000125 seconds\n",
+    "stderr": ""
+  }
+]

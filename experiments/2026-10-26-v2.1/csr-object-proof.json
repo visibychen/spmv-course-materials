@@ -1,0 +1,20 @@
+{
+  "builds": {
+    "original": {
+      "csr_c_sha256": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+      "text_bytes": 24786,
+      "csr_object_text_sha256": "538c3db5fadcf90626576faa9a7ae713a36f534990af5a652233b944a95cdbcb"
+    },
+    "v2": {
+      "csr_c_sha256": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+      "text_bytes": 24786,
+      "csr_object_text_sha256": "538c3db5fadcf90626576faa9a7ae713a36f534990af5a652233b944a95cdbcb"
+    },
+    "v21": {
+      "csr_c_sha256": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+      "text_bytes": 24786,
+      "csr_object_text_sha256": "538c3db5fadcf90626576faa9a7ae713a36f534990af5a652233b944a95cdbcb"
+    }
+  },
+  "limit": "Identical pre-relocation csr.o text/source does not establish identical final addresses or runtime cache/scheduling behavior."
+}

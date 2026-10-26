@@ -1,0 +1,28 @@
+{
+  "commit": "aa1ef3d9bfb93002f19d0bfffdb3074225bb7f15",
+  "parent": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "branch": "optimization/v2.1",
+  "message": "\u4f18\u5316\u65b9\u6848v2.1",
+  "source_sha256": {
+    "src/csr.c": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+    "src/main.c": "c324bcaa4d6e578e25d15fa250cb38a327a0f0411c19134b028f44140ce1e42c",
+    "src/matrix_market.c": "b492e4583a9f168dd8665acfbe3b3078e22c755f7d49e58b54e37ddb6cd45cc3",
+    "src/parse.c": "8549704ed14cc23ab1f417bae1931ec02b4d29089c1ff6ee4d7e9b7553f682d6",
+    "src/program_options.c": "2f04448e27b36cc583dceac5eac98cdd2fe11ebcfdad19e51adb6c0ea5dce5aa",
+    "src/spmv_plan.c": "0ac376f7bad5e30a9f3ff714d40088ee98537afee91a8b9bcb9ed73757d3f158",
+    "src/spmv_v2.c": "ecf330e9c69d721c8ff9e7aaa562c773b922093b4193d1267c7a934dcffad4b2",
+    "src/spmv_v21.c": "a3c02377a7a3e79cb56121c0f85b92baa9c833dee8fbe6c8043dddf64e8d866b",
+    "src/vector.c": "22f71d918b0086adcce263d81729ce3e45bb778a32bcc79e5a767516eaba3ada",
+    "src/csr.h": "cf5234aaf6820d7158aaab96c2ffa0016497bf0c205983d7da09403987197c22",
+    "src/matrix_market.h": "532853be15bfd294d847f6599bd1281900acf10dd8325e34f275a3c5dab67b29",
+    "src/parse.h": "4437a7a6a7f9ae07adc11a761f15784e0f76c8a9426a6681522dd57976568341",
+    "src/program_options.h": "229c35066b195d506e91bb25bf22edefca84402c9154e18bbedc53f7649d3b2a",
+    "src/spmv_plan.h": "b1ae0560494eaabb0c00295064e37da35c322db3ce0b2f4ef90c9e230b64bca0",
+    "src/spmv_v2.h": "be2d75c914f4af78b17d59e614049f652ebeb751c93b79fe3db1d3f860728eb5",
+    "src/spmv_v21.h": "8a764faab416b8c7d3fe5b2704cb5e59a79e0c59b3ed1623706b6594002d4766",
+    "src/vector.h": "a3c0e032f7e7c08f2d77d43c4894fa37f036cea9e29a01eab0c9dbf4c891d45c",
+    "Makefile": "b99062014925a1d1f9dccc7d53cf07ebe7b25b5c6528ee068aa937f1cea76489",
+    "tests/test_spmv_v21.c": "4c877a206e7c01db278916721a75c08f7c913e3b6a6029dcd4dcbc79033cf811"
+  },
+  "formal_experiments_started": false
+}

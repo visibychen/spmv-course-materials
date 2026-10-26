@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-26 Asia/Shanghai",
+  "frozen_core_commit": "aa1ef3d9bfb93002f19d0bfffdb3074225bb7f15",
+  "core_pushed_before_formal_experiments": true,
+  "v2_commit": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "original_commit": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "materials_parent": "3560908",
+  "profile_sha256": "f3579b3f914184a5d9eaad1121b9a6a384fe968f5ac6de49674937423f518151",
+  "calibration": "One process, 918 retained within-process observations, disjoint generated shapes/seed; preceding contraction-off preliminary excluded and retained raw. No evaluation measurements used to fit.",
+  "numeric": "f32/f32/f32 y+=Ax; original auto-SIMD; v21 local ordered and optional regrouped AVX2/merge, no global fast-math; full P+E+D",
+  "formal_plan": {
+    "screen": "All 31 prior non-calibration/non-large inputs, T12; 5 randomized triplets original/v2/v21. R100 for zero/tiny inputs, otherwise9.",
+    "critical": "Prior double-giant/empty99/emptycluster/bcsstk18 and giant/heavycluster, T12/24, 10 adjacent process pairs for v21 vs original and v21 vs v2; replaces overlapping screen conditions.",
+    "new_holdout": "16 new generated patterns/seeds/dimensions and up to four newly sourced real matrices, T12/24, 5 randomized triplets; no post-result retuning.",
+    "large": "T12/24 R9: 10 adjacent AB/BA pairs for each control; T1 R9 and T24 R1/R100: 5 randomized triplets; original R9 at T2/4/8 additionally 5 samples to broaden best-tested-team comparison.",
+    "ablations": "Negative cases/large-compatible cases: forced serial, prepare mode, cache/fixup, same-FP generic CSR, short8 and long controls; 5 samples, reported separately.",
+    "sensitivity_limit": "No full T1/12/24 x R1/9/100 Cartesian product in this round; R sensitivity of large centered on T24. Full task and input-generation costs reported separately."
+  },
+  "environment": {
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PLACES": "cores",
+    "OMP_PROC_BIND": "spread",
+    "OMP_WAIT_POLICY": "PASSIVE"
+  },
+  "statistics": "Per-process total then median; independent process pairs bootstrap20000 fixed seed; rotated within-process diagnostics not independent replications; retain all slow samples",
+  "acceptance": {
+    "primary_original": "large R9 vs original best tested allowed team >=5% median total reduction and paired interval supports benefit where same-team pairing applies",
+    "primary_v2": "large R9 total no more than3% regression vs same-batch v2",
+    "robustness": "Reduce >5% negative-case count and worst regressions on matched conditions; critical cases target <=5% vs same-request original",
+    "branch_policy": "if overall criteria fail or material regressions persist, preserve pushed branch but switch working checkout to optimization/v2; no master merge"
+  },
+  "no_retuning_after_formal": true,
+  "pre_formal_amendment": {
+    "reason": "Calibration-only identifiability audit: one workload size cannot fit scaling slope and call overhead separately. Exclude 6 stream-short8 models rather than extrapolate constants. No formal performance samples existed.",
+    "previous_profile_sha256": "179c93153bab9bb1c854377441209d52d19f722dfe3ae79418687ef4d943c709",
+    "new_profile_sha256": "f3579b3f914184a5d9eaad1121b9a6a384fe968f5ac6de49674937423f518151",
+    "core_commit_unchanged": true,
+    "raw_retained": "raw/pre-identifiability-profile.txt and raw/pre-identifiability-calibration-fit.json",
+    "calibration_observations_unchanged": 918,
+    "output_verification_fix": "Real-matrix output precision50 replaces fixed9 serialization; original/v2/v21 all failed fixed9 for SHERMAN3 small values. All affected real checks rerun. Solver code unchanged."
+  }
+}

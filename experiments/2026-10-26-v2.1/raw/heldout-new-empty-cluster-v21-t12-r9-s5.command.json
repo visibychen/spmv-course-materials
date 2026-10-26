@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/usr/bin/time",
+    "-f",
+    "{\"wall_s\":%e,\"max_rss_kib\":%M,\"major_faults\":%F}",
+    "-o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/raw/heldout-new-empty-cluster-v21-t12-r9-s5.resource.json",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/data/new-empty-cluster.mtx",
+    "--kernel=v2.1",
+    "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+    "--matrix-format=f32",
+    "--source-vector-format=f32",
+    "--destination-vector-format=f32",
+    "--repeat=9",
+    "-v"
+  ],
+  "environment": {
+    "OMP_NUM_THREADS": "12",
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PLACES": "cores",
+    "OMP_PROC_BIND": "spread",
+    "OMP_WAIT_POLICY": "PASSIVE"
+  }
+}

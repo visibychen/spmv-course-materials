@@ -1,0 +1,926 @@
+[
+  {
+    "matrix": "heldout-two-giants",
+    "backend": "v21",
+    "instrumented": false,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/heldout-two-giants.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.028937 seconds matrix object coordinate format real field general symmetry 10003 rows 300007 columns 310007 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004133 seconds 10003 rows 300007 columns 310007 nonzeros\nspmv_prepare: 0.000278118 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=272\nspmv_v21: kernel=merge partition=rows threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000134726 policy_s=0.000004488 predicted_s=0.001346829 baseline_predicted_s=0.004011188 groups=1\ncsr_matrix_int32_spmv: 0.002091 seconds 9 multiplications 5580126 flops (2.67 Gflop/s, 1.334 Gnz/s)\nspmv_team: actual_threads=2\nspmv_cleanup: 0.000000241 seconds\n"
+  },
+  {
+    "matrix": "heldout-two-giants",
+    "backend": "v21",
+    "instrumented": false,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/heldout-two-giants.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.026597 seconds matrix object coordinate format real field general symmetry 10003 rows 300007 columns 310007 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003421 seconds 10003 rows 300007 columns 310007 nonzeros\nspmv_prepare: 0.000258391 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=272\nspmv_v21: kernel=merge partition=rows threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000120920 policy_s=0.000003957 predicted_s=0.001346829 baseline_predicted_s=0.004011188 groups=1\ncsr_matrix_int32_spmv: 0.001820 seconds 9 multiplications 5580126 flops (3.07 Gflop/s, 1.533 Gnz/s)\nspmv_team: actual_threads=2\nspmv_cleanup: 0.000000171 seconds\n"
+  },
+  {
+    "matrix": "heldout-two-giants",
+    "backend": "v21",
+    "instrumented": false,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/heldout-two-giants.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.025011 seconds matrix object coordinate format real field general symmetry 10003 rows 300007 columns 310007 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003100 seconds 10003 rows 300007 columns 310007 nonzeros\nspmv_prepare: 0.000238343 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=272\nspmv_v21: kernel=merge partition=rows threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000115830 policy_s=0.000003647 predicted_s=0.001346829 baseline_predicted_s=0.004011188 groups=1\ncsr_matrix_int32_spmv: 0.001764 seconds 9 multiplications 5580126 flops (3.16 Gflop/s, 1.581 Gnz/s)\nspmv_team: actual_threads=2\nspmv_cleanup: 0.000000170 seconds\n"
+  },
+  {
+    "matrix": "heldout-two-giants",
+    "backend": "v21",
+    "instrumented": true,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/heldout-two-giants.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.024116 seconds matrix object coordinate format real field general symmetry 10003 rows 300007 columns 310007 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003828 seconds 10003 rows 300007 columns 310007 nonzeros\nspmv_prepare: 0.000278489 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=272\nspmv_v21: kernel=merge partition=rows threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000115670 policy_s=0.000005510 predicted_s=0.001346829 baseline_predicted_s=0.004011188 groups=1\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.001839 seconds 9 multiplications 5580126 flops (3.03 Gflop/s, 1.517 Gnz/s)\nspmv_team: actual_threads=2\nspmv_v21: kernel=merge partition=rows threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000115670 policy_s=0.000005510 predicted_s=0.001346829 baseline_predicted_s=0.004011188 groups=1\nspmv_v21_thread: thread=0 compute_s=0.001008354 publish_s=0.000450311 fixup_s=0.000000992 complete_s=0.000148632\nspmv_v21_thread: thread=1 compute_s=0.001105620 publish_s=0.000170062 fixup_s=0.000000393 complete_s=0.000381577\nspmv_cleanup: 0.000000160 seconds\n"
+  },
+  {
+    "matrix": "heldout-two-giants",
+    "backend": "v21",
+    "instrumented": true,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/heldout-two-giants.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.025622 seconds matrix object coordinate format real field general symmetry 10003 rows 300007 columns 310007 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003573 seconds 10003 rows 300007 columns 310007 nonzeros\nspmv_prepare: 0.000258350 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=272\nspmv_v21: kernel=merge partition=rows threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000131179 policy_s=0.000003687 predicted_s=0.001346829 baseline_predicted_s=0.004011188 groups=1\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.001757 seconds 9 multiplications 5580126 flops (3.18 Gflop/s, 1.588 Gnz/s)\nspmv_team: actual_threads=2\nspmv_v21: kernel=merge partition=rows threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000131179 policy_s=0.000003687 predicted_s=0.001346829 baseline_predicted_s=0.004011188 groups=1\nspmv_v21_thread: thread=0 compute_s=0.001016210 publish_s=0.000388053 fixup_s=0.000000851 complete_s=0.000140459\nspmv_v21_thread: thread=1 compute_s=0.001072649 publish_s=0.000158793 fixup_s=0.000000440 complete_s=0.000358000\nspmv_cleanup: 0.000000180 seconds\n"
+  },
+  {
+    "matrix": "heldout-two-giants",
+    "backend": "v21",
+    "instrumented": true,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/heldout-two-giants.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.027077 seconds matrix object coordinate format real field general symmetry 10003 rows 300007 columns 310007 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003689 seconds 10003 rows 300007 columns 310007 nonzeros\nspmv_prepare: 0.000269593 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=272\nspmv_v21: kernel=merge partition=rows threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000134575 policy_s=0.000003807 predicted_s=0.001346829 baseline_predicted_s=0.004011188 groups=1\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.001921 seconds 9 multiplications 5580126 flops (2.90 Gflop/s, 1.452 Gnz/s)\nspmv_team: actual_threads=2\nspmv_v21: kernel=merge partition=rows threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000134575 policy_s=0.000003807 predicted_s=0.001346829 baseline_predicted_s=0.004011188 groups=1\nspmv_v21_thread: thread=0 compute_s=0.001090481 publish_s=0.000185353 fixup_s=0.000000981 complete_s=0.000405750\nspmv_v21_thread: thread=1 compute_s=0.001191845 publish_s=0.000425816 fixup_s=0.000000390 complete_s=0.000165536\nspmv_cleanup: 0.000000231 seconds\n"
+  },
+  {
+    "matrix": "heldout-two-giants",
+    "backend": "v21-merge",
+    "instrumented": false,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/heldout-two-giants.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.031585 seconds matrix object coordinate format real field general symmetry 10003 rows 300007 columns 310007 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003927 seconds 10003 rows 300007 columns 310007 nonzeros\nspmv_prepare: 0.000202555 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000131791 policy_s=0.000001823 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\ncsr_matrix_int32_spmv: 0.004112 seconds 9 multiplications 5580126 flops (1.36 Gflop/s, 0.679 Gnz/s)\nspmv_team: actual_threads=12\nspmv_cleanup: 0.000000351 seconds\n"
+  },
+  {
+    "matrix": "heldout-two-giants",
+    "backend": "v21-merge",
+    "instrumented": false,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/heldout-two-giants.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.028245 seconds matrix object coordinate format real field general symmetry 10003 rows 300007 columns 310007 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003347 seconds 10003 rows 300007 columns 310007 nonzeros\nspmv_prepare: 0.000188908 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000118195 policy_s=0.000001883 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\ncsr_matrix_int32_spmv: 0.003701 seconds 9 multiplications 5580126 flops (1.51 Gflop/s, 0.754 Gnz/s)\nspmv_team: actual_threads=12\nspmv_cleanup: 0.000000391 seconds\n"
+  },
+  {
+    "matrix": "heldout-two-giants",
+    "backend": "v21-merge",
+    "instrumented": false,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/heldout-two-giants.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.027129 seconds matrix object coordinate format real field general symmetry 10003 rows 300007 columns 310007 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003500 seconds 10003 rows 300007 columns 310007 nonzeros\nspmv_prepare: 0.000182828 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000120449 policy_s=0.000001673 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\ncsr_matrix_int32_spmv: 0.003663 seconds 9 multiplications 5580126 flops (1.52 Gflop/s, 0.762 Gnz/s)\nspmv_team: actual_threads=12\nspmv_cleanup: 0.000000421 seconds\n"
+  },
+  {
+    "matrix": "heldout-two-giants",
+    "backend": "v21-merge",
+    "instrumented": true,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/heldout-two-giants.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.027079 seconds matrix object coordinate format real field general symmetry 10003 rows 300007 columns 310007 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003349 seconds 10003 rows 300007 columns 310007 nonzeros\nspmv_prepare: 0.000175574 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000117524 policy_s=0.000001603 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=8 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=9 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=10 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=11 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.003707 seconds 9 multiplications 5580126 flops (1.51 Gflop/s, 0.753 Gnz/s)\nspmv_team: actual_threads=12\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000117524 policy_s=0.000001603 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000170344 publish_s=0.001609717 fixup_s=0.000001182 complete_s=0.001604168\nspmv_v21_thread: thread=1 compute_s=0.000174082 publish_s=0.001637228 fixup_s=0.000001283 complete_s=0.001602825\nspmv_v21_thread: thread=2 compute_s=0.000176576 publish_s=0.001624450 fixup_s=0.000000310 complete_s=0.001604893\nspmv_v21_thread: thread=3 compute_s=0.000171226 publish_s=0.001597755 fixup_s=0.000000310 complete_s=0.001643391\nspmv_v21_thread: thread=4 compute_s=0.000170513 publish_s=0.001607635 fixup_s=0.000000301 complete_s=0.001626751\nspmv_v21_thread: thread=5 compute_s=0.000170043 publish_s=0.001654128 fixup_s=0.000000310 complete_s=0.001582771\nspmv_v21_thread: thread=6 compute_s=0.000170916 publish_s=0.001625954 fixup_s=0.000000361 complete_s=0.001611549\nspmv_v21_thread: thread=7 compute_s=0.000205962 publish_s=0.001554446 fixup_s=0.000000291 complete_s=0.001643812\nspmv_v21_thread: thread=8 compute_s=0.000172007 publish_s=0.001620714 fixup_s=0.000000290 complete_s=0.001609783\nspmv_v21_thread: thread=9 compute_s=0.000172156 publish_s=0.001522965 fixup_s=0.000000351 complete_s=0.001574861\nspmv_v21_thread: thread=10 compute_s=0.000175935 publish_s=0.001594357 fixup_s=0.000000350 complete_s=0.001604161\nspmv_v21_thread: thread=11 compute_s=0.000240437 publish_s=0.001485736 fixup_s=0.000000411 complete_s=0.001692923\nspmv_cleanup: 0.000000310 seconds\n"
+  },
+  {
+    "matrix": "heldout-two-giants",
+    "backend": "v21-merge",
+    "instrumented": true,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/heldout-two-giants.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.027461 seconds matrix object coordinate format real field general symmetry 10003 rows 300007 columns 310007 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003447 seconds 10003 rows 300007 columns 310007 nonzeros\nspmv_prepare: 0.000182386 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000118876 policy_s=0.000001703 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=8 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=9 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=10 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=11 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.003665 seconds 9 multiplications 5580126 flops (1.52 Gflop/s, 0.761 Gnz/s)\nspmv_team: actual_threads=12\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000118876 policy_s=0.000001703 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000171596 publish_s=0.001608430 fixup_s=0.000001580 complete_s=0.001552886\nspmv_v21_thread: thread=1 compute_s=0.000172888 publish_s=0.001634004 fixup_s=0.000001112 complete_s=0.001572740\nspmv_v21_thread: thread=2 compute_s=0.000170563 publish_s=0.001679143 fixup_s=0.000000420 complete_s=0.001522641\nspmv_v21_thread: thread=3 compute_s=0.000170625 publish_s=0.001670913 fixup_s=0.000000331 complete_s=0.001536341\nspmv_v21_thread: thread=4 compute_s=0.000174441 publish_s=0.001626883 fixup_s=0.000000350 complete_s=0.001592827\nspmv_v21_thread: thread=5 compute_s=0.000172168 publish_s=0.001624477 fixup_s=0.000000351 complete_s=0.001580369\nspmv_v21_thread: thread=6 compute_s=0.000170894 publish_s=0.001644522 fixup_s=0.000000351 complete_s=0.001568632\nspmv_v21_thread: thread=7 compute_s=0.000264873 publish_s=0.001509498 fixup_s=0.000000360 complete_s=0.001630762\nspmv_v21_thread: thread=8 compute_s=0.000188730 publish_s=0.001601249 fixup_s=0.000000390 complete_s=0.001599521\nspmv_v21_thread: thread=9 compute_s=0.000172387 publish_s=0.001614189 fixup_s=0.000000360 complete_s=0.001548532\nspmv_v21_thread: thread=10 compute_s=0.000172686 publish_s=0.001581456 fixup_s=0.000000360 complete_s=0.001598082\nspmv_v21_thread: thread=11 compute_s=0.000226189 publish_s=0.001609810 fixup_s=0.000000350 complete_s=0.001535176\nspmv_cleanup: 0.000000351 seconds\n"
+  },
+  {
+    "matrix": "heldout-two-giants",
+    "backend": "v21-merge",
+    "instrumented": true,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/heldout-two-giants.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.026834 seconds matrix object coordinate format real field general symmetry 10003 rows 300007 columns 310007 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003616 seconds 10003 rows 300007 columns 310007 nonzeros\nspmv_prepare: 0.000177147 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000117103 policy_s=0.000001663 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=8 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=9 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=10 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=11 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.003750 seconds 9 multiplications 5580126 flops (1.49 Gflop/s, 0.744 Gnz/s)\nspmv_team: actual_threads=12\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=200003 validation_s=0.000117103 policy_s=0.000001663 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000175715 publish_s=0.001702681 fixup_s=0.000001473 complete_s=0.001538995\nspmv_v21_thread: thread=1 compute_s=0.000170403 publish_s=0.001704346 fixup_s=0.000001242 complete_s=0.001542713\nspmv_v21_thread: thread=2 compute_s=0.000221781 publish_s=0.001699330 fixup_s=0.000000330 complete_s=0.001542202\nspmv_v21_thread: thread=3 compute_s=0.000170525 publish_s=0.001695624 fixup_s=0.000000363 complete_s=0.001529771\nspmv_v21_thread: thread=4 compute_s=0.000174341 publish_s=0.001658655 fixup_s=0.000000350 complete_s=0.001570531\nspmv_v21_thread: thread=5 compute_s=0.000170003 publish_s=0.001675437 fixup_s=0.000000321 complete_s=0.001563582\nspmv_v21_thread: thread=6 compute_s=0.000205790 publish_s=0.001692978 fixup_s=0.000000350 complete_s=0.001532680\nspmv_v21_thread: thread=7 compute_s=0.000216020 publish_s=0.001677078 fixup_s=0.000000350 complete_s=0.001555543\nspmv_v21_thread: thread=8 compute_s=0.000175294 publish_s=0.001665021 fixup_s=0.000000451 complete_s=0.001569673\nspmv_v21_thread: thread=9 compute_s=0.000170974 publish_s=0.001691013 fixup_s=0.000000370 complete_s=0.001541409\nspmv_v21_thread: thread=10 compute_s=0.000169934 publish_s=0.001661018 fixup_s=0.000000351 complete_s=0.001558740\nspmv_v21_thread: thread=11 compute_s=0.000327573 publish_s=0.001580843 fixup_s=0.000000380 complete_s=0.001506351\nspmv_cleanup: 0.000000420 seconds\n"
+  },
+  {
+    "matrix": "giant-row",
+    "backend": "v21",
+    "instrumented": false,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/giant-row.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.103112 seconds matrix object coordinate format real field general symmetry 100000 rows 2000000 columns 1099999 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.007935 seconds 100000 rows 2000000 columns 1099999 nonzeros\nspmv_prepare: 0.000646528 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=1088\nspmv_v21: kernel=merge partition=rows threads=8 prepare_threads=2 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000500330 policy_s=0.000006072 predicted_s=0.005159910 baseline_predicted_s=0.052745534 groups=2\ncsr_matrix_int32_spmv: 0.006735 seconds 9 multiplications 19799982 flops (2.94 Gflop/s, 1.470 Gnz/s)\nspmv_team: actual_threads=8\nspmv_cleanup: 0.000000541 seconds\n"
+  },
+  {
+    "matrix": "giant-row",
+    "backend": "v21",
+    "instrumented": false,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/giant-row.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.107999 seconds matrix object coordinate format real field general symmetry 100000 rows 2000000 columns 1099999 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.008064 seconds 100000 rows 2000000 columns 1099999 nonzeros\nspmv_prepare: 0.000791609 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=1088\nspmv_v21: kernel=merge partition=rows threads=8 prepare_threads=2 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000635893 policy_s=0.000005901 predicted_s=0.005159910 baseline_predicted_s=0.052745534 groups=2\ncsr_matrix_int32_spmv: 0.006492 seconds 9 multiplications 19799982 flops (3.05 Gflop/s, 1.525 Gnz/s)\nspmv_team: actual_threads=8\nspmv_cleanup: 0.000000521 seconds\n"
+  },
+  {
+    "matrix": "giant-row",
+    "backend": "v21",
+    "instrumented": false,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/giant-row.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.105351 seconds matrix object coordinate format real field general symmetry 100000 rows 2000000 columns 1099999 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.007376 seconds 100000 rows 2000000 columns 1099999 nonzeros\nspmv_prepare: 0.000714292 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=1088\nspmv_v21: kernel=merge partition=rows threads=8 prepare_threads=2 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000577182 policy_s=0.000007374 predicted_s=0.005159910 baseline_predicted_s=0.052745534 groups=2\ncsr_matrix_int32_spmv: 0.006719 seconds 9 multiplications 19799982 flops (2.95 Gflop/s, 1.473 Gnz/s)\nspmv_team: actual_threads=8\nspmv_cleanup: 0.000000421 seconds\n"
+  },
+  {
+    "matrix": "giant-row",
+    "backend": "v21",
+    "instrumented": true,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/giant-row.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.101122 seconds matrix object coordinate format real field general symmetry 100000 rows 2000000 columns 1099999 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.007387 seconds 100000 rows 2000000 columns 1099999 nonzeros\nspmv_prepare: 0.000625909 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=1088\nspmv_v21: kernel=merge partition=rows threads=8 prepare_threads=2 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000487366 policy_s=0.000006542 predicted_s=0.005159910 baseline_predicted_s=0.052745534 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.005908 seconds 9 multiplications 19799982 flops (3.35 Gflop/s, 1.676 Gnz/s)\nspmv_team: actual_threads=8\nspmv_v21: kernel=merge partition=rows threads=8 prepare_threads=2 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000487366 policy_s=0.000006542 predicted_s=0.005159910 baseline_predicted_s=0.052745534 groups=2\nspmv_v21_thread: thread=0 compute_s=0.001137610 publish_s=0.002963151 fixup_s=0.000001793 complete_s=0.001092843\nspmv_v21_thread: thread=1 compute_s=0.001199248 publish_s=0.002941699 fixup_s=0.000001403 complete_s=0.001110691\nspmv_v21_thread: thread=2 compute_s=0.001229565 publish_s=0.002951479 fixup_s=0.000000361 complete_s=0.001098794\nspmv_v21_thread: thread=3 compute_s=0.001115980 publish_s=0.003001224 fixup_s=0.000000361 complete_s=0.001136909\nspmv_v21_thread: thread=4 compute_s=0.001207463 publish_s=0.002928988 fixup_s=0.000000370 complete_s=0.001095511\nspmv_v21_thread: thread=5 compute_s=0.001359885 publish_s=0.002703572 fixup_s=0.000000350 complete_s=0.001211666\nspmv_v21_thread: thread=6 compute_s=0.002018544 publish_s=0.002182778 fixup_s=0.000000320 complete_s=0.001040396\nspmv_v21_thread: thread=7 compute_s=0.002964050 publish_s=0.001165430 fixup_s=0.000000490 complete_s=0.001116374\nspmv_cleanup: 0.000000391 seconds\n"
+  },
+  {
+    "matrix": "giant-row",
+    "backend": "v21",
+    "instrumented": true,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/giant-row.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.106607 seconds matrix object coordinate format real field general symmetry 100000 rows 2000000 columns 1099999 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.007908 seconds 100000 rows 2000000 columns 1099999 nonzeros\nspmv_prepare: 0.000691193 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=1088\nspmv_v21: kernel=merge partition=rows threads=8 prepare_threads=2 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000546809 policy_s=0.000007394 predicted_s=0.005159910 baseline_predicted_s=0.052745534 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.007535 seconds 9 multiplications 19799982 flops (2.63 Gflop/s, 1.314 Gnz/s)\nspmv_team: actual_threads=8\nspmv_v21: kernel=merge partition=rows threads=8 prepare_threads=2 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000546809 policy_s=0.000007394 predicted_s=0.005159910 baseline_predicted_s=0.052745534 groups=2\nspmv_v21_thread: thread=0 compute_s=0.001279911 publish_s=0.004264816 fixup_s=0.000002165 complete_s=0.001213721\nspmv_v21_thread: thread=1 compute_s=0.001429406 publish_s=0.004287218 fixup_s=0.000001735 complete_s=0.001158701\nspmv_v21_thread: thread=2 compute_s=0.001310126 publish_s=0.004329442 fixup_s=0.000000390 complete_s=0.001186950\nspmv_v21_thread: thread=3 compute_s=0.001361497 publish_s=0.004312839 fixup_s=0.000000360 complete_s=0.001200314\nspmv_v21_thread: thread=4 compute_s=0.001303976 publish_s=0.004334134 fixup_s=0.000000371 complete_s=0.001128643\nspmv_v21_thread: thread=5 compute_s=0.001288018 publish_s=0.004327894 fixup_s=0.000000611 complete_s=0.001152862\nspmv_v21_thread: thread=6 compute_s=0.002063921 publish_s=0.003644519 fixup_s=0.000000390 complete_s=0.001103178\nspmv_v21_thread: thread=7 compute_s=0.004393519 publish_s=0.001160869 fixup_s=0.000000492 complete_s=0.001276450\nspmv_cleanup: 0.000000581 seconds\n"
+  },
+  {
+    "matrix": "giant-row",
+    "backend": "v21",
+    "instrumented": true,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/giant-row.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.107340 seconds matrix object coordinate format real field general symmetry 100000 rows 2000000 columns 1099999 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.007307 seconds 100000 rows 2000000 columns 1099999 nonzeros\nspmv_prepare: 0.000622573 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=1088\nspmv_v21: kernel=merge partition=rows threads=8 prepare_threads=2 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000476645 policy_s=0.000008026 predicted_s=0.005159910 baseline_predicted_s=0.052745534 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.006483 seconds 9 multiplications 19799982 flops (3.05 Gflop/s, 1.527 Gnz/s)\nspmv_team: actual_threads=8\nspmv_v21: kernel=merge partition=rows threads=8 prepare_threads=2 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000476645 policy_s=0.000008026 predicted_s=0.005159910 baseline_predicted_s=0.052745534 groups=2\nspmv_v21_thread: thread=0 compute_s=0.001197965 publish_s=0.003255398 fixup_s=0.000001865 complete_s=0.001238823\nspmv_v21_thread: thread=1 compute_s=0.001213538 publish_s=0.003413057 fixup_s=0.000001582 complete_s=0.001155423\nspmv_v21_thread: thread=2 compute_s=0.001112656 publish_s=0.003456862 fixup_s=0.000000362 complete_s=0.001154622\nspmv_v21_thread: thread=3 compute_s=0.001158539 publish_s=0.003470785 fixup_s=0.000000341 complete_s=0.001140906\nspmv_v21_thread: thread=4 compute_s=0.001190141 publish_s=0.003397614 fixup_s=0.000000361 complete_s=0.001145847\nspmv_v21_thread: thread=5 compute_s=0.001131081 publish_s=0.003463703 fixup_s=0.000000351 complete_s=0.001169860\nspmv_v21_thread: thread=6 compute_s=0.002063891 publish_s=0.002644364 fixup_s=0.000000360 complete_s=0.001032894\nspmv_v21_thread: thread=7 compute_s=0.003470187 publish_s=0.001083209 fixup_s=0.000000381 complete_s=0.001202509\nspmv_cleanup: 0.000000351 seconds\n"
+  },
+  {
+    "matrix": "giant-row",
+    "backend": "v21-merge",
+    "instrumented": false,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/giant-row.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.102759 seconds matrix object coordinate format real field general symmetry 100000 rows 2000000 columns 1099999 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.007032 seconds 100000 rows 2000000 columns 1099999 nonzeros\nspmv_prepare: 0.000580453 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000508637 policy_s=0.000002575 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\ncsr_matrix_int32_spmv: 0.006225 seconds 9 multiplications 19799982 flops (3.18 Gflop/s, 1.590 Gnz/s)\nspmv_team: actual_threads=12\nspmv_cleanup: 0.000000531 seconds\n"
+  },
+  {
+    "matrix": "giant-row",
+    "backend": "v21-merge",
+    "instrumented": false,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/giant-row.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.108101 seconds matrix object coordinate format real field general symmetry 100000 rows 2000000 columns 1099999 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.008115 seconds 100000 rows 2000000 columns 1099999 nonzeros\nspmv_prepare: 0.000560765 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000483058 policy_s=0.000002464 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\ncsr_matrix_int32_spmv: 0.006257 seconds 9 multiplications 19799982 flops (3.16 Gflop/s, 1.582 Gnz/s)\nspmv_team: actual_threads=12\nspmv_cleanup: 0.000000952 seconds\n"
+  },
+  {
+    "matrix": "giant-row",
+    "backend": "v21-merge",
+    "instrumented": false,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/giant-row.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.104767 seconds matrix object coordinate format real field general symmetry 100000 rows 2000000 columns 1099999 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.006981 seconds 100000 rows 2000000 columns 1099999 nonzeros\nspmv_prepare: 0.000556948 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000485934 policy_s=0.000003096 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\ncsr_matrix_int32_spmv: 0.006148 seconds 9 multiplications 19799982 flops (3.22 Gflop/s, 1.610 Gnz/s)\nspmv_team: actual_threads=12\nspmv_cleanup: 0.000000752 seconds\n"
+  },
+  {
+    "matrix": "giant-row",
+    "backend": "v21-merge",
+    "instrumented": true,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/giant-row.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.101876 seconds matrix object coordinate format real field general symmetry 100000 rows 2000000 columns 1099999 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.007170 seconds 100000 rows 2000000 columns 1099999 nonzeros\nspmv_prepare: 0.000593733 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000525002 policy_s=0.000004569 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=8 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=9 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=10 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=11 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.006624 seconds 9 multiplications 19799982 flops (2.99 Gflop/s, 1.495 Gnz/s)\nspmv_team: actual_threads=12\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000525002 policy_s=0.000004569 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000798287 publish_s=0.003544929 fixup_s=0.000002325 complete_s=0.001841764\nspmv_v21_thread: thread=1 compute_s=0.000796023 publish_s=0.003664698 fixup_s=0.000001661 complete_s=0.001800763\nspmv_v21_thread: thread=2 compute_s=0.000866335 publish_s=0.003631722 fixup_s=0.000000362 complete_s=0.001759143\nspmv_v21_thread: thread=3 compute_s=0.000716911 publish_s=0.003633607 fixup_s=0.000000361 complete_s=0.001782097\nspmv_v21_thread: thread=4 compute_s=0.000716180 publish_s=0.003515576 fixup_s=0.000000351 complete_s=0.001868502\nspmv_v21_thread: thread=5 compute_s=0.000872955 publish_s=0.003608894 fixup_s=0.000000350 complete_s=0.001765518\nspmv_v21_thread: thread=6 compute_s=0.000777065 publish_s=0.003629337 fixup_s=0.000000350 complete_s=0.001858395\nspmv_v21_thread: thread=7 compute_s=0.000833955 publish_s=0.003607269 fixup_s=0.000000361 complete_s=0.001769104\nspmv_v21_thread: thread=8 compute_s=0.000726340 publish_s=0.003663190 fixup_s=0.000000360 complete_s=0.001850801\nspmv_v21_thread: thread=9 compute_s=0.000877178 publish_s=0.003553658 fixup_s=0.000000361 complete_s=0.001804576\nspmv_v21_thread: thread=10 compute_s=0.002342700 publish_s=0.002273275 fixup_s=0.000000351 complete_s=0.001672242\nspmv_v21_thread: thread=11 compute_s=0.002478899 publish_s=0.001949174 fixup_s=0.000000350 complete_s=0.001843653\nspmv_cleanup: 0.000000762 seconds\n"
+  },
+  {
+    "matrix": "giant-row",
+    "backend": "v21-merge",
+    "instrumented": true,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/giant-row.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.104881 seconds matrix object coordinate format real field general symmetry 100000 rows 2000000 columns 1099999 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.006972 seconds 100000 rows 2000000 columns 1099999 nonzeros\nspmv_prepare: 0.000641369 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000587426 policy_s=0.000002475 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=8 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=9 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=10 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=11 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.006331 seconds 9 multiplications 19799982 flops (3.13 Gflop/s, 1.564 Gnz/s)\nspmv_team: actual_threads=12\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000587426 policy_s=0.000002475 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000754782 publish_s=0.003523709 fixup_s=0.000002064 complete_s=0.001686754\nspmv_v21_thread: thread=1 compute_s=0.000708927 publish_s=0.003684266 fixup_s=0.000001161 complete_s=0.001673394\nspmv_v21_thread: thread=2 compute_s=0.000739626 publish_s=0.003648675 fixup_s=0.000000401 complete_s=0.001700615\nspmv_v21_thread: thread=3 compute_s=0.000744633 publish_s=0.003670518 fixup_s=0.000000341 complete_s=0.001646392\nspmv_v21_thread: thread=4 compute_s=0.000780382 publish_s=0.003628668 fixup_s=0.000000361 complete_s=0.001653416\nspmv_v21_thread: thread=5 compute_s=0.000849663 publish_s=0.003500343 fixup_s=0.000000350 complete_s=0.001699226\nspmv_v21_thread: thread=6 compute_s=0.000906372 publish_s=0.003443247 fixup_s=0.000000350 complete_s=0.001699443\nspmv_v21_thread: thread=7 compute_s=0.000757749 publish_s=0.003493442 fixup_s=0.000000350 complete_s=0.001700515\nspmv_v21_thread: thread=8 compute_s=0.000810420 publish_s=0.003564235 fixup_s=0.000000351 complete_s=0.001643174\nspmv_v21_thread: thread=9 compute_s=0.000818998 publish_s=0.003550412 fixup_s=0.000000340 complete_s=0.001649828\nspmv_v21_thread: thread=10 compute_s=0.002611902 publish_s=0.001708896 fixup_s=0.000000361 complete_s=0.001682515\nspmv_v21_thread: thread=11 compute_s=0.002229115 publish_s=0.002328623 fixup_s=0.000000350 complete_s=0.001529440\nspmv_cleanup: 0.000000962 seconds\n"
+  },
+  {
+    "matrix": "giant-row",
+    "backend": "v21-merge",
+    "instrumented": true,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/giant-row.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.102533 seconds matrix object coordinate format real field general symmetry 100000 rows 2000000 columns 1099999 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.007891 seconds 100000 rows 2000000 columns 1099999 nonzeros\nspmv_prepare: 0.000550095 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000479320 policy_s=0.000002154 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=8 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=9 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=10 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=11 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.005829 seconds 9 multiplications 19799982 flops (3.40 Gflop/s, 1.698 Gnz/s)\nspmv_team: actual_threads=12\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=1000000 validation_s=0.000479320 policy_s=0.000002154 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=2\nspmv_v21_thread: thread=0 compute_s=0.000780152 publish_s=0.002993104 fixup_s=0.000002245 complete_s=0.001703266\nspmv_v21_thread: thread=1 compute_s=0.000669674 publish_s=0.003048512 fixup_s=0.000001300 complete_s=0.001785202\nspmv_v21_thread: thread=2 compute_s=0.000731069 publish_s=0.002962157 fixup_s=0.000000361 complete_s=0.001804137\nspmv_v21_thread: thread=3 compute_s=0.000693737 publish_s=0.003036325 fixup_s=0.000000372 complete_s=0.001765317\nspmv_v21_thread: thread=4 compute_s=0.000697827 publish_s=0.003103557 fixup_s=0.000000311 complete_s=0.001673974\nspmv_v21_thread: thread=5 compute_s=0.000709510 publish_s=0.003111700 fixup_s=0.000000352 complete_s=0.001662575\nspmv_v21_thread: thread=6 compute_s=0.000705690 publish_s=0.002996884 fixup_s=0.000000361 complete_s=0.001619777\nspmv_v21_thread: thread=7 compute_s=0.000748774 publish_s=0.003103435 fixup_s=0.000000350 complete_s=0.001650547\nspmv_v21_thread: thread=8 compute_s=0.000682526 publish_s=0.003040522 fixup_s=0.000000350 complete_s=0.001772923\nspmv_v21_thread: thread=9 compute_s=0.000727651 publish_s=0.003093036 fixup_s=0.000000551 complete_s=0.001661096\nspmv_v21_thread: thread=10 compute_s=0.001456950 publish_s=0.002612638 fixup_s=0.000000340 complete_s=0.001482077\nspmv_v21_thread: thread=11 compute_s=0.002010559 publish_s=0.001699969 fixup_s=0.000000370 complete_s=0.001758005\nspmv_cleanup: 0.000000801 seconds\n"
+  },
+  {
+    "matrix": "empty99",
+    "backend": "v21",
+    "instrumented": false,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/empty99.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.008244 seconds matrix object coordinate format real field general symmetry 1000000 rows 12000000 columns 80000 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003902 seconds 1000000 rows 12000000 columns 80000 nonzeros\nspmv_prepare: 0.001009918 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=0\nspmv_v21: kernel=original partition=rows threads=8 prepare_threads=4 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000845667 policy_s=0.000005961 predicted_s=0.000566600 baseline_predicted_s=0.000712059 groups=0\ncsr_matrix_int32_spmv: 0.004702 seconds 9 multiplications 1440000 flops (0.31 Gflop/s, 0.153 Gnz/s)\nspmv_team: actual_threads=8\nspmv_cleanup: 0.000000150 seconds\n"
+  },
+  {
+    "matrix": "empty99",
+    "backend": "v21",
+    "instrumented": false,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/empty99.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.008016 seconds matrix object coordinate format real field general symmetry 1000000 rows 12000000 columns 80000 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003634 seconds 1000000 rows 12000000 columns 80000 nonzeros\nspmv_prepare: 0.000762940 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=0\nspmv_v21: kernel=original partition=rows threads=8 prepare_threads=4 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000613315 policy_s=0.000006583 predicted_s=0.000566600 baseline_predicted_s=0.000712059 groups=0\ncsr_matrix_int32_spmv: 0.005089 seconds 9 multiplications 1440000 flops (0.28 Gflop/s, 0.141 Gnz/s)\nspmv_team: actual_threads=8\nspmv_cleanup: 0.000000171 seconds\n"
+  },
+  {
+    "matrix": "empty99",
+    "backend": "v21",
+    "instrumented": false,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/empty99.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.008213 seconds matrix object coordinate format real field general symmetry 1000000 rows 12000000 columns 80000 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004029 seconds 1000000 rows 12000000 columns 80000 nonzeros\nspmv_prepare: 0.000756548 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=0\nspmv_v21: kernel=original partition=rows threads=8 prepare_threads=4 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000601904 policy_s=0.000006062 predicted_s=0.000566600 baseline_predicted_s=0.000712059 groups=0\ncsr_matrix_int32_spmv: 0.004701 seconds 9 multiplications 1440000 flops (0.31 Gflop/s, 0.153 Gnz/s)\nspmv_team: actual_threads=8\nspmv_cleanup: 0.000000210 seconds\n"
+  },
+  {
+    "matrix": "empty99",
+    "backend": "v21",
+    "instrumented": true,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/empty99.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.008101 seconds matrix object coordinate format real field general symmetry 1000000 rows 12000000 columns 80000 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003888 seconds 1000000 rows 12000000 columns 80000 nonzeros\nspmv_prepare: 0.000864174 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=0\nspmv_v21: kernel=original partition=rows threads=8 prepare_threads=4 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000669774 policy_s=0.000006332 predicted_s=0.000566600 baseline_predicted_s=0.000712059 groups=0\ncsr_matrix_int32_spmv: 0.005049 seconds 9 multiplications 1440000 flops (0.29 Gflop/s, 0.143 Gnz/s)\nspmv_team: actual_threads=8\nspmv_v21: kernel=original partition=rows threads=8 prepare_threads=4 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000669774 policy_s=0.000006332 predicted_s=0.000566600 baseline_predicted_s=0.000712059 groups=0\nspmv_cleanup: 0.000000241 seconds\n"
+  },
+  {
+    "matrix": "empty99",
+    "backend": "v21",
+    "instrumented": true,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/empty99.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.007889 seconds matrix object coordinate format real field general symmetry 1000000 rows 12000000 columns 80000 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004029 seconds 1000000 rows 12000000 columns 80000 nonzeros\nspmv_prepare: 0.000803707 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=0\nspmv_v21: kernel=original partition=rows threads=8 prepare_threads=4 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000648983 policy_s=0.000005390 predicted_s=0.000566600 baseline_predicted_s=0.000712059 groups=0\ncsr_matrix_int32_spmv: 0.005065 seconds 9 multiplications 1440000 flops (0.28 Gflop/s, 0.142 Gnz/s)\nspmv_team: actual_threads=8\nspmv_v21: kernel=original partition=rows threads=8 prepare_threads=4 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000648983 policy_s=0.000005390 predicted_s=0.000566600 baseline_predicted_s=0.000712059 groups=0\nspmv_cleanup: 0.000000331 seconds\n"
+  },
+  {
+    "matrix": "empty99",
+    "backend": "v21",
+    "instrumented": true,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/empty99.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.008481 seconds matrix object coordinate format real field general symmetry 1000000 rows 12000000 columns 80000 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004176 seconds 1000000 rows 12000000 columns 80000 nonzeros\nspmv_prepare: 0.000892555 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=0\nspmv_v21: kernel=original partition=rows threads=8 prepare_threads=4 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000717813 policy_s=0.000008226 predicted_s=0.000566600 baseline_predicted_s=0.000712059 groups=0\ncsr_matrix_int32_spmv: 0.005212 seconds 9 multiplications 1440000 flops (0.28 Gflop/s, 0.138 Gnz/s)\nspmv_team: actual_threads=8\nspmv_v21: kernel=original partition=rows threads=8 prepare_threads=4 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000717813 policy_s=0.000008226 predicted_s=0.000566600 baseline_predicted_s=0.000712059 groups=0\nspmv_cleanup: 0.000000170 seconds\n"
+  },
+  {
+    "matrix": "empty99",
+    "backend": "v21-merge",
+    "instrumented": false,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/empty99.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.007780 seconds matrix object coordinate format real field general symmetry 1000000 rows 12000000 columns 80000 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004207 seconds 1000000 rows 12000000 columns 80000 nonzeros\nspmv_prepare: 0.001067318 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000966235 policy_s=0.000023785 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=0\ncsr_matrix_int32_spmv: 0.008183 seconds 9 multiplications 1440000 flops (0.18 Gflop/s, 0.088 Gnz/s)\nspmv_team: actual_threads=12\nspmv_cleanup: 0.000000722 seconds\n"
+  },
+  {
+    "matrix": "empty99",
+    "backend": "v21-merge",
+    "instrumented": false,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/empty99.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.008241 seconds matrix object coordinate format real field general symmetry 1000000 rows 12000000 columns 80000 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003752 seconds 1000000 rows 12000000 columns 80000 nonzeros\nspmv_prepare: 0.001070303 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000974241 policy_s=0.000016301 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=0\ncsr_matrix_int32_spmv: 0.007829 seconds 9 multiplications 1440000 flops (0.18 Gflop/s, 0.092 Gnz/s)\nspmv_team: actual_threads=12\nspmv_cleanup: 0.000000932 seconds\n"
+  },
+  {
+    "matrix": "empty99",
+    "backend": "v21-merge",
+    "instrumented": false,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/empty99.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v"
+    ],
+    "stdout": "matrix_market_read: 0.007858 seconds matrix object coordinate format real field general symmetry 1000000 rows 12000000 columns 80000 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003832 seconds 1000000 rows 12000000 columns 80000 nonzeros\nspmv_prepare: 0.001001563 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000917002 policy_s=0.000011562 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=0\ncsr_matrix_int32_spmv: 0.008562 seconds 9 multiplications 1440000 flops (0.17 Gflop/s, 0.084 Gnz/s)\nspmv_team: actual_threads=12\nspmv_cleanup: 0.000000751 seconds\n"
+  },
+  {
+    "matrix": "empty99",
+    "backend": "v21-merge",
+    "instrumented": true,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/empty99.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.008246 seconds matrix object coordinate format real field general symmetry 1000000 rows 12000000 columns 80000 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004842 seconds 1000000 rows 12000000 columns 80000 nonzeros\nspmv_prepare: 0.001047951 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000967989 policy_s=0.000010801 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=0\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=8 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=9 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=10 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=11 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.008029 seconds 9 multiplications 1440000 flops (0.18 Gflop/s, 0.090 Gnz/s)\nspmv_team: actual_threads=12\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000967989 policy_s=0.000010801 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=0\nspmv_v21_thread: thread=0 compute_s=0.002633198 publish_s=0.003299924 fixup_s=0.000000752 complete_s=0.001758399\nspmv_v21_thread: thread=1 compute_s=0.002855294 publish_s=0.002949829 fixup_s=0.000000360 complete_s=0.001878393\nspmv_v21_thread: thread=2 compute_s=0.002401230 publish_s=0.003570049 fixup_s=0.000000391 complete_s=0.001719357\nspmv_v21_thread: thread=3 compute_s=0.002208919 publish_s=0.003527679 fixup_s=0.000000401 complete_s=0.001883199\nspmv_v21_thread: thread=4 compute_s=0.002544443 publish_s=0.003377200 fixup_s=0.000000381 complete_s=0.001751337\nspmv_v21_thread: thread=5 compute_s=0.002366545 publish_s=0.003548326 fixup_s=0.000000360 complete_s=0.001803900\nspmv_v21_thread: thread=6 compute_s=0.002235465 publish_s=0.003502540 fixup_s=0.000000361 complete_s=0.001910234\nspmv_v21_thread: thread=7 compute_s=0.002834122 publish_s=0.003212357 fixup_s=0.000000360 complete_s=0.001744231\nspmv_v21_thread: thread=8 compute_s=0.002488567 publish_s=0.003467167 fixup_s=0.000000340 complete_s=0.001737726\nspmv_v21_thread: thread=9 compute_s=0.002882074 publish_s=0.003093450 fixup_s=0.000000361 complete_s=0.001694923\nspmv_v21_thread: thread=10 compute_s=0.003172197 publish_s=0.002809815 fixup_s=0.000000350 complete_s=0.001715171\nspmv_v21_thread: thread=11 compute_s=0.003121781 publish_s=0.002715899 fixup_s=0.000000390 complete_s=0.001886966\nspmv_cleanup: 0.000000481 seconds\n"
+  },
+  {
+    "matrix": "empty99",
+    "backend": "v21-merge",
+    "instrumented": true,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/empty99.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.008857 seconds matrix object coordinate format real field general symmetry 1000000 rows 12000000 columns 80000 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004304 seconds 1000000 rows 12000000 columns 80000 nonzeros\nspmv_prepare: 0.001035798 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000947260 policy_s=0.000018705 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=0\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=8 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=9 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=10 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=11 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.008182 seconds 9 multiplications 1440000 flops (0.18 Gflop/s, 0.088 Gnz/s)\nspmv_team: actual_threads=12\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000947260 policy_s=0.000018705 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=0\nspmv_v21_thread: thread=0 compute_s=0.002511211 publish_s=0.003559964 fixup_s=0.000000511 complete_s=0.001759431\nspmv_v21_thread: thread=1 compute_s=0.002940537 publish_s=0.003316414 fixup_s=0.000000431 complete_s=0.001770801\nspmv_v21_thread: thread=2 compute_s=0.003609687 publish_s=0.002634727 fixup_s=0.000000420 complete_s=0.001689718\nspmv_v21_thread: thread=3 compute_s=0.003493095 publish_s=0.002752748 fixup_s=0.000000460 complete_s=0.001722103\nspmv_v21_thread: thread=4 compute_s=0.001886515 publish_s=0.004243030 fixup_s=0.000000401 complete_s=0.001826570\nspmv_v21_thread: thread=5 compute_s=0.002756645 publish_s=0.003501032 fixup_s=0.000000380 complete_s=0.001696905\nspmv_v21_thread: thread=6 compute_s=0.002734674 publish_s=0.003528957 fixup_s=0.000000370 complete_s=0.001652300\nspmv_v21_thread: thread=7 compute_s=0.002721099 publish_s=0.003584962 fixup_s=0.000000381 complete_s=0.001692283\nspmv_v21_thread: thread=8 compute_s=0.002942891 publish_s=0.003302859 fixup_s=0.000000370 complete_s=0.001689046\nspmv_v21_thread: thread=9 compute_s=0.002597173 publish_s=0.003525399 fixup_s=0.000000360 complete_s=0.001766304\nspmv_v21_thread: thread=10 compute_s=0.003302914 publish_s=0.002990842 fixup_s=0.000000512 complete_s=0.001641663\nspmv_v21_thread: thread=11 compute_s=0.003354043 publish_s=0.002933950 fixup_s=0.000000362 complete_s=0.001717998\nspmv_cleanup: 0.000000842 seconds\n"
+  },
+  {
+    "matrix": "empty99",
+    "backend": "v21-merge",
+    "instrumented": true,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/empty99.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.008492 seconds matrix object coordinate format real field general symmetry 1000000 rows 12000000 columns 80000 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.004175 seconds 1000000 rows 12000000 columns 80000 nonzeros\nspmv_prepare: 0.001061587 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000960645 policy_s=0.000015941 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=0\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=8 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=9 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=10 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=11 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.009254 seconds 9 multiplications 1440000 flops (0.16 Gflop/s, 0.078 Gnz/s)\nspmv_team: actual_threads=12\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=990000 longest=8 validation_s=0.000960645 policy_s=0.000015941 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=0\nspmv_v21_thread: thread=0 compute_s=0.003489417 publish_s=0.003592739 fixup_s=0.000000553 complete_s=0.001787941\nspmv_v21_thread: thread=1 compute_s=0.002905639 publish_s=0.004284329 fixup_s=0.000000392 complete_s=0.001759031\nspmv_v21_thread: thread=2 compute_s=0.003838631 publish_s=0.003231710 fixup_s=0.000000362 complete_s=0.001794014\nspmv_v21_thread: thread=3 compute_s=0.003846347 publish_s=0.003174132 fixup_s=0.000000381 complete_s=0.001839109\nspmv_v21_thread: thread=4 compute_s=0.003919443 publish_s=0.003198055 fixup_s=0.000000370 complete_s=0.001752534\nspmv_v21_thread: thread=5 compute_s=0.003436749 publish_s=0.003796271 fixup_s=0.000000462 complete_s=0.001775488\nspmv_v21_thread: thread=6 compute_s=0.003203616 publish_s=0.004043708 fixup_s=0.000000381 complete_s=0.001756580\nspmv_v21_thread: thread=7 compute_s=0.004684650 publish_s=0.002545648 fixup_s=0.000000370 complete_s=0.001851206\nspmv_v21_thread: thread=8 compute_s=0.003573390 publish_s=0.003743066 fixup_s=0.000000381 complete_s=0.001768303\nspmv_v21_thread: thread=9 compute_s=0.003223684 publish_s=0.003746047 fixup_s=0.000000370 complete_s=0.001909904\nspmv_v21_thread: thread=10 compute_s=0.003526501 publish_s=0.003695010 fixup_s=0.000000360 complete_s=0.001724354\nspmv_v21_thread: thread=11 compute_s=0.004563510 publish_s=0.002705684 fixup_s=0.000000370 complete_s=0.001706767\nspmv_cleanup: 0.000000801 seconds\n"
+  },
+  {
+    "matrix": "bcsstk18",
+    "backend": "v21",
+    "instrumented": false,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/bcsstk18.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--include-symmetric-part"
+    ],
+    "stdout": "matrix_market_read: 0.011862 seconds matrix object coordinate format real field symmetric symmetry 11948 rows 11948 columns 80519 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003569 seconds 11948 rows 11948 columns 149090 nonzeros\nspmv_prepare: 0.000229867 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=272\nspmv_v21: kernel=csr partition=work threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000093288 policy_s=0.000005380 predicted_s=0.000694818 baseline_predicted_s=0.002035323 groups=0\ncsr_matrix_int32_spmv: 0.000941 seconds 9 multiplications 2683620 flops (2.85 Gflop/s, 1.425 Gnz/s)\nspmv_team: actual_threads=2\nspmv_cleanup: 0.000000171 seconds\n"
+  },
+  {
+    "matrix": "bcsstk18",
+    "backend": "v21",
+    "instrumented": false,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/bcsstk18.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--include-symmetric-part"
+    ],
+    "stdout": "matrix_market_read: 0.011220 seconds matrix object coordinate format real field symmetric symmetry 11948 rows 11948 columns 80519 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.002912 seconds 11948 rows 11948 columns 149090 nonzeros\nspmv_prepare: 0.000192205 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=272\nspmv_v21: kernel=csr partition=work threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000066176 policy_s=0.000004789 predicted_s=0.000694818 baseline_predicted_s=0.002035323 groups=0\ncsr_matrix_int32_spmv: 0.000955 seconds 9 multiplications 2683620 flops (2.81 Gflop/s, 1.404 Gnz/s)\nspmv_team: actual_threads=2\nspmv_cleanup: 0.000000341 seconds\n"
+  },
+  {
+    "matrix": "bcsstk18",
+    "backend": "v21",
+    "instrumented": false,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/bcsstk18.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--include-symmetric-part"
+    ],
+    "stdout": "matrix_market_read: 0.011794 seconds matrix object coordinate format real field symmetric symmetry 11948 rows 11948 columns 80519 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.002909 seconds 11948 rows 11948 columns 149090 nonzeros\nspmv_prepare: 0.000264903 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=272\nspmv_v21: kernel=csr partition=work threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000088969 policy_s=0.000005089 predicted_s=0.000694818 baseline_predicted_s=0.002035323 groups=0\ncsr_matrix_int32_spmv: 0.001001 seconds 9 multiplications 2683620 flops (2.68 Gflop/s, 1.340 Gnz/s)\nspmv_team: actual_threads=2\nspmv_cleanup: 0.000000201 seconds\n"
+  },
+  {
+    "matrix": "bcsstk18",
+    "backend": "v21",
+    "instrumented": true,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/bcsstk18.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--include-symmetric-part",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.011255 seconds matrix object coordinate format real field symmetric symmetry 11948 rows 11948 columns 80519 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.002922 seconds 11948 rows 11948 columns 149090 nonzeros\nspmv_prepare: 0.000196793 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=272\nspmv_v21: kernel=csr partition=work threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000064933 policy_s=0.000004679 predicted_s=0.000694818 baseline_predicted_s=0.002035323 groups=0\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.000927 seconds 9 multiplications 2683620 flops (2.90 Gflop/s, 1.448 Gnz/s)\nspmv_team: actual_threads=2\nspmv_v21: kernel=csr partition=work threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000064933 policy_s=0.000004679 predicted_s=0.000694818 baseline_predicted_s=0.002035323 groups=0\nspmv_v21_thread: thread=0 compute_s=0.000456058 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000282428\nspmv_v21_thread: thread=1 compute_s=0.000450107 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000270610\nspmv_cleanup: 0.000000241 seconds\n"
+  },
+  {
+    "matrix": "bcsstk18",
+    "backend": "v21",
+    "instrumented": true,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/bcsstk18.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--include-symmetric-part",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.011027 seconds matrix object coordinate format real field symmetric symmetry 11948 rows 11948 columns 80519 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.002806 seconds 11948 rows 11948 columns 149090 nonzeros\nspmv_prepare: 0.000191745 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=272\nspmv_v21: kernel=csr partition=work threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000064372 policy_s=0.000004688 predicted_s=0.000694818 baseline_predicted_s=0.002035323 groups=0\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.000914 seconds 9 multiplications 2683620 flops (2.94 Gflop/s, 1.468 Gnz/s)\nspmv_team: actual_threads=2\nspmv_v21: kernel=csr partition=work threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000064372 policy_s=0.000004688 predicted_s=0.000694818 baseline_predicted_s=0.002035323 groups=0\nspmv_v21_thread: thread=0 compute_s=0.000447269 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000279036\nspmv_v21_thread: thread=1 compute_s=0.000454003 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000304800\nspmv_cleanup: 0.000000180 seconds\n"
+  },
+  {
+    "matrix": "bcsstk18",
+    "backend": "v21",
+    "instrumented": true,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/bcsstk18.mtx",
+      "--kernel=v2.1",
+      "--v21-profile=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/profile.txt",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--include-symmetric-part",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.011816 seconds matrix object coordinate format real field symmetric symmetry 11948 rows 11948 columns 80519 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003085 seconds 11948 rows 11948 columns 149090 nonzeros\nspmv_prepare: 0.000196763 seconds requested=v2.1 selected=v2.1 reason=profile-cost extra_bytes=272\nspmv_v21: kernel=csr partition=work threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000065885 policy_s=0.000004799 predicted_s=0.000694818 baseline_predicted_s=0.002035323 groups=0\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.001138 seconds 9 multiplications 2683620 flops (2.36 Gflop/s, 1.179 Gnz/s)\nspmv_team: actual_threads=2\nspmv_v21: kernel=csr partition=work threads=2 prepare_threads=1 calls=9 profile_match=1 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000065885 policy_s=0.000004799 predicted_s=0.000694818 baseline_predicted_s=0.002035323 groups=0\nspmv_v21_thread: thread=0 compute_s=0.000530297 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000393658\nspmv_v21_thread: thread=1 compute_s=0.000514337 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000486819\nspmv_cleanup: 0.000000191 seconds\n"
+  },
+  {
+    "matrix": "bcsstk18",
+    "backend": "v21-merge",
+    "instrumented": false,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/bcsstk18.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--include-symmetric-part"
+    ],
+    "stdout": "matrix_market_read: 0.011045 seconds matrix object coordinate format real field symmetric symmetry 11948 rows 11948 columns 80519 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.002835 seconds 11948 rows 11948 columns 149090 nonzeros\nspmv_prepare: 0.000126330 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000066055 policy_s=0.000002104 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=9\ncsr_matrix_int32_spmv: 0.003706 seconds 9 multiplications 2683620 flops (0.72 Gflop/s, 0.362 Gnz/s)\nspmv_team: actual_threads=12\nspmv_cleanup: 0.000000401 seconds\n"
+  },
+  {
+    "matrix": "bcsstk18",
+    "backend": "v21-merge",
+    "instrumented": false,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/bcsstk18.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--include-symmetric-part"
+    ],
+    "stdout": "matrix_market_read: 0.010817 seconds matrix object coordinate format real field symmetric symmetry 11948 rows 11948 columns 80519 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.002861 seconds 11948 rows 11948 columns 149090 nonzeros\nspmv_prepare: 0.000138623 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000067478 policy_s=0.000002575 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=9\ncsr_matrix_int32_spmv: 0.003828 seconds 9 multiplications 2683620 flops (0.70 Gflop/s, 0.351 Gnz/s)\nspmv_team: actual_threads=12\nspmv_cleanup: 0.000000491 seconds\n"
+  },
+  {
+    "matrix": "bcsstk18",
+    "backend": "v21-merge",
+    "instrumented": false,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/bcsstk18.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--include-symmetric-part"
+    ],
+    "stdout": "matrix_market_read: 0.011126 seconds matrix object coordinate format real field symmetric symmetry 11948 rows 11948 columns 80519 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.002941 seconds 11948 rows 11948 columns 149090 nonzeros\nspmv_prepare: 0.000116181 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000064743 policy_s=0.000001724 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=9\ncsr_matrix_int32_spmv: 0.003592 seconds 9 multiplications 2683620 flops (0.75 Gflop/s, 0.374 Gnz/s)\nspmv_team: actual_threads=12\nspmv_cleanup: 0.000000591 seconds\n"
+  },
+  {
+    "matrix": "bcsstk18",
+    "backend": "v21-merge",
+    "instrumented": true,
+    "sample": 1,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/bcsstk18.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--include-symmetric-part",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.010863 seconds matrix object coordinate format real field symmetric symmetry 11948 rows 11948 columns 80519 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.002916 seconds 11948 rows 11948 columns 149090 nonzeros\nspmv_prepare: 0.000128333 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000071266 policy_s=0.000001973 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=9\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=8 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=9 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=10 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=11 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.003977 seconds 9 multiplications 2683620 flops (0.67 Gflop/s, 0.337 Gnz/s)\nspmv_team: actual_threads=12\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000071266 policy_s=0.000001973 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=9\nspmv_v21_thread: thread=0 compute_s=0.000094348 publish_s=0.001673348 fixup_s=0.000001613 complete_s=0.001843525\nspmv_v21_thread: thread=1 compute_s=0.000108837 publish_s=0.001782543 fixup_s=0.000001351 complete_s=0.001709083\nspmv_v21_thread: thread=2 compute_s=0.000109697 publish_s=0.001760344 fixup_s=0.000001043 complete_s=0.001730157\nspmv_v21_thread: thread=3 compute_s=0.000087165 publish_s=0.001818335 fixup_s=0.000001012 complete_s=0.001725167\nspmv_v21_thread: thread=4 compute_s=0.000085227 publish_s=0.001763543 fixup_s=0.000001111 complete_s=0.001745446\nspmv_v21_thread: thread=5 compute_s=0.000088508 publish_s=0.001756445 fixup_s=0.000000912 complete_s=0.001759203\nspmv_v21_thread: thread=6 compute_s=0.000090491 publish_s=0.001775332 fixup_s=0.000001034 complete_s=0.001756329\nspmv_v21_thread: thread=7 compute_s=0.000078019 publish_s=0.001724580 fixup_s=0.000000951 complete_s=0.001777656\nspmv_v21_thread: thread=8 compute_s=0.000085532 publish_s=0.001738058 fixup_s=0.000000892 complete_s=0.001781210\nspmv_v21_thread: thread=9 compute_s=0.000082688 publish_s=0.001721505 fixup_s=0.000000401 complete_s=0.001773544\nspmv_v21_thread: thread=10 compute_s=0.000084670 publish_s=0.001892817 fixup_s=0.000000391 complete_s=0.001620659\nspmv_v21_thread: thread=11 compute_s=0.000083869 publish_s=0.001797600 fixup_s=0.000000400 complete_s=0.001732527\nspmv_cleanup: 0.000000321 seconds\n"
+  },
+  {
+    "matrix": "bcsstk18",
+    "backend": "v21-merge",
+    "instrumented": true,
+    "sample": 2,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/bcsstk18.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--include-symmetric-part",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.012093 seconds matrix object coordinate format real field symmetric symmetry 11948 rows 11948 columns 80519 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003100 seconds 11948 rows 11948 columns 149090 nonzeros\nspmv_prepare: 0.000140466 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000082407 policy_s=0.000002224 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=9\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=8 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=9 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=10 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=11 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.004310 seconds 9 multiplications 2683620 flops (0.62 Gflop/s, 0.311 Gnz/s)\nspmv_team: actual_threads=12\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000082407 policy_s=0.000002224 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=9\nspmv_v21_thread: thread=0 compute_s=0.000101894 publish_s=0.001827190 fixup_s=0.000001183 complete_s=0.002001372\nspmv_v21_thread: thread=1 compute_s=0.000108666 publish_s=0.001912458 fixup_s=0.000001144 complete_s=0.001896695\nspmv_v21_thread: thread=2 compute_s=0.000104630 publish_s=0.001926990 fixup_s=0.000001211 complete_s=0.001887788\nspmv_v21_thread: thread=3 compute_s=0.000092677 publish_s=0.001966997 fixup_s=0.000001012 complete_s=0.001853074\nspmv_v21_thread: thread=4 compute_s=0.000091676 publish_s=0.001999437 fixup_s=0.000001160 complete_s=0.001835660\nspmv_v21_thread: thread=5 compute_s=0.000096294 publish_s=0.001972959 fixup_s=0.000001074 complete_s=0.001880957\nspmv_v21_thread: thread=6 compute_s=0.000086293 publish_s=0.001933474 fixup_s=0.000001105 complete_s=0.001860748\nspmv_v21_thread: thread=7 compute_s=0.000087944 publish_s=0.001981833 fixup_s=0.000001070 complete_s=0.001837535\nspmv_v21_thread: thread=8 compute_s=0.000094450 publish_s=0.001994440 fixup_s=0.000000934 complete_s=0.001826194\nspmv_v21_thread: thread=9 compute_s=0.000106002 publish_s=0.001977283 fixup_s=0.000000431 complete_s=0.001831744\nspmv_v21_thread: thread=10 compute_s=0.000091564 publish_s=0.001974162 fixup_s=0.000000411 complete_s=0.001855783\nspmv_v21_thread: thread=11 compute_s=0.000097766 publish_s=0.002038313 fixup_s=0.000000430 complete_s=0.001740978\nspmv_cleanup: 0.000000400 seconds\n"
+  },
+  {
+    "matrix": "bcsstk18",
+    "backend": "v21-merge",
+    "instrumented": true,
+    "sample": 3,
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2.1/build/v21/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/bcsstk18.mtx",
+      "--kernel=v2.1",
+      "--v21-kernel=merge",
+      "--execution=parallel",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=9",
+      "-v",
+      "--include-symmetric-part",
+      "--v21-diagnostics"
+    ],
+    "stdout": "matrix_market_read: 0.012327 seconds matrix object coordinate format real field symmetric symmetry 11948 rows 11948 columns 80519 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.003348 seconds 11948 rows 11948 columns 149090 nonzeros\nspmv_prepare: 0.000148482 seconds requested=v2.1 selected=v2.1 reason=forced extra_bytes=1632\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000078179 policy_s=0.000002314 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=9\nspmv_v21_thread: thread=0 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=1 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=2 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=3 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=4 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=5 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=6 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=7 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=8 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=9 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=10 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\nspmv_v21_thread: thread=11 compute_s=0.000000000 publish_s=0.000000000 fixup_s=0.000000000 complete_s=0.000000000\ncsr_matrix_int32_spmv: 0.004284 seconds 9 multiplications 2683620 flops (0.63 Gflop/s, 0.313 Gnz/s)\nspmv_team: actual_threads=12\nspmv_v21: kernel=merge partition=rows threads=12 prepare_threads=1 calls=9 profile_match=0 fingerprint=440efe50ae1f554f empty_rows=0 longest=49 validation_s=0.000078179 policy_s=0.000002314 predicted_s=0.000000000 baseline_predicted_s=0.000000000 groups=9\nspmv_v21_thread: thread=0 compute_s=0.000102165 publish_s=0.001844544 fixup_s=0.000001412 complete_s=0.001865078\nspmv_v21_thread: thread=1 compute_s=0.000102475 publish_s=0.001870629 fixup_s=0.000001304 complete_s=0.001891357\nspmv_v21_thread: thread=2 compute_s=0.000143563 publish_s=0.001821377 fixup_s=0.000001400 complete_s=0.001900272\nspmv_v21_thread: thread=3 compute_s=0.000091173 publish_s=0.001885790 fixup_s=0.000001172 complete_s=0.001887657\nspmv_v21_thread: thread=4 compute_s=0.000103226 publish_s=0.001855589 fixup_s=0.000001392 complete_s=0.001915135\nspmv_v21_thread: thread=5 compute_s=0.000099572 publish_s=0.001844075 fixup_s=0.000001232 complete_s=0.001870345\nspmv_v21_thread: thread=6 compute_s=0.000088097 publish_s=0.001864361 fixup_s=0.000001222 complete_s=0.001899324\nspmv_v21_thread: thread=7 compute_s=0.000122443 publish_s=0.001831214 fixup_s=0.000001283 complete_s=0.001889726\nspmv_v21_thread: thread=8 compute_s=0.000108346 publish_s=0.001817399 fixup_s=0.000001212 complete_s=0.001919801\nspmv_v21_thread: thread=9 compute_s=0.000102013 publish_s=0.001912568 fixup_s=0.000000430 complete_s=0.001839486\nspmv_v21_thread: thread=10 compute_s=0.000101643 publish_s=0.001795389 fixup_s=0.000000493 complete_s=0.001939074\nspmv_v21_thread: thread=11 compute_s=0.000104630 publish_s=0.001938436 fixup_s=0.000000422 complete_s=0.001796421\nspmv_cleanup: 0.000000461 seconds\n"
+  }
+]

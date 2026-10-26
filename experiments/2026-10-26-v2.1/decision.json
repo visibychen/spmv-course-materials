@@ -1,0 +1,44 @@
+{
+  "original_best_tested_threads": 24,
+  "original_best_total_s": 0.7712955,
+  "v21_cap24_total_s": 0.7980830155,
+  "v2_t24_total_s": 0.679334668,
+  "v21_time_change_vs_original_best_percent": 3.4730548149185303,
+  "v21_time_change_vs_v2_percent": 17.48009531879213,
+  "same_cap24_paired_low95": 0.9459237589209382,
+  "same_cap24_paired_high95": 1.0047341675058525,
+  "primary_original_pass": false,
+  "primary_v2_pass": false,
+  "old_development_negative_count_improved": false,
+  "worst_critical_time_change_percent": 19.259654534238123,
+  "critical_all_within5": false,
+  "accepted_as_robust_upgrade": false,
+  "branch_action": "switch working checkout back to optimization/v2; keep v2.1 commit and remote branch",
+  "limits": "If best original team differs from24, same-cap24 CI does not validate that best-team comparison; report inconclusive rather than extrapolate.",
+  "old_T12": {
+    "n": 32,
+    "v2": {
+      "faster_over5": 16,
+      "within5": 10,
+      "slower_over5": 6
+    },
+    "v21": {
+      "faster_over5": 21,
+      "within5": 4,
+      "slower_over5": 7
+    }
+  },
+  "new_T12": {
+    "n": 20,
+    "v2": {
+      "faster_over5": 6,
+      "within5": 3,
+      "slower_over5": 11
+    },
+    "v21": {
+      "faster_over5": 14,
+      "within5": 0,
+      "slower_over5": 6
+    }
+  }
+}
