@@ -1,0 +1,17 @@
+{
+  "csrspmv": {
+    "head": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+    "branch": "optimization/v2",
+    "index_sha256": "72763566fccb19fd80fded1fbad838acf701462ed8fa0fe6ab5026dba3a3a592",
+    "refs": "9352c865044f4c8b344d6fe5a277200a89f7a08b refs/heads/master\nf089579a489723547a354459d591c551a313c4bb refs/heads/optimization/v1\n9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a refs/heads/optimization/v2\n9352c865044f4c8b344d6fe5a277200a89f7a08b refs/remotes/origin/HEAD\n9352c865044f4c8b344d6fe5a277200a89f7a08b refs/remotes/origin/master\nf089579a489723547a354459d591c551a313c4bb refs/remotes/origin/optimization/v1\n9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a refs/remotes/origin/optimization/v2\n"
+  },
+  "spmv-course-materials": {
+    "head": "3bf5ff5f80e9a0ec5cb7c7b0e2553db53c7a2d07",
+    "branch": "main",
+    "index_sha256": "e495146807f11d2e2bf7fb275320167caba0ad615c3ee2a996b8f36e3c556ac2",
+    "refs": "3bf5ff5f80e9a0ec5cb7c7b0e2553db53c7a2d07 refs/heads/main\n3bf5ff5f80e9a0ec5cb7c7b0e2553db53c7a2d07 refs/remotes/origin/main\n"
+  },
+  "v2_measurements_sha256": "40c059bd38079b42d1adb1f94b7dfe2eedf5490efcc84b24ea24b360e36b39bd",
+  "log_prefix_sha256": "204a3a95ba5b8794c37d3b541d135150fb3f7b24dbd923c2d3bb1eb5757ff201",
+  "log_prefix_bytes": 29118
+}

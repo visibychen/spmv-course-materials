@@ -1,0 +1,80 @@
+{
+  "checked_at": "2026-10-26T20:19:28.463055+08:00",
+  "status": "passed",
+  "scope": "research/documents and re-analysis only; no v2.1 implementation or benchmark",
+  "checks": {
+    "json_parse": true,
+    "analysis_script_ast": true,
+    "repeat_analysis_byte_identical": true,
+    "existing_v2_measurements_unchanged": true,
+    "all_61_conditions_match_published_summary": true,
+    "displayed_numeric_table_matches_data": true,
+    "T12_unique_matrix_conditions": 32,
+    "T12_descriptive_counts": {
+      "faster_over_5_percent": 15,
+      "within_plus_minus_5_percent": 7,
+      "slower_over_5_percent": 10
+    },
+    "relative_markdown_links": 55,
+    "original_log_prefix_byte_identical": true,
+    "source_and_document_whitespace": true
+  },
+  "fixed_source_checks": [
+    {
+      "source": "R4",
+      "file": "cpu_spmv.cpp",
+      "sha256": "0afec976ff6fcf68b81d8b8996ee1fcbdd82802862fbb5a8104b2bce5af7744a",
+      "matches": true
+    },
+    {
+      "source": "R7",
+      "file": "library/src/level2/aoclsparse_csrmv_kt.cpp",
+      "sha256": "2045e5c896b7f97ab7500bcacc228389fee917be571da32affe89e6ee3ee44e1",
+      "matches": true
+    },
+    {
+      "source": "R7",
+      "file": "library/src/include/kernel-templates/kt_l0_avx2.hpp",
+      "sha256": "4e7eae578a98fef952fada4435e7f52f41dd8082d4e1b726e2c1c215e2e9633f",
+      "matches": true
+    }
+  ],
+  "git": {
+    "csrspmv": {
+      "head": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+      "branch": "optimization/v2",
+      "refs_unchanged": true,
+      "index_bytes_unchanged": true,
+      "staged_paths": [],
+      "worktree_clean": true
+    },
+    "spmv-course-materials": {
+      "head": "3bf5ff5f80e9a0ec5cb7c7b0e2553db53c7a2d07",
+      "branch": "main",
+      "refs_unchanged": true,
+      "index_bytes_unchanged": true,
+      "staged_paths": [],
+      "tracked_changes": [
+        "项目日志.md (append only)"
+      ]
+    }
+  },
+  "artifact_sha256": {
+    "README.md": "ad0bb74cbb13af2458a4eabf6a709c42d6edf21ca5174582419a1656f52cef6b",
+    "analyze_v2.py": "afccd5e19a3d7278b5e09d68af4a633e033f679e58a5cb6b1df0ae159331ac62",
+    "before-state.json": "6268528f9f783ae1d1e768ce5a66395475d5fe203761b2a8f9424cfc41fa3ce0",
+    "case-review.csv": "ea3dc748e63571e201738eface56429c42734ba69dfb902e31390ae277f49536",
+    "diagnosis.json": "7d22c689169151cba4be8da4b245b7616a839a2a53f4f5ab42126bdabbdd715a",
+    "sources.json": "0a5d64495796a0cb95d9664b2e24b250c285760eef86778fce6fd92f678f6666",
+    "v2缺陷与证据.md": "cb00d65464d21ba88a22cf872cac00869723fe99d18852410ce36463354a8b8a",
+    "优化方案v2.1.md": "0e37f88d1e8fda474517af1fd253fdd8c3615edb25604745493b20d13f35e361",
+    "资料与复用索引.md": "3ddaeaa161f7a4851c65271a033d4b47686c1d65c7194d128f84ca1fdfe431e5",
+    "验证计划.md": "41ab1a638774ea9a123e7680cab30121ec84f9b53fb1cb8051e4b48b6b8aae15"
+  },
+  "limits": [
+    "no new speed measurements or v2.1 performance promises",
+    "old v2 holdout is v2.1 development evidence",
+    "new policy coefficients and thresholds await separate calibration",
+    "no git add/commit/push/config/branch mutation"
+  ]
+}

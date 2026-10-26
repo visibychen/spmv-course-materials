@@ -1,0 +1,189 @@
+{
+  "accessed_on": "2026-10-26",
+  "timezone": "Asia/Shanghai",
+  "status": "research and design only; no v2.1 solver code or benchmark",
+  "retrieval": "Official web sources; GitHub connector for fixed PETSc tag, source and license; existing fixed local AOCL/merge cache re-read and SHA checked",
+  "sources": [
+    {
+      "id": "R1",
+      "title": "Performance Analysis and Optimization of Sparse Matrix-Vector Multiplication on Modern Multi- and Many-Core Processors",
+      "authors": [
+        "Athena Elafrou",
+        "Georgios Goumas",
+        "Nektarios Koziris"
+      ],
+      "year": 2017,
+      "urls": [
+        "https://arxiv.org/abs/1711.05487",
+        "https://arxiv.org/pdf/1711.05487"
+      ],
+      "read_scope": [
+        "III-C/D/E",
+        "Fig.4-6",
+        "IV-D and Table V"
+      ],
+      "use": "Low-overhead feature/bottleneck selection, optional long-row decomposition, preprocessing amortization",
+      "boundary": "Method reference only; no transplanted classifier, hardware thresholds, performance figures, or source code"
+    },
+    {
+      "id": "R2",
+      "title": "AOCL API Guide: aoclsparse_set_*_hint",
+      "version_observed": "5.3",
+      "release_date_observed": "2026-05-13",
+      "urls": [
+        "https://docs.amd.com/r/en-US/68552-AOCL-api-guide/aoclsparse_set_-_hint?contentId=_yplp7sQP6BHC7KEXyUokw"
+      ],
+      "read_scope": [
+        "expected_no_of_calls",
+        "optimize interaction",
+        "thread safety note"
+      ],
+      "use": "Expected-call hint interface",
+      "boundary": "Does not promise profitability; no AOCL dependency introduced"
+    },
+    {
+      "id": "R3",
+      "title": "oneMKL expected calls and inspector-executor",
+      "version": "2024.0",
+      "urls": [
+        "https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-c/2024-0/mkl-sparse-set-mv-hint.html",
+        "https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-fortran/2024-0/inspector-executor-sparse-blas-routines.html"
+      ],
+      "read_scope": [
+        "Description",
+        "expected_calls",
+        "analysis/execution separation"
+      ],
+      "use": "Call-count and lifecycle design reference",
+      "boundary": "No assumption that inspection is free"
+    },
+    {
+      "id": "R4",
+      "title": "Merge-based Parallel Sparse Matrix-vector Multiplication / author CPU code",
+      "repository": "dumerrill/merge-spmv",
+      "commit": "18895571ce9af960ee207dae541b0ffc701ea4bb",
+      "urls": [
+        "https://mgarland.org/papers/2016/spmv/",
+        "https://github.com/dumerrill/merge-spmv/blob/18895571ce9af960ee207dae541b0ffc701ea4bb/cpu_spmv.cpp"
+      ],
+      "files": [
+        {
+          "path": "cpu_spmv.cpp",
+          "sha256": "0afec976ff6fcf68b81d8b8996ee1fcbdd82802862fbb5a8104b2bce5af7744a",
+          "read_scope": "MergePathSearch and OmpMergeCsrmv, 223-352"
+        }
+      ],
+      "license": "BSD-3-Clause",
+      "use": "Merge coordinates/carry fix-up method",
+      "boundary": "Cached coordinates and per-row merge owners are project adaptations, not the original author's code"
+    },
+    {
+      "id": "R5",
+      "title": "PETSc compressed nonempty rows and MatMultAdd_SeqAIJ",
+      "repository": "petsc/petsc",
+      "tag": "v3.24.0",
+      "annotated_tag_object": "87d0c23a8110a4d2ac412f49910cf5f7e6fd4193",
+      "commit": "51619389660697cb6ab811d9eb05c4522bec4803",
+      "urls": [
+        "https://petsc.org/main/manualpages/Mat/MatCheckCompressedRow/",
+        "https://github.com/petsc/petsc/blob/51619389660697cb6ab811d9eb05c4522bec4803/src/mat/utils/compressedrow.c",
+        "https://github.com/petsc/petsc/blob/51619389660697cb6ab811d9eb05c4522bec4803/src/mat/impls/aij/seq/aij.c",
+        "https://github.com/petsc/petsc/blob/51619389660697cb6ab811d9eb05c4522bec4803/LICENSE"
+      ],
+      "files": [
+        {
+          "path": "src/mat/utils/compressedrow.c",
+          "git_blob_sha": "e16f3355bedaf57ecbf415a2f9ab7a7b4a4505d0",
+          "read_scope": "full file"
+        },
+        {
+          "path": "src/mat/impls/aij/seq/aij.c",
+          "git_blob_sha": "8e12c0cc106be8e67fec23c4814cfa93a3dcb2c3",
+          "read_scope": "1610-1720; MatMultAdd_SeqAIJ"
+        },
+        {
+          "path": "LICENSE",
+          "git_blob_sha": "37aa71d7e041475a828c01b51ad653df1a2b1b9e",
+          "read_scope": "full file"
+        }
+      ],
+      "license": "BSD-2-Clause; downloaded dependencies excluded",
+      "use": "Optional nonempty-row metadata method",
+      "boundary": "Do not transplant skipping empty y updates or PETSc's accumulation order"
+    },
+    {
+      "id": "R6",
+      "title": "OpenMP 5.2 specification",
+      "version": "5.2",
+      "urls": [
+        "https://www.openmp.org/spec-html/5.2/openmpse57.html",
+        "https://www.openmp.org/spec-html/5.2/openmpse66.html",
+        "https://www.openmp.org/spec-html/5.2/openmpse94.html"
+      ],
+      "read_scope": [
+        "parallel",
+        "worksharing-loop",
+        "nowait"
+      ],
+      "use": "Team binding, mandatory completion synchronization and preparation organization",
+      "boundary": "Specification cannot predict local barrier/wait times"
+    },
+    {
+      "id": "R7",
+      "title": "AOCL-Sparse CSR kernel templates and AVX2 indexed set",
+      "repository": "amd/aocl-sparse",
+      "commit": "d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c",
+      "urls": [
+        "https://github.com/amd/aocl-sparse/blob/d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c/library/src/level2/aoclsparse_csrmv_kt.cpp",
+        "https://github.com/amd/aocl-sparse/blob/d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c/library/src/include/kernel-templates/kt_l0_avx2.hpp",
+        "https://github.com/amd/aocl-sparse/blob/d633b58d3cfa266a2a0a8e2fb0f22cc97ee7355c/LICENSE.md"
+      ],
+      "files": [
+        {
+          "path": "library/src/level2/aoclsparse_csrmv_kt.cpp",
+          "sha256": "2045e5c896b7f97ab7500bcacc228389fee917be571da32affe89e6ee3ee44e1",
+          "read_scope": "53-82"
+        },
+        {
+          "path": "library/src/include/kernel-templates/kt_l0_avx2.hpp",
+          "sha256": "4e7eae578a98fef952fada4435e7f52f41dd8082d4e1b726e2c1c215e2e9633f",
+          "read_scope": "83-97 and load helpers"
+        }
+      ],
+      "license": "MIT; retain per-file notices if copying",
+      "use": "Scalar address loads packed into SIMD as an optional long-row kernel method",
+      "boundary": "No import of the v1 branch, AOCL FMA/template dependencies or universal SIMD speed claim"
+    },
+    {
+      "id": "R8",
+      "title": "GCC 11.4 Optimize Options",
+      "version": "11.4.0",
+      "urls": [
+        "https://gcc.gnu.org/onlinedocs/gcc-11.4.0/gcc/Optimize-Options.html"
+      ],
+      "read_scope": [
+        "ffp-contract"
+      ],
+      "use": "Match FP contraction modes in comparisons",
+      "boundary": "Contraction-off alone does not preserve an explicitly regrouped summation order"
+    }
+  ],
+  "project_evidence": {
+    "core_v2_commit": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+    "original_commit": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+    "v1_commit": "f089579a489723547a354459d591c551a313c4bb",
+    "materials_parent": "3bf5ff5f80e9a0ec5cb7c7b0e2553db53c7a2d07",
+    "input": "experiments/2026-10-26-v2/measurements.csv",
+    "prior_cache_manifest": "research/2026-10-25-spmv-optimization/code-sources.json"
+  },
+  "third_party_code_copied_to_core": false,
+  "design_inferences": [
+    "cost model and margin",
+    "candidate thread set",
+    "preparation team policy",
+    "cached partition lifecycle",
+    "per-split-row reduction owners",
+    "empty-row plus-zero semantics",
+    "acceptance thresholds"
+  ]
+}
