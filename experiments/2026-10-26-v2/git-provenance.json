@@ -1,0 +1,21 @@
+{
+  "core_commit": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "core_commit_message": "优化方案v2",
+  "core_parent": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "core_branch": "optimization/v2",
+  "core_upstream": "origin/optimization/v2",
+  "core_remote": "https://github.com/visibychen/csrspmv",
+  "remote_v2_sha_verified": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "local_master": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "remote_master_sha_verified": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "v1_unchanged": "f089579a489723547a354459d591c551a313c4bb",
+  "v1_is_ancestor_of_v2": false,
+  "materials_branch": "main",
+  "materials_parent": "aaea7f430a24d577b25899cb411370eef97ad657",
+  "materials_commit_message": "2026.10.26v2实验记录",
+  "materials_commit_id": "See containing commit: self-referential commit IDs are not embedded in their own tree.",
+  "final_core_checkout": "optimization/v2",
+  "decision": "Primary target passes; branch retained, original master not merged.",
+  "transport": "Native Windows Git with existing Credential Manager, per-command HTTP/1.1/OpenSSL. TLS verification enabled; no persistent log-format/pager settings changed.",
+  "verified_on": "2026-10-26 Asia/Shanghai"
+}

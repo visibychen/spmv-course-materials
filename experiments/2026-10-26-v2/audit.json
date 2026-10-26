@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "counts": {
+    "pilot": 180,
+    "screen": 650,
+    "heldout": 555,
+    "large": 180,
+    "large-controls": 75
+  },
+  "total_processes": 1640,
+  "source_and_binary_hashes_match": true,
+  "input_hashes_match": true,
+  "raw_and_flop_counts_match": true,
+  "duplicates": 0,
+  "local_links_checked": 19,
+  "v1_not_ancestor_of_v2": true,
+  "base_is_original_master": true,
+  "extra_cli_checks": 6,
+  "wide_index_check": "PASS wide-index and nonzero team checks: 100276 checks; no huge allocation\n",
+  "biggest_tracked_candidate_bytes": 314059,
+  "no_slow_samples_removed": true,
+  "post_report_links_checked": 21,
+  "report_sha256": "a309413e75b6ebfee19543f80cd197512a8aa1a5e37c4cfe7cb93651f49aa9a7"
+}

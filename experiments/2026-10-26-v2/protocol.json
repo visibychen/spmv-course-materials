@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-26 Asia/Shanghai",
+  "code_frozen": true,
+  "core_base": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "branch": "optimization/v2 (directly from master; sibling of v1)",
+  "variants": "See run_experiments.py; v1 and original archive builds; v2 working source hashes in source-provenance.json",
+  "numeric": "f32/f32/f32 y+=Ax, no global fast-math; v2 TU ffp-contract=off, local ordered scalar row kernel",
+  "kernel_default": "original; --kernel=v2 opts into new rules",
+  "v2_auto": {
+    "serial_threshold": 32768,
+    "work_max_over_mean": 1.5,
+    "merge_longest_over_mean_events": 2,
+    "prefetch": 0
+  },
+  "pilot": "180 processes, 3 per condition; predeclared conservative rules retained. Medium cache-resident calibration above serial threshold still favors forced serial: known limit, no claim of optimal threshold.",
+  "formal": {
+    "screen": 650,
+    "heldout": 555,
+    "large_paired": 180,
+    "large_controls": 75,
+    "samples": 5,
+    "main_pairs": 10
+  },
+  "large_design": "Every thread 1/12/24 x repeats 1/9/100, 10 adjacent randomized AB/BA independent process pairs. Additional R9 controls have 5 processes each.",
+  "same_binary": "Separate diagnostic binary links renamed fixed v1 modules alongside original and v2. One warmup per backend; five-rank rotated order, 10 rounds, every method in each rank twice. Includes matched-FP v2 generic CSR. Within-process samples are not independent process replications.",
+  "metrics": [
+    "prepare",
+    "execute",
+    "cleanup",
+    "prepare+execute+cleanup",
+    "full-process wall",
+    "RSS",
+    "major faults",
+    "actual team",
+    "extra bytes",
+    "phase timers"
+  ],
+  "intervals": "Paired bootstrap over process pairs, fixed seed 20261026, 20000 resamples, percentile 95%; no removal of slow samples.",
+  "acceptance": "At least 5% median total-time reduction on large R9 versus original best tested thread setting, interval supporting benefit; 5% is project policy, not literature theorem.",
+  "exclusions": "MTX data, archives and binaries remain local ignored files. Failed SuiteSparse TLS download replaced with NIST bcsstk18/sherman5; URLs, headers and hashes retained. No STREAM or hardware DRAM bandwidth claim.",
+  "constraints": "No concurrent benchmarks; OMP_DYNAMIC FALSE, PLACES cores, PROC_BIND spread, WAIT_POLICY PASSIVE; original CSR source unchanged.",
+  "diagnostic_amendment": "Before first diagnostic run: add matched-FP CSR control for direct short8 attribution. Primary/core frozen; all primary samples retained. Source amendment recorded in source-provenance.json."
+}

@@ -1,0 +1,38 @@
+{
+  "original": {
+    "command": [
+      "make",
+      "-j12",
+      "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/raw/vectorization-original.txt"
+    ],
+    "flags": "-O3 -march=native -g -Wall -iquote src -fopenmp",
+    "binary_sha256": "ead35b5c2feabba04c9a9e96da1cb70f39b56ca75708e7bc7a7ecee9c4691a77"
+  },
+  "original-novec": {
+    "command": [
+      "make",
+      "-j12",
+      "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -fno-tree-loop-vectorize -fno-tree-slp-vectorize -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/raw/vectorization-original-novec.txt"
+    ],
+    "flags": "-O3 -march=native -g -Wall -iquote src -fopenmp -fno-tree-loop-vectorize -fno-tree-slp-vectorize",
+    "binary_sha256": "a2ad7dedfa860e48dd92e6a4d2b29754a7e090eab8f07ca9f26a4a74ca8fca7a"
+  },
+  "v1": {
+    "command": [
+      "make",
+      "-j12",
+      "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/raw/vectorization-v1.txt"
+    ],
+    "flags": "-O3 -march=native -g -Wall -iquote src -fopenmp",
+    "binary_sha256": "48144902744c3c6700a6bf3d540a236a1a0413a355ea9062fea46d4819d2fe2a"
+  },
+  "v2": {
+    "command": [
+      "make",
+      "-j12",
+      "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/raw/vectorization-v2.txt"
+    ],
+    "flags": "-O3 -march=native -g -Wall -iquote src -fopenmp",
+    "binary_sha256": "706cce5e24778f2088c2e5acdc310ea2e1a23c47b89912a28169ed38d94d642f"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "target": "large R9, fixed v2 requested=24 vs original best tested team",
+  "original_best_threads": 24,
+  "original_best_total_s": 0.8113995,
+  "v2_total_s": 0.734879557,
+  "speedup": 1.104125828880555,
+  "time_reduction_percent": 9.430612540431705,
+  "interval_kind": "adjacent same-team process pairs",
+  "low95": 1.0524337467106917,
+  "high95": 1.2109688692782554,
+  "passes_primary": true,
+  "policy": "5% median total-time reduction and interval supports benefit; not a universal performance promise"
+}

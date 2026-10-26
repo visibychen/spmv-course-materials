@@ -1,0 +1,1496 @@
+[
+  {
+    "kind": "native",
+    "threads": 1,
+    "stdout": "PASS v2: 5368 checks, max_threads=1\n",
+    "exit": 0
+  },
+  {
+    "kind": "native",
+    "threads": 12,
+    "stdout": "PASS v2: 5368 checks, max_threads=12\n",
+    "exit": 0
+  },
+  {
+    "kind": "native",
+    "threads": 24,
+    "stdout": "PASS v2: 5368 checks, max_threads=24\n",
+    "exit": 0
+  },
+  {
+    "kind": "portable",
+    "threads": 12,
+    "stdout": "PASS v2: 5368 checks, max_threads=12\n",
+    "exit": 0
+  },
+  {
+    "kind": "sanitize",
+    "threads": 1,
+    "stdout": "PASS v2: 5368 checks, max_threads=1\n",
+    "exit": 0
+  },
+  {
+    "kind": "sanitize",
+    "threads": 12,
+    "stdout": "PASS v2: 5368 checks, max_threads=12\n",
+    "exit": 0
+  },
+  {
+    "kind": "sanitize",
+    "threads": 24,
+    "stdout": "PASS v2: 5368 checks, max_threads=24\n",
+    "exit": 0
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random1",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random1",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random1",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random1",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random2",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random2",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random2",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random2",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random4",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 500000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random4",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 500000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random4",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 500000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random4",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 500000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random7",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 285714,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random7",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 285714,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random7",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 285714,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random7",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 285714,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random8",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 250000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random8",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 250000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random8",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 250000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random8",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 250000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random9",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 222222,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random9",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 222222,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random9",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 222222,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random9",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 222222,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random15",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 133333,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random15",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 133333,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random15",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 133333,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random15",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 133333,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random16",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 125000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random16",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 125000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random16",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 125000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random16",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 125000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random17",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 117647,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random17",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 117647,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random17",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 117647,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random17",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 117647,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random32",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 62500,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random32",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 62500,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random32",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 62500,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random32",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 62500,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random64",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 31250,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random64",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 31250,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random64",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 31250,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random64",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 31250,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random256",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 8192,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random256",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 8192,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random256",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 8192,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "random256",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 8192,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "banded8",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 250000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "banded8",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 250000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "banded8",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 250000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "banded8",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 250000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "hot8",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 250000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "hot8",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 250000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "hot8",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 250000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "hot8",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 250000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heavy-clustered",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heavy-clustered",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heavy-clustered",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heavy-clustered",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heavy-scattered",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heavy-scattered",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heavy-scattered",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heavy-scattered",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "giant-row",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "giant-row",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "giant-row",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "giant-row",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "empty99",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "empty99",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "empty99",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "empty99",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "zero",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "zero",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "zero",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "zero",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "cache-small",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 256,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "cache-small",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 256,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "cache-small",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 256,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "cache-small",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 256,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "wide",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 101,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "wide",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 101,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "wide",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 101,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "wide",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 101,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "tall",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "tall",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "tall",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "tall",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "large",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 12000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "large",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 12000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "large",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 12000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "large",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 12000000,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-iid8",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-iid8",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-iid8",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-iid8",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 100003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-iid9",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 8193,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-iid9",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 8193,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-iid9",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 8193,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-iid9",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 8193,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-two-giants",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 10003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-two-giants",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 10003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-two-giants",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 10003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-two-giants",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 10003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-empty-cluster",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 120003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-empty-cluster",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 120003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-empty-cluster",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 120003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-empty-cluster",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 120003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-longtail",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 50003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-longtail",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 50003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-longtail",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 50003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-longtail",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 50003,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-small",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1027,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-small",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1027,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-small",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1027,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-small",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 1027,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-medium",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 8195,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-medium",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 8195,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-medium",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 8195,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "heldout-medium",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 8195,
+    "max_absolute_error": 0.0,
+    "exact": true
+  },
+  {
+    "kind": "full-output",
+    "matrix": "bcsstk18",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 11948,
+    "max_absolute_error": 13929.0,
+    "exact": false
+  },
+  {
+    "kind": "full-output",
+    "matrix": "bcsstk18",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 11948,
+    "max_absolute_error": 13929.0,
+    "exact": false
+  },
+  {
+    "kind": "full-output",
+    "matrix": "bcsstk18",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 11948,
+    "max_absolute_error": 13929.0,
+    "exact": false
+  },
+  {
+    "kind": "full-output",
+    "matrix": "bcsstk18",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 11948,
+    "max_absolute_error": 13929.0,
+    "exact": false
+  },
+  {
+    "kind": "full-output",
+    "matrix": "bcsstk18",
+    "variant": "original",
+    "threads": 12,
+    "repeat": 3,
+    "values": 11948,
+    "max_absolute_error": 13929.0,
+    "exact": false
+  },
+  {
+    "kind": "full-output",
+    "matrix": "sherman5",
+    "variant": "v2-auto",
+    "threads": 12,
+    "repeat": 3,
+    "values": 3312,
+    "max_absolute_error": 0.0009562969207763672,
+    "exact": false
+  },
+  {
+    "kind": "full-output",
+    "matrix": "sherman5",
+    "variant": "v2-csr-work",
+    "threads": 12,
+    "repeat": 3,
+    "values": 3312,
+    "max_absolute_error": 0.0009562969207763672,
+    "exact": false
+  },
+  {
+    "kind": "full-output",
+    "matrix": "sherman5",
+    "variant": "v2-merge",
+    "threads": 12,
+    "repeat": 3,
+    "values": 3312,
+    "max_absolute_error": 0.0009562969207763672,
+    "exact": false
+  },
+  {
+    "kind": "full-output",
+    "matrix": "sherman5",
+    "variant": "v2-short128",
+    "threads": 12,
+    "repeat": 3,
+    "values": 3312,
+    "max_absolute_error": 0.0009562969207763672,
+    "exact": false
+  },
+  {
+    "kind": "full-output",
+    "matrix": "sherman5",
+    "variant": "original",
+    "threads": 12,
+    "repeat": 3,
+    "values": 3312,
+    "max_absolute_error": 0.0009562969207763672,
+    "exact": false
+  },
+  {
+    "kind": "compatibility",
+    "field": "real",
+    "dtype": "f32",
+    "symmetry": "general"
+  },
+  {
+    "kind": "compatibility",
+    "field": "real",
+    "dtype": "f32",
+    "symmetry": "symmetric"
+  },
+  {
+    "kind": "compatibility",
+    "field": "real",
+    "dtype": "f64",
+    "symmetry": "general"
+  },
+  {
+    "kind": "compatibility",
+    "field": "real",
+    "dtype": "f64",
+    "symmetry": "symmetric"
+  },
+  {
+    "kind": "compatibility",
+    "field": "integer",
+    "dtype": null,
+    "symmetry": "general"
+  },
+  {
+    "kind": "compatibility",
+    "field": "integer",
+    "dtype": null,
+    "symmetry": "symmetric"
+  },
+  {
+    "kind": "compatibility",
+    "field": "complex",
+    "dtype": null,
+    "symmetry": "general"
+  },
+  {
+    "kind": "compatibility",
+    "field": "complex",
+    "dtype": null,
+    "symmetry": "symmetric"
+  },
+  {
+    "kind": "compatibility",
+    "field": "pattern",
+    "dtype": null,
+    "symmetry": "general"
+  },
+  {
+    "kind": "compatibility",
+    "field": "pattern",
+    "dtype": null,
+    "symmetry": "symmetric"
+  },
+  {
+    "kind": "invalid-option",
+    "option": "--v2-kernel=bad",
+    "exit": 1
+  },
+  {
+    "kind": "invalid-option",
+    "option": "--partition=bad",
+    "exit": 1
+  },
+  {
+    "kind": "invalid-option",
+    "option": "--execution=bad",
+    "exit": 1
+  },
+  {
+    "kind": "invalid-option",
+    "option": "--prefetch=1",
+    "exit": 1
+  },
+  {
+    "kind": "invalid-option",
+    "option": "--prefetch=32garbage",
+    "exit": 1
+  },
+  {
+    "kind": "invalid-option",
+    "option": "--serial-threshold=-1",
+    "exit": 1
+  },
+  {
+    "kind": "invalid-option",
+    "option": "--repeat=-1",
+    "exit": 1
+  },
+  {
+    "kind": "invalid-option",
+    "option": "--flops=-1",
+    "exit": 1
+  },
+  {
+    "kind": "invalid-option",
+    "option": "--plan-memory-mib=-1",
+    "exit": 1
+  },
+  {
+    "kind": "invalid-option",
+    "option": "--v2-kernel",
+    "exit": 1
+  },
+  {
+    "kind": "invalid-option",
+    "option": "--partition",
+    "exit": 1
+  },
+  {
+    "kind": "invalid-option",
+    "option": "--execution",
+    "exit": 1
+  },
+  {
+    "kind": "invalid-combination",
+    "options": [
+      "--v2-kernel=merge",
+      "--strict-order"
+    ],
+    "exit": 1
+  },
+  {
+    "kind": "invalid-combination",
+    "options": [
+      "--v2-kernel=merge",
+      "--partition=work"
+    ],
+    "exit": 1
+  },
+  {
+    "kind": "zero-positive-flops",
+    "exit": 1
+  },
+  {
+    "kind": "repeat-count",
+    "repeat": 0
+  },
+  {
+    "kind": "repeat-count",
+    "repeat": 1
+  },
+  {
+    "kind": "repeat-count",
+    "repeat": 3
+  }
+]

@@ -1,0 +1,3 @@
+cc -O3 -march=native -g -Wall -iquote src -fopenmp tests/test_spmv_plan.c src/csr.o src/matrix_market.o src/parse.o src/spmv_plan.o src/spmv_csr_scalar.o src/spmv_csr_pack.o src/spmv_sell.o src/vector.o  -Wl,--wrap=malloc -lm -o tests/test_spmv_plan
+./tests/test_spmv_plan
+PASS: 850 checks, max_threads=12

@@ -1,0 +1,82 @@
+[
+  {
+    "label": "native",
+    "command": [
+      "gcc",
+      "-g",
+      "-Wall",
+      "-fopenmp",
+      "-ffp-contract=off",
+      "-iquote",
+      "/home/visiby/计算机组成原理课设/csrspmv/src",
+      "/home/visiby/计算机组成原理课设/csrspmv/tests/test_spmv_v2.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/csr.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/matrix_market.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/vector.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/parse.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_plan.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_v2.c",
+      "-O3",
+      "-march=native",
+      "-Wl,--wrap=malloc",
+      "-lm",
+      "-o",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/build/test-native"
+    ],
+    "binary_sha256": "f5ddbc7c9b86752906e116182685d9c0431e4d005b86f789eec71d4c3ed0a5b0"
+  },
+  {
+    "label": "portable",
+    "command": [
+      "gcc",
+      "-g",
+      "-Wall",
+      "-fopenmp",
+      "-ffp-contract=off",
+      "-iquote",
+      "/home/visiby/计算机组成原理课设/csrspmv/src",
+      "/home/visiby/计算机组成原理课设/csrspmv/tests/test_spmv_v2.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/csr.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/matrix_market.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/vector.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/parse.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_plan.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_v2.c",
+      "-O3",
+      "-Wl,--wrap=malloc",
+      "-lm",
+      "-o",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/build/test-portable"
+    ],
+    "binary_sha256": "8b4c9c5a326ab6d73cdac6d753aa8545f38e48e85bfba001b307e9737f66e98f"
+  },
+  {
+    "label": "sanitize",
+    "command": [
+      "gcc",
+      "-g",
+      "-Wall",
+      "-fopenmp",
+      "-ffp-contract=off",
+      "-iquote",
+      "/home/visiby/计算机组成原理课设/csrspmv/src",
+      "/home/visiby/计算机组成原理课设/csrspmv/tests/test_spmv_v2.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/csr.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/matrix_market.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/vector.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/parse.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_plan.c",
+      "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_v2.c",
+      "-O1",
+      "-march=native",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-no-pie",
+      "-Wl,--wrap=malloc",
+      "-lm",
+      "-o",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/build/test-sanitize"
+    ],
+    "binary_sha256": "40efcf6bd8ffd86406e563a8b17dc1ec0ead4d6c3c803e47e3554d02f1a4c734"
+  }
+]

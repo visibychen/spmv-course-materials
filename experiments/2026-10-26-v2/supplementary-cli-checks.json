@@ -1,0 +1,116 @@
+[
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/build/v2/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/cache-small.mtx",
+      "--kernel=v2",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=1",
+      "-v",
+      "--kernel",
+      "v2",
+      "--v2-kernel",
+      "short8",
+      "--partition",
+      "work",
+      "--execution",
+      "serial",
+      "--prefetch",
+      "128",
+      "--serial-threshold",
+      "32768",
+      "--plan-memory-mib",
+      "4"
+    ],
+    "stdout": "matrix_market_read: 0.000172 seconds matrix object coordinate format real field general symmetry 256 rows 256 columns 2048 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001805 seconds 256 rows 256 columns 2048 nonzeros\nspmv_prepare: 0.000003586 seconds requested=v2 selected=v2 reason=selected extra_bytes=0\nspmv_v2: kernel=short8 partition=work serial=1 max_threads=12 prefetch=128 longest=8 all8=1 row_scan_s=0.000001559 column_validation_s=0.000001281 policy_s=0.000000040\ncsr_matrix_int32_spmv: 0.000001 seconds 1 multiplications 4096 flops (4.58 Gflop/s, 2.291 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000060 seconds\n",
+    "exit": 0
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/build/v2/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/cache-small.mtx",
+      "--kernel=v2",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=1",
+      "-v",
+      "--kernel=v2",
+      "--v2-kernel=merge",
+      "--execution=serial"
+    ],
+    "stdout": "matrix_market_read: 0.000159 seconds matrix object coordinate format real field general symmetry 256 rows 256 columns 2048 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001709 seconds 256 rows 256 columns 2048 nonzeros\nspmv_prepare: 0.000002890 seconds requested=v2 selected=v2 reason=selected extra_bytes=64\nspmv_v2: kernel=merge partition=rows serial=1 max_threads=12 prefetch=0 longest=8 all8=1 row_scan_s=0.000001380 column_validation_s=0.000001152 policy_s=0.000000090\ncsr_matrix_int32_spmv: 0.000001 seconds 1 multiplications 4096 flops (3.32 Gflop/s, 1.662 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000079 seconds\n",
+    "exit": 0
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/build/v2/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/cache-small.mtx",
+      "--kernel=v2",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=1",
+      "-v",
+      "--kernel=v2",
+      "--v2-kernel=merge",
+      "--plan-memory-mib=0",
+      "--execution=parallel"
+    ],
+    "stdout": "matrix_market_read: 0.000166 seconds matrix object coordinate format real field general symmetry 256 rows 256 columns 2048 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001816 seconds 256 rows 256 columns 2048 nonzeros\nspmv_prepare: 0.000002970 seconds requested=v2 selected=v2 reason=v2-scratch-budget extra_bytes=0\nspmv_v2: kernel=csr partition=rows serial=0 max_threads=12 prefetch=0 longest=8 all8=1 row_scan_s=0.000001519 column_validation_s=0.000001122 policy_s=0.000000060\ncsr_matrix_int32_spmv: 0.000425 seconds 1 multiplications 4096 flops (0.01 Gflop/s, 0.005 Gnz/s)\nspmv_team: actual_threads=12\nspmv_cleanup: 0.000000089 seconds\n",
+    "exit": 0
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/build/v2/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/cache-small.mtx",
+      "--kernel=v2",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=1",
+      "-v",
+      "--kernel=v2",
+      "--repeat=1",
+      "--flops=12287"
+    ],
+    "stdout": "matrix_market_read: 0.000160 seconds matrix object coordinate format real field general symmetry 256 rows 256 columns 2048 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001785 seconds 256 rows 256 columns 2048 nonzeros\nspmv_prepare: 0.000002910 seconds requested=v2 selected=v2 reason=selected extra_bytes=0\nspmv_v2: kernel=short8 partition=rows serial=1 max_threads=12 prefetch=0 longest=8 all8=1 row_scan_s=0.000001480 column_validation_s=0.000001142 policy_s=0.000000020\ncsr_matrix_int32_spmv: 0.000002 seconds 3 multiplications 12288 flops (6.48 Gflop/s, 3.239 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000060 seconds\n",
+    "exit": 0
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/build/v2/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/cache-small.mtx",
+      "--kernel=v2",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=1",
+      "-v",
+      "--flops=9223372036854775807"
+    ],
+    "stdout": "matrix_market_read: 0.000169 seconds matrix object coordinate format real field general symmetry 256 rows 256 columns 2048 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001767 seconds 256 rows 256 columns 2048 nonzeros\nspmv_prepare: 0.000002900 seconds requested=v2 selected=v2 reason=selected extra_bytes=0\nspmv_v2: kernel=short8 partition=rows serial=1 max_threads=12 prefetch=0 longest=8 all8=1 row_scan_s=0.000001470 column_validation_s=0.000001162 policy_s=0.000000020\ncsr_matrix_int32_spmv: ",
+    "stderr": "csrspmv: Value too large for defined data type\n",
+    "exit": 1
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/build/v2/csrspmv",
+      "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/cache-small.mtx",
+      "--kernel=v2",
+      "--matrix-format=f32",
+      "--source-vector-format=f32",
+      "--destination-vector-format=f32",
+      "--repeat=1",
+      "-v",
+      "--kernel=v2",
+      "--v2-kernel=merge",
+      "--strict-order"
+    ],
+    "stdout": "matrix_market_read: 0.000162 seconds matrix object coordinate format real field general symmetry 256 rows 256 columns 2048 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001758 seconds 256 rows 256 columns 2048 nonzeros\n",
+    "stderr": "csrspmv: prepare: Invalid argument\n",
+    "exit": 1
+  }
+]

@@ -1,0 +1,7 @@
+matrix_market_read: 8.938845 seconds matrix object coordinate format real field general symmetry 12000000 rows 12000000 columns 96000000 nonzeros
+csr_matrix_int32_from_matrix_market: 0.443298 seconds 12000000 rows 12000000 columns 96000000 nonzeros
+spmv_prepare: 0.012340398 seconds requested=v2 selected=v2 reason=selected extra_bytes=0
+spmv_v2: kernel=short8 partition=rows serial=0 max_threads=24 prefetch=0 longest=8 all8=1 row_scan_s=0.003866701 column_validation_s=0.008470631 policy_s=0.000001493
+csr_matrix_int32_spmv: 7.641804 seconds 100 multiplications 19200000000 flops (2.51 Gflop/s, 1.256 Gnz/s)
+spmv_team: actual_threads=24
+spmv_cleanup: 0.000000474 seconds

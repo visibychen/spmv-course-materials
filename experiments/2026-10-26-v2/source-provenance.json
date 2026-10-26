@@ -1,0 +1,41 @@
+{
+  "original_commit": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "v1_commit": "f089579a489723547a354459d591c551a313c4bb",
+  "v2_branch": "optimization/v2",
+  "v2_base": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "source_sha256": {
+    "src/csr.c": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+    "src/csr.h": "cf5234aaf6820d7158aaab96c2ffa0016497bf0c205983d7da09403987197c22",
+    "src/main.c": "ba36fa50de717be871e08ce7970d8aa4156c80748f80d2dd0173405d2251a2f5",
+    "src/matrix_market.c": "b492e4583a9f168dd8665acfbe3b3078e22c755f7d49e58b54e37ddb6cd45cc3",
+    "src/matrix_market.h": "532853be15bfd294d847f6599bd1281900acf10dd8325e34f275a3c5dab67b29",
+    "src/parse.c": "8549704ed14cc23ab1f417bae1931ec02b4d29089c1ff6ee4d7e9b7553f682d6",
+    "src/parse.h": "4437a7a6a7f9ae07adc11a761f15784e0f76c8a9426a6681522dd57976568341",
+    "src/program_options.c": "70a0055b07931f5eb143f496e35285c6c5af08bc722a8b04f82ac28c5911dca7",
+    "src/program_options.h": "b6b49369ce9ac895950f7eb7df220f257e59e9d6ee11fec52407a36b6c81ca94",
+    "src/spmv_plan.c": "f34a126b519b95e7b7cde525083cc02686e954c62a783e84adf62166990670be",
+    "src/spmv_plan.h": "b336336a12eb96315a8a9faa87c2597907a0cddfbf3ead181d2cd38488ef4658",
+    "src/spmv_v2.c": "ecf330e9c69d721c8ff9e7aaa562c773b922093b4193d1267c7a934dcffad4b2",
+    "src/spmv_v2.h": "be2d75c914f4af78b17d59e614049f652ebeb751c93b79fe3db1d3f860728eb5",
+    "src/vector.c": "22f71d918b0086adcce263d81729ce3e45bb778a32bcc79e5a767516eaba3ada",
+    "src/vector.h": "a3c0e032f7e7c08f2d77d43c4894fa37f036cea9e29a01eab0c9dbf4c891d45c",
+    "tests/test_spmv_v2.c": "506daaf478babc2c0c2b825d590f359d3af6feac433dbbd4b60d645fbf0f6029",
+    "Makefile": "f79ad910fa70ea5a2de8e412572ef0f6be07b46e280792e66d96d1c7be38eaf6"
+  },
+  "runner_sha256": "f0ee0431fc30dfd381aae32032cb57769eb73d5173a1cf352dce92249472adbf",
+  "pilot_runner_sha256": "43f11737ba38834e51c014b35bf7a2c8bf93bec4cd83306393063ae11a8852d1",
+  "formal_harness_sha256": {
+    "run_experiments.py": "f0ee0431fc30dfd381aae32032cb57769eb73d5173a1cf352dce92249472adbf",
+    "verify_and_inputs.py": "0894405793e347507666ee6dfd4a16147b98c63b4baac7a7e6972eb8e4b32a85",
+    "diagnostic.py": "5498a4c902d2a5aecae5ae8437d0b1f2ac27dabca60bedf6db326c153e5ae0d4",
+    "bench_compare.c": "7cf1cc722528eec4b7a0048c433a08ad43ae14bb2616514090764abed02bbf45",
+    "bench_v1_adapter.c": "a2c8b3fd0615a89a5834b69d9c97d92038c9da85c65f81a134f8b03b9a59e313"
+  },
+  "diagnostic_before_first_run_amendment": {
+    "reason": "Add matched-FP v2 generic CSR to same-binary diagnosis; no core/CLI measurement changes.",
+    "original_sha256": {
+      "bench_compare.c": "062149741dbbab3acd451762c89457220a94d4802e2a4448b008999dcb5987e9",
+      "diagnostic.py": "703060797d49bc848298bc0d1612402cc3ebe85ac2d9dc7fed7d705629c77537"
+    }
+  }
+}

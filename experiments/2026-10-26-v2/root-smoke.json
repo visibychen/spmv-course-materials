@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+    "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+    "--kernel=v2",
+    "--repeat=3",
+    "--destination-vector=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-26-v2/data/root-smoke.mtx",
+    "-v"
+  ],
+  "stdout": "matrix_market_read: 0.000322 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001694 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000006858 seconds requested=v2 selected=v2 reason=selected extra_bytes=0\nspmv_v2: kernel=csr partition=rows serial=1 max_threads=12 prefetch=0 longest=3 all8=0 row_scan_s=0.000001414 column_validation_s=0.000004893 policy_s=0.000000030\ncsr_matrix_int32_spmv: 0.000000 seconds 3 multiplications 42 flops (0.11 Gflop/s, 0.054 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000070 seconds\nvector_to_matrix_market: 0.000323 seconds\nmatrix_market_write: 0.000070 seconds\n",
+  "stderr": "",
+  "values": [
+    9,
+    3,
+    9,
+    6
+  ],
+  "exit": 0
+}

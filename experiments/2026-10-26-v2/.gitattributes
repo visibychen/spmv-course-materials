@@ -1,0 +1,4 @@
+# Preserve byte-exact compiler/disassembler output and SVG exports.
+# Authored source/scripts/docs retain the repository whitespace checks.
+raw/** -whitespace
+figures/*.svg -whitespace
