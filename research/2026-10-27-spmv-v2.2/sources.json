@@ -1,0 +1,33 @@
+{
+  "accessed_on": "2026-10-27",
+  "sources": [
+    {
+      "title": "Elafrou CPU SpMV",
+      "url": "https://arxiv.org/pdf/1711.05487",
+      "scope": "III-D/E, IV-D"
+    },
+    {
+      "title": "PETSc nonempty rows",
+      "url": "https://github.com/petsc/petsc/blob/51619389660697cb6ab811d9eb05c4522bec4803/src/mat/utils/compressedrow.c",
+      "scope": "v3.24.0 fixed commit; method reference only"
+    },
+    {
+      "title": "OpenMP worksharing",
+      "url": "https://www.openmp.org/spec-html/5.2/openmpse66.html",
+      "scope": "5.2"
+    },
+    {
+      "title": "GCC optimization",
+      "url": "https://gcc.gnu.org/onlinedocs/gcc-11.4.0/gcc/Optimize-Options.html",
+      "scope": "11.4.0"
+    },
+    {
+      "title": "NVIDIA merge",
+      "url": "https://github.com/dumerrill/merge-spmv/blob/18895571ce9af960ee207dae541b0ffc701ea4bb/cpu_spmv.cpp",
+      "scope": "existing v2 code and BSD-3 notice retained"
+    }
+  ],
+  "project_v21_commit": "aa1ef3d9bfb93002f19d0bfffdb3074225bb7f15",
+  "base_v2": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "status": "design before implementation; no v2.2 performance claim"
+}
