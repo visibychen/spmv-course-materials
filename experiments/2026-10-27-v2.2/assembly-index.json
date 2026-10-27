@@ -1,0 +1,22 @@
+{
+  "assembly-original-csr.txt": {
+    "bytes": 165514,
+    "sha256": "d1212c44e7bceb4f7cb8c4b61589d84f8367e32c65f6a23cd3ab55fbd230284c",
+    "has_instructions": true
+  },
+  "assembly-rows_f32.txt": {
+    "bytes": 7144,
+    "sha256": "27e3caf38049eb85056f00bb96ebb2205548afe01ce73efe5cf2788e0b32b4ac",
+    "has_instructions": true
+  },
+  "assembly-sum_row.txt": {
+    "bytes": 1075,
+    "sha256": "71cd27695b4d5eb20fed748107d41754aa0b86155a8bebf31485ecdab9f00fc6",
+    "has_instructions": true
+  },
+  "assembly-spmv_v22_execute.txt": {
+    "bytes": 17365,
+    "sha256": "0ed59021d368582d8f0bc12acc5fa363f3db2c8b52da6a1f4fbe080fdd26ba5c",
+    "has_instructions": true
+  }
+}

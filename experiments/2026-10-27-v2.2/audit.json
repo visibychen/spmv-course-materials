@@ -1,0 +1,21 @@
+{
+  "formal_processes": 1960,
+  "phase_counts": {
+    "critical": 560,
+    "screen": 660,
+    "heldout": 480,
+    "large": 80,
+    "large-sensitivity": 60,
+    "ablations": 120
+  },
+  "unique_keys": true,
+  "paired_blocks": 320,
+  "inputs": 68,
+  "full_vector_and_compatibility_checks": 233,
+  "frozen_harness_unchanged": true,
+  "source_binaries_unchanged": true,
+  "resources_and_timings_match_raw": true,
+  "core_checkout": "optimization/v2",
+  "core_clean": true,
+  "limitations": "SHA verifies local bytes; timings remain conditional on the recorded machine/load, not a reproducibility guarantee."
+}

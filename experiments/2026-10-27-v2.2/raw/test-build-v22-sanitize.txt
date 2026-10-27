@@ -1,0 +1,13 @@
+/home/visiby/计算机组成原理课设/csrspmv/tests/test_spmv_v22.c: In function ‘auto_empty’:
+/home/visiby/计算机组成原理课设/csrspmv/tests/test_spmv_v22.c:65:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+   65 |     for(int64_t k=0;k<nz;k++)v[k]=1;xx[0]=1;
+      |     ^~~
+/home/visiby/计算机组成原理课设/csrspmv/tests/test_spmv_v22.c:65:37: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   65 |     for(int64_t k=0;k<nz;k++)v[k]=1;xx[0]=1;
+      |                                     ^~
+/home/visiby/计算机组成原理课设/csrspmv/tests/test_spmv_v22.c:74:9: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+   74 |         for(int r=0;r<m;r++)assert(yy[r]==(r%100==0?8*(rep+1)*(rep+2)/2:0));checks++;
+      |         ^~~
+/home/visiby/计算机组成原理课设/csrspmv/tests/test_spmv_v22.c:74:77: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   74 |         for(int r=0;r<m;r++)assert(yy[r]==(r%100==0?8*(rep+1)*(rep+2)/2:0));checks++;
+      |                                                                             ^~~~~~

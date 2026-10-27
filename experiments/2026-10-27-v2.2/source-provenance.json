@@ -1,0 +1,29 @@
+{
+  "commit": "10f6b89ef7829e66ee83cdacd38953ba7ad7497b",
+  "parent": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "branch": "optimization/v2.2",
+  "design_commit": "645b2928f2bd009452f88ef72b5180894e0d8e14",
+  "source_sha256": {
+    "src/csr.c": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+    "src/main.c": "8b1293a9bc304a97699820fc762bb0fa4c49fda294f80eeecaba2e57fb8099da",
+    "src/matrix_market.c": "b492e4583a9f168dd8665acfbe3b3078e22c755f7d49e58b54e37ddb6cd45cc3",
+    "src/parse.c": "8549704ed14cc23ab1f417bae1931ec02b4d29089c1ff6ee4d7e9b7553f682d6",
+    "src/program_options.c": "7c489e60705d246acb8cec67fc1aa0c7987bc11f6829ac0e45cb2131a5189483",
+    "src/spmv_plan.c": "e8d209600cf7fb6ce6df1c374a381123cd5258b45fdffa7cf4b7196c1251d4f4",
+    "src/spmv_v2.c": "ecf330e9c69d721c8ff9e7aaa562c773b922093b4193d1267c7a934dcffad4b2",
+    "src/spmv_v22.c": "b13c865cf5f675ffb8a9f5d882fba8b62c3a2bcc0bb100ce6a487cbdc45a377a",
+    "src/vector.c": "22f71d918b0086adcce263d81729ce3e45bb778a32bcc79e5a767516eaba3ada",
+    "src/csr.h": "cf5234aaf6820d7158aaab96c2ffa0016497bf0c205983d7da09403987197c22",
+    "src/matrix_market.h": "532853be15bfd294d847f6599bd1281900acf10dd8325e34f275a3c5dab67b29",
+    "src/parse.h": "4437a7a6a7f9ae07adc11a761f15784e0f76c8a9426a6681522dd57976568341",
+    "src/program_options.h": "3a950eb25dcbaef9168df2ecd5c0ca0606dde4189743da6e118dd7bbe88653e6",
+    "src/spmv_plan.h": "6a6c96c2320cedf43b1b7702f801cd48bebc20432e476fd55a4bb43591214206",
+    "src/spmv_v2.h": "be2d75c914f4af78b17d59e614049f652ebeb751c93b79fe3db1d3f860728eb5",
+    "src/spmv_v22.h": "6cc6cd2144ba5434723bc117005b35eae0b67261bdbf29406f54319c96c324db",
+    "src/vector.h": "a3c0e032f7e7c08f2d77d43c4894fa37f036cea9e29a01eab0c9dbf4c891d45c",
+    "Makefile": "84d46272ab7b00b5c975f7aba326933a20c8b0819e2d47ddaeb251891ca64113",
+    "tests/test_spmv_v22.c": "7e22eaa0f8716aa22a96d757435ad6d8fb30a877c3cc58df37bdae1b12f0b80f"
+  },
+  "formal_experiments_started": false,
+  "snapshot_stage": "after code commit/push, before formal experiments; formal_experiments_started is historical snapshot state"
+}

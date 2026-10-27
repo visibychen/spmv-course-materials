@@ -1,0 +1,6 @@
+DIAGNOSTIC heldout-two-giants 12
+DIAGNOSTIC giant-row 12
+DIAGNOSTIC empty99 12
+DIAGNOSTIC bcsstk18 12
+DIAGNOSTIC wide 12
+DIAGNOSTIC large 24

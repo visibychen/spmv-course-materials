@@ -1,0 +1,32 @@
+{
+  "original": {
+    "commit": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+    "command": [
+      "make",
+      "-j12",
+      "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-27-v2.2/raw/vectorization-original.txt"
+    ],
+    "binary_sha256": "c8277d2628bb5938dae37035954a506665276bd86eb65afff35310579e0782d0",
+    "flags": "-O3 -march=native -g -Wall -iquote src -fopenmp"
+  },
+  "v2": {
+    "commit": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+    "command": [
+      "make",
+      "-j12",
+      "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-27-v2.2/raw/vectorization-v2.txt"
+    ],
+    "binary_sha256": "f6f86f710c5b45c5035f1cfde81194f0bae4e1684eb40c5c6a8420ff7a8f518f",
+    "flags": "-O3 -march=native -g -Wall -iquote src -fopenmp"
+  },
+  "v22": {
+    "commit": "10f6b89ef7829e66ee83cdacd38953ba7ad7497b",
+    "command": [
+      "make",
+      "-j12",
+      "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-27-v2.2/raw/vectorization-v22.txt"
+    ],
+    "binary_sha256": "ad41fcadaaf2b26ba29d339936c15d4a05d10303ec5704dc1f865147fe271b64",
+    "flags": "-O3 -march=native -g -Wall -iquote src -fopenmp"
+  }
+}

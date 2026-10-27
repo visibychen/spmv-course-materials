@@ -1,0 +1,121 @@
+{
+  "original_best_tested_threads": 24,
+  "original_best_total_s": 0.7265334999999999,
+  "v22_cap24_total_s": 0.629400434,
+  "v2_t24_total_s": 0.6252336575,
+  "v22_time_change_vs_original_best_percent": -13.369385719997762,
+  "v22_time_change_vs_v2_percent": 0.6664350919080242,
+  "same_cap24_original_pair": {
+    "phase": "large",
+    "matrix": "large",
+    "threads": 24,
+    "repeat": 9,
+    "control": "original",
+    "pairs": 10,
+    "median_pair_speedup": 1.1530196279962612,
+    "low95": 1.0901864995771746,
+    "high95": 1.2231001857426613,
+    "control_total_s_median": 0.7265334999999999,
+    "candidate_total_s_median": 0.654391913,
+    "pair_speedups": [
+      1.1895390265865853,
+      1.1872528836473808,
+      1.1187863723451419,
+      1.2566613448987372,
+      1.2860908001180553,
+      1.0929191991886662,
+      0.989661436343372,
+      1.097671861496206,
+      1.0827011376581432,
+      1.2139041693455952
+    ]
+  },
+  "same_cap24_v2_pair": {
+    "phase": "large",
+    "matrix": "large",
+    "threads": 24,
+    "repeat": 9,
+    "control": "v2",
+    "pairs": 10,
+    "median_pair_speedup": 1.002234155350479,
+    "low95": 0.925281976096302,
+    "high95": 1.0570211993308019,
+    "control_total_s_median": 0.6252336575,
+    "candidate_total_s_median": 0.6257890035,
+    "pair_speedups": [
+      1.0067634084531962,
+      1.0026067544400907,
+      1.032438838035641,
+      1.2507526609757684,
+      0.9619161479999299,
+      0.8999340357430609,
+      0.85396931948108,
+      1.1072789902084077,
+      1.0018615562608673,
+      0.925281976096302
+    ]
+  },
+  "primary_original_pass": true,
+  "primary_v2_pass": false,
+  "critical_worst_vs_v2": {
+    "phase": "critical",
+    "matrix": "heavy-clustered",
+    "threads": 12,
+    "repeat": 9,
+    "original_ms": 56.387,
+    "v2_ms": 13.811233999999999,
+    "v22_ms": 13.9300475,
+    "v2_vs_original_percent": -75.50635075460657,
+    "v22_vs_original_percent": -75.29563995247132,
+    "v22_vs_v2_percent": 0.8602670840273996,
+    "prepare_ms": 0.5169429999999999,
+    "execute_ms": 13.414,
+    "cleanup_ms": 0.0004545,
+    "selected": "csr",
+    "route": "v2-rules-fast-validation",
+    "actual_threads": "12",
+    "extra_bytes": 0,
+    "samples_original": 10,
+    "samples_v2": 10,
+    "samples_v22": 20
+  },
+  "critical_all_within5": true,
+  "class_representatives_T12": {
+    "bcsstk18": -63.863329148102245,
+    "empty99": -20.062502090044166,
+    "heldout-two-giants": -53.58247508156631
+  },
+  "classes_improved_over5": 3,
+  "old_T12": {
+    "n": 52,
+    "v2": {
+      "faster_over5": 22,
+      "within5": 8,
+      "slower_over5": 22
+    },
+    "v22": {
+      "faster_over5": 36,
+      "within5": 8,
+      "slower_over5": 8
+    }
+  },
+  "new_T12": {
+    "n": 16,
+    "v2": {
+      "faster_over5": 4,
+      "within5": 3,
+      "slower_over5": 9
+    },
+    "v22": {
+      "faster_over5": 11,
+      "within5": 2,
+      "slower_over5": 3
+    }
+  },
+  "negative_counts_not_increased": true,
+  "correctness_pass": true,
+  "accepted_as_robust_upgrade": false,
+  "branch_action": "switch checkout to optimization/v2; retain remote optimization/v2.2",
+  "interpretation": "The v2/v22 interval includes1; this is insufficient evidence for the predeclared non-regression bound, not proof of a definite slowdown.",
+  "limits": "If original best team is not24, the T24 paired interval cannot validate the best-team comparison; mark inconclusive and fail joint gate."
+}

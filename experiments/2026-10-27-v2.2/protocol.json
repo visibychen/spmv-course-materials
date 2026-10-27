@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-27 Asia/Shanghai",
+  "design_commit": "645b2928f2bd009452f88ef72b5180894e0d8e14",
+  "core_commit": "10f6b89ef7829e66ee83cdacd38953ba7ad7497b",
+  "parent": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "core_pushed_before_formal": true,
+  "no_profile_no_retuning": true,
+  "rules": "as frozen in committed docs/v2.2.md; 180 disjoint calibration observations; no formal-input parameter changes",
+  "formal_counts": {
+    "critical": 560,
+    "screen": 660,
+    "heldout": 480,
+    "large": 80,
+    "large-sensitivity": 60,
+    "ablations": 120
+  },
+  "input_plan": "52 prior development inputs plus12 new generated and4 new real =68; none of the new data used to tune",
+  "metrics": "per-process P+E+cleanup then median; whole-process wall separate; raw commands/stdout/stderr/resources retained; original automatic SIMD retained",
+  "pairing": "10 adjacent randomized AB/BA process pairs for each control, T12/24 primary/critical; candidate20/control10; other conditions5 independent processes",
+  "acceptance": "primary >=5percent vs original best tested with paired support; <=3percent median vs v2 and same-team pair speedup low95>=0.95; critical v22 vs v2 <=5percent; improve at least2 classes of small/empty/two-giants; old/new T12 negative count vs original no increase relative to v2",
+  "environment": {
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PLACES": "cores",
+    "OMP_PROC_BIND": "spread",
+    "OMP_WAIT_POLICY": "PASSIVE"
+  },
+  "scope_limit": "R1/R100 large atT24, R9 T1/12/24; original2/4/8 supplemental; not full Cartesian",
+  "branch_policy": "retain remote optimization/v2.2; if criteria fail switch core checkout back to optimization/v2; no master merge"
+}

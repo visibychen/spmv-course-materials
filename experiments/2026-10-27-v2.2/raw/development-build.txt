@@ -1,0 +1,2 @@
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp -ffp-contract=off src/spmv_v22.c -o src/spmv_v22.o
+cc -O3 -march=native -g -Wall -iquote src -fopenmp src/csr.o src/main.o src/matrix_market.o src/parse.o src/program_options.o src/spmv_plan.o src/spmv_v2.o src/spmv_v22.o src/vector.o  -o csrspmv

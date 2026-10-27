@@ -1,0 +1,42 @@
+{
+  "versions": {
+    "original": {
+      "csr_source_sha256": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+      "csr_text_sha256": "538c3db5fadcf90626576faa9a7ae713a36f534990af5a652233b944a95cdbcb",
+      "csr_text_bytes": 24786,
+      "command": [
+        "objcopy",
+        "--dump-section",
+        ".text=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-27-v2.2/build/csr-text-original.bin",
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-27-v2.2/build/original/src/csr.o"
+      ]
+    },
+    "v2": {
+      "csr_source_sha256": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+      "csr_text_sha256": "538c3db5fadcf90626576faa9a7ae713a36f534990af5a652233b944a95cdbcb",
+      "csr_text_bytes": 24786,
+      "command": [
+        "objcopy",
+        "--dump-section",
+        ".text=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-27-v2.2/build/csr-text-v2.bin",
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-27-v2.2/build/v2/src/csr.o"
+      ]
+    },
+    "v22": {
+      "csr_source_sha256": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+      "csr_text_sha256": "538c3db5fadcf90626576faa9a7ae713a36f534990af5a652233b944a95cdbcb",
+      "csr_text_bytes": 24786,
+      "command": [
+        "objcopy",
+        "--dump-section",
+        ".text=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-27-v2.2/build/csr-text-v22.bin",
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-27-v2.2/build/v22/src/csr.o"
+      ]
+    }
+  },
+  "v2_source_sha256": {
+    "v2": "ecf330e9c69d721c8ff9e7aaa562c773b922093b4193d1267c7a934dcffad4b2",
+    "v22": "ecf330e9c69d721c8ff9e7aaa562c773b922093b4193d1267c7a934dcffad4b2"
+  },
+  "interpretation": "csr.c and spmv_v2.c unchanged. csr.o .text identical before relocation; this does not prove equal final addresses, relocations, cache states or timings."
+}

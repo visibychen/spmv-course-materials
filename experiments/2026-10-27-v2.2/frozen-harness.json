@@ -1,0 +1,10 @@
+{
+  "before_first_formal_unix": 1793105170.2619371,
+  "files": {
+    "run_experiments.py": "64c6375cab4c8cd98d92a235f68a30350d96a665120e5f3a161475e2f6fcba37",
+    "verify_and_inputs.py": "a598e96ca14db900b8b13bb4cc367f3889bea06e9cf0ccc127d255e181a74d43",
+    "protocol.json": "087fee13502a01591aef4b2e2452ceca7cd2bdc8733c2b358b5ea5179b02e474",
+    "matrices.json": "20cb804267bf2a871b420858b2974177a28b3ac8a899bc23786e139530acbf92"
+  },
+  "core": "10f6b89ef7829e66ee83cdacd38953ba7ad7497b"
+}

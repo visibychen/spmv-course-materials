@@ -1,0 +1,13 @@
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-27-v2.2/bench_compare.c: In function ‘main’:
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-27-v2.2/bench_compare.c:34:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   34 |         if(v==4)o.guarded=0;if(v==5)o.empty=1;
+      |         ^~
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-27-v2.2/bench_compare.c:34:29: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   34 |         if(v==4)o.guarded=0;if(v==5)o.empty=1;
+      |                             ^~
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-27-v2.2/bench_compare.c:50:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+   50 |     for(int v=0;v<6;v++)spmv_plan_free(&p[v]);vector_free(&x);vector_free(&y);csr_matrix_int32_free(&a);return 0;
+      |     ^~~
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-27-v2.2/bench_compare.c:50:47: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   50 |     for(int v=0;v<6;v++)spmv_plan_free(&p[v]);vector_free(&x);vector_free(&y);csr_matrix_int32_free(&a);return 0;
+      |                                               ^~~~~~~~~~~
