@@ -1,0 +1,154 @@
+{
+  "binary_sha256": "ca8072c1e39ad24c0715f4da7b0a37f0bc734d7bd2e86a2291b972648f3cff5b",
+  "default": "serial validation; explicit parallel experiment",
+  "records": [
+    {
+      "command": [
+        "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cli.mtx",
+        "--kernel=v2.2.1",
+        "--matrix-format=f32",
+        "--source-vector-format=f32",
+        "--destination-vector-format=f32",
+        "-v",
+        "--repeat=0"
+      ],
+      "returncode": 0,
+      "stdout": "matrix_market_read: 0.000012 seconds matrix object coordinate format real field general symmetry 3 rows 3 columns 3 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001832 seconds 3 rows 3 columns 3 nonzeros\nspmv_prepare: 0.000000781 seconds requested=v2.2.1 selected=v2.2 reason=guarded-v221 extra_bytes=0\nspmv_v221: kernel=auto executor=v2.2 partition=rows threads=1 route=zero-calls statistics_known=0 empty_rows=-1 nonempty_rows=-1 index_capacity=0 index_retry=0 validation_threads=1 row_scan_s=0.000000000 column_validation_s=0.000000000 retry_s=0.000000000\ncsr_matrix_int32_spmv: 0.000000 seconds 0 multiplications 0 flops (0.00 Gflop/s, 0.000 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000083 seconds\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cli.mtx",
+        "--kernel=v2.2.1",
+        "--matrix-format=f32",
+        "--source-vector-format=f32",
+        "--destination-vector-format=f32",
+        "-v",
+        "--repeat=1",
+        "--flops=100"
+      ],
+      "returncode": 0,
+      "stdout": "matrix_market_read: 0.000010 seconds matrix object coordinate format real field general symmetry 3 rows 3 columns 3 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001901 seconds 3 rows 3 columns 3 nonzeros\nspmv_prepare: 0.000000680 seconds requested=v2.2.1 selected=v2 reason=guarded-v221 extra_bytes=0\nspmv_v2: kernel=csr partition=rows serial=1 max_threads=12 prefetch=0 longest=1 all8=0 row_scan_s=0.000000000 column_validation_s=0.000000000 policy_s=0.000000000\nspmv_v221: kernel=csr executor=v2 partition=rows threads=1 route=resident-direct statistics_known=1 empty_rows=0 nonempty_rows=3 index_capacity=0 index_retry=0 validation_threads=1 row_scan_s=0.000000046 column_validation_s=0.000000037 retry_s=0.000000000\ncsr_matrix_int32_spmv: 0.000001 seconds 17 multiplications 102 flops (0.17 Gflop/s, 0.085 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000064 seconds\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cli.mtx",
+        "--kernel=v2.2.1",
+        "--matrix-format=f32",
+        "--source-vector-format=f32",
+        "--destination-vector-format=f32",
+        "-v",
+        "--v221-empty=off",
+        "--v221-validation",
+        "serial",
+        "--v221-balance",
+        "rows"
+      ],
+      "returncode": 0,
+      "stdout": "matrix_market_read: 0.000009 seconds matrix object coordinate format real field general symmetry 3 rows 3 columns 3 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001767 seconds 3 rows 3 columns 3 nonzeros\nspmv_prepare: 0.000000570 seconds requested=v2.2.1 selected=v2 reason=guarded-v221 extra_bytes=0\nspmv_v2: kernel=csr partition=rows serial=1 max_threads=12 prefetch=0 longest=1 all8=0 row_scan_s=0.000000000 column_validation_s=0.000000000 policy_s=0.000000000\nspmv_v221: kernel=csr executor=v2 partition=rows threads=1 route=resident-direct statistics_known=1 empty_rows=0 nonempty_rows=3 index_capacity=0 index_retry=0 validation_threads=1 row_scan_s=0.000000046 column_validation_s=0.000000036 retry_s=0.000000000\ncsr_matrix_int32_spmv: 0.000000 seconds 1 multiplications 6 flops (0.02 Gflop/s, 0.011 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000074 seconds\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cli.mtx",
+        "--kernel=v2.2.1",
+        "--matrix-format=f32",
+        "--source-vector-format=f32",
+        "--destination-vector-format=f32",
+        "-v",
+        "--v221-validation=parallel"
+      ],
+      "returncode": 0,
+      "stdout": "matrix_market_read: 0.000009 seconds matrix object coordinate format real field general symmetry 3 rows 3 columns 3 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001732 seconds 3 rows 3 columns 3 nonzeros\nspmv_prepare: 0.000000579 seconds requested=v2.2.1 selected=v2 reason=guarded-v221 extra_bytes=0\nspmv_v2: kernel=csr partition=rows serial=1 max_threads=12 prefetch=0 longest=1 all8=0 row_scan_s=0.000000000 column_validation_s=0.000000000 policy_s=0.000000000\nspmv_v221: kernel=csr executor=v2 partition=rows threads=1 route=resident-direct statistics_known=1 empty_rows=0 nonempty_rows=3 index_capacity=0 index_retry=0 validation_threads=1 row_scan_s=0.000000046 column_validation_s=0.000000046 retry_s=0.000000000\ncsr_matrix_int32_spmv: 0.000000 seconds 1 multiplications 6 flops (0.02 Gflop/s, 0.010 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000064 seconds\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cli.mtx",
+        "--kernel=v2.2.1",
+        "--matrix-format=f32",
+        "--source-vector-format=f32",
+        "--destination-vector-format=f32",
+        "-v",
+        "--v221-validation=invalid"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "csrspmv: Invalid argument --v221-validation=invalid\n"
+    },
+    {
+      "command": [
+        "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cli.mtx",
+        "--kernel=v2.2.1",
+        "--matrix-format=f32",
+        "--source-vector-format=f32",
+        "--destination-vector-format=f32",
+        "-v",
+        "--v221-empty=on",
+        "--execution=serial"
+      ],
+      "returncode": 1,
+      "stdout": "matrix_market_read: 0.000010 seconds matrix object coordinate format real field general symmetry 3 rows 3 columns 3 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001842 seconds 3 rows 3 columns 3 nonzeros\n",
+      "stderr": "csrspmv: prepare: Invalid argument\n"
+    },
+    {
+      "command": [
+        "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cli.mtx",
+        "--kernel=v2.2.1",
+        "--matrix-format=f32",
+        "--source-vector-format=f32",
+        "--destination-vector-format=f32",
+        "-v",
+        "--flops=9223372036854775807"
+      ],
+      "returncode": 1,
+      "stdout": "matrix_market_read: 0.000009 seconds matrix object coordinate format real field general symmetry 3 rows 3 columns 3 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001716 seconds 3 rows 3 columns 3 nonzeros\n",
+      "stderr": "csrspmv: call target: Value too large for defined data type\n"
+    },
+    {
+      "command": [
+        "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cal-0.mtx",
+        "--kernel=v2.2.1",
+        "--matrix-format=f32",
+        "--source-vector-format=f32",
+        "--destination-vector-format=f32",
+        "-v",
+        "--repeat=2"
+      ],
+      "environment": {
+        "OMP_THREAD_LIMIT": "2"
+      },
+      "returncode": 0,
+      "stdout": "matrix_market_read: 0.103799 seconds matrix object coordinate format real field general symmetry 150013 rows 4000003 columns 1200104 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.017707 seconds 150013 rows 4000003 columns 1200104 nonzeros\nspmv_prepare: 0.000516652 seconds requested=v2.2.1 selected=v2 reason=guarded-v221 extra_bytes=0\nspmv_v2: kernel=short8 partition=rows serial=0 max_threads=24 prefetch=0 longest=8 all8=1 row_scan_s=0.000000000 column_validation_s=0.000000000 policy_s=0.000000000\nspmv_v221: kernel=short8 executor=v2 partition=rows threads=24 route=v2-local-direct statistics_known=1 empty_rows=0 nonempty_rows=150013 index_capacity=0 index_retry=0 validation_threads=1 row_scan_s=0.000140628 column_validation_s=0.000373543 retry_s=0.000000000\ncsr_matrix_int32_spmv: 0.002949 seconds 2 multiplications 4800416 flops (1.63 Gflop/s, 0.814 Gnz/s)\nspmv_team: actual_threads=2\nspmv_cleanup: 0.000000230 seconds\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+        "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cal-0.mtx",
+        "--kernel=v2.2.1",
+        "--matrix-format=f32",
+        "--source-vector-format=f32",
+        "--destination-vector-format=f32",
+        "-v",
+        "--repeat=2",
+        "--v221-validation=parallel"
+      ],
+      "environment": {
+        "OMP_THREAD_LIMIT": "2"
+      },
+      "returncode": 0,
+      "stdout": "matrix_market_read: 0.094081 seconds matrix object coordinate format real field general symmetry 150013 rows 4000003 columns 1200104 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.015300 seconds 150013 rows 4000003 columns 1200104 nonzeros\nspmv_prepare: 0.000404535 seconds requested=v2.2.1 selected=v2 reason=guarded-v221 extra_bytes=0\nspmv_v2: kernel=short8 partition=rows serial=0 max_threads=24 prefetch=0 longest=8 all8=1 row_scan_s=0.000000000 column_validation_s=0.000000000 policy_s=0.000000000\nspmv_v221: kernel=short8 executor=v2 partition=rows threads=24 route=v2-local-direct statistics_known=1 empty_rows=0 nonempty_rows=150013 index_capacity=0 index_retry=0 validation_threads=2 row_scan_s=0.000148152 column_validation_s=0.000253794 retry_s=0.000000000\ncsr_matrix_int32_spmv: 0.003131 seconds 2 multiplications 4800416 flops (1.53 Gflop/s, 0.767 Gnz/s)\nspmv_team: actual_threads=2\nspmv_cleanup: 0.000000276 seconds\n",
+      "stderr": ""
+    }
+  ]
+}

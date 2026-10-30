@@ -1,0 +1,8 @@
+{
+  "base_commit": "dfb4ae256c61cfcefc7aa426a4de4906a6d6dd2a",
+  "patch": "raw/calibration-cli-default.patch",
+  "program_options_before_sha256": "4463623af6036dbdc7ce189943b72881e65127cbe49dbe25997fa6d1e503f498",
+  "program_options_final_sha256": "d91345897c98f109c8aa38e01287822ed7f93e1b7480d4071dea003100ea64f8",
+  "matches_precommit_verification_snapshot": true,
+  "interpretation": "Apply patch to final source archive to reconstruct original parallel-auto calibration CLI; other production sources unchanged. Build paths/compiler affect complete binary identity."
+}

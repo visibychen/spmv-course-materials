@@ -1,0 +1,698 @@
+[
+  {
+    "matrix": "v221-period97",
+    "requested_threads": 12,
+    "samples": 5,
+    "selected": [
+      "empty-runs"
+    ],
+    "route": [
+      "empty-runs"
+    ],
+    "executor": [
+      "v2.2"
+    ],
+    "actual_threads": [
+      "12"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "47832"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-period97",
+    "requested_threads": 24,
+    "samples": 5,
+    "selected": [
+      "empty-runs"
+    ],
+    "route": [
+      "empty-runs"
+    ],
+    "executor": [
+      "v2.2"
+    ],
+    "actual_threads": [
+      "24"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "47832"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-period101",
+    "requested_threads": 12,
+    "samples": 5,
+    "selected": [
+      "empty-runs"
+    ],
+    "route": [
+      "empty-runs"
+    ],
+    "executor": [
+      "v2.2"
+    ],
+    "actual_threads": [
+      "12"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "56232"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-period101",
+    "requested_threads": 24,
+    "samples": 5,
+    "selected": [
+      "empty-runs"
+    ],
+    "route": [
+      "empty-runs"
+    ],
+    "executor": [
+      "v2.2"
+    ],
+    "actual_threads": [
+      "24"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "56232"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-cluster90",
+    "requested_threads": 12,
+    "samples": 5,
+    "selected": [
+      "empty-runs"
+    ],
+    "route": [
+      "empty-runs"
+    ],
+    "executor": [
+      "v2.2"
+    ],
+    "actual_threads": [
+      "12"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "1"
+    ],
+    "index_capacity": [
+      "33001"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-cluster90",
+    "requested_threads": 24,
+    "samples": 5,
+    "selected": [
+      "empty-runs"
+    ],
+    "route": [
+      "empty-runs"
+    ],
+    "executor": [
+      "v2.2"
+    ],
+    "actual_threads": [
+      "24"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "1"
+    ],
+    "index_capacity": [
+      "33001"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-random91",
+    "requested_threads": 12,
+    "samples": 5,
+    "selected": [
+      "empty-runs"
+    ],
+    "route": [
+      "empty-runs"
+    ],
+    "executor": [
+      "v2.2"
+    ],
+    "actual_threads": [
+      "12"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "1"
+    ],
+    "index_capacity": [
+      "36314"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-random91",
+    "requested_threads": 24,
+    "samples": 5,
+    "selected": [
+      "empty-runs"
+    ],
+    "route": [
+      "empty-runs"
+    ],
+    "executor": [
+      "v2.2"
+    ],
+    "actual_threads": [
+      "24"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "1"
+    ],
+    "index_capacity": [
+      "36314"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-max64",
+    "requested_threads": 12,
+    "samples": 5,
+    "selected": [
+      "empty-runs"
+    ],
+    "route": [
+      "empty-runs"
+    ],
+    "executor": [
+      "v2.2"
+    ],
+    "actual_threads": [
+      "12"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "134464"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-max64",
+    "requested_threads": 24,
+    "samples": 5,
+    "selected": [
+      "empty-runs"
+    ],
+    "route": [
+      "empty-runs"
+    ],
+    "executor": [
+      "v2.2"
+    ],
+    "actual_threads": [
+      "24"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "134464"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-max65",
+    "requested_threads": 12,
+    "samples": 5,
+    "selected": [
+      "csr"
+    ],
+    "route": [
+      "v2-local-direct"
+    ],
+    "executor": [
+      "v2"
+    ],
+    "actual_threads": [
+      "12"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "0"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-max65",
+    "requested_threads": 24,
+    "samples": 5,
+    "selected": [
+      "csr"
+    ],
+    "route": [
+      "v2-local-direct"
+    ],
+    "executor": [
+      "v2"
+    ],
+    "actual_threads": [
+      "24"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "0"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-column-low",
+    "requested_threads": 12,
+    "samples": 5,
+    "selected": [
+      "short8"
+    ],
+    "route": [
+      "v2-local-direct"
+    ],
+    "executor": [
+      "v2"
+    ],
+    "actual_threads": [
+      "12"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "0"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-column-low",
+    "requested_threads": 24,
+    "samples": 5,
+    "selected": [
+      "short8"
+    ],
+    "route": [
+      "v2-local-direct"
+    ],
+    "executor": [
+      "v2"
+    ],
+    "actual_threads": [
+      "24"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "0"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-column-high",
+    "requested_threads": 12,
+    "samples": 5,
+    "selected": [
+      "short8"
+    ],
+    "route": [
+      "v2-local-direct"
+    ],
+    "executor": [
+      "v2"
+    ],
+    "actual_threads": [
+      "12"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "0"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-column-high",
+    "requested_threads": 24,
+    "samples": 5,
+    "selected": [
+      "short8"
+    ],
+    "route": [
+      "v2-local-direct"
+    ],
+    "executor": [
+      "v2"
+    ],
+    "actual_threads": [
+      "24"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "0"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-resident-low",
+    "requested_threads": 12,
+    "samples": 5,
+    "selected": [
+      "short8"
+    ],
+    "route": [
+      "resident-direct"
+    ],
+    "executor": [
+      "v2"
+    ],
+    "actual_threads": [
+      "1"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "0"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-resident-low",
+    "requested_threads": 24,
+    "samples": 5,
+    "selected": [
+      "short8"
+    ],
+    "route": [
+      "resident-direct"
+    ],
+    "executor": [
+      "v2"
+    ],
+    "actual_threads": [
+      "1"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "0"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-resident-high",
+    "requested_threads": 12,
+    "samples": 5,
+    "selected": [
+      "short8"
+    ],
+    "route": [
+      "v2-local-direct"
+    ],
+    "executor": [
+      "v2"
+    ],
+    "actual_threads": [
+      "12"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "0"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-resident-high",
+    "requested_threads": 24,
+    "samples": 5,
+    "selected": [
+      "short8"
+    ],
+    "route": [
+      "v2-local-direct"
+    ],
+    "executor": [
+      "v2"
+    ],
+    "actual_threads": [
+      "24"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "0"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-zero-low",
+    "requested_threads": 12,
+    "samples": 5,
+    "selected": [
+      "empty-runs"
+    ],
+    "route": [
+      "zero-runs"
+    ],
+    "executor": [
+      "v2.2"
+    ],
+    "actual_threads": [
+      "1"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "0"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-zero-low",
+    "requested_threads": 24,
+    "samples": 5,
+    "selected": [
+      "empty-runs"
+    ],
+    "route": [
+      "zero-runs"
+    ],
+    "executor": [
+      "v2.2"
+    ],
+    "actual_threads": [
+      "1"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "0"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-zero-high",
+    "requested_threads": 12,
+    "samples": 5,
+    "selected": [
+      "empty-runs"
+    ],
+    "route": [
+      "zero-runs"
+    ],
+    "executor": [
+      "v2.2"
+    ],
+    "actual_threads": [
+      "12"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "0"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  },
+  {
+    "matrix": "v221-zero-high",
+    "requested_threads": 24,
+    "samples": 5,
+    "selected": [
+      "empty-runs"
+    ],
+    "route": [
+      "zero-runs"
+    ],
+    "executor": [
+      "v2.2"
+    ],
+    "actual_threads": [
+      "24"
+    ],
+    "validation_threads": [
+      "1"
+    ],
+    "index_retry": [
+      "0"
+    ],
+    "index_capacity": [
+      "0"
+    ],
+    "statistics_known": [
+      "1"
+    ]
+  }
+]

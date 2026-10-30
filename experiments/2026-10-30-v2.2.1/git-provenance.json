@@ -1,0 +1,19 @@
+{
+  "core_commit": "dfb4ae256c61cfcefc7aa426a4de4906a6d6dd2a",
+  "core_parent": "10f6b89ef7829e66ee83cdacd38953ba7ad7497b",
+  "core_branch": "optimization/v2.2.1",
+  "core_remote_tracking": "dfb4ae256c61cfcefc7aa426a4de4906a6d6dd2a",
+  "core_before_checkout": "optimization/v2.2.1",
+  "core_final_checkout": "optimization/v2",
+  "core_final_head": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "core_clean": true,
+  "master": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "v2": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "materials_branch": "main",
+  "materials_parent": "f6e247a3ba5af6adc5de574f88582c77f838153e",
+  "design_commit": "f6e247a3ba5af6adc5de574f88582c77f838153e",
+  "result_commit_title": "2026.10.30v2.2.1实验记录",
+  "result_commit": "See enclosing Git commit; no self-reference",
+  "no_history_rewrite": true,
+  "no_master_merge": true
+}

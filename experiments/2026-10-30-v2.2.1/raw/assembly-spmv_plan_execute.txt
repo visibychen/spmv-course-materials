@@ -1,0 +1,75 @@
+
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/build/v221/csrspmv:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .plt.sec:
+
+Disassembly of section .text:
+
+0000000000010130 <spmv_plan_execute>:
+   10130:	f3 0f 1e fa          	endbr64 
+   10134:	4c 8b 07             	mov    r8,QWORD PTR [rdi]
+   10137:	8b 02                	mov    eax,DWORD PTR [rdx]
+   10139:	41 39 00             	cmp    DWORD PTR [r8],eax
+   1013c:	0f 85 9e 00 00 00    	jne    101e0 <spmv_plan_execute+0xb0>
+   10142:	8b 06                	mov    eax,DWORD PTR [rsi]
+   10144:	41 39 40 04          	cmp    DWORD PTR [r8+0x4],eax
+   10148:	0f 85 92 00 00 00    	jne    101e0 <spmv_plan_execute+0xb0>
+   1014e:	44 8b 4f 08          	mov    r9d,DWORD PTR [rdi+0x8]
+   10152:	41 83 f9 02          	cmp    r9d,0x2
+   10156:	0f 84 b4 00 00 00    	je     10210 <spmv_plan_execute+0xe0>
+   1015c:	45 85 c9             	test   r9d,r9d
+   1015f:	0f 84 9b 00 00 00    	je     10200 <spmv_plan_execute+0xd0>
+   10165:	b8 16 00 00 00       	mov    eax,0x16
+   1016a:	41 83 f9 01          	cmp    r9d,0x1
+   1016e:	0f 85 7c 00 00 00    	jne    101f0 <spmv_plan_execute+0xc0>
+   10174:	83 7e 04 01          	cmp    DWORD PTR [rsi+0x4],0x1
+   10178:	75 76                	jne    101f0 <spmv_plan_execute+0xc0>
+   1017a:	83 7a 04 01          	cmp    DWORD PTR [rdx+0x4],0x1
+   1017e:	75 70                	jne    101f0 <spmv_plan_execute+0xc0>
+   10180:	48 83 ec 18          	sub    rsp,0x18
+   10184:	49 8b 40 10          	mov    rax,QWORD PTR [r8+0x10]
+   10188:	49 b8 ff ff ff ff ff 	movabs r8,0x7fffffffffffffff
+   1018f:	ff ff 7f 
+   10192:	48 89 0c 24          	mov    QWORD PTR [rsp],rcx
+   10196:	48 01 c0             	add    rax,rax
+   10199:	49 29 c0             	sub    r8,rax
+   1019c:	4c 39 01             	cmp    QWORD PTR [rcx],r8
+   1019f:	b8 4b 00 00 00       	mov    eax,0x4b
+   101a4:	7f 2a                	jg     101d0 <spmv_plan_execute+0xa0>
+   101a6:	48 8b 52 08          	mov    rdx,QWORD PTR [rdx+0x8]
+   101aa:	48 8b 76 08          	mov    rsi,QWORD PTR [rsi+0x8]
+   101ae:	48 89 7c 24 08       	mov    QWORD PTR [rsp+0x8],rdi
+   101b3:	e8 18 0c 00 00       	call   10dd0 <spmv_v2_execute>
+   101b8:	48 8b 7c 24 08       	mov    rdi,QWORD PTR [rsp+0x8]
+   101bd:	48 8b 0c 24          	mov    rcx,QWORD PTR [rsp]
+   101c1:	48 8b 07             	mov    rax,QWORD PTR [rdi]
+   101c4:	48 8b 40 10          	mov    rax,QWORD PTR [rax+0x10]
+   101c8:	48 01 c0             	add    rax,rax
+   101cb:	48 01 01             	add    QWORD PTR [rcx],rax
+   101ce:	31 c0                	xor    eax,eax
+   101d0:	48 83 c4 18          	add    rsp,0x18
+   101d4:	c3                   	ret    
+   101d5:	66 66 2e 0f 1f 84 00 	data16 cs nop WORD PTR [rax+rax*1+0x0]
+   101dc:	00 00 00 00 
+   101e0:	b8 16 00 00 00       	mov    eax,0x16
+   101e5:	c3                   	ret    
+   101e6:	66 2e 0f 1f 84 00 00 	cs nop WORD PTR [rax+rax*1+0x0]
+   101ed:	00 00 00 
+   101f0:	c3                   	ret    
+   101f1:	66 66 2e 0f 1f 84 00 	data16 cs nop WORD PTR [rax+rax*1+0x0]
+   101f8:	00 00 00 00 
+   101fc:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+   10200:	4c 89 c7             	mov    rdi,r8
+   10203:	e9 c8 6c ff ff       	jmp    6ed0 <csr_matrix_int32_spmv>
+   10208:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+   1020f:	00 
+   10210:	e9 5b 20 00 00       	jmp    12270 <spmv_v22_execute>
+
+Disassembly of section .fini:

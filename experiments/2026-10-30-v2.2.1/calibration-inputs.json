@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cal-0.mtx",
+    "sha256": "0c37ad7991638e10bd1c9f7787c159e850ec53bcf6583a2c46329c6cdaf3fdc7"
+  },
+  {
+    "path": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cal-1.mtx",
+    "sha256": "23efbe6a7acf4b6af098a259b914d20b7f5c264de816cb47b87539fc3c2e75f6"
+  },
+  {
+    "path": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cal-2.mtx",
+    "sha256": "f9b455316d21503401991f3ee75863abf33a0d666fefc15a293f9f51497a1a87"
+  },
+  {
+    "path": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cal-3.mtx",
+    "sha256": "bb111938709cdc28d720aa2f12b77359330eca67525f48a071d601020fdf1dde"
+  },
+  {
+    "path": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cal-4.mtx",
+    "sha256": "786a3b18803ee6bce004bfd2973cdd56e8a58471d10833f7261ce5be7957c9b3"
+  },
+  {
+    "path": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/data/cal-5.mtx",
+    "sha256": "23cfbb1f73cf36d87ee1b376826e29fa74986501ac867177289751b13a884fbe"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "prefix_bytes": 44752,
+  "prefix_sha256": "a19e3bc1cef73a8b93d8ca6a8d4e69eba9a7c540f06fdce3a157228b012ac956",
+  "appended_bytes": 4660,
+  "original_prefix_preserved": true,
+  "final_sha256": "be025af2ed38ef8060724fc0dfc094a9c93bbb596961268c1d548093065b4ccc"
+}

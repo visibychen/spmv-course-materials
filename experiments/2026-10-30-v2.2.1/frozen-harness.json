@@ -1,0 +1,13 @@
+{
+  "before_first_formal_unix": 1793325753.067486,
+  "client_date": "2026-10-30 Asia/Shanghai",
+  "files": {
+    "run_experiments.py": "04b18002f3d025ee419c73a0e85f91d49b406d41b0b9954c8da4ecf0576df720",
+    "verify_and_inputs.py": "ce6e8271f60ffbd803a9320a30b314dabbe2ea7f3d5b8aa6bfd8a4d448caa54a",
+    "protocol.json": "207a988f6c8a18f35aef86b09ab73d21de702b4a8e8a4cf231812f15607142aa",
+    "matrices.json": "f8404d4b0657c27c812315c58339e7acdca0c88a0a2131c9d9e387db76b444b6",
+    "build.json": "81aa1638419d9ff7193bbabc127d08ea6ff7a429e89108f46305cad6272e0b6a"
+  },
+  "core": "dfb4ae256c61cfcefc7aa426a4de4906a6d6dd2a",
+  "default": "serial validation, calibrated before source push"
+}

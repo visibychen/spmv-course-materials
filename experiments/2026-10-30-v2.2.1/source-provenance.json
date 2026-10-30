@@ -1,0 +1,29 @@
+{
+  "commit": "dfb4ae256c61cfcefc7aa426a4de4906a6d6dd2a",
+  "parent": "10f6b89ef7829e66ee83cdacd38953ba7ad7497b",
+  "branch": "optimization/v2.2.1",
+  "design_commit": "f6e247a3ba5af6adc5de574f88582c77f838153e",
+  "source_sha256": {
+    "src/csr.c": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+    "src/csr.h": "cf5234aaf6820d7158aaab96c2ffa0016497bf0c205983d7da09403987197c22",
+    "src/main.c": "0a6f523ed9aaebd0a7f7ec3853d41a8f97d52b702634675215403116e85e678f",
+    "src/matrix_market.c": "b492e4583a9f168dd8665acfbe3b3078e22c755f7d49e58b54e37ddb6cd45cc3",
+    "src/matrix_market.h": "532853be15bfd294d847f6599bd1281900acf10dd8325e34f275a3c5dab67b29",
+    "src/parse.c": "8549704ed14cc23ab1f417bae1931ec02b4d29089c1ff6ee4d7e9b7553f682d6",
+    "src/parse.h": "4437a7a6a7f9ae07adc11a761f15784e0f76c8a9426a6681522dd57976568341",
+    "src/program_options.c": "d91345897c98f109c8aa38e01287822ed7f93e1b7480d4071dea003100ea64f8",
+    "src/program_options.h": "f6d3344acecde3847336b62a78758d215bd036ba67af283406961effad18c12b",
+    "src/spmv_plan.c": "93b43ae713f72c77a3df24e6476428790f0ff059c1e7b94e0885f7966fa6a3c0",
+    "src/spmv_plan.h": "1c32f7a355069d22105e157a0b7e79fa2bc40e0697271bdfa41f1bee5bed288c",
+    "src/spmv_v2.c": "ecf330e9c69d721c8ff9e7aaa562c773b922093b4193d1267c7a934dcffad4b2",
+    "src/spmv_v2.h": "be2d75c914f4af78b17d59e614049f652ebeb751c93b79fe3db1d3f860728eb5",
+    "src/spmv_v22.c": "b13c865cf5f675ffb8a9f5d882fba8b62c3a2bcc0bb100ce6a487cbdc45a377a",
+    "src/spmv_v22.h": "6cc6cd2144ba5434723bc117005b35eae0b67261bdbf29406f54319c96c324db",
+    "src/spmv_v221.c": "a2177e3900ad213988d43006cea73c16ace0f682bee9173f384c6e2f31a28502",
+    "src/spmv_v221.h": "cdb50dcdbed155d0774f9bd5e8721f94a025768e9991483b47b0a30d5ed50d14",
+    "src/vector.c": "22f71d918b0086adcce263d81729ce3e45bb778a32bcc79e5a767516eaba3ada",
+    "src/vector.h": "a3c0e032f7e7c08f2d77d43c4894fa37f036cea9e29a01eab0c9dbf4c891d45c"
+  },
+  "production_binary_before_push": "ca8072c1e39ad24c0715f4da7b0a37f0bc734d7bd2e86a2291b972648f3cff5b",
+  "stage": "source committed, before formal archive builds and inputs"
+}

@@ -1,0 +1,866 @@
+
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/build/v221/csrspmv:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .plt.sec:
+
+Disassembly of section .text:
+
+00000000000128e0 <spmv_v221_prepare>:
+   128e0:	f3 0f 1e fa          	endbr64 
+   128e4:	41 57                	push   r15
+   128e6:	41 56                	push   r14
+   128e8:	41 55                	push   r13
+   128ea:	41 54                	push   r12
+   128ec:	55                   	push   rbp
+   128ed:	53                   	push   rbx
+   128ee:	48 81 ec 88 00 00 00 	sub    rsp,0x88
+   128f5:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+   128fc:	00 00 
+   128fe:	48 89 44 24 78       	mov    QWORD PTR [rsp+0x78],rax
+   12903:	31 c0                	xor    eax,eax
+   12905:	48 85 ff             	test   rdi,rdi
+   12908:	0f 84 a2 01 00 00    	je     12ab0 <spmv_v221_prepare+0x1d0>
+   1290e:	48 89 f5             	mov    rbp,rsi
+   12911:	49 89 d5             	mov    r13,rdx
+   12914:	31 f6                	xor    esi,esi
+   12916:	ba 08 01 00 00       	mov    edx,0x108
+   1291b:	49 89 fe             	mov    r14,rdi
+   1291e:	49 89 cc             	mov    r12,rcx
+   12921:	4c 89 c3             	mov    rbx,r8
+   12924:	4c 89 4c 24 08       	mov    QWORD PTR [rsp+0x8],r9
+   12929:	e8 12 fb fe ff       	call   2440 <memset@plt>
+   1292e:	48 8d 05 9b 50 00 00 	lea    rax,[rip+0x509b]        # 179d0 <CSWTCH.145+0x1270>
+   12935:	49 89 2e             	mov    QWORD PTR [r14],rbp
+   12938:	41 c7 46 08 01 00 00 	mov    DWORD PTR [r14+0x8],0x1
+   1293f:	00 
+   12940:	49 89 46 10          	mov    QWORD PTR [r14+0x10],rax
+   12944:	48 85 ed             	test   rbp,rbp
+   12947:	0f 84 63 01 00 00    	je     12ab0 <spmv_v221_prepare+0x1d0>
+   1294d:	4d 85 ed             	test   r13,r13
+   12950:	0f 84 5a 01 00 00    	je     12ab0 <spmv_v221_prepare+0x1d0>
+   12956:	4c 8b 4c 24 08       	mov    r9,QWORD PTR [rsp+0x8]
+   1295b:	4d 85 e4             	test   r12,r12
+   1295e:	0f 94 c0             	sete   al
+   12961:	48 85 db             	test   rbx,rbx
+   12964:	0f 94 c2             	sete   dl
+   12967:	09 d0                	or     eax,edx
+   12969:	4d 85 c9             	test   r9,r9
+   1296c:	0f 94 c2             	sete   dl
+   1296f:	08 d0                	or     al,dl
+   12971:	0f 85 39 01 00 00    	jne    12ab0 <spmv_v221_prepare+0x1d0>
+   12977:	48 83 bc 24 c0 00 00 	cmp    QWORD PTR [rsp+0xc0],0x0
+   1297e:	00 00 
+   12980:	0f 88 2a 01 00 00    	js     12ab0 <spmv_v221_prepare+0x1d0>
+   12986:	41 8b 01             	mov    eax,DWORD PTR [r9]
+   12989:	83 f8 01             	cmp    eax,0x1
+   1298c:	0f 87 1e 01 00 00    	ja     12ab0 <spmv_v221_prepare+0x1d0>
+   12992:	41 8b 51 04          	mov    edx,DWORD PTR [r9+0x4]
+   12996:	83 fa 02             	cmp    edx,0x2
+   12999:	0f 87 11 01 00 00    	ja     12ab0 <spmv_v221_prepare+0x1d0>
+   1299f:	41 83 79 08 01       	cmp    DWORD PTR [r9+0x8],0x1
+   129a4:	0f 87 06 01 00 00    	ja     12ab0 <spmv_v221_prepare+0x1d0>
+   129aa:	41 83 79 0c 01       	cmp    DWORD PTR [r9+0xc],0x1
+   129af:	0f 87 fb 00 00 00    	ja     12ab0 <spmv_v221_prepare+0x1d0>
+   129b5:	44 8b 45 00          	mov    r8d,DWORD PTR [rbp+0x0]
+   129b9:	45 85 c0             	test   r8d,r8d
+   129bc:	0f 88 ee 00 00 00    	js     12ab0 <spmv_v221_prepare+0x1d0>
+   129c2:	8b 4d 04             	mov    ecx,DWORD PTR [rbp+0x4]
+   129c5:	85 c9                	test   ecx,ecx
+   129c7:	0f 88 e3 00 00 00    	js     12ab0 <spmv_v221_prepare+0x1d0>
+   129cd:	48 8b 7d 10          	mov    rdi,QWORD PTR [rbp+0x10]
+   129d1:	48 85 ff             	test   rdi,rdi
+   129d4:	0f 88 d6 00 00 00    	js     12ab0 <spmv_v221_prepare+0x1d0>
+   129da:	41 3b 4d 00          	cmp    ecx,DWORD PTR [r13+0x0]
+   129de:	0f 85 cc 00 00 00    	jne    12ab0 <spmv_v221_prepare+0x1d0>
+   129e4:	45 3b 04 24          	cmp    r8d,DWORD PTR [r12]
+   129e8:	0f 85 c2 00 00 00    	jne    12ab0 <spmv_v221_prepare+0x1d0>
+   129ee:	48 b9 ff ff ff ff ff 	movabs rcx,0x3fffffffffffffff
+   129f5:	ff ff 3f 
+   129f8:	41 bf 4b 00 00 00    	mov    r15d,0x4b
+   129fe:	48 39 cf             	cmp    rdi,rcx
+   12a01:	0f 8f af 00 00 00    	jg     12ab6 <spmv_v221_prepare+0x1d6>
+   12a07:	85 c0                	test   eax,eax
+   12a09:	0f 84 cc 00 00 00    	je     12adb <spmv_v221_prepare+0x1fb>
+   12a0f:	83 3b 03             	cmp    DWORD PTR [rbx],0x3
+   12a12:	0f 87 98 00 00 00    	ja     12ab0 <spmv_v221_prepare+0x1d0>
+   12a18:	83 7b 04 02          	cmp    DWORD PTR [rbx+0x4],0x2
+   12a1c:	0f 87 8e 00 00 00    	ja     12ab0 <spmv_v221_prepare+0x1d0>
+   12a22:	8b 43 08             	mov    eax,DWORD PTR [rbx+0x8]
+   12a25:	83 f8 02             	cmp    eax,0x2
+   12a28:	0f 87 82 00 00 00    	ja     12ab0 <spmv_v221_prepare+0x1d0>
+   12a2e:	48 8b 73 18          	mov    rsi,QWORD PTR [rbx+0x18]
+   12a32:	48 85 f6             	test   rsi,rsi
+   12a35:	78 79                	js     12ab0 <spmv_v221_prepare+0x1d0>
+   12a37:	8b 4b 0c             	mov    ecx,DWORD PTR [rbx+0xc]
+   12a3a:	f7 c1 df ff ff ff    	test   ecx,0xffffffdf
+   12a40:	74 08                	je     12a4a <spmv_v221_prepare+0x16a>
+   12a42:	81 f9 80 00 00 00    	cmp    ecx,0x80
+   12a48:	75 66                	jne    12ab0 <spmv_v221_prepare+0x1d0>
+   12a4a:	83 fa 02             	cmp    edx,0x2
+   12a4d:	74 53                	je     12aa2 <spmv_v221_prepare+0x1c2>
+   12a4f:	48 83 3b 00          	cmp    QWORD PTR [rbx],0x0
+   12a53:	0f 95 c2             	setne  dl
+   12a56:	48 81 fe 00 80 00 00 	cmp    rsi,0x8000
+   12a5d:	40 0f 95 c6          	setne  sil
+   12a61:	40 08 f2             	or     dl,sil
+   12a64:	75 08                	jne    12a6e <spmv_v221_prepare+0x18e>
+   12a66:	09 c8                	or     eax,ecx
+   12a68:	0f 84 d2 00 00 00    	je     12b40 <spmv_v221_prepare+0x260>
+   12a6e:	4c 8b 8c 24 c8 00 00 	mov    r9,QWORD PTR [rsp+0xc8]
+   12a75:	00 
+   12a76:	49 89 d8             	mov    r8,rbx
+   12a79:	4c 89 e1             	mov    rcx,r12
+   12a7c:	4c 89 ea             	mov    rdx,r13
+   12a7f:	48 89 ee             	mov    rsi,rbp
+   12a82:	4c 89 f7             	mov    rdi,r14
+   12a85:	e8 c6 dc ff ff       	call   10750 <spmv_v2_prepare>
+   12a8a:	41 89 c7             	mov    r15d,eax
+   12a8d:	85 c0                	test   eax,eax
+   12a8f:	75 25                	jne    12ab6 <spmv_v221_prepare+0x1d6>
+   12a91:	48 8d 35 58 4f 00 00 	lea    rsi,[rip+0x4f58]        # 179f0 <CSWTCH.145+0x1290>
+   12a98:	4c 89 f7             	mov    rdi,r14
+   12a9b:	e8 f0 fd ff ff       	call   12890 <delegate.part.0>
+   12aa0:	eb 14                	jmp    12ab6 <spmv_v221_prepare+0x1d6>
+   12aa2:	48 83 3b 00          	cmp    QWORD PTR [rbx],0x0
+   12aa6:	75 08                	jne    12ab0 <spmv_v221_prepare+0x1d0>
+   12aa8:	85 c0                	test   eax,eax
+   12aaa:	74 a3                	je     12a4f <spmv_v221_prepare+0x16f>
+   12aac:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+   12ab0:	41 bf 16 00 00 00    	mov    r15d,0x16
+   12ab6:	48 8b 44 24 78       	mov    rax,QWORD PTR [rsp+0x78]
+   12abb:	64 48 2b 04 25 28 00 	sub    rax,QWORD PTR fs:0x28
+   12ac2:	00 00 
+   12ac4:	75 75                	jne    12b3b <spmv_v221_prepare+0x25b>
+   12ac6:	48 81 c4 88 00 00 00 	add    rsp,0x88
+   12acd:	44 89 f8             	mov    eax,r15d
+   12ad0:	5b                   	pop    rbx
+   12ad1:	5d                   	pop    rbp
+   12ad2:	41 5c                	pop    r12
+   12ad4:	41 5d                	pop    r13
+   12ad6:	41 5e                	pop    r14
+   12ad8:	41 5f                	pop    r15
+   12ada:	c3                   	ret    
+   12adb:	4c 8b 8c 24 c8 00 00 	mov    r9,QWORD PTR [rsp+0xc8]
+   12ae2:	00 
+   12ae3:	49 89 d8             	mov    r8,rbx
+   12ae6:	4c 89 e1             	mov    rcx,r12
+   12ae9:	4c 89 ea             	mov    rdx,r13
+   12aec:	48 89 ee             	mov    rsi,rbp
+   12aef:	4c 89 f7             	mov    rdi,r14
+   12af2:	e8 59 dc ff ff       	call   10750 <spmv_v2_prepare>
+   12af7:	41 89 c7             	mov    r15d,eax
+   12afa:	85 c0                	test   eax,eax
+   12afc:	75 b8                	jne    12ab6 <spmv_v221_prepare+0x1d6>
+   12afe:	41 83 7e 08 01       	cmp    DWORD PTR [r14+0x8],0x1
+   12b03:	75 0c                	jne    12b11 <spmv_v221_prepare+0x231>
+   12b05:	41 83 7e 48 00       	cmp    DWORD PTR [r14+0x48],0x0
+   12b0a:	b8 01 00 00 00       	mov    eax,0x1
+   12b0f:	75 05                	jne    12b16 <spmv_v221_prepare+0x236>
+   12b11:	e8 ea f8 fe ff       	call   2400 <omp_get_max_threads@plt>
+   12b16:	41 89 86 c0 00 00 00 	mov    DWORD PTR [r14+0xc0],eax
+   12b1d:	48 8d 05 b9 4e 00 00 	lea    rax,[rip+0x4eb9]        # 179dd <CSWTCH.145+0x127d>
+   12b24:	41 c7 86 c4 00 00 00 	mov    DWORD PTR [r14+0xc4],0xffffffff
+   12b2b:	ff ff ff ff 
+   12b2f:	49 89 86 00 01 00 00 	mov    QWORD PTR [r14+0x100],rax
+   12b36:	e9 7b ff ff ff       	jmp    12ab6 <spmv_v221_prepare+0x1d6>
+   12b3b:	e8 a0 f8 fe ff       	call   23e0 <__stack_chk_fail@plt>
+   12b40:	83 7d 20 03          	cmp    DWORD PTR [rbp+0x20],0x3
+   12b44:	75 14                	jne    12b5a <spmv_v221_prepare+0x27a>
+   12b46:	41 83 7d 04 01       	cmp    DWORD PTR [r13+0x4],0x1
+   12b4b:	75 0d                	jne    12b5a <spmv_v221_prepare+0x27a>
+   12b4d:	41 8b 44 24 04       	mov    eax,DWORD PTR [r12+0x4]
+   12b52:	89 44 24 34          	mov    DWORD PTR [rsp+0x34],eax
+   12b56:	ff c8                	dec    eax
+   12b58:	74 3b                	je     12b95 <spmv_v221_prepare+0x2b5>
+   12b5a:	4c 8b 8c 24 c8 00 00 	mov    r9,QWORD PTR [rsp+0xc8]
+   12b61:	00 
+   12b62:	49 89 d8             	mov    r8,rbx
+   12b65:	4c 89 e1             	mov    rcx,r12
+   12b68:	4c 89 ea             	mov    rdx,r13
+   12b6b:	48 89 ee             	mov    rsi,rbp
+   12b6e:	4c 89 f7             	mov    rdi,r14
+   12b71:	e8 da db ff ff       	call   10750 <spmv_v2_prepare>
+   12b76:	41 89 c7             	mov    r15d,eax
+   12b79:	85 c0                	test   eax,eax
+   12b7b:	0f 85 35 ff ff ff    	jne    12ab6 <spmv_v221_prepare+0x1d6>
+   12b81:	48 8d 35 7b 4e 00 00 	lea    rsi,[rip+0x4e7b]        # 17a03 <CSWTCH.145+0x12a3>
+   12b88:	4c 89 f7             	mov    rdi,r14
+   12b8b:	e8 00 fd ff ff       	call   12890 <delegate.part.0>
+   12b90:	e9 21 ff ff ff       	jmp    12ab6 <spmv_v221_prepare+0x1d6>
+   12b95:	4c 89 4c 24 18       	mov    QWORD PTR [rsp+0x18],r9
+   12b9a:	48 89 7c 24 10       	mov    QWORD PTR [rsp+0x10],rdi
+   12b9f:	44 89 44 24 08       	mov    DWORD PTR [rsp+0x8],r8d
+   12ba4:	e8 57 f8 fe ff       	call   2400 <omp_get_max_threads@plt>
+   12ba9:	48 63 c8             	movsxd rcx,eax
+   12bac:	48 8d 05 60 4e 00 00 	lea    rax,[rip+0x4e60]        # 17a13 <CSWTCH.145+0x12b3>
+   12bb3:	41 c7 86 c4 00 00 00 	mov    DWORD PTR [r14+0xc4],0x1
+   12bba:	01 00 00 00 
+   12bbe:	c5 fa 6f 03          	vmovdqu xmm0,XMMWORD PTR [rbx]
+   12bc2:	49 89 86 00 01 00 00 	mov    QWORD PTR [r14+0x100],rax
+   12bc9:	41 89 8e 80 00 00 00 	mov    DWORD PTR [r14+0x80],ecx
+   12bd0:	41 89 8e c0 00 00 00 	mov    DWORD PTR [r14+0xc0],ecx
+   12bd7:	48 8b 84 24 c0 00 00 	mov    rax,QWORD PTR [rsp+0xc0]
+   12bde:	00 
+   12bdf:	44 8b 44 24 08       	mov    r8d,DWORD PTR [rsp+0x8]
+   12be4:	48 8b 7c 24 10       	mov    rdi,QWORD PTR [rsp+0x10]
+   12be9:	4c 8b 4c 24 18       	mov    r9,QWORD PTR [rsp+0x18]
+   12bee:	48 85 c0             	test   rax,rax
+   12bf1:	49 89 86 88 00 00 00 	mov    QWORD PTR [r14+0x88],rax
+   12bf8:	c4 c1 7a 7f 46 20    	vmovdqu XMMWORD PTR [r14+0x20],xmm0
+   12bfe:	c5 fa 6f 5b 10       	vmovdqu xmm3,XMMWORD PTR [rbx+0x10]
+   12c03:	c4 c1 7a 7f 5e 30    	vmovdqu XMMWORD PTR [r14+0x30],xmm3
+   12c09:	0f 84 ff 09 00 00    	je     1360e <spmv_v221_prepare+0xd2e>
+   12c0f:	49 63 c0             	movsxd rax,r8d
+   12c12:	48 01 f8             	add    rax,rdi
+   12c15:	48 89 44 24 28       	mov    QWORD PTR [rsp+0x28],rax
+   12c1a:	48 3d ff ff 3f 00    	cmp    rax,0x3fffff
+   12c20:	0f 8f ad 09 00 00    	jg     135d3 <spmv_v221_prepare+0xcf3>
+   12c26:	4c 8b 5d 08          	mov    r11,QWORD PTR [rbp+0x8]
+   12c2a:	4d 85 db             	test   r11,r11
+   12c2d:	0f 84 7d fe ff ff    	je     12ab0 <spmv_v221_prepare+0x1d0>
+   12c33:	49 8b 03             	mov    rax,QWORD PTR [r11]
+   12c36:	48 89 44 24 40       	mov    QWORD PTR [rsp+0x40],rax
+   12c3b:	48 85 c0             	test   rax,rax
+   12c3e:	0f 85 6c fe ff ff    	jne    12ab0 <spmv_v221_prepare+0x1d0>
+   12c44:	48 63 45 00          	movsxd rax,DWORD PTR [rbp+0x0]
+   12c48:	4c 8b 45 10          	mov    r8,QWORD PTR [rbp+0x10]
+   12c4c:	48 89 c7             	mov    rdi,rax
+   12c4f:	4d 39 04 c3          	cmp    QWORD PTR [r11+rax*8],r8
+   12c53:	0f 85 57 fe ff ff    	jne    12ab0 <spmv_v221_prepare+0x1d0>
+   12c59:	4d 85 c0             	test   r8,r8
+   12c5c:	74 16                	je     12c74 <spmv_v221_prepare+0x394>
+   12c5e:	48 83 7d 18 00       	cmp    QWORD PTR [rbp+0x18],0x0
+   12c63:	0f 84 47 fe ff ff    	je     12ab0 <spmv_v221_prepare+0x1d0>
+   12c69:	48 83 7d 28 00       	cmp    QWORD PTR [rbp+0x28],0x0
+   12c6e:	0f 84 3c fe ff ff    	je     12ab0 <spmv_v221_prepare+0x1d0>
+   12c74:	41 83 7d 00 00       	cmp    DWORD PTR [r13+0x0],0x0
+   12c79:	74 0b                	je     12c86 <spmv_v221_prepare+0x3a6>
+   12c7b:	49 83 7d 08 00       	cmp    QWORD PTR [r13+0x8],0x0
+   12c80:	0f 84 2a fe ff ff    	je     12ab0 <spmv_v221_prepare+0x1d0>
+   12c86:	41 83 3c 24 00       	cmp    DWORD PTR [r12],0x0
+   12c8b:	74 0c                	je     12c99 <spmv_v221_prepare+0x3b9>
+   12c8d:	49 83 7c 24 08 00    	cmp    QWORD PTR [r12+0x8],0x0
+   12c93:	0f 84 17 fe ff ff    	je     12ab0 <spmv_v221_prepare+0x1d0>
+   12c99:	48 8b 74 24 28       	mov    rsi,QWORD PTR [rsp+0x28]
+   12c9e:	48 63 55 04          	movsxd rdx,DWORD PTR [rbp+0x4]
+   12ca2:	c7 44 24 08 01 00 00 	mov    DWORD PTR [rsp+0x8],0x1
+   12ca9:	00 
+   12caa:	48 81 fe 00 80 00 00 	cmp    rsi,0x8000
+   12cb1:	7e 5b                	jle    12d0e <spmv_v221_prepare+0x42e>
+   12cb3:	c7 44 24 08 00 00 00 	mov    DWORD PTR [rsp+0x8],0x0
+   12cba:	00 
+   12cbb:	48 81 fe 00 00 04 00 	cmp    rsi,0x40000
+   12cc2:	7f 4a                	jg     12d0e <spmv_v221_prepare+0x42e>
+   12cc4:	48 8d 70 01          	lea    rsi,[rax+0x1]
+   12cc8:	48 01 c2             	add    rdx,rax
+   12ccb:	48 89 74 24 08       	mov    QWORD PTR [rsp+0x8],rsi
+   12cd0:	df 6c 24 08          	fild   QWORD PTR [rsp+0x8]
+   12cd4:	4c 89 44 24 08       	mov    QWORD PTR [rsp+0x8],r8
+   12cd9:	31 f6                	xor    esi,esi
+   12cdb:	d9 05 e3 4c 00 00    	fld    DWORD PTR [rip+0x4ce3]        # 179c4 <CSWTCH.145+0x1264>
+   12ce1:	dc c9                	fmul   st(1),st
+   12ce3:	df 6c 24 08          	fild   QWORD PTR [rsp+0x8]
+   12ce7:	48 89 54 24 08       	mov    QWORD PTR [rsp+0x8],rdx
+   12cec:	de c9                	fmulp  st(1),st
+   12cee:	de c1                	faddp  st(1),st
+   12cf0:	df 6c 24 08          	fild   QWORD PTR [rsp+0x8]
+   12cf4:	d8 0d ce 4c 00 00    	fmul   DWORD PTR [rip+0x4cce]        # 179c8 <CSWTCH.145+0x1268>
+   12cfa:	de c1                	faddp  st(1),st
+   12cfc:	d9 05 ca 4c 00 00    	fld    DWORD PTR [rip+0x4cca]        # 179cc <CSWTCH.145+0x126c>
+   12d02:	df f1                	fcomip st,st(1)
+   12d04:	df c0                	ffreep st(0)
+   12d06:	40 0f 93 c6          	setae  sil
+   12d0a:	89 74 24 08          	mov    DWORD PTR [rsp+0x8],esi
+   12d0e:	49 39 c0             	cmp    r8,rax
+   12d11:	be 40 00 00 00       	mov    esi,0x40
+   12d16:	44 8d 57 ff          	lea    r10d,[rdi-0x1]
+   12d1a:	49 0f 4e c0          	cmovle rax,r8
+   12d1e:	39 f7                	cmp    edi,esi
+   12d20:	4d 63 d2             	movsxd r10,r10d
+   12d23:	0f 4e f7             	cmovle esi,edi
+   12d26:	48 89 44 24 10       	mov    QWORD PTR [rsp+0x10],rax
+   12d2b:	45 31 c0             	xor    r8d,r8d
+   12d2e:	45 31 e4             	xor    r12d,r12d
+   12d31:	44 8d 6e ff          	lea    r13d,[rsi-0x1]
+   12d35:	4d 63 ed             	movsxd r13,r13d
+   12d38:	eb 28                	jmp    12d62 <spmv_v221_prepare+0x482>
+   12d3a:	31 c0                	xor    eax,eax
+   12d3c:	83 ff 01             	cmp    edi,0x1
+   12d3f:	7e 0c                	jle    12d4d <spmv_v221_prepare+0x46d>
+   12d41:	49 63 c0             	movsxd rax,r8d
+   12d44:	49 0f af c2          	imul   rax,r10
+   12d48:	48 99                	cqo    
+   12d4a:	49 f7 fd             	idiv   r13
+   12d4d:	49 8b 14 c3          	mov    rdx,QWORD PTR [r11+rax*8]
+   12d51:	49 39 54 c3 08       	cmp    QWORD PTR [r11+rax*8+0x8],rdx
+   12d56:	0f 94 c0             	sete   al
+   12d59:	41 ff c0             	inc    r8d
+   12d5c:	0f b6 c0             	movzx  eax,al
+   12d5f:	41 01 c4             	add    r12d,eax
+   12d62:	41 39 f0             	cmp    r8d,esi
+   12d65:	7c d3                	jl     12d3a <spmv_v221_prepare+0x45a>
+   12d67:	41 8b 41 04          	mov    eax,DWORD PTR [r9+0x4]
+   12d6b:	83 f8 02             	cmp    eax,0x2
+   12d6e:	0f 84 fa 07 00 00    	je     1356e <spmv_v221_prepare+0xc8e>
+   12d74:	85 c0                	test   eax,eax
+   12d76:	75 20                	jne    12d98 <spmv_v221_prepare+0x4b8>
+   12d78:	0f b6 54 24 08       	movzx  edx,BYTE PTR [rsp+0x8]
+   12d7d:	83 f2 01             	xor    edx,0x1
+   12d80:	48 83 bc 24 c0 00 00 	cmp    QWORD PTR [rsp+0xc0],0x1
+   12d87:	00 01 
+   12d89:	0f 9f c0             	setg   al
+   12d8c:	84 c2                	test   dl,al
+   12d8e:	74 08                	je     12d98 <spmv_v221_prepare+0x4b8>
+   12d90:	85 ff                	test   edi,edi
+   12d92:	0f 85 c6 07 00 00    	jne    1355e <spmv_v221_prepare+0xc7e>
+   12d98:	4c 8d 6c 24 60       	lea    r13,[rsp+0x60]
+   12d9d:	bf 01 00 00 00       	mov    edi,0x1
+   12da2:	4c 89 4c 24 18       	mov    QWORD PTR [rsp+0x18],r9
+   12da7:	45 31 e4             	xor    r12d,r12d
+   12daa:	4c 89 ee             	mov    rsi,r13
+   12dad:	45 31 ff             	xor    r15d,r15d
+   12db0:	e8 db f5 fe ff       	call   2390 <clock_gettime@plt>
+   12db5:	c5 d1 57 ed          	vxorpd xmm5,xmm5,xmm5
+   12db9:	8b 75 00             	mov    esi,DWORD PTR [rbp+0x0]
+   12dbc:	31 d2                	xor    edx,edx
+   12dbe:	c4 e1 d3 2a 44 24 68 	vcvtsi2sd xmm0,xmm5,QWORD PTR [rsp+0x68]
+   12dc5:	c5 fb 59 05 ab 39 00 	vmulsd xmm0,xmm0,QWORD PTR [rip+0x39ab]        # 16778 <CSWTCH.145+0x18>
+   12dcc:	00 
+   12dcd:	c4 e1 d3 2a 4c 24 60 	vcvtsi2sd xmm1,xmm5,QWORD PTR [rsp+0x60]
+   12dd4:	4c 8b 4c 24 18       	mov    r9,QWORD PTR [rsp+0x18]
+   12dd9:	48 c7 44 24 20 00 00 	mov    QWORD PTR [rsp+0x20],0x0
+   12de0:	00 00 
+   12de2:	31 ff                	xor    edi,edi
+   12de4:	c7 44 24 38 01 00 00 	mov    DWORD PTR [rsp+0x38],0x1
+   12deb:	00 
+   12dec:	c5 fb 58 c1          	vaddsd xmm0,xmm0,xmm1
+   12df0:	c5 fb 11 44 24 48    	vmovsd QWORD PTR [rsp+0x48],xmm0
+   12df6:	eb 4a                	jmp    12e42 <spmv_v221_prepare+0x562>
+   12df8:	48 29 c8             	sub    rax,rcx
+   12dfb:	31 c9                	xor    ecx,ecx
+   12dfd:	48 83 f8 08          	cmp    rax,0x8
+   12e01:	0f 94 c1             	sete   cl
+   12e04:	21 4c 24 38          	and    DWORD PTR [rsp+0x38],ecx
+   12e08:	48 83 f8 01          	cmp    rax,0x1
+   12e0c:	48 83 54 24 20 00    	adc    QWORD PTR [rsp+0x20],0x0
+   12e12:	48 39 c7             	cmp    rdi,rax
+   12e15:	48 0f 4c f8          	cmovl  rdi,rax
+   12e19:	48 85 c0             	test   rax,rax
+   12e1c:	74 21                	je     12e3f <spmv_v221_prepare+0x55f>
+   12e1e:	49 8b 86 a0 00 00 00 	mov    rax,QWORD PTR [r14+0xa0]
+   12e25:	48 85 c0             	test   rax,rax
+   12e28:	74 12                	je     12e3c <spmv_v221_prepare+0x55c>
+   12e2a:	4c 3b 64 24 10       	cmp    r12,QWORD PTR [rsp+0x10]
+   12e2f:	0f 8d 69 03 00 00    	jge    1319e <spmv_v221_prepare+0x8be>
+   12e35:	42 89 14 a0          	mov    DWORD PTR [rax+r12*4],edx
+   12e39:	8b 75 00             	mov    esi,DWORD PTR [rbp+0x0]
+   12e3c:	49 ff c4             	inc    r12
+   12e3f:	48 ff c2             	inc    rdx
+   12e42:	48 63 c6             	movsxd rax,esi
+   12e45:	48 39 d0             	cmp    rax,rdx
+   12e48:	7e 25                	jle    12e6f <spmv_v221_prepare+0x58f>
+   12e4a:	48 8b 45 08          	mov    rax,QWORD PTR [rbp+0x8]
+   12e4e:	48 8b 0c d0          	mov    rcx,QWORD PTR [rax+rdx*8]
+   12e52:	48 8b 44 d0 08       	mov    rax,QWORD PTR [rax+rdx*8+0x8]
+   12e57:	48 85 c9             	test   rcx,rcx
+   12e5a:	78 0b                	js     12e67 <spmv_v221_prepare+0x587>
+   12e5c:	48 39 c1             	cmp    rcx,rax
+   12e5f:	7f 06                	jg     12e67 <spmv_v221_prepare+0x587>
+   12e61:	48 39 45 10          	cmp    QWORD PTR [rbp+0x10],rax
+   12e65:	7d 91                	jge    12df8 <spmv_v221_prepare+0x518>
+   12e67:	41 bf 01 00 00 00    	mov    r15d,0x1
+   12e6d:	eb d0                	jmp    12e3f <spmv_v221_prepare+0x55f>
+   12e6f:	48 89 7c 24 18       	mov    QWORD PTR [rsp+0x18],rdi
+   12e74:	4c 89 ee             	mov    rsi,r13
+   12e77:	bf 01 00 00 00       	mov    edi,0x1
+   12e7c:	4c 89 4c 24 50       	mov    QWORD PTR [rsp+0x50],r9
+   12e81:	e8 0a f5 fe ff       	call   2390 <clock_gettime@plt>
+   12e86:	c5 c9 57 f6          	vxorpd xmm6,xmm6,xmm6
+   12e8a:	45 85 ff             	test   r15d,r15d
+   12e8d:	c4 e1 cb 2a 4c 24 68 	vcvtsi2sd xmm1,xmm6,QWORD PTR [rsp+0x68]
+   12e94:	c5 f3 59 0d dc 38 00 	vmulsd xmm1,xmm1,QWORD PTR [rip+0x38dc]        # 16778 <CSWTCH.145+0x18>
+   12e9b:	00 
+   12e9c:	c4 e1 cb 2a 54 24 60 	vcvtsi2sd xmm2,xmm6,QWORD PTR [rsp+0x60]
+   12ea3:	4c 8b 4c 24 50       	mov    r9,QWORD PTR [rsp+0x50]
+   12ea8:	c5 f3 58 ca          	vaddsd xmm1,xmm1,xmm2
+   12eac:	c5 f3 5c 4c 24 48    	vsubsd xmm1,xmm1,QWORD PTR [rsp+0x48]
+   12eb2:	c4 c1 7b 11 8e e8 00 	vmovsd QWORD PTR [r14+0xe8],xmm1
+   12eb9:	00 00 
+   12ebb:	0f 85 8c 00 00 00    	jne    12f4d <spmv_v221_prepare+0x66d>
+   12ec1:	4c 89 ee             	mov    rsi,r13
+   12ec4:	bf 01 00 00 00       	mov    edi,0x1
+   12ec9:	4c 89 4c 24 50       	mov    QWORD PTR [rsp+0x50],r9
+   12ece:	e8 bd f4 fe ff       	call   2390 <clock_gettime@plt>
+   12ed3:	c5 c1 57 ff          	vxorpd xmm7,xmm7,xmm7
+   12ed7:	c4 e1 c3 2a 4c 24 68 	vcvtsi2sd xmm1,xmm7,QWORD PTR [rsp+0x68]
+   12ede:	c5 f3 59 0d 92 38 00 	vmulsd xmm1,xmm1,QWORD PTR [rip+0x3892]        # 16778 <CSWTCH.145+0x18>
+   12ee5:	00 
+   12ee6:	83 7c 24 08 00       	cmp    DWORD PTR [rsp+0x8],0x0
+   12eeb:	c4 e1 c3 2a 54 24 60 	vcvtsi2sd xmm2,xmm7,QWORD PTR [rsp+0x60]
+   12ef2:	4c 8b 4c 24 50       	mov    r9,QWORD PTR [rsp+0x50]
+   12ef7:	c5 f3 58 c2          	vaddsd xmm0,xmm1,xmm2
+   12efb:	c5 fb 11 44 24 48    	vmovsd QWORD PTR [rsp+0x48],xmm0
+   12f01:	75 1b                	jne    12f1e <spmv_v221_prepare+0x63e>
+   12f03:	41 83 79 08 00       	cmp    DWORD PTR [r9+0x8],0x0
+   12f08:	74 14                	je     12f1e <spmv_v221_prepare+0x63e>
+   12f0a:	48 81 7d 10 ff ff 0f 	cmp    QWORD PTR [rbp+0x10],0xfffff
+   12f11:	00 
+   12f12:	7e 0a                	jle    12f1e <spmv_v221_prepare+0x63e>
+   12f14:	41 83 be c0 00 00 00 	cmp    DWORD PTR [r14+0xc0],0x1
+   12f1b:	01 
+   12f1c:	7f 4b                	jg     12f69 <spmv_v221_prepare+0x689>
+   12f1e:	48 8b 75 10          	mov    rsi,QWORD PTR [rbp+0x10]
+   12f22:	31 c0                	xor    eax,eax
+   12f24:	b9 01 00 00 00       	mov    ecx,0x1
+   12f29:	eb 0a                	jmp    12f35 <spmv_v221_prepare+0x655>
+   12f2b:	3b 55 04             	cmp    edx,DWORD PTR [rbp+0x4]
+   12f2e:	44 0f 4d f9          	cmovge r15d,ecx
+   12f32:	48 ff c0             	inc    rax
+   12f35:	48 39 c6             	cmp    rsi,rax
+   12f38:	7e 6c                	jle    12fa6 <spmv_v221_prepare+0x6c6>
+   12f3a:	48 8b 55 18          	mov    rdx,QWORD PTR [rbp+0x18]
+   12f3e:	8b 14 82             	mov    edx,DWORD PTR [rdx+rax*4]
+   12f41:	85 d2                	test   edx,edx
+   12f43:	79 e6                	jns    12f2b <spmv_v221_prepare+0x64b>
+   12f45:	41 bf 01 00 00 00    	mov    r15d,0x1
+   12f4b:	eb e5                	jmp    12f32 <spmv_v221_prepare+0x652>
+   12f4d:	49 8b be a0 00 00 00 	mov    rdi,QWORD PTR [r14+0xa0]
+   12f54:	e8 d7 f3 fe ff       	call   2330 <free@plt>
+   12f59:	49 c7 86 a0 00 00 00 	mov    QWORD PTR [r14+0xa0],0x0
+   12f60:	00 00 00 00 
+   12f64:	e9 47 fb ff ff       	jmp    12ab0 <spmv_v221_prepare+0x1d0>
+   12f69:	49 8d 86 c0 00 00 00 	lea    rax,[r14+0xc0]
+   12f70:	c4 e1 f9 6e dd       	vmovq  xmm3,rbp
+   12f75:	31 c9                	xor    ecx,ecx
+   12f77:	31 d2                	xor    edx,edx
+   12f79:	c4 e3 e1 22 c0 01    	vpinsrq xmm0,xmm3,rax,0x1
+   12f7f:	4c 89 ee             	mov    rsi,r13
+   12f82:	48 8d 3d 57 f8 ff ff 	lea    rdi,[rip+0xfffffffffffff857]        # 127e0 <spmv_v221_prepare._omp_fn.0>
+   12f89:	c7 44 24 70 00 00 00 	mov    DWORD PTR [rsp+0x70],0x0
+   12f90:	00 
+   12f91:	c5 f9 7f 44 24 60    	vmovdqa XMMWORD PTR [rsp+0x60],xmm0
+   12f97:	e8 34 f6 fe ff       	call   25d0 <GOMP_parallel@plt>
+   12f9c:	44 8b 7c 24 70       	mov    r15d,DWORD PTR [rsp+0x70]
+   12fa1:	4c 8b 4c 24 50       	mov    r9,QWORD PTR [rsp+0x50]
+   12fa6:	4c 89 ee             	mov    rsi,r13
+   12fa9:	bf 01 00 00 00       	mov    edi,0x1
+   12fae:	4c 89 4c 24 50       	mov    QWORD PTR [rsp+0x50],r9
+   12fb3:	e8 d8 f3 fe ff       	call   2390 <clock_gettime@plt>
+   12fb8:	c5 e1 57 db          	vxorpd xmm3,xmm3,xmm3
+   12fbc:	45 85 ff             	test   r15d,r15d
+   12fbf:	c4 e1 e3 2a 4c 24 68 	vcvtsi2sd xmm1,xmm3,QWORD PTR [rsp+0x68]
+   12fc6:	c5 f3 59 0d aa 37 00 	vmulsd xmm1,xmm1,QWORD PTR [rip+0x37aa]        # 16778 <CSWTCH.145+0x18>
+   12fcd:	00 
+   12fce:	c4 e1 e3 2a 54 24 60 	vcvtsi2sd xmm2,xmm3,QWORD PTR [rsp+0x60]
+   12fd5:	4c 8b 4c 24 50       	mov    r9,QWORD PTR [rsp+0x50]
+   12fda:	c5 f3 58 ca          	vaddsd xmm1,xmm1,xmm2
+   12fde:	c5 f3 5c 4c 24 48    	vsubsd xmm1,xmm1,QWORD PTR [rsp+0x48]
+   12fe4:	c4 c1 7b 11 8e f0 00 	vmovsd QWORD PTR [r14+0xf0],xmm1
+   12feb:	00 00 
+   12fed:	c4 c1 73 58 8e e8 00 	vaddsd xmm1,xmm1,QWORD PTR [r14+0xe8]
+   12ff4:	00 00 
+   12ff6:	c4 c1 7b 11 8e b8 00 	vmovsd QWORD PTR [r14+0xb8],xmm1
+   12ffd:	00 00 
+   12fff:	0f 85 48 ff ff ff    	jne    12f4d <spmv_v221_prepare+0x66d>
+   13005:	48 8b 44 24 20       	mov    rax,QWORD PTR [rsp+0x20]
+   1300a:	41 c7 86 c8 00 00 00 	mov    DWORD PTR [r14+0xc8],0x1
+   13011:	01 00 00 00 
+   13015:	4d 89 a6 d8 00 00 00 	mov    QWORD PTR [r14+0xd8],r12
+   1301c:	48 8b 4c 24 18       	mov    rcx,QWORD PTR [rsp+0x18]
+   13021:	49 89 86 90 00 00 00 	mov    QWORD PTR [r14+0x90],rax
+   13028:	49 89 86 d0 00 00 00 	mov    QWORD PTR [r14+0xd0],rax
+   1302f:	8b 44 24 38          	mov    eax,DWORD PTR [rsp+0x38]
+   13033:	49 89 4e 58          	mov    QWORD PTR [r14+0x58],rcx
+   13037:	41 89 46 50          	mov    DWORD PTR [r14+0x50],eax
+   1303b:	ff c0                	inc    eax
+   1303d:	83 7c 24 08 00       	cmp    DWORD PTR [rsp+0x8],0x0
+   13042:	41 89 46 40          	mov    DWORD PTR [r14+0x40],eax
+   13046:	74 19                	je     13061 <spmv_v221_prepare+0x781>
+   13048:	48 8d 05 e4 49 00 00 	lea    rax,[rip+0x49e4]        # 17a33 <CSWTCH.145+0x12d3>
+   1304f:	41 c7 86 80 00 00 00 	mov    DWORD PTR [r14+0x80],0x1
+   13056:	01 00 00 00 
+   1305a:	49 89 86 00 01 00 00 	mov    QWORD PTR [r14+0x100],rax
+   13061:	48 83 7d 10 00       	cmp    QWORD PTR [rbp+0x10],0x0
+   13066:	75 34                	jne    1309c <spmv_v221_prepare+0x7bc>
+   13068:	48 8d 05 ad 48 00 00 	lea    rax,[rip+0x48ad]        # 1791c <CSWTCH.145+0x11bc>
+   1306f:	41 c7 86 84 00 00 00 	mov    DWORD PTR [r14+0x84],0x1
+   13076:	01 00 00 00 
+   1307a:	49 89 86 00 01 00 00 	mov    QWORD PTR [r14+0x100],rax
+   13081:	48 63 45 00          	movsxd rax,DWORD PTR [rbp+0x0]
+   13085:	48 c1 e0 02          	shl    rax,0x2
+   13089:	48 3d 00 00 20 00    	cmp    rax,0x200000
+   1308f:	7f 0b                	jg     1309c <spmv_v221_prepare+0x7bc>
+   13091:	41 c7 86 80 00 00 00 	mov    DWORD PTR [r14+0x80],0x1
+   13098:	01 00 00 00 
+   1309c:	31 f6                	xor    esi,esi
+   1309e:	48 89 5c 24 48       	mov    QWORD PTR [rsp+0x48],rbx
+   130a3:	41 c7 46 44 01 00 00 	mov    DWORD PTR [r14+0x44],0x1
+   130aa:	00 
+   130ab:	45 31 d2             	xor    r10d,r10d
+   130ae:	4c 89 64 24 38       	mov    QWORD PTR [rsp+0x38],r12
+   130b3:	89 f3                	mov    ebx,esi
+   130b5:	eb 4e                	jmp    13105 <spmv_v221_prepare+0x825>
+   130b7:	31 c9                	xor    ecx,ecx
+   130b9:	89 de                	mov    esi,ebx
+   130bb:	48 89 ef             	mov    rdi,rbp
+   130be:	4c 89 4c 24 58       	mov    QWORD PTR [rsp+0x58],r9
+   130c3:	4c 89 54 24 50       	mov    QWORD PTR [rsp+0x50],r10
+   130c8:	e8 73 d5 ff ff       	call   10640 <spmv_v2_row_cut>
+   130cd:	ff c3                	inc    ebx
+   130cf:	31 c9                	xor    ecx,ecx
+   130d1:	41 8b 96 80 00 00 00 	mov    edx,DWORD PTR [r14+0x80]
+   130d8:	89 de                	mov    esi,ebx
+   130da:	48 89 ef             	mov    rdi,rbp
+   130dd:	49 89 c4             	mov    r12,rax
+   130e0:	e8 5b d5 ff ff       	call   10640 <spmv_v2_row_cut>
+   130e5:	48 8b 55 08          	mov    rdx,QWORD PTR [rbp+0x8]
+   130e9:	4c 8b 54 24 50       	mov    r10,QWORD PTR [rsp+0x50]
+   130ee:	4c 8b 4c 24 58       	mov    r9,QWORD PTR [rsp+0x58]
+   130f3:	48 03 04 c2          	add    rax,QWORD PTR [rdx+rax*8]
+   130f7:	4a 2b 04 e2          	sub    rax,QWORD PTR [rdx+r12*8]
+   130fb:	4c 29 e0             	sub    rax,r12
+   130fe:	49 39 c2             	cmp    r10,rax
+   13101:	4c 0f 4c d0          	cmovl  r10,rax
+   13105:	49 63 96 80 00 00 00 	movsxd rdx,DWORD PTR [r14+0x80]
+   1310c:	39 da                	cmp    edx,ebx
+   1310e:	7f a7                	jg     130b7 <spmv_v221_prepare+0x7d7>
+   13110:	c5 d9 57 e4          	vxorpd xmm4,xmm4,xmm4
+   13114:	4c 8b 64 24 38       	mov    r12,QWORD PTR [rsp+0x38]
+   13119:	48 8b 5c 24 48       	mov    rbx,QWORD PTR [rsp+0x48]
+   1311e:	c4 e1 db 2a 4c 24 28 	vcvtsi2sd xmm1,xmm4,QWORD PTR [rsp+0x28]
+   13125:	c5 f3 10 d1          	vmovsd xmm2,xmm1,xmm1
+   13129:	c5 db 2a ca          	vcvtsi2sd xmm1,xmm4,edx
+   1312d:	c5 eb 5e e9          	vdivsd xmm5,xmm2,xmm1
+   13131:	c4 c1 db 2a ca       	vcvtsi2sd xmm1,xmm4,r10
+   13136:	c5 d3 59 15 7a 47 00 	vmulsd xmm2,xmm5,QWORD PTR [rip+0x477a]        # 178b8 <CSWTCH.145+0x1158>
+   1313d:	00 
+   1313e:	c5 fb 11 6c 24 38    	vmovsd QWORD PTR [rsp+0x38],xmm5
+   13144:	c5 f9 2f ca          	vcomisd xmm1,xmm2
+   13148:	76 08                	jbe    13152 <spmv_v221_prepare+0x872>
+   1314a:	41 c7 46 44 02 00 00 	mov    DWORD PTR [r14+0x44],0x2
+   13151:	00 
+   13152:	48 83 7d 10 00       	cmp    QWORD PTR [rbp+0x10],0x0
+   13157:	74 08                	je     13161 <spmv_v221_prepare+0x881>
+   13159:	48 83 7c 24 18 40    	cmp    QWORD PTR [rsp+0x18],0x40
+   1315f:	7e 48                	jle    131a9 <spmv_v221_prepare+0x8c9>
+   13161:	41 83 be 84 00 00 00 	cmp    DWORD PTR [r14+0x84],0x0
+   13168:	00 
+   13169:	0f 84 d9 02 00 00    	je     13448 <spmv_v221_prepare+0xb68>
+   1316f:	41 8b 96 80 00 00 00 	mov    edx,DWORD PTR [r14+0x80]
+   13176:	31 c0                	xor    eax,eax
+   13178:	c7 44 24 34 02 00 00 	mov    DWORD PTR [rsp+0x34],0x2
+   1317f:	00 
+   13180:	83 fa 01             	cmp    edx,0x1
+   13183:	0f 94 c0             	sete   al
+   13186:	41 89 46 48          	mov    DWORD PTR [r14+0x48],eax
+   1318a:	8b 44 24 34          	mov    eax,DWORD PTR [rsp+0x34]
+   1318e:	41 89 96 c0 00 00 00 	mov    DWORD PTR [r14+0xc0],edx
+   13195:	41 89 46 08          	mov    DWORD PTR [r14+0x8],eax
+   13199:	e9 18 f9 ff ff       	jmp    12ab6 <spmv_v221_prepare+0x1d6>
+   1319e:	41 bf 01 00 00 00    	mov    r15d,0x1
+   131a4:	e9 93 fc ff ff       	jmp    12e3c <spmv_v221_prepare+0x55c>
+   131a9:	41 8b 41 04          	mov    eax,DWORD PTR [r9+0x4]
+   131ad:	83 f8 02             	cmp    eax,0x2
+   131b0:	74 29                	je     131db <spmv_v221_prepare+0x8fb>
+   131b2:	85 c0                	test   eax,eax
+   131b4:	75 ab                	jne    13161 <spmv_v221_prepare+0x881>
+   131b6:	83 7c 24 08 00       	cmp    DWORD PTR [rsp+0x8],0x0
+   131bb:	75 a4                	jne    13161 <spmv_v221_prepare+0x881>
+   131bd:	48 83 bc 24 c0 00 00 	cmp    QWORD PTR [rsp+0xc0],0x1
+   131c4:	00 01 
+   131c6:	7e 99                	jle    13161 <spmv_v221_prepare+0x881>
+   131c8:	48 6b 44 24 20 0a    	imul   rax,QWORD PTR [rsp+0x20],0xa
+   131ce:	48 63 4d 00          	movsxd rcx,DWORD PTR [rbp+0x0]
+   131d2:	48 8d 0c c9          	lea    rcx,[rcx+rcx*8]
+   131d6:	48 39 c8             	cmp    rax,rcx
+   131d9:	7c 86                	jl     13161 <spmv_v221_prepare+0x881>
+   131db:	49 83 be a0 00 00 00 	cmp    QWORD PTR [r14+0xa0],0x0
+   131e2:	00 
+   131e3:	0f 84 1f 01 00 00    	je     13308 <spmv_v221_prepare+0xa28>
+   131e9:	48 6b fa 18          	imul   rdi,rdx,0x18
+   131ed:	4c 89 4c 24 08       	mov    QWORD PTR [rsp+0x8],r9
+   131f2:	e8 f9 f2 fe ff       	call   24f0 <malloc@plt>
+   131f7:	49 89 86 a8 00 00 00 	mov    QWORD PTR [r14+0xa8],rax
+   131fe:	48 85 c0             	test   rax,rax
+   13201:	0f 84 5a ff ff ff    	je     13161 <spmv_v221_prepare+0x881>
+   13207:	4c 8b 4c 24 08       	mov    r9,QWORD PTR [rsp+0x8]
+   1320c:	48 8d 05 13 47 00 00 	lea    rax,[rip+0x4713]        # 17926 <CSWTCH.145+0x11c6>
+   13213:	45 89 a6 98 00 00 00 	mov    DWORD PTR [r14+0x98],r12d
+   1321a:	41 c7 86 84 00 00 00 	mov    DWORD PTR [r14+0x84],0x1
+   13221:	01 00 00 00 
+   13225:	49 89 86 00 01 00 00 	mov    QWORD PTR [r14+0x100],rax
+   1322c:	48 8b 44 24 10       	mov    rax,QWORD PTR [rsp+0x10]
+   13231:	45 8b 59 0c          	mov    r11d,DWORD PTR [r9+0xc]
+   13235:	49 89 86 e0 00 00 00 	mov    QWORD PTR [r14+0xe0],rax
+   1323c:	45 85 db             	test   r11d,r11d
+   1323f:	74 0c                	je     1324d <spmv_v221_prepare+0x96d>
+   13241:	45 31 db             	xor    r11d,r11d
+   13244:	41 83 7e 44 02       	cmp    DWORD PTR [r14+0x44],0x2
+   13249:	41 0f 94 c3          	sete   r11b
+   1324d:	48 89 5c 24 08       	mov    QWORD PTR [rsp+0x8],rbx
+   13252:	45 31 ed             	xor    r13d,r13d
+   13255:	44 89 db             	mov    ebx,r11d
+   13258:	41 8b 96 80 00 00 00 	mov    edx,DWORD PTR [r14+0x80]
+   1325f:	44 89 ee             	mov    esi,r13d
+   13262:	44 39 ea             	cmp    edx,r13d
+   13265:	0f 8e d7 03 00 00    	jle    13642 <spmv_v221_prepare+0xd62>
+   1326b:	4d 6b e5 18          	imul   r12,r13,0x18
+   1326f:	4d 03 a6 a8 00 00 00 	add    r12,QWORD PTR [r14+0xa8]
+   13276:	89 d9                	mov    ecx,ebx
+   13278:	48 89 ef             	mov    rdi,rbp
+   1327b:	e8 c0 d3 ff ff       	call   10640 <spmv_v2_row_cut>
+   13280:	41 8b 96 80 00 00 00 	mov    edx,DWORD PTR [r14+0x80]
+   13287:	41 8d 75 01          	lea    esi,[r13+0x1]
+   1328b:	89 d9                	mov    ecx,ebx
+   1328d:	48 89 ef             	mov    rdi,rbp
+   13290:	49 89 04 24          	mov    QWORD PTR [r12],rax
+   13294:	e8 a7 d3 ff ff       	call   10640 <spmv_v2_row_cut>
+   13299:	31 c9                	xor    ecx,ecx
+   1329b:	41 8b b6 98 00 00 00 	mov    esi,DWORD PTR [r14+0x98]
+   132a2:	4d 8b 0c 24          	mov    r9,QWORD PTR [r12]
+   132a6:	49 89 44 24 08       	mov    QWORD PTR [r12+0x8],rax
+   132ab:	4d 8b 86 a0 00 00 00 	mov    r8,QWORD PTR [r14+0xa0]
+   132b2:	89 f7                	mov    edi,esi
+   132b4:	eb 1a                	jmp    132d0 <spmv_v221_prepare+0x9f0>
+   132b6:	89 fa                	mov    edx,edi
+   132b8:	29 ca                	sub    edx,ecx
+   132ba:	d1 fa                	sar    edx,1
+   132bc:	01 ca                	add    edx,ecx
+   132be:	4c 63 d2             	movsxd r10,edx
+   132c1:	4f 63 14 90          	movsxd r10,DWORD PTR [r8+r10*4]
+   132c5:	4d 39 d1             	cmp    r9,r10
+   132c8:	0f 8f 88 02 00 00    	jg     13556 <spmv_v221_prepare+0xc76>
+   132ce:	89 d7                	mov    edi,edx
+   132d0:	39 cf                	cmp    edi,ecx
+   132d2:	7f e2                	jg     132b6 <spmv_v221_prepare+0x9d6>
+   132d4:	41 89 4c 24 10       	mov    DWORD PTR [r12+0x10],ecx
+   132d9:	31 c9                	xor    ecx,ecx
+   132db:	eb 1a                	jmp    132f7 <spmv_v221_prepare+0xa17>
+   132dd:	89 f2                	mov    edx,esi
+   132df:	29 ca                	sub    edx,ecx
+   132e1:	d1 fa                	sar    edx,1
+   132e3:	01 ca                	add    edx,ecx
+   132e5:	48 63 fa             	movsxd rdi,edx
+   132e8:	49 63 3c b8          	movsxd rdi,DWORD PTR [r8+rdi*4]
+   132ec:	48 39 f8             	cmp    rax,rdi
+   132ef:	0f 8f 6b 03 00 00    	jg     13660 <spmv_v221_prepare+0xd80>
+   132f5:	89 d6                	mov    esi,edx
+   132f7:	39 ce                	cmp    esi,ecx
+   132f9:	7f e2                	jg     132dd <spmv_v221_prepare+0x9fd>
+   132fb:	41 89 4c 24 14       	mov    DWORD PTR [r12+0x14],ecx
+   13300:	49 ff c5             	inc    r13
+   13303:	e9 50 ff ff ff       	jmp    13258 <spmv_v221_prepare+0x978>
+   13308:	4c 89 4c 24 20       	mov    QWORD PTR [rsp+0x20],r9
+   1330d:	85 d2                	test   edx,edx
+   1330f:	0f 8e 4c fe ff ff    	jle    13161 <spmv_v221_prepare+0x881>
+   13315:	48 b8 ff ff ff ff ff 	movabs rax,0x3fffffffffffffff
+   1331c:	ff ff 3f 
+   1331f:	49 39 c4             	cmp    r12,rax
+   13322:	0f 8f 39 fe ff ff    	jg     13161 <spmv_v221_prepare+0x881>
+   13328:	4e 8d 04 a5 00 00 00 	lea    r8,[r12*4+0x0]
+   1332f:	00 
+   13330:	4c 39 84 24 c8 00 00 	cmp    QWORD PTR [rsp+0xc8],r8
+   13337:	00 
+   13338:	0f 82 23 fe ff ff    	jb     13161 <spmv_v221_prepare+0x881>
+   1333e:	48 8b 84 24 c8 00 00 	mov    rax,QWORD PTR [rsp+0xc8]
+   13345:	00 
+   13346:	48 63 fa             	movsxd rdi,edx
+   13349:	b9 18 00 00 00       	mov    ecx,0x18
+   1334e:	31 d2                	xor    edx,edx
+   13350:	4c 89 44 24 10       	mov    QWORD PTR [rsp+0x10],r8
+   13355:	4c 29 c0             	sub    rax,r8
+   13358:	48 f7 f1             	div    rcx
+   1335b:	48 39 c7             	cmp    rdi,rax
+   1335e:	0f 87 fd fd ff ff    	ja     13161 <spmv_v221_prepare+0x881>
+   13364:	4c 89 ee             	mov    rsi,r13
+   13367:	bf 01 00 00 00       	mov    edi,0x1
+   1336c:	41 c7 86 cc 00 00 00 	mov    DWORD PTR [r14+0xcc],0x1
+   13373:	01 00 00 00 
+   13377:	e8 14 f0 fe ff       	call   2390 <clock_gettime@plt>
+   1337c:	c5 c9 57 f6          	vxorpd xmm6,xmm6,xmm6
+   13380:	c4 e1 cb 2a 4c 24 68 	vcvtsi2sd xmm1,xmm6,QWORD PTR [rsp+0x68]
+   13387:	c5 f3 59 0d e9 33 00 	vmulsd xmm1,xmm1,QWORD PTR [rip+0x33e9]        # 16778 <CSWTCH.145+0x18>
+   1338e:	00 
+   1338f:	48 8b 7c 24 10       	mov    rdi,QWORD PTR [rsp+0x10]
+   13394:	c4 e1 cb 2a 54 24 60 	vcvtsi2sd xmm2,xmm6,QWORD PTR [rsp+0x60]
+   1339b:	c5 f3 58 da          	vaddsd xmm3,xmm1,xmm2
+   1339f:	c5 fb 11 5c 24 08    	vmovsd QWORD PTR [rsp+0x8],xmm3
+   133a5:	e8 46 f1 fe ff       	call   24f0 <malloc@plt>
+   133aa:	4c 8b 4c 24 20       	mov    r9,QWORD PTR [rsp+0x20]
+   133af:	48 85 c0             	test   rax,rax
+   133b2:	49 89 86 a0 00 00 00 	mov    QWORD PTR [r14+0xa0],rax
+   133b9:	74 2a                	je     133e5 <spmv_v221_prepare+0xb05>
+   133bb:	48 63 75 00          	movsxd rsi,DWORD PTR [rbp+0x0]
+   133bf:	48 8b 4c 24 40       	mov    rcx,QWORD PTR [rsp+0x40]
+   133c4:	31 d2                	xor    edx,edx
+   133c6:	eb 18                	jmp    133e0 <spmv_v221_prepare+0xb00>
+   133c8:	48 8b 7d 08          	mov    rdi,QWORD PTR [rbp+0x8]
+   133cc:	4c 8b 5c d7 08       	mov    r11,QWORD PTR [rdi+rdx*8+0x8]
+   133d1:	4c 39 1c d7          	cmp    QWORD PTR [rdi+rdx*8],r11
+   133d5:	74 06                	je     133dd <spmv_v221_prepare+0xafd>
+   133d7:	89 14 88             	mov    DWORD PTR [rax+rcx*4],edx
+   133da:	48 ff c1             	inc    rcx
+   133dd:	48 ff c2             	inc    rdx
+   133e0:	48 39 d6             	cmp    rsi,rdx
+   133e3:	7f e3                	jg     133c8 <spmv_v221_prepare+0xae8>
+   133e5:	4c 89 ee             	mov    rsi,r13
+   133e8:	bf 01 00 00 00       	mov    edi,0x1
+   133ed:	4c 89 4c 24 10       	mov    QWORD PTR [rsp+0x10],r9
+   133f2:	e8 99 ef fe ff       	call   2390 <clock_gettime@plt>
+   133f7:	c5 c1 57 ff          	vxorpd xmm7,xmm7,xmm7
+   133fb:	c4 e1 c3 2a 4c 24 68 	vcvtsi2sd xmm1,xmm7,QWORD PTR [rsp+0x68]
+   13402:	c5 f3 59 0d 6e 33 00 	vmulsd xmm1,xmm1,QWORD PTR [rip+0x336e]        # 16778 <CSWTCH.145+0x18>
+   13409:	00 
+   1340a:	c4 e1 c3 2a 54 24 60 	vcvtsi2sd xmm2,xmm7,QWORD PTR [rsp+0x60]
+   13411:	49 83 be a0 00 00 00 	cmp    QWORD PTR [r14+0xa0],0x0
+   13418:	00 
+   13419:	c5 f3 58 ca          	vaddsd xmm1,xmm1,xmm2
+   1341d:	c5 f3 5c 4c 24 08    	vsubsd xmm1,xmm1,QWORD PTR [rsp+0x8]
+   13423:	c4 c1 7b 11 8e f8 00 	vmovsd QWORD PTR [r14+0xf8],xmm1
+   1342a:	00 00 
+   1342c:	0f 84 2f fd ff ff    	je     13161 <spmv_v221_prepare+0x881>
+   13432:	4c 8b 4c 24 10       	mov    r9,QWORD PTR [rsp+0x10]
+   13437:	4c 89 64 24 10       	mov    QWORD PTR [rsp+0x10],r12
+   1343c:	49 63 96 80 00 00 00 	movsxd rdx,DWORD PTR [r14+0x80]
+   13443:	e9 a1 fd ff ff       	jmp    131e9 <spmv_v221_prepare+0x909>
+   13448:	49 8b be a0 00 00 00 	mov    rdi,QWORD PTR [r14+0xa0]
+   1344f:	e8 dc ee fe ff       	call   2330 <free@plt>
+   13454:	49 8b be a8 00 00 00 	mov    rdi,QWORD PTR [r14+0xa8]
+   1345b:	49 c7 86 a0 00 00 00 	mov    QWORD PTR [r14+0xa0],0x0
+   13462:	00 00 00 00 
+   13466:	e8 c5 ee fe ff       	call   2330 <free@plt>
+   1346b:	41 83 be 84 00 00 00 	cmp    DWORD PTR [r14+0x84],0x0
+   13472:	00 
+   13473:	49 c7 86 a8 00 00 00 	mov    QWORD PTR [r14+0xa8],0x0
+   1347a:	00 00 00 00 
+   1347e:	0f 85 eb fc ff ff    	jne    1316f <spmv_v221_prepare+0x88f>
+   13484:	83 7b 10 00          	cmp    DWORD PTR [rbx+0x10],0x0
+   13488:	0f 85 bf 00 00 00    	jne    1354d <spmv_v221_prepare+0xc6d>
+   1348e:	41 83 be 80 00 00 00 	cmp    DWORD PTR [r14+0x80],0x1
+   13495:	01 
+   13496:	0f 8e b1 00 00 00    	jle    1354d <spmv_v221_prepare+0xc6d>
+   1349c:	c5 fb 10 5c 24 38    	vmovsd xmm3,QWORD PTR [rsp+0x38]
+   134a2:	c5 d9 57 e4          	vxorpd xmm4,xmm4,xmm4
+   134a6:	c4 e1 db 2a 4c 24 18 	vcvtsi2sd xmm1,xmm4,QWORD PTR [rsp+0x18]
+   134ad:	c5 e3 58 d3          	vaddsd xmm2,xmm3,xmm3
+   134b1:	c5 f9 2f ca          	vcomisd xmm1,xmm2
+   134b5:	0f 86 92 00 00 00    	jbe    1354d <spmv_v221_prepare+0xc6d>
+   134bb:	48 83 bc 24 c0 00 00 	cmp    QWORD PTR [rsp+0xc0],0x1
+   134c2:	00 01 
+   134c4:	41 c7 46 40 03 00 00 	mov    DWORD PTR [r14+0x40],0x3
+   134cb:	00 
+   134cc:	7e 39                	jle    13507 <spmv_v221_prepare+0xc27>
+   134ce:	48 81 7c 24 28 00 00 	cmp    QWORD PTR [rsp+0x28],0x100000
+   134d5:	10 00 
+   134d7:	7f 2e                	jg     13507 <spmv_v221_prepare+0xc27>
+   134d9:	48 8b 45 10          	mov    rax,QWORD PTR [rbp+0x10]
+   134dd:	b9 04 00 00 00       	mov    ecx,0x4
+   134e2:	48 99                	cqo    
+   134e4:	48 f7 f9             	idiv   rcx
+   134e7:	48 3b 44 24 18       	cmp    rax,QWORD PTR [rsp+0x18]
+   134ec:	7f 19                	jg     13507 <spmv_v221_prepare+0xc27>
+   134ee:	48 8d 05 4e 45 00 00 	lea    rax,[rip+0x454e]        # 17a43 <CSWTCH.145+0x12e3>
+   134f5:	41 c7 86 80 00 00 00 	mov    DWORD PTR [r14+0x80],0x2
+   134fc:	02 00 00 00 
+   13500:	49 89 86 00 01 00 00 	mov    QWORD PTR [r14+0x100],rax
+   13507:	49 63 9e 80 00 00 00 	movsxd rbx,DWORD PTR [r14+0x80]
+   1350e:	b8 06 00 00 00       	mov    eax,0x6
+   13513:	c4 e2 fb f7 84 24 c8 	shrx   rax,QWORD PTR [rsp+0xc8],rax
+   1351a:	00 00 00 
+   1351d:	48 89 da             	mov    rdx,rbx
+   13520:	41 89 5e 4c          	mov    DWORD PTR [r14+0x4c],ebx
+   13524:	48 39 c3             	cmp    rbx,rax
+   13527:	0f 86 53 01 00 00    	jbe    13680 <spmv_v221_prepare+0xda0>
+   1352d:	49 83 7e 78 00       	cmp    QWORD PTR [r14+0x78],0x0
+   13532:	0f 84 30 01 00 00    	je     13668 <spmv_v221_prepare+0xd88>
+   13538:	48 c1 e3 06          	shl    rbx,0x6
+   1353c:	49 89 5e 18          	mov    QWORD PTR [r14+0x18],rbx
+   13540:	31 c0                	xor    eax,eax
+   13542:	83 fa 01             	cmp    edx,0x1
+   13545:	0f 94 c0             	sete   al
+   13548:	e9 39 fc ff ff       	jmp    13186 <spmv_v221_prepare+0x8a6>
+   1354d:	41 8b 96 80 00 00 00 	mov    edx,DWORD PTR [r14+0x80]
+   13554:	eb ea                	jmp    13540 <spmv_v221_prepare+0xc60>
+   13556:	8d 4a 01             	lea    ecx,[rdx+0x1]
+   13559:	e9 72 fd ff ff       	jmp    132d0 <spmv_v221_prepare+0x9f0>
+   1355e:	45 6b e4 0a          	imul   r12d,r12d,0xa
+   13562:	8d 34 f6             	lea    esi,[rsi+rsi*8]
+   13565:	41 39 f4             	cmp    r12d,esi
+   13568:	0f 8c 2a f8 ff ff    	jl     12d98 <spmv_v221_prepare+0x4b8>
+   1356e:	85 c9                	test   ecx,ecx
+   13570:	0f 8e 22 f8 ff ff    	jle    12d98 <spmv_v221_prepare+0x4b8>
+   13576:	48 8b 44 24 10       	mov    rax,QWORD PTR [rsp+0x10]
+   1357b:	48 85 c0             	test   rax,rax
+   1357e:	0f 8e 14 f8 ff ff    	jle    12d98 <spmv_v221_prepare+0x4b8>
+   13584:	48 8d 3c 85 00 00 00 	lea    rdi,[rax*4+0x0]
+   1358b:	00 
+   1358c:	48 39 bc 24 c8 00 00 	cmp    QWORD PTR [rsp+0xc8],rdi
+   13593:	00 
+   13594:	0f 82 fe f7 ff ff    	jb     12d98 <spmv_v221_prepare+0x4b8>
+   1359a:	48 8b 84 24 c8 00 00 	mov    rax,QWORD PTR [rsp+0xc8]
+   135a1:	00 
+   135a2:	be 18 00 00 00       	mov    esi,0x18
+   135a7:	31 d2                	xor    edx,edx
+   135a9:	48 29 f8             	sub    rax,rdi
+   135ac:	48 f7 f6             	div    rsi
+   135af:	48 39 c1             	cmp    rcx,rax
+   135b2:	0f 87 e0 f7 ff ff    	ja     12d98 <spmv_v221_prepare+0x4b8>
+   135b8:	4c 89 4c 24 18       	mov    QWORD PTR [rsp+0x18],r9
+   135bd:	e8 2e ef fe ff       	call   24f0 <malloc@plt>
+   135c2:	4c 8b 4c 24 18       	mov    r9,QWORD PTR [rsp+0x18]
+   135c7:	49 89 86 a0 00 00 00 	mov    QWORD PTR [r14+0xa0],rax
+   135ce:	e9 c5 f7 ff ff       	jmp    12d98 <spmv_v221_prepare+0x4b8>
+   135d3:	4c 8b 8c 24 c8 00 00 	mov    r9,QWORD PTR [rsp+0xc8]
+   135da:	00 
+   135db:	49 89 d8             	mov    r8,rbx
+   135de:	4c 89 e1             	mov    rcx,r12
+   135e1:	4c 89 ea             	mov    rdx,r13
+   135e4:	48 89 ee             	mov    rsi,rbp
+   135e7:	4c 89 f7             	mov    rdi,r14
+   135ea:	e8 61 d1 ff ff       	call   10750 <spmv_v2_prepare>
+   135ef:	41 89 c7             	mov    r15d,eax
+   135f2:	85 c0                	test   eax,eax
+   135f4:	0f 85 bc f4 ff ff    	jne    12ab6 <spmv_v221_prepare+0x1d6>
+   135fa:	48 8d 35 22 44 00 00 	lea    rsi,[rip+0x4422]        # 17a23 <CSWTCH.145+0x12c3>
+   13601:	4c 89 f7             	mov    rdi,r14
+   13604:	e8 87 f2 ff ff       	call   12890 <delegate.part.0>
+   13609:	e9 a8 f4 ff ff       	jmp    12ab6 <spmv_v221_prepare+0x1d6>
+   1360e:	48 8d 05 e6 42 00 00 	lea    rax,[rip+0x42e6]        # 178fb <CSWTCH.145+0x119b>
+   13615:	41 c7 46 08 02 00 00 	mov    DWORD PTR [r14+0x8],0x2
+   1361c:	00 
+   1361d:	41 c7 86 80 00 00 00 	mov    DWORD PTR [r14+0x80],0x1
+   13624:	01 00 00 00 
+   13628:	41 c7 86 c0 00 00 00 	mov    DWORD PTR [r14+0xc0],0x1
+   1362f:	01 00 00 00 
+   13633:	49 89 86 00 01 00 00 	mov    QWORD PTR [r14+0x100],rax
+   1363a:	45 31 ff             	xor    r15d,r15d
+   1363d:	e9 74 f4 ff ff       	jmp    12ab6 <spmv_v221_prepare+0x1d6>
+   13642:	48 63 c2             	movsxd rax,edx
+   13645:	48 8b 5c 24 08       	mov    rbx,QWORD PTR [rsp+0x8]
+   1364a:	48 6b c0 06          	imul   rax,rax,0x6
+   1364e:	48 03 44 24 10       	add    rax,QWORD PTR [rsp+0x10]
+   13653:	48 c1 e0 02          	shl    rax,0x2
+   13657:	49 89 46 18          	mov    QWORD PTR [r14+0x18],rax
+   1365b:	e9 01 fb ff ff       	jmp    13161 <spmv_v221_prepare+0x881>
+   13660:	8d 4a 01             	lea    ecx,[rdx+0x1]
+   13663:	e9 8f fc ff ff       	jmp    132f7 <spmv_v221_prepare+0xa17>
+   13668:	48 8d 05 cd 42 00 00 	lea    rax,[rip+0x42cd]        # 1793c <CSWTCH.145+0x11dc>
+   1366f:	41 c7 46 40 01 00 00 	mov    DWORD PTR [r14+0x40],0x1
+   13676:	00 
+   13677:	49 89 46 10          	mov    QWORD PTR [r14+0x10],rax
+   1367b:	e9 c0 fe ff ff       	jmp    13540 <spmv_v221_prepare+0xc60>
+   13680:	48 89 df             	mov    rdi,rbx
+   13683:	48 c1 e7 06          	shl    rdi,0x6
+   13687:	e8 64 ee fe ff       	call   24f0 <malloc@plt>
+   1368c:	41 8b 96 80 00 00 00 	mov    edx,DWORD PTR [r14+0x80]
+   13693:	49 89 46 78          	mov    QWORD PTR [r14+0x78],rax
+   13697:	e9 91 fe ff ff       	jmp    1352d <spmv_v221_prepare+0xc4d>
+
+Disassembly of section .fini:

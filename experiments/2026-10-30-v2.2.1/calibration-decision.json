@@ -1,0 +1,10 @@
+{
+  "stage": "after independent calibration, before source commit and any formal input generation/measurement",
+  "calibration_observations": 90,
+  "rules_changed": true,
+  "change": "CLI auto validation now serial; explicit parallel retains nnz1048576 candidate. Index retry, work bounds and direct executor unchanged.",
+  "reason": "Case0 parallel vs serial median time increases atT12 andT24; case1 mixed and insufficient improvement. Do not enable an unsupported default.",
+  "source": "calibration.json; preserve original commands/output/binary hash; defaults at the time of calibration were parallel-auto",
+  "formal_ablation_change": "Use explicit parallel vs final serial default, same160-process ablation count; final protocol frozen before formal.",
+  "no_formal_data_used": true
+}

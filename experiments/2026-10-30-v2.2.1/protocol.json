@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-30 Asia/Shanghai",
+  "design_commit": "f6e247a3ba5af6adc5de574f88582c77f838153e",
+  "core_commit": "dfb4ae256c61cfcefc7aa426a4de4906a6d6dd2a",
+  "parent": "10f6b89ef7829e66ee83cdacd38953ba7ad7497b",
+  "core_pushed_before_formal": true,
+  "no_retuning_after_formal": true,
+  "formal_counts": {
+    "critical": 1560,
+    "screen": 1000,
+    "heldout": 480,
+    "large": 80,
+    "large-sensitivity": 89,
+    "ablations": 160
+  },
+  "input_plan": "68 prior regression +12 new heldout synthetic=80; all10 prior real retained; no formal input used in90-observation calibration",
+  "default_change": "Independent precommit calibration rejected parallel column validation as default; final auto=serial, explicit parallel ablation. See calibration-decision.json; this correction precedes formal inputs.",
+  "pairing": "10 adjacent pairs per control per critical condition; mainT24 10 original+20v2+10v22; random block and AB/BA order; 820pairs total",
+  "metrics": "Per-process P+E+cleanup then median, whole process wall separate; all negative samples retained; bootstrap20000 seed20261030",
+  "acceptance": "As design: correctness; main>=5percent vs best measured original with paired support and original bestT24; main median vs v2/v22<=3percent, v2 pair low95>=.95; old7 guard critical vs v22<=5percent;2 prior missed cases select indexes, at least1T12 improves>5percent other<=5percent; old/new T12 negatives vs original no more than v22; none of8 prior regressions confirmed>5percent slower than v2 with interval fully below1.",
+  "environment": {
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PLACES": "cores",
+    "OMP_PROC_BIND": "spread",
+    "OMP_WAIT_POLICY": "PASSIVE"
+  },
+  "branch_policy": "if any joint criterion fails or unresolved material regression switch checkout to optimization/v2; retain origin/optimization/v2.2.1; no master merge"
+}

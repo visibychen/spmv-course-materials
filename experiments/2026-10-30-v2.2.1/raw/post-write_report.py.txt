@@ -1,0 +1,61 @@
+{
+  "gates": {
+    "correctness": true,
+    "main_vs_original": true,
+    "main_vs_v2": false,
+    "main_vs_v22": false,
+    "guards_no_over5_regression_vs_v22": false,
+    "misses_selected_and_total_cost_improved": false,
+    "negative_counts_not_increased": true,
+    "no_confirmed_prior_regressions_vs_v2": true
+  },
+  "failed_gates": [
+    "main_vs_v2",
+    "main_vs_v22",
+    "guards_no_over5_regression_vs_v22",
+    "misses_selected_and_total_cost_improved"
+  ],
+  "accepted": false,
+  "primary": {
+    "original": 0.7957465,
+    "v2": 0.6856341185,
+    "v22": 0.6950735705,
+    "v221": 0.7235201835
+  },
+  "old": {
+    "n": 68,
+    "v2": {
+      "faster_over5": 26,
+      "within5": 12,
+      "slower_over5": 30
+    },
+    "v22": {
+      "faster_over5": 45,
+      "within5": 11,
+      "slower_over5": 12
+    },
+    "v221": {
+      "faster_over5": 44,
+      "within5": 12,
+      "slower_over5": 12
+    }
+  },
+  "new": {
+    "n": 12,
+    "v2": {
+      "faster_over5": 2,
+      "within5": 3,
+      "slower_over5": 7
+    },
+    "v22": {
+      "faster_over5": 7,
+      "within5": 2,
+      "slower_over5": 3
+    },
+    "v221": {
+      "faster_over5": 6,
+      "within5": 3,
+      "slower_over5": 3
+    }
+  }
+}

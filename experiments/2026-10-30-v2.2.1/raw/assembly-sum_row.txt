@@ -1,0 +1,30 @@
+
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-30-v2.2.1/build/v221/csrspmv:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .plt.sec:
+
+Disassembly of section .text:
+
+0000000000011780 <sum_row>:
+   11780:	c5 f0 57 c9          	vxorps xmm1,xmm1,xmm1
+   11784:	4c 39 c1             	cmp    rcx,r8
+   11787:	7d 21                	jge    117aa <sum_row+0x2a>
+   11789:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+   11790:	48 63 04 8e          	movsxd rax,DWORD PTR [rsi+rcx*4]
+   11794:	c5 fa 10 04 82       	vmovss xmm0,DWORD PTR [rdx+rax*4]
+   11799:	c5 fa 59 04 8f       	vmulss xmm0,xmm0,DWORD PTR [rdi+rcx*4]
+   1179e:	48 ff c1             	inc    rcx
+   117a1:	c5 f2 58 c8          	vaddss xmm1,xmm1,xmm0
+   117a5:	49 39 c8             	cmp    r8,rcx
+   117a8:	75 e6                	jne    11790 <sum_row+0x10>
+   117aa:	c5 f8 28 c1          	vmovaps xmm0,xmm1
+   117ae:	c3                   	ret    
+
+Disassembly of section .fini:

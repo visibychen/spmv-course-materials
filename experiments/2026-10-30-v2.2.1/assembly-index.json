@@ -1,0 +1,32 @@
+{
+  "assembly-spmv_plan_execute.txt": {
+    "bytes": 3553,
+    "sha256": "8705a65610fc423db9304a690c159931e05674de2ac0afbb4216ccbd40800b58",
+    "has_instructions": true
+  },
+  "assembly-original-csr.txt": {
+    "bytes": 165516,
+    "sha256": "9774bf24a2498ad6bae423c67709f3de1e4dde9919479e83e1425b7197e4a974",
+    "has_instructions": true
+  },
+  "assembly-rows_f32.txt": {
+    "bytes": 7159,
+    "sha256": "ce4f4ea98129df69aa91d7811273703df2bd056ed7b452f6925518e32f3ab195",
+    "has_instructions": true
+  },
+  "assembly-spmv_v221_prepare.txt": {
+    "bytes": 48184,
+    "sha256": "62b670d472c7c8d39a17874cb851dc8e32ca7361373b79597be4937e99c12517",
+    "has_instructions": true
+  },
+  "assembly-sum_row.txt": {
+    "bytes": 1078,
+    "sha256": "9413048db4d0c37dbaa66653953d35ad0658e187041fc0365694cae7eef6b02d",
+    "has_instructions": true
+  },
+  "assembly-spmv_v22_execute.txt": {
+    "bytes": 17368,
+    "sha256": "8fe6eedf7f78d34d29d95a756dd003b6de257bc0ff117b15d1a03ec1fcc9a335",
+    "has_instructions": true
+  }
+}
