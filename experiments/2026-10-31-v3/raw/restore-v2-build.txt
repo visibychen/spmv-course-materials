@@ -1,0 +1,14 @@
+rm -f src/csr.o src/main.o src/matrix_market.o src/parse.o src/program_options.o src/spmv_v3.o src/vector.o csrspmv tests/test_spmv_v3
+Switched to branch 'optimization/v2'
+Your branch is up to date with 'origin/optimization/v2'.
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/csr.c -o src/csr.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/main.c -o src/main.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/matrix_market.c -o src/matrix_market.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/parse.c -o src/parse.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/program_options.c -o src/program_options.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/spmv_plan.c -o src/spmv_plan.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp -ffp-contract=off src/spmv_v2.c -o src/spmv_v2.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/vector.c -o src/vector.o
+cc -O3 -march=native -g -Wall -iquote src -fopenmp src/csr.o src/main.o src/matrix_market.o src/parse.o src/program_options.o src/spmv_plan.o src/spmv_v2.o src/vector.o  -o csrspmv
+## optimization/v2...origin/optimization/v2
+9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a

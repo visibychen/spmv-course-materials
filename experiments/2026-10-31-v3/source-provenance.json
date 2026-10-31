@@ -1,0 +1,59 @@
+{
+  "original": {
+    "commit": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+    "binary_sha256": "01dc57e8b5678c747c3980f4f04fa0811ed02109e5c9a81cc65cd917f6aa98e6",
+    "sources": {
+      "src/csr.c": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+      "src/csr.h": "cf5234aaf6820d7158aaab96c2ffa0016497bf0c205983d7da09403987197c22",
+      "src/main.c": "081e4cb7d44ca0e7d22c6f2eacadd04176db2b8c7d13d8fe1276bfda3b8cfada",
+      "src/matrix_market.c": "b492e4583a9f168dd8665acfbe3b3078e22c755f7d49e58b54e37ddb6cd45cc3",
+      "src/matrix_market.h": "532853be15bfd294d847f6599bd1281900acf10dd8325e34f275a3c5dab67b29",
+      "src/parse.c": "8549704ed14cc23ab1f417bae1931ec02b4d29089c1ff6ee4d7e9b7553f682d6",
+      "src/parse.h": "4437a7a6a7f9ae07adc11a761f15784e0f76c8a9426a6681522dd57976568341",
+      "src/program_options.c": "187f2abbc3d7723cfc4b10c6ae6e37fdcc40ef4c9d5a6e31b3fb14a243883eed",
+      "src/program_options.h": "c19aa669cbed5f73aa066999b378e24fcff386632e69cbf9725721c2f5141d25",
+      "src/vector.c": "22f71d918b0086adcce263d81729ce3e45bb778a32bcc79e5a767516eaba3ada",
+      "src/vector.h": "a3c0e032f7e7c08f2d77d43c4894fa37f036cea9e29a01eab0c9dbf4c891d45c"
+    }
+  },
+  "v2": {
+    "commit": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+    "binary_sha256": "fee22a6bad18dee55b7f7da13527183104d35da03a2c626b59827d763e524f93",
+    "sources": {
+      "src/csr.c": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+      "src/csr.h": "cf5234aaf6820d7158aaab96c2ffa0016497bf0c205983d7da09403987197c22",
+      "src/main.c": "ba36fa50de717be871e08ce7970d8aa4156c80748f80d2dd0173405d2251a2f5",
+      "src/matrix_market.c": "b492e4583a9f168dd8665acfbe3b3078e22c755f7d49e58b54e37ddb6cd45cc3",
+      "src/matrix_market.h": "532853be15bfd294d847f6599bd1281900acf10dd8325e34f275a3c5dab67b29",
+      "src/parse.c": "8549704ed14cc23ab1f417bae1931ec02b4d29089c1ff6ee4d7e9b7553f682d6",
+      "src/parse.h": "4437a7a6a7f9ae07adc11a761f15784e0f76c8a9426a6681522dd57976568341",
+      "src/program_options.c": "70a0055b07931f5eb143f496e35285c6c5af08bc722a8b04f82ac28c5911dca7",
+      "src/program_options.h": "b6b49369ce9ac895950f7eb7df220f257e59e9d6ee11fec52407a36b6c81ca94",
+      "src/spmv_plan.c": "f34a126b519b95e7b7cde525083cc02686e954c62a783e84adf62166990670be",
+      "src/spmv_plan.h": "b336336a12eb96315a8a9faa87c2597907a0cddfbf3ead181d2cd38488ef4658",
+      "src/spmv_v2.c": "ecf330e9c69d721c8ff9e7aaa562c773b922093b4193d1267c7a934dcffad4b2",
+      "src/spmv_v2.h": "be2d75c914f4af78b17d59e614049f652ebeb751c93b79fe3db1d3f860728eb5",
+      "src/vector.c": "22f71d918b0086adcce263d81729ce3e45bb778a32bcc79e5a767516eaba3ada",
+      "src/vector.h": "a3c0e032f7e7c08f2d77d43c4894fa37f036cea9e29a01eab0c9dbf4c891d45c"
+    }
+  },
+  "v3": {
+    "commit": "e83160bf4da3b20f154f81dfbe43fad532764145",
+    "binary_sha256": "7be74aea01057661fb89cbd27a41486ce39a3fe2c117c4244d9516d5adc4f65f",
+    "sources": {
+      "src/csr.c": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+      "src/csr.h": "cf5234aaf6820d7158aaab96c2ffa0016497bf0c205983d7da09403987197c22",
+      "src/main.c": "5315ec5c726cc30d01e296ef4a1c88026b8854139612538b74bd8a63978636ca",
+      "src/matrix_market.c": "b492e4583a9f168dd8665acfbe3b3078e22c755f7d49e58b54e37ddb6cd45cc3",
+      "src/matrix_market.h": "532853be15bfd294d847f6599bd1281900acf10dd8325e34f275a3c5dab67b29",
+      "src/parse.c": "8549704ed14cc23ab1f417bae1931ec02b4d29089c1ff6ee4d7e9b7553f682d6",
+      "src/parse.h": "4437a7a6a7f9ae07adc11a761f15784e0f76c8a9426a6681522dd57976568341",
+      "src/program_options.c": "9427fbfed52fec001f8e39b8090bd56f09406942034d4bf95f5b828fe04e6d9d",
+      "src/program_options.h": "304cbe36f2295dfda75970adf1dab3ace3f1fb085b90e9f98ce5bedbf4e3630b",
+      "src/spmv_v3.c": "7d44417dc5442516b475ac5f77af577d544a3cc517d7659481d2e3fa087a3048",
+      "src/spmv_v3.h": "2fb4870eb1602b24bff83127466504aff39622a161f14cdcff1b7f1e44e40126",
+      "src/vector.c": "22f71d918b0086adcce263d81729ce3e45bb778a32bcc79e5a767516eaba3ada",
+      "src/vector.h": "a3c0e032f7e7c08f2d77d43c4894fa37f036cea9e29a01eab0c9dbf4c891d45c"
+    }
+  }
+}

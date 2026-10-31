@@ -1,0 +1,27 @@
+--- src/main.c.calibration
++++ src/main.c
+@@ -29,7 +29,14 @@
+ 
+ #include <errno.h>
+ #include <limits.h>
++#ifdef _OPENMP
+ #include <omp.h>
++#else
++#define omp_get_max_threads() 1
++#define omp_get_num_threads() 1
++#define omp_get_thread_num() 0
++#define omp_in_parallel() 0
++#endif
+ 
+ #include <inttypes.h>
+ #include <stdbool.h>
+@@ -434,7 +441,9 @@
+     }else{
+ #pragma omp parallel reduction(err_add:err) reduction(max:num_flops) reduction(max:repeat) reduction(max:actual_threads)
+         {
++#ifdef _OPENMP
+             actual_threads=omp_get_num_threads();
++#endif
+             for(repeat=0,num_flops=0;repeat<args.repeat||num_flops<args.min_flops;repeat++){
+                 err=args.kernel_v3?spmv_v3_execute(&v3plan,&x,&y,&num_flops):csr_matrix_int32_spmv(&csr_matrix,&x,&y,&num_flops);
+                 if(err)break;

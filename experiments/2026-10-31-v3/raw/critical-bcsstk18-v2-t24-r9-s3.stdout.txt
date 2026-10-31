@@ -1,0 +1,1 @@
+{"prepare_s":0.001345214,"execute_s":0.003339441,"cleanup_s":0.000000138,"total_s":0.004684793,"actual_threads":24,"repeat":9,"flops":2683620,"simd":0,"backend":"v2"}

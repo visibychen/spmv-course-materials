@@ -1,0 +1,13 @@
+{
+  "changes": {
+    "src/main.c": {
+      "before": "2a81d92cb89f84a86a04c265b47510046c2ca675188dd6dd2aaf271605de8b6e",
+      "after": "5315ec5c726cc30d01e296ef4a1c88026b8854139612538b74bd8a63978636ca"
+    },
+    "src/spmv_v3.c": {
+      "before": "274ead1a9f5e5eefd1d91cccc5b271a334099f7d1ef0d2d0ad100a3f24d065c4",
+      "after": "7d44417dc5442516b475ac5f77af577d544a3cc517d7659481d2e3fa087a3048"
+    }
+  },
+  "reason": "Only NO_OPENMP compatibility; OpenMP computation and selected default unchanged."
+}

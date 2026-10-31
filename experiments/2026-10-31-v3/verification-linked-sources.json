@@ -1,0 +1,8 @@
+{
+  "tests/test_spmv_v3.c": "facafd0de143bb18c9df708cfc1adbfbd146a2064b2a98573be691d062d71fa8",
+  "src/csr.c": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+  "src/matrix_market.c": "b492e4583a9f168dd8665acfbe3b3078e22c755f7d49e58b54e37ddb6cd45cc3",
+  "src/parse.c": "8549704ed14cc23ab1f417bae1931ec02b4d29089c1ff6ee4d7e9b7553f682d6",
+  "src/vector.c": "22f71d918b0086adcce263d81729ce3e45bb778a32bcc79e5a767516eaba3ada",
+  "src/spmv_v3.c": "7d44417dc5442516b475ac5f77af577d544a3cc517d7659481d2e3fa087a3048"
+}

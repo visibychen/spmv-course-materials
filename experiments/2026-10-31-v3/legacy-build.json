@@ -1,0 +1,10 @@
+{
+  "original": {
+    "commit": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+    "binary_sha256": "01dc57e8b5678c747c3980f4f04fa0811ed02109e5c9a81cc65cd917f6aa98e6"
+  },
+  "v2": {
+    "commit": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+    "binary_sha256": "fee22a6bad18dee55b7f7da13527183104d35da03a2c626b59827d763e524f93"
+  }
+}

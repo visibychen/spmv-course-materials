@@ -1,0 +1,62 @@
+[
+  {
+    "field": "real",
+    "format": "f32",
+    "symmetry": "general",
+    "match": true
+  },
+  {
+    "field": "real",
+    "format": "f32",
+    "symmetry": "symmetric",
+    "match": true
+  },
+  {
+    "field": "real",
+    "format": "f64",
+    "symmetry": "general",
+    "match": true
+  },
+  {
+    "field": "real",
+    "format": "f64",
+    "symmetry": "symmetric",
+    "match": true
+  },
+  {
+    "field": "integer",
+    "format": null,
+    "symmetry": "general",
+    "match": true
+  },
+  {
+    "field": "integer",
+    "format": null,
+    "symmetry": "symmetric",
+    "match": true
+  },
+  {
+    "field": "complex",
+    "format": null,
+    "symmetry": "general",
+    "match": true
+  },
+  {
+    "field": "complex",
+    "format": null,
+    "symmetry": "symmetric",
+    "match": true
+  },
+  {
+    "field": "pattern",
+    "format": null,
+    "symmetry": "general",
+    "match": true
+  },
+  {
+    "field": "pattern",
+    "format": null,
+    "symmetry": "symmetric",
+    "match": true
+  }
+]

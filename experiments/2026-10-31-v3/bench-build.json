@@ -1,0 +1,40 @@
+{
+  "command": [
+    "gcc",
+    "-O3",
+    "-march=native",
+    "-g",
+    "-Wall",
+    "-iquote",
+    "src",
+    "-fopenmp",
+    "-Werror",
+    "-ffp-contract=off",
+    "-iquote",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/original/src",
+    "-iquote",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/v2/src",
+    "-iquote",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/v3/src",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/bench.c",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/original/src/csr.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/original/src/matrix_market.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/original/src/parse.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/original/src/vector.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/v2/src/spmv_plan.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/v2/src/spmv_v2.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/v3/src/spmv_v3.o",
+    "-o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/bench"
+  ],
+  "binary_sha256": "d402694d3b95b341462122556aa328a1925d2aebf78768e1419c5b7c6219dd09",
+  "object_sha256": {
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/original/src/csr.o": "6120d491a6da6ea63b78cbc1413baa48cf2b845cef8ff48eb268559a9c5cd10a",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/original/src/matrix_market.o": "11b07da0ded8ce65840a8739a14764c9e470d6084cc95f005b0beb29558e5f97",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/original/src/parse.o": "f7d6578d6d5a2316ac60ebabdcf84f30dad1ebeca4955e2bc5b6b69e375add6c",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/original/src/vector.o": "1cdaf6681a763d0c30cbd021ed666ef48b651225fe14c43cefd21727f42f5433",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/v2/src/spmv_plan.o": "cb6af81d705404292b6e07a482197cf117d40a72318aef9bf1d4443b09daf7d5",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/v2/src/spmv_v2.o": "3267d0b3231ccc959abcf5d251d1aafe6aff150b1b4bb208153956d25eae6785",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/v3/src/spmv_v3.o": "285c8207aea6b9c31f88fe7382a4733f6ff91aa90e47b853ceb8067f0a44cf1b"
+  }
+}

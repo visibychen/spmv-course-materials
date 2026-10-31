@@ -1,0 +1,7 @@
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/csr.c -o src/csr.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/main.c -o src/main.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/matrix_market.c -o src/matrix_market.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/parse.c -o src/parse.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/program_options.c -o src/program_options.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/vector.c -o src/vector.o
+cc -O3 -march=native -g -Wall -iquote src -fopenmp src/csr.o src/main.o src/matrix_market.o src/parse.o src/program_options.o src/vector.o  -o csrspmv

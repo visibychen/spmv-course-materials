@@ -1,0 +1,5 @@
+{
+  "binary_sha256": "cdd1494f27ba5e5b54b1beeb0d652301b9eca351cba90a6ba46a43fb9ef9b0b5",
+  "checks": 464,
+  "note": "Native computation and default unchanged after calibration. Later main.c NO_OPENMP compatibility does not link into this benchmark."
+}

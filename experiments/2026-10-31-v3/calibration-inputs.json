@@ -1,0 +1,82 @@
+[
+  {
+    "name": "cal-u8-a",
+    "rows": 80003,
+    "columns": 900001,
+    "nonzeros": 640024,
+    "seed": 2026103805,
+    "path": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/data/cal-u8-a.csr",
+    "sha256": "021855f626586d91b00369116d52af3718154f629b633f472b3019c4a2a02a51",
+    "source": "independent direct CSR generator in calibrate.py"
+  },
+  {
+    "name": "cal-u8-b",
+    "rows": 170003,
+    "columns": 4000003,
+    "nonzeros": 1360024,
+    "seed": 2026103806,
+    "path": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/data/cal-u8-b.csr",
+    "sha256": "da4b28309fbe7cdd08617a86a8ca76142e42c386e8e9155e1e7c07235989ee51",
+    "source": "independent direct CSR generator in calibrate.py"
+  },
+  {
+    "name": "cal-u8-c",
+    "rows": 260003,
+    "columns": 6500011,
+    "nonzeros": 2080024,
+    "seed": 2026103807,
+    "path": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/data/cal-u8-c.csr",
+    "sha256": "fa7a14a603cd57b130269968a3e8987daf6f3452ff4c8d13e4e9e6a2e925a114",
+    "source": "independent direct CSR generator in calibrate.py"
+  },
+  {
+    "name": "cal-u8-d",
+    "rows": 400009,
+    "columns": 9000011,
+    "nonzeros": 3200072,
+    "seed": 2026103808,
+    "path": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/data/cal-u8-d.csr",
+    "sha256": "210e48d3004dbeee94cf13a52d8b82ecd2fa62479a18bc126429b4fafeab3b32",
+    "source": "independent direct CSR generator in calibrate.py"
+  },
+  {
+    "name": "cal-short2",
+    "rows": 240019,
+    "columns": 900007,
+    "nonzeros": 480038,
+    "seed": 2026104100,
+    "path": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/data/cal-short2.csr",
+    "sha256": "d2263854c40345d5e669b72069cbb4a47996684172be38f4ad6e450403fe461b",
+    "source": "independent direct CSR generator in calibrate.py"
+  },
+  {
+    "name": "cal-short4",
+    "rows": 180013,
+    "columns": 1900003,
+    "nonzeros": 720052,
+    "seed": 2026104102,
+    "path": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/data/cal-short4.csr",
+    "sha256": "1d8c3f7fea87f905e1f52b1b6fc562532f06a0764a2693ddeff1b22b073356a2",
+    "source": "independent direct CSR generator in calibrate.py"
+  },
+  {
+    "name": "cal-short16",
+    "rows": 110017,
+    "columns": 2900003,
+    "nonzeros": 1760272,
+    "seed": 2026104153,
+    "path": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/data/cal-short16.csr",
+    "sha256": "572331099a3d43c03fc31e2539faaee2c49155a2e97d4abf6855875a71787bc6",
+    "source": "independent direct CSR generator in calibrate.py"
+  },
+  {
+    "name": "cal-ragged",
+    "rows": 100019,
+    "columns": 3900007,
+    "nonzeros": 800151,
+    "seed": 2026104108,
+    "path": "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/data/cal-ragged.csr",
+    "sha256": "f16a67f21dbb34898e72c0da91812afdfae7281d1bdc964a771489f187502956",
+    "source": "independent direct CSR generator in calibrate.py"
+  }
+]

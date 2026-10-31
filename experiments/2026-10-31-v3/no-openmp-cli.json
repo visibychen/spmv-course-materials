@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/no-openmp/csrspmv",
+    "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+    "--kernel=v3",
+    "--repeat=3",
+    "--destination-vector=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/data/no-openmp.mtx",
+    "-v"
+  ],
+  "stdout": "matrix_market_read: 0.000017 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.000001 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000000090 seconds requested=v3 selected=v3 reason=direct-csr extra_bytes=0\nspmv_v3: backend=tile8 simd=1 partition=work threads=1\ncsr_matrix_int32_spmv: 0.000000 seconds 3 multiplications 42 flops (0.14 Gflop/s, 0.068 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000000 seconds\nvector_to_matrix_market: 0.000003 seconds\nmatrix_market_write: 0.000040 seconds\n",
+  "stderr": "",
+  "binary_sha256": "e6d2075bfc63815f9406c79a2ca6c340f473be8a0e758df204aadbd48001d34d",
+  "correct": true
+}

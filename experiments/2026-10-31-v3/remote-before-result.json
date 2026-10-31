@@ -1,0 +1,30 @@
+[
+  {
+    "name": "design",
+    "repository": "visibychen/spmv-course-materials",
+    "expected_commit": "b67c63744afcabe09412e6364e5b4c18837829f7",
+    "branch": "main",
+    "status": "identical"
+  },
+  {
+    "name": "code",
+    "repository": "visibychen/csrspmv",
+    "expected_commit": "e83160bf4da3b20f154f81dfbe43fad532764145",
+    "branch": "optimization/v3",
+    "status": "identical"
+  },
+  {
+    "name": "master",
+    "repository": "visibychen/csrspmv",
+    "expected_commit": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+    "branch": "master",
+    "status": "identical"
+  },
+  {
+    "name": "best",
+    "repository": "visibychen/csrspmv",
+    "expected_commit": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+    "branch": "optimization/v2",
+    "status": "identical"
+  }
+]

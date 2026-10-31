@@ -1,0 +1,25 @@
+{
+  "command": [
+    "gcc",
+    "-O0",
+    "-g",
+    "--coverage",
+    "-fopenmp",
+    "-ffp-contract=off",
+    "-iquote",
+    "/home/visiby/计算机组成原理课设/csrspmv/src",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/coverage_probe.c",
+    "/home/visiby/计算机组成原理课设/csrspmv/src/spmv_v3.c",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/original/src/csr.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/original/src/matrix_market.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/original/src/parse.o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/original/src/vector.o",
+    "-o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/coverage/probe"
+  ],
+  "probe_stdout": "simd=1 correct=1\n",
+  "tile8_calls": 12,
+  "source_sha256": "7d44417dc5442516b475ac5f77af577d544a3cc517d7659481d2e3fa087a3048",
+  "binary_sha256": "5b22c41e4b548aca0a7f5d17b4cac4edb925209b698f5f24191edec3b49e8173",
+  "scope": "Independent coverage probe; no counters in performance build."
+}

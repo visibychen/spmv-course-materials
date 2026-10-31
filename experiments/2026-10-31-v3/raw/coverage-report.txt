@@ -1,0 +1,26 @@
+File '/home/visiby/计算机组成原理课设/csrspmv/src/spmv_v3.c'
+Lines executed:72.64% of 106
+Branches executed:75.65% of 193
+Taken at least once:41.45% of 193
+Calls executed:71.43% of 21
+Creating 'spmv_v3.c.gcov'
+
+File '/usr/lib/gcc/x86_64-linux-gnu/11/include/avxintrin.h'
+Lines executed:100.00% of 10
+No branches
+No calls
+Creating 'avxintrin.h.gcov'
+
+File '/usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h'
+Lines executed:100.00% of 1
+No branches
+No calls
+Creating 'xmmintrin.h.gcov'
+
+File '/usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h'
+Lines executed:100.00% of 2
+No branches
+No calls
+Creating 'emmintrin.h.gcov'
+
+Lines executed:75.63% of 119

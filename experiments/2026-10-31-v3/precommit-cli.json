@@ -1,0 +1,201 @@
+[
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel=v3",
+      "--repeat=0"
+    ],
+    "expected_success": true,
+    "returncode": 0,
+    "stdout": "matrix_market_read: 0.000262 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.002576 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000000852 seconds requested=v3 selected=v3 reason=direct-csr extra_bytes=0\nspmv_v3: backend=tile8 simd=1 partition=work threads=1\ncsr_matrix_int32_spmv: 0.000000 seconds 0 multiplications 0 flops (0.00 Gflop/s, 0.000 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000000 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel=v3",
+      "--repeat=3"
+    ],
+    "expected_success": true,
+    "returncode": 0,
+    "stdout": "matrix_market_read: 0.000015 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001801 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000000381 seconds requested=v3 selected=v3 reason=direct-csr extra_bytes=0\nspmv_v3: backend=tile8 simd=1 partition=work threads=1\ncsr_matrix_int32_spmv: 0.000001 seconds 3 multiplications 42 flops (0.07 Gflop/s, 0.034 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000000 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel",
+      "v3",
+      "--v3-backend",
+      "tile8"
+    ],
+    "expected_success": true,
+    "returncode": 0,
+    "stdout": "matrix_market_read: 0.000010 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001777 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000000271 seconds requested=v3 selected=v3 reason=direct-csr extra_bytes=0\nspmv_v3: backend=tile8 simd=1 partition=work threads=1\ncsr_matrix_int32_spmv: 0.000000 seconds 1 multiplications 14 flops (0.05 Gflop/s, 0.023 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000000 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel=v3",
+      "--v3-backend=auto"
+    ],
+    "expected_success": true,
+    "returncode": 0,
+    "stdout": "matrix_market_read: 0.000010 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001805 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000000231 seconds requested=v3 selected=v3 reason=direct-csr extra_bytes=0\nspmv_v3: backend=auto simd=1 partition=work threads=1\ncsr_matrix_int32_spmv: 0.000000 seconds 1 multiplications 14 flops (0.05 Gflop/s, 0.024 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000000 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel=v3",
+      "--v3-backend=pipeline4"
+    ],
+    "expected_success": true,
+    "returncode": 0,
+    "stdout": "matrix_market_read: 0.000010 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.002110 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000000241 seconds requested=v3 selected=v3 reason=direct-csr extra_bytes=0\nspmv_v3: backend=pipeline4 simd=1 partition=work threads=1\ncsr_matrix_int32_spmv: 0.000000 seconds 1 multiplications 14 flops (0.05 Gflop/s, 0.026 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000000 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel=v3",
+      "--v3-backend=csr",
+      "--v3-balance=rows"
+    ],
+    "expected_success": true,
+    "returncode": 0,
+    "stdout": "matrix_market_read: 0.000010 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001889 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000000240 seconds requested=v3 selected=v3 reason=direct-csr extra_bytes=0\nspmv_v3: backend=csr simd=1 partition=rows threads=1\ncsr_matrix_int32_spmv: 0.000000 seconds 1 multiplications 14 flops (0.05 Gflop/s, 0.026 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000000 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel=v3",
+      "--v3-serial-threshold=0"
+    ],
+    "expected_success": true,
+    "returncode": 0,
+    "stdout": "matrix_market_read: 0.000010 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001880 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000000211 seconds requested=v3 selected=v3 reason=direct-csr extra_bytes=0\nspmv_v3: backend=tile8 simd=1 partition=work threads=12\ncsr_matrix_int32_spmv: 0.000447 seconds 1 multiplications 14 flops (0.00 Gflop/s, 0.000 Gnz/s)\nspmv_team: actual_threads=12\nspmv_cleanup: 0.000000000 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel=v3",
+      "--v3-backend=bad"
+    ],
+    "expected_success": false,
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "csrspmv: Invalid argument --v3-backend=bad\n"
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel=v3",
+      "--v3-balance=bad"
+    ],
+    "expected_success": false,
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "csrspmv: Invalid argument --v3-balance=bad\n"
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel=v3",
+      "--v3-serial-threshold=-1"
+    ],
+    "expected_success": false,
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "csrspmv: Invalid argument --v3-serial-threshold=-1\n"
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel=v3",
+      "--v3-serial-threshold=9223372036854775808"
+    ],
+    "expected_success": false,
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "csrspmv: Invalid argument --v3-serial-threshold=9223372036854775808\n"
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel=v3",
+      "--repeat=-1"
+    ],
+    "expected_success": false,
+    "returncode": 1,
+    "stdout": "matrix_market_read: 0.000010 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001834 seconds 4 rows 5 columns 7 nonzeros\n",
+    "stderr": "csrspmv: invalid repetition/flop target\n"
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel=v3",
+      "--flops=-1"
+    ],
+    "expected_success": false,
+    "returncode": 1,
+    "stdout": "matrix_market_read: 0.000012 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001784 seconds 4 rows 5 columns 7 nonzeros\n",
+    "stderr": "csrspmv: invalid repetition/flop target\n"
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel=v3",
+      "--flops=100",
+      "--repeat=0"
+    ],
+    "expected_success": true,
+    "returncode": 0,
+    "stdout": "matrix_market_read: 0.000010 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001837 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000000291 seconds requested=v3 selected=v3 reason=direct-csr extra_bytes=0\nspmv_v3: backend=tile8 simd=1 partition=work threads=1\ncsr_matrix_int32_spmv: 0.000000 seconds 8 multiplications 112 flops (0.24 Gflop/s, 0.121 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000000 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "/home/visiby/计算机组成原理课设/csrspmv/test.mtx",
+      "-v",
+      "--kernel=v3",
+      "--v3-backend"
+    ],
+    "expected_success": false,
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "csrspmv: Invalid argument --v3-backend\n"
+  }
+]

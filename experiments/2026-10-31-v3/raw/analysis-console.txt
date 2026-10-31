@@ -1,0 +1,44 @@
+{
+  "gates": {
+    "correctness": true,
+    "main_vs_best_original": true,
+    "main_vs_v2": false,
+    "matched_fp_mechanism": true,
+    "actual_tile_coverage": true,
+    "aa_precision": true,
+    "production_cli_guard": true,
+    "critical_regression_guard": false,
+    "negative_counts_not_increased": true
+  },
+  "counts": {
+    "old": {
+      "n": 92,
+      "v2_slower_over10": 37,
+      "v3_slower_over10": 13
+    },
+    "new": {
+      "n": 12,
+      "v2_slower_over10": 5,
+      "v3_slower_over10": 5
+    }
+  },
+  "main": [
+    {
+      "control": "original",
+      "median_time_ratio": 0.8837387287014451,
+      "ci95": [
+        0.864267208199075,
+        0.8897392232633615
+      ]
+    },
+    {
+      "control": "v2",
+      "median_time_ratio": 1.0073208372046178,
+      "ci95": [
+        0.9915388588971801,
+        1.02023497947678
+      ]
+    }
+  ],
+  "mechanism": 0.8688598766464644
+}

@@ -1,0 +1,17 @@
+--- src/spmv_v3.c.calibration
++++ src/spmv_v3.c
+@@ -4,7 +4,14 @@
+ #include "spmv_v3.h"
+ #include <errno.h>
+ #include <limits.h>
++#ifdef _OPENMP
+ #include <omp.h>
++#else
++#define omp_get_max_threads() 1
++#define omp_get_num_threads() 1
++#define omp_get_thread_num() 0
++#define omp_in_parallel() 0
++#endif
+ #include <string.h>
+ #if (defined(__x86_64__) || defined(__i386__)) && defined(__GNUC__)
+ #include <immintrin.h>

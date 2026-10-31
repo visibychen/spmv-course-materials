@@ -1,0 +1,16 @@
+{
+  "code_commit": "e83160bf4da3b20f154f81dfbe43fad532764145",
+  "verified_sections": {
+    "text": "3aeb6e5775215f630be1b79488e4e03bb173cb37538778098d521f23f572913b",
+    "rodata": "ae44b4c434b44ed8199c3865fbd297f59322f9fa7dc312a95e42e701961b052a",
+    "data": "3de3d42b0acf34a116fc2644b6b7f841d53ac11606dd5eb39c6d1e89938cf77d"
+  },
+  "fixed_sections": {
+    "text": "3aeb6e5775215f630be1b79488e4e03bb173cb37538778098d521f23f572913b",
+    "rodata": "ae44b4c434b44ed8199c3865fbd297f59322f9fa7dc312a95e42e701961b052a",
+    "data": "3de3d42b0acf34a116fc2644b6b7f841d53ac11606dd5eb39c6d1e89938cf77d"
+  },
+  "equal_loadable_computation_sections": true,
+  "production_binary_sha256": "7be74aea01057661fb89cbd27a41486ce39a3fe2c117c4244d9516d5adc4f65f",
+  "benchmark_sha256": "d402694d3b95b341462122556aa328a1925d2aebf78768e1419c5b7c6219dd09"
+}

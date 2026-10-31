@@ -1,0 +1,34 @@
+{
+  "recorded_local": "2026-10-31T17:45:50.230456+08:00",
+  "design": {
+    "repo": "visibychen/spmv-course-materials",
+    "branch": "main",
+    "commit": "b67c63744afcabe09412e6364e5b4c18837829f7",
+    "message": "优化方案v3",
+    "pushed_before_implementation": true
+  },
+  "implementation": {
+    "repo": "visibychen/csrspmv",
+    "branch": "optimization/v3",
+    "commit": "e83160bf4da3b20f154f81dfbe43fad532764145",
+    "parent": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+    "message": "优化方案v3代码实现",
+    "pushed_before_formal": true
+  },
+  "result": {
+    "repo": "visibychen/spmv-course-materials",
+    "branch": "main",
+    "message": "2026.10.31v3实验记录",
+    "commit": "Use the enclosing Git commit; no self-referential SHA."
+  },
+  "final_core_branch": "optimization/v2",
+  "final_core_commit": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "final_core_clean": true,
+  "restored_native_binary_sha256": "d7468c23a2336e7d11eef3a274a0e3eb42427e9bf116fe30fc5ed83f5b41ce4e",
+  "restore_log": "raw/restore-v2-build.txt",
+  "unchanged_master": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "retained_candidate_branch": true,
+  "materials_design_head_before_results": "b67c63744afcabe09412e6364e5b4c18837829f7",
+  "forced_push": false,
+  "history_rewritten": false
+}

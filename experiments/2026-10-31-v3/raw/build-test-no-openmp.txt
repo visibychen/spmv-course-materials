@@ -1,0 +1,4 @@
+/home/visiby/计算机组成原理课设/csrspmv/tests/test_spmv_v3.c: In function ‘testcase’:
+/home/visiby/计算机组成原理课设/csrspmv/tests/test_spmv_v3.c:57:17: warning: unused variable ‘nt’ [-Wunused-variable]
+   57 |             int nt=rep==0?maximum:rep==1?1:maximum+1,err=0;int64_t flops=0;
+      |                 ^~

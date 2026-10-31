@@ -1,0 +1,13 @@
+cc -c -O3 -g -Wall -Wno-unknown-pragmas -iquote src src/csr.c -o src/csr.o
+cc -c -O3 -g -Wall -Wno-unknown-pragmas -iquote src src/main.c -o src/main.o
+cc -c -O3 -g -Wall -Wno-unknown-pragmas -iquote src src/matrix_market.c -o src/matrix_market.o
+cc -c -O3 -g -Wall -Wno-unknown-pragmas -iquote src src/parse.c -o src/parse.o
+cc -c -O3 -g -Wall -Wno-unknown-pragmas -iquote src src/program_options.c -o src/program_options.o
+cc -c -O3 -g -Wall -Wno-unknown-pragmas -iquote src -ffp-contract=off src/spmv_v3.c -o src/spmv_v3.o
+cc -c -O3 -g -Wall -Wno-unknown-pragmas -iquote src src/vector.c -o src/vector.o
+cc -O3 -g -Wall -Wno-unknown-pragmas -iquote src src/csr.o src/main.o src/matrix_market.o src/parse.o src/program_options.o src/spmv_v3.o src/vector.o  -o csrspmv
+/usr/bin/ld: src/main.o: in function `main':
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/no-openmp/src/main.c:259: undefined reference to `omp_get_thread_num'
+/usr/bin/ld: /home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v3/build/no-openmp/src/main.c:257: undefined reference to `omp_get_num_threads'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:55: csrspmv] Error 1

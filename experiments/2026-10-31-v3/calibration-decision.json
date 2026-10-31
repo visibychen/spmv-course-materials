@@ -1,0 +1,69 @@
+{
+  "selected_default": "tile8",
+  "geomean_auto_over_tile_non8": 0.980001669981398,
+  "worst_group_auto_over_tile": 1.2251599279594914,
+  "rule": "auto iff geomean<=0.97 and every group<=1.10; otherwise tile8; frozen before formal",
+  "ratios": [
+    {
+      "matrix": "cal-short2",
+      "threads": 1,
+      "auto_over_tile": 0.9518633598032084
+    },
+    {
+      "matrix": "cal-short2",
+      "threads": 12,
+      "auto_over_tile": 0.9622863108000589
+    },
+    {
+      "matrix": "cal-short2",
+      "threads": 24,
+      "auto_over_tile": 0.9873814853565833
+    },
+    {
+      "matrix": "cal-short4",
+      "threads": 1,
+      "auto_over_tile": 0.9107964349726633
+    },
+    {
+      "matrix": "cal-short4",
+      "threads": 12,
+      "auto_over_tile": 1.1737154965631278
+    },
+    {
+      "matrix": "cal-short4",
+      "threads": 24,
+      "auto_over_tile": 0.9752242786673926
+    },
+    {
+      "matrix": "cal-short16",
+      "threads": 1,
+      "auto_over_tile": 0.7422764479416605
+    },
+    {
+      "matrix": "cal-short16",
+      "threads": 12,
+      "auto_over_tile": 0.8162681693433402
+    },
+    {
+      "matrix": "cal-short16",
+      "threads": 24,
+      "auto_over_tile": 0.9709848292349561
+    },
+    {
+      "matrix": "cal-ragged",
+      "threads": 1,
+      "auto_over_tile": 1.0527728233375802
+    },
+    {
+      "matrix": "cal-ragged",
+      "threads": 12,
+      "auto_over_tile": 1.2251599279594914
+    },
+    {
+      "matrix": "cal-ragged",
+      "threads": 24,
+      "auto_over_tile": 1.0968084587592613
+    }
+  ],
+  "observations": 288
+}
