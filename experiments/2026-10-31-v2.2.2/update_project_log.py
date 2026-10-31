@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+import datetime,hashlib,json,subprocess
+from pathlib import Path
+from zoneinfo import ZoneInfo
+import run_experiments as r
+H=r.HERE;d=json.loads((H/'decision.json').read_text());a=json.loads((H/'audit.json').read_text())
+date=datetime.datetime.now(ZoneInfo('Asia/Shanghai')).strftime('%Y.%m.%d')
+branch='optimization/v2.2.2' if d['accepted_as_robust_upgrade'] else 'optimization/v2'
+body=f'''\n\n### 优化方案v2.2.2实现与实验记录\n\n- 设计77bbb9c2（优化方案v2.2.2）先推送；核心从父版v2.2的10f6b89创建optimization/v2.2.2，实现92f45f7（优化方案v2.2.2代码实现）随后推送。正式测量固定四版本提交，未从v2.2.1创建。\n- 在父版完整行检查中记录至多8个空区间；真实空行>=90%、平均区间>=1024、最长行<=64、非resident且R>=2时采用新区间执行。保留父版普通/大任务/串行/少巨行路径与旧索引；新路径真实执行y+=+0、不缓存Ax。初次投机申请的旧表可能被释放，全部成本计P。\n- native1/12/24、portable12及ASan+UBSan1/12/24三套测试共21配置通过；每配置v2/v2.2/v2.2.2各5368/1007/1197项，另有12项提交前CLI检查和{a['full_vector_and_compatibility_checks']}组完整向量/类型核验。92输入含旧80份回归与新12份保留结构，真实矩阵以float64参考及误差界验证，不称全都误差0。\n- 正式{a['formal_processes']}个进程、{a['paired_blocks']}组相邻配对（含12组同一v2二进制A/A），另24个独立进程做同二进制公平预热轮转。每个控制使用自己的候选配对样本，AB/BA平衡；P+R次E+D为主指标，wall单列。\n- 补充诊断初版漏传父版选项参数，首个诊断计时前编译失败；保留原冻结文件、失败日志和修正补丁。修正版仅补接口参数后完成24个诊断进程，生产源码、正式数据和冻结统计未改；另4组original-novec完整输出检查通过。\n\n\n| 主T24/R9控制 | 控制总成本/ms | 本版对应总成本/ms | 配对本版/控制中位数 | 95%区间 |\n| --- | ---: | ---: | ---: | --- |\n'''
+for x in d['main_matched']:body+=f"| {x['control']} | {x['control_total_s_median']*1000:.3f} | {x['candidate_total_s_median']*1000:.3f} | {x['median_candidate_over_control']:.4f} | [{x['ci95'][0]:.4f}, {x['ci95'][1]:.4f}] |\n"
+aa=d['aa'];body+=f"\nA/A配对时间比中位数{aa['median_candidate_over_control']:.4f}、区间[{aa['ci95'][0]:.4f}, {aa['ci95'][1]:.4f}]。通过目标改善的输入：{', '.join(d['improved_new_targets']) or '无'}。旧/新T12对原始的>5%退化描述计数：{json.dumps(d['descriptive_counts'],ensure_ascii=False)}。计数无负载权重、区间未做多重比较校正。\n\n共同门槛{'通过' if d['accepted_as_robust_upgrade'] else '未通过'}；未通过项：{', '.join(d['failed_gates']) or '无'}。工作分支保留/恢复为**{branch}**，研究分支及远端提交92f45f7保留。未改正式后阈值/样本/R，也未重写历史或合并master。未锁宿主频率、未测DRAM/缓存硬件事件，不将E差异直接归因于某条指令。\n\n完整入口：[实验说明](experiments/2026-10-31-v2.2.2/README.md)、[结果分析](experiments/2026-10-31-v2.2.2/结果分析.md)、[配对分析](experiments/2026-10-31-v2.2.2/paired-analysis.json)、[决策](experiments/2026-10-31-v2.2.2/decision.json)、[审计](experiments/2026-10-31-v2.2.2/audit.json)。本次材料提交名**{date}v2.2.2实验记录**，提交号从所属Git提交查看。\n"
+log=r.MATERIALS/'项目日志.md';old=log.read_text();assert '### 优化方案v2.2.2实现与实验记录' not in old
+log.write_text(old+body)
+r.save('project-log-update.json',dict(date=date,commit_message=date+'v2.2.2实验记录',body_sha256=hashlib.sha256(body.encode()).hexdigest(),final_branch=branch))
+r.save('git-provenance.json',dict(design_commit='77bbb9c26b25679be1b0495bc83b6c221a7e1e6b',core_commit=r.COMMITS['v222'],core_parent=r.COMMITS['v22'],core_branch='optimization/v2.2.2',core_final_branch=branch,core_final_head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=r.CORE,text=True).strip(),core_remote_tracking=subprocess.check_output(['git','rev-parse','origin/optimization/v2.2.2'],cwd=r.CORE,text=True).strip(),materials_parent=subprocess.check_output(['git','rev-parse','HEAD'],cwd=r.MATERIALS,text=True).strip(),result_commit_title=date+'v2.2.2实验记录',result_commit='See enclosing commit',no_history_rewrite=True,no_master_merge=True))
+print('LOG UPDATED',date,branch)

@@ -1,0 +1,30 @@
+{
+  "formal_processes": 3952,
+  "phase_counts": {
+    "screen": 1240,
+    "critical": 1560,
+    "heldout": 400,
+    "ablations": 160,
+    "original-best": 51,
+    "waiting": 48,
+    "large": 120,
+    "large-sensitivity": 89,
+    "controls": 20,
+    "aa": 24,
+    "targets": 240
+  },
+  "paired_blocks": 972,
+  "inputs": 92,
+  "full_vector_and_compatibility_checks": 402,
+  "unit_configurations": 21,
+  "unique_keys": true,
+  "frozen_harness_unchanged": true,
+  "source_binaries_unchanged": true,
+  "resources_and_timings_match_raw": true,
+  "aa_commands_identical": true,
+  "all_input_hashes_match": true,
+  "core_checkout": "optimization/v2",
+  "core_clean": true,
+  "max_rss_kib": 1970688,
+  "max_major_faults": 6
+}

@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "/usr/bin/time",
+    "-f",
+    "{\"wall_s\":%e,\"max_rss_kib\":%M,\"major_faults\":%F}",
+    "-o",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/raw/critical-heavy-clustered-v222-t12-r9-s201.resource.json",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/build/v222/csrspmv",
+    "/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-25-v1/data/heavy-clustered.mtx",
+    "--kernel=v2.2.2",
+    "--matrix-format=f32",
+    "--source-vector-format=f32",
+    "--destination-vector-format=f32",
+    "--repeat=9",
+    "-v"
+  ],
+  "environment": {
+    "OMP_NUM_THREADS": "12",
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PLACES": "cores",
+    "OMP_PROC_BIND": "spread",
+    "OMP_WAIT_POLICY": "PASSIVE"
+  }
+}

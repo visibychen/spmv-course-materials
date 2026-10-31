@@ -1,0 +1,10 @@
+{
+  "unix_time": 1793435345.614603,
+  "reason": "Supplementary harness omitted parent-options argument; compilation failed before any diagnostic timing. Production source and all3952 formal commands/data unchanged.",
+  "original_source_sha256": "d374cfa15005dd59e94ba71f1aad1db8688d7a698bed73813533695cd26e2b37",
+  "corrected_source_sha256": "831f261df28574b865d685516090950558df80c9e010518b391ded21541a765d",
+  "corrected_runner_sha256": "38ee682a8f3c339c04f8b0d828f0a601e833c39545d85db9b107f55d0e5b6375",
+  "only_c_change": "add &old argument to spmv_v222_prepare",
+  "original_logs": "raw/build-diagnostic.txt and raw/diagnostic-console.txt preserved",
+  "scope": "Only supplementary diagnostic harness; frozen acceptance analysis and formal runner unchanged."
+}

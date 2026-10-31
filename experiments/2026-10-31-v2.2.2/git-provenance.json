@@ -1,0 +1,14 @@
+{
+  "design_commit": "77bbb9c26b25679be1b0495bc83b6c221a7e1e6b",
+  "core_commit": "92f45f77b24f7eb5420a3456deec790bf0c45156",
+  "core_parent": "10f6b89ef7829e66ee83cdacd38953ba7ad7497b",
+  "core_branch": "optimization/v2.2.2",
+  "core_final_branch": "optimization/v2",
+  "core_final_head": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "core_remote_tracking": "92f45f77b24f7eb5420a3456deec790bf0c45156",
+  "materials_parent": "77bbb9c26b25679be1b0495bc83b6c221a7e1e6b",
+  "result_commit_title": "2026.10.31v2.2.2实验记录",
+  "result_commit": "See enclosing commit",
+  "no_history_rewrite": true,
+  "no_master_merge": true
+}

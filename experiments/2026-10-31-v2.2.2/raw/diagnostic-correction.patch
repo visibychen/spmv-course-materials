@@ -1,0 +1,11 @@
+--- bench_compare.c
++++ bench_compare_fixed.c
+@@ -42,7 +42,7 @@
+         if(v==0)err=spmv_plan_prepare(&plans[v],&a,&x,&y,spmv_original,&common,4194304);
+         else if(v==1)err=spmv_v2_prepare(&plans[v],&a,&x,&y,&common,4194304);
+         else if(v==2)err=spmv_v22_prepare(&plans[v],&a,&x,&y,&common,&old,R,4194304);
+-        else err=spmv_v222_prepare(&plans[v],&a,&x,&y,&common,&o,R,4194304);
++        else err=spmv_v222_prepare(&plans[v],&a,&x,&y,&common,&old,&o,R,4194304);
+         assert(!err);double elapsed=now()-start;struct spmv_plan *p=&plans[v];
+         printf("{\"type\":\"prepare\",\"backend\":\"%s\",\"prepare_s\":%.9f,\"extra_bytes\":%zu,\"compute_threads\":%d,\"selected\":\"%s\",\"executor\":\"%s\",\"route\":\"%s\"}\n",names[v],elapsed,p->extra_bytes,planned(p),
+             p->kernel==spmv_original?"original":p->v22.empty_runs?"empty-runs":spmv_v2_name(p->v2.kernel),spmv_kernel_name(p->kernel),

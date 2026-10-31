@@ -1,0 +1,52 @@
+{
+  "original": {
+    "commit": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+    "command": [
+      "make",
+      "-j12",
+      "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/raw/vectorization-original.txt"
+    ],
+    "binary_sha256": "83fb84ed2946fcdbd2a5ae0561eb0ac3c8ff87bee1ce3fa232041f63a3f46251",
+    "flags": "-O3 -march=native -g -Wall -iquote src -fopenmp"
+  },
+  "v2": {
+    "commit": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+    "command": [
+      "make",
+      "-j12",
+      "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/raw/vectorization-v2.txt"
+    ],
+    "binary_sha256": "da66a9e14677d78230948b03e62a8c09b848ba14be3da60c60977c97745b07f4",
+    "flags": "-O3 -march=native -g -Wall -iquote src -fopenmp"
+  },
+  "v22": {
+    "commit": "10f6b89ef7829e66ee83cdacd38953ba7ad7497b",
+    "command": [
+      "make",
+      "-j12",
+      "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/raw/vectorization-v22.txt"
+    ],
+    "binary_sha256": "5dd7c3f49f99fc078844c6b417f2802f28c28f14d9b50c89a4eac03512b89689",
+    "flags": "-O3 -march=native -g -Wall -iquote src -fopenmp"
+  },
+  "v222": {
+    "commit": "92f45f77b24f7eb5420a3456deec790bf0c45156",
+    "command": [
+      "make",
+      "-j12",
+      "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/raw/vectorization-v222.txt"
+    ],
+    "binary_sha256": "cc74208a07937a38727dfd415eb6865e0a17735cedb4ae144c8972a4e97665d3",
+    "flags": "-O3 -march=native -g -Wall -iquote src -fopenmp"
+  },
+  "original-novec": {
+    "commit": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+    "command": [
+      "make",
+      "-j12",
+      "CFLAGS=-O3 -march=native -g -Wall -iquote src -fopenmp -fno-tree-loop-vectorize -fno-tree-slp-vectorize -fopt-info-vec-all=/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/raw/vectorization-original-novec.txt"
+    ],
+    "binary_sha256": "aae67f68857e4b140810ac4f03158dc049825a0c6b26c1be65e53954007bc0bb",
+    "flags": "-O3 -march=native -g -Wall -iquote src -fopenmp -fno-tree-loop-vectorize -fno-tree-slp-vectorize"
+  }
+}

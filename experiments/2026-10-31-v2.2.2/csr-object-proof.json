@@ -1,0 +1,31 @@
+{
+  "objects": {
+    "original": {
+      "csr_source_sha256": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+      "object_text_sha256": "538c3db5fadcf90626576faa9a7ae713a36f534990af5a652233b944a95cdbcb",
+      "object_text_bytes": 24786
+    },
+    "v2": {
+      "csr_source_sha256": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+      "object_text_sha256": "538c3db5fadcf90626576faa9a7ae713a36f534990af5a652233b944a95cdbcb",
+      "object_text_bytes": 24786
+    },
+    "v22": {
+      "csr_source_sha256": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+      "object_text_sha256": "538c3db5fadcf90626576faa9a7ae713a36f534990af5a652233b944a95cdbcb",
+      "object_text_bytes": 24786
+    },
+    "v222": {
+      "csr_source_sha256": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+      "object_text_sha256": "538c3db5fadcf90626576faa9a7ae713a36f534990af5a652233b944a95cdbcb",
+      "object_text_bytes": 24786
+    },
+    "original-novec": {
+      "csr_source_sha256": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+      "object_text_sha256": "ff71ab78f2bcae38391a185df7d3dbe1f4d0e68cd75a4a4908a46bea34d9ab7d",
+      "object_text_bytes": 12754
+    }
+  },
+  "production_text_identical": true,
+  "limit": "Only CSR object .text before relocation; does not prove final addresses/cache/state identical. Novec is intentionally different."
+}

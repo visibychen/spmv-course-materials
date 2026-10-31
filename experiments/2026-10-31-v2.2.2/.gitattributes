@@ -1,0 +1,8 @@
+*.json text eol=lf
+*.csv text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+
+# Preserve compiler/raw log bytes and generated SVG path formatting.
+raw/** -whitespace
+figures/*.svg -whitespace

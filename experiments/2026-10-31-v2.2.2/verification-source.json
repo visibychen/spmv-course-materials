@@ -1,0 +1,21 @@
+{
+  "src/csr.c": "9bd7b5963e33cfcba8fb8ce80635286ad133a0acb8a5cdfd1560145d155e68f0",
+  "src/csr.h": "cf5234aaf6820d7158aaab96c2ffa0016497bf0c205983d7da09403987197c22",
+  "src/main.c": "3269864b78b7a2fa983bda996a32865c95fd0edaf224228c9ad59738c057e11b",
+  "src/matrix_market.c": "b492e4583a9f168dd8665acfbe3b3078e22c755f7d49e58b54e37ddb6cd45cc3",
+  "src/matrix_market.h": "532853be15bfd294d847f6599bd1281900acf10dd8325e34f275a3c5dab67b29",
+  "src/parse.c": "8549704ed14cc23ab1f417bae1931ec02b4d29089c1ff6ee4d7e9b7553f682d6",
+  "src/parse.h": "4437a7a6a7f9ae07adc11a761f15784e0f76c8a9426a6681522dd57976568341",
+  "src/program_options.c": "d11893448796bc4ecf96669940d50a3be36619d30260cd006ce7c6c16c371395",
+  "src/program_options.h": "708e739fd3d103be2c6c280a9789c739e78fa7180127eaf55dedfa1e0a000c03",
+  "src/spmv_plan.c": "5b6980ac8d3a184adfde3a53b318a20edd26e866fc549f81c4854ebd1fe8e611",
+  "src/spmv_plan.h": "8797ef8d78767e745e4782fad738b3e8d1e03ff4d44f6c79425c9bd40ba2688c",
+  "src/spmv_v2.c": "ecf330e9c69d721c8ff9e7aaa562c773b922093b4193d1267c7a934dcffad4b2",
+  "src/spmv_v2.h": "be2d75c914f4af78b17d59e614049f652ebeb751c93b79fe3db1d3f860728eb5",
+  "src/spmv_v22.c": "b13c865cf5f675ffb8a9f5d882fba8b62c3a2bcc0bb100ce6a487cbdc45a377a",
+  "src/spmv_v22.h": "6cc6cd2144ba5434723bc117005b35eae0b67261bdbf29406f54319c96c324db",
+  "src/spmv_v222.c": "b4ee004fbed3265cbde0e6e83a8da81d966147899f43de331bef67ebedab0739",
+  "src/spmv_v222.h": "160ccfa94767bd20c24ac2c44e2982724bae08412fda31c233e1d4ae0c00b788",
+  "src/vector.c": "22f71d918b0086adcce263d81729ce3e45bb778a32bcc79e5a767516eaba3ada",
+  "src/vector.h": "a3c0e032f7e7c08f2d77d43c4894fa37f036cea9e29a01eab0c9dbf4c891d45c"
+}

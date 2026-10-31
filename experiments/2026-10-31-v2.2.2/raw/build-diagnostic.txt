@@ -1,0 +1,29 @@
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/bench_compare.c: In function ‘main’:
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/bench_compare.c:45:63: warning: passing argument 6 of ‘spmv_v222_prepare’ from incompatible pointer type [-Wincompatible-pointer-types]
+   45 |         else err=spmv_v222_prepare(&plans[v],&a,&x,&y,&common,&o,R,4194304);
+      |                                                               ^~
+      |                                                               |
+      |                                                               struct spmv_v222_options *
+In file included from /home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/build/v222/src/spmv_plan.h:8,
+                 from /home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/bench_compare.c:2:
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/build/v222/src/spmv_v222.h:18:5: note: expected ‘const struct spmv_v22_options *’ but argument is of type ‘struct spmv_v222_options *’
+   18 |     const struct spmv_v22_options *, const struct spmv_v222_options *, int64_t, size_t);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/bench_compare.c:45:66: warning: passing argument 7 of ‘spmv_v222_prepare’ makes pointer from integer without a cast [-Wint-conversion]
+   45 |         else err=spmv_v222_prepare(&plans[v],&a,&x,&y,&common,&o,R,4194304);
+      |                                                                  ^
+      |                                                                  |
+      |                                                                  int
+In file included from /home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/build/v222/src/spmv_plan.h:8,
+                 from /home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/bench_compare.c:2:
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/build/v222/src/spmv_v222.h:18:38: note: expected ‘const struct spmv_v222_options *’ but argument is of type ‘int’
+   18 |     const struct spmv_v22_options *, const struct spmv_v222_options *, int64_t, size_t);
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/bench_compare.c:45:18: error: too few arguments to function ‘spmv_v222_prepare’
+   45 |         else err=spmv_v222_prepare(&plans[v],&a,&x,&y,&common,&o,R,4194304);
+      |                  ^~~~~~~~~~~~~~~~~
+In file included from /home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/build/v222/src/spmv_plan.h:8,
+                 from /home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/bench_compare.c:2:
+/home/visiby/计算机组成原理课设/spmv-course-materials/experiments/2026-10-31-v2.2.2/build/v222/src/spmv_v222.h:16:5: note: declared here
+   16 | int spmv_v222_prepare(struct spmv_plan *, const struct csr_matrix_int32 *,
+      |     ^~~~~~~~~~~~~~~~~

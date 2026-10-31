@@ -1,0 +1,163 @@
+[
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "test.mtx",
+      "-v",
+      "--kernel=v2.2.2",
+      "--repeat=0"
+    ],
+    "returncode": 0,
+    "expected_success": true,
+    "stdout": "matrix_market_read: 0.000213 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001813 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000000588 seconds requested=v2.2.2 selected=v2.2 reason=guarded extra_bytes=0\nspmv_v22: kernel=auto partition=rows threads=1 calls=0 route=zero-calls empty_rows=0 nonempty_rows=0 validation_s=0.000000000\nspmv_v222: kernel=auto partition=rows threads=1 route=zero-calls active=0 empty_rows=0 empty_runs=0 discarded_index_bytes=0 retained_run_bytes=0\ncsr_matrix_int32_spmv: 0.000000 seconds 0 multiplications 0 flops (0.00 Gflop/s, 0.000 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000128 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "test.mtx",
+      "-v",
+      "--kernel=v2.2.2",
+      "--repeat=3"
+    ],
+    "returncode": 0,
+    "expected_success": true,
+    "stdout": "matrix_market_read: 0.000014 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001458 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000000579 seconds requested=v2.2.2 selected=v2.2 reason=guarded extra_bytes=0\nspmv_v22: kernel=csr partition=rows threads=1 calls=3 route=small-serial empty_rows=0 nonempty_rows=0 validation_s=0.000000110\nspmv_v222: kernel=csr partition=rows threads=1 route=small-serial active=0 empty_rows=0 empty_runs=0 discarded_index_bytes=0 retained_run_bytes=0\ncsr_matrix_int32_spmv: 0.000001 seconds 3 multiplications 42 flops (0.08 Gflop/s, 0.040 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000064 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "test.mtx",
+      "-v",
+      "--kernel",
+      "v2.2.2",
+      "--v222-runs",
+      "on",
+      "--repeat=2"
+    ],
+    "returncode": 0,
+    "expected_success": true,
+    "stdout": "matrix_market_read: 0.000014 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001719 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000000487 seconds requested=v2.2.2 selected=v2.2 reason=guarded extra_bytes=0\nspmv_v22: kernel=csr partition=rows threads=1 calls=2 route=small-serial empty_rows=0 nonempty_rows=0 validation_s=0.000000092\nspmv_v222: kernel=csr partition=rows threads=1 route=small-serial active=0 empty_rows=0 empty_runs=0 discarded_index_bytes=0 retained_run_bytes=0\ncsr_matrix_int32_spmv: 0.000000 seconds 2 multiplications 28 flops (0.08 Gflop/s, 0.040 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000064 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "test.mtx",
+      "-v",
+      "--kernel=v2.2.2",
+      "--v222-runs=bad"
+    ],
+    "returncode": 1,
+    "expected_success": false,
+    "stdout": "",
+    "stderr": "csrspmv: Invalid argument --v222-runs=bad\n"
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "test.mtx",
+      "-v",
+      "--kernel=v2.2.2",
+      "--v222-policy=bad"
+    ],
+    "returncode": 1,
+    "expected_success": false,
+    "stdout": "",
+    "stderr": "csrspmv: Invalid argument --v222-policy=bad\n"
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "test.mtx",
+      "-v",
+      "--kernel=v2.2.2",
+      "--v222-runs"
+    ],
+    "returncode": 1,
+    "expected_success": false,
+    "stdout": "",
+    "stderr": "csrspmv: Invalid argument --v222-runs\n"
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "test.mtx",
+      "-v",
+      "--kernel=v2.2.2",
+      "--v222-runs=on",
+      "--execution=serial"
+    ],
+    "returncode": 1,
+    "expected_success": false,
+    "stdout": "matrix_market_read: 0.000014 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001621 seconds 4 rows 5 columns 7 nonzeros\n",
+    "stderr": "csrspmv: prepare: Invalid argument\n"
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "test.mtx",
+      "-v",
+      "--kernel=v2.2.2",
+      "--repeat=-1"
+    ],
+    "returncode": 1,
+    "expected_success": false,
+    "stdout": "",
+    "stderr": "csrspmv: Invalid argument (null)\n"
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "test.mtx",
+      "-v",
+      "--kernel=v2.2.2",
+      "--flops=-1"
+    ],
+    "returncode": 1,
+    "expected_success": false,
+    "stdout": "",
+    "stderr": "csrspmv: Invalid argument (null)\n"
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "test.mtx",
+      "-v",
+      "--kernel=v2.2.2",
+      "--v222-policy=v22"
+    ],
+    "returncode": 0,
+    "expected_success": true,
+    "stdout": "matrix_market_read: 0.000015 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001702 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000000725 seconds requested=v2.2.2 selected=v2.2 reason=guarded extra_bytes=0\nspmv_v22: kernel=csr partition=rows threads=1 calls=1 route=small-serial empty_rows=0 nonempty_rows=0 validation_s=0.000000073\nspmv_v222: kernel=csr partition=rows threads=1 route=small-serial active=0 empty_rows=0 empty_runs=0 discarded_index_bytes=0 retained_run_bytes=0\ncsr_matrix_int32_spmv: 0.000000 seconds 1 multiplications 14 flops (0.04 Gflop/s, 0.022 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000073 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "test.mtx",
+      "-v",
+      "--kernel=v2.2.2",
+      "--v222-policy=v2"
+    ],
+    "returncode": 0,
+    "expected_success": true,
+    "stdout": "matrix_market_read: 0.000014 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001720 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000006282 seconds requested=v2.2.2 selected=v2 reason=selected extra_bytes=0\nspmv_v2: kernel=csr partition=rows serial=1 max_threads=12 prefetch=0 longest=3 all8=0 row_scan_s=0.000001176 column_validation_s=0.000004748 policy_s=0.000000027\nspmv_v222: kernel=csr partition=rows threads=1 route=v2-delegate active=0 empty_rows=0 empty_runs=0 discarded_index_bytes=0 retained_run_bytes=0\ncsr_matrix_int32_spmv: 0.000000 seconds 1 multiplications 14 flops (0.06 Gflop/s, 0.031 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000083 seconds\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/home/visiby/计算机组成原理课设/csrspmv/csrspmv",
+      "test.mtx",
+      "-v",
+      "--kernel=v2.2.2",
+      "--flops=100",
+      "--repeat=0"
+    ],
+    "returncode": 0,
+    "expected_success": true,
+    "stdout": "matrix_market_read: 0.000015 seconds matrix object coordinate format real field general symmetry 4 rows 5 columns 7 nonzeros\ncsr_matrix_int32_from_matrix_market: 0.001748 seconds 4 rows 5 columns 7 nonzeros\nspmv_prepare: 0.000000496 seconds requested=v2.2.2 selected=v2.2 reason=guarded extra_bytes=0\nspmv_v22: kernel=csr partition=rows threads=1 calls=8 route=small-serial empty_rows=0 nonempty_rows=0 validation_s=0.000000128\nspmv_v222: kernel=csr partition=rows threads=1 route=small-serial active=0 empty_rows=0 empty_runs=0 discarded_index_bytes=0 retained_run_bytes=0\ncsr_matrix_int32_spmv: 0.000001 seconds 8 multiplications 112 flops (0.22 Gflop/s, 0.109 Gnz/s)\nspmv_team: actual_threads=1\nspmv_cleanup: 0.000000065 seconds\n",
+    "stderr": ""
+  }
+]
