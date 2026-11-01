@@ -1,0 +1,17 @@
+{
+  "head_sha": "a566fd1fe68471f9360897f0a4c030c55e19a217",
+  "base_ref": "master",
+  "base_repo": "jamtrott/csrspmv",
+  "html_url": "https://github.com/jamtrott/csrspmv/pull/1",
+  "recorded_at": "2026-11-01T14:15:01.3628636+08:00",
+  "number": 1,
+  "base_sha": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "body": "This adds an opt-in `--kernel=v2` backend for f32 CSR SpMV, plus reproducible build/run/check scripts and a README. The executable still defaults to the original backend; unsupported value types use that backend.\n\nThe backend borrows the existing CSR arrays. It combines a true serial path for small work, validated fixed-eight row unrolling, contiguous `nnz + rows` work cuts, and merge-path splitting for exceptionally long rows. It does not build a SELL copy or cache `A*x`, and each repeat performs `y += A*x`. Preparation validates the full structure and is charged separately from execution. Split-row sums can reassociate rounding; `--strict-order` disables splitting. Method attribution and the adapted BSD-3-Clause notice are retained in `docs/` and the source.\n\nOn the recorded Ryzen 9 7845HX / WSL2 / GCC 11.4 setup, the original v2 study's 12-million-row, 96-million-entry input at T24/R9 had median preparation + execution + cleanup of 0.811400 s (original) and 0.734880 s (v2), a 9.43% decrease. This is a workload-specific result, not an all-input or end-to-end guarantee. The original compiler/OpenMP settings were retained; full positive/negative results, paired intervals and fixed-input reproduction scripts are available at https://github.com/visibychen/spmv-course-materials/tree/main/experiments/2026-10-26-v2 .\n\nValidation for this final packaging:\n- `scripts/build.sh --portable --check --jobs 12`, followed by `scripts/check.sh`: 5,368 unit checks and exact CLI output checks for both backends passed.\n- The same build/check sequence with `--native` and 12 requested threads passed.\n- Eight script argument/caller-directory/override checks passed.\n- The algorithm, tests and Makefile are unchanged from the previously validated v2 commit `9b652e8`; the final commit only adds the scripts and updates the README.\n\nBuild with `./scripts/build.sh --check`; run with `OMP_NUM_THREADS=12 ./scripts/run.sh input.mtx --repeat=9`. The run script selects v2 explicitly, preserves caller OpenMP settings and performs no hidden warm-up or extra repetitions.",
+  "connector_attempt": "403 Resource not accessible by integration",
+  "method": "existing local GitHub credential via REST",
+  "head_ref": "optimization/v2",
+  "state": "open",
+  "merged": false,
+  "head_repo": "visibychen/csrspmv",
+  "title": "Final optimized version"
+}

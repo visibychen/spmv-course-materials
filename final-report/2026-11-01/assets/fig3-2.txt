@@ -1,0 +1,29 @@
+static int64_t target(int64_t total, int t, int nt)
+{
+    return (total/nt)*t + (t < total%nt ? t : total%nt);
+}
+int64_t spmv_v2_row_cut(const struct csr_matrix_int32 *a, int t, int nt, int work)
+{
+    if (!work) return target(a->num_rows,t,nt);
+    int64_t goal=target(a->num_nonzeros+a->num_rows,t,nt);
+    int64_t lo=0,hi=a->num_rows;
+    while(lo<hi) {
+        int64_t mid=lo+(hi-lo)/2;
+        if(a->row_ptr[mid]+mid<goal) lo=mid+1;
+        else hi=mid;
+    }
+    return lo;
+}
+/* Stable tie: row-end events precede equal nonzero-index events. */
+void spmv_v2_merge_cut(const struct csr_matrix_int32 *a, int64_t diagonal,
+                        int64_t *row, int64_t *nz)
+{
+    int64_t lo=diagonal>a->num_nonzeros ? diagonal-a->num_nonzeros : 0;
+    int64_t hi=diagonal<a->num_rows ? diagonal:a->num_rows;
+    while(lo<hi) {
+        int64_t mid=lo+(hi-lo)/2;
+        if(a->row_ptr[mid+1] <= diagonal-mid-1) lo=mid+1;
+        else hi=mid;
+    }
+    *row=lo; *nz=diagonal-lo;
+}

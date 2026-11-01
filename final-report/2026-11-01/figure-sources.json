@@ -1,0 +1,136 @@
+[
+  {
+    "name": "fig1-1",
+    "commit": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+    "path": "src/csr.c",
+    "lines": [
+      1278,
+      1300
+    ],
+    "sha256": "5b58c1a28dff01fff42afaf111c4444f99aa350421fdc55a587abe36f390391d",
+    "kind": "verbatim source excerpt",
+    "png_sha256": "502e643c130430daf554c3e60bd02d90486ad5ee5a7c5ee8c9ea7192ccb71ac0",
+    "capture_method": "Chrome DevTools actual screenshot of verbatim git-show/git-log text rendered in a local HTML page; source lines use syntax highlighting and display wrapping."
+  },
+  {
+    "name": "fig1-2",
+    "commit": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+    "path": "src/main.c",
+    "lines": [
+      403,
+      411
+    ],
+    "sha256": "34699aea69e0c2dedff2850adfb2625458c49b8b472fa404cd054c308a31933b",
+    "kind": "verbatim source excerpt",
+    "png_sha256": "3bddedb44b224ddf46780ab7a306073b00a53aebe6794908afb89ba7bb08ffb0",
+    "capture_method": "Chrome DevTools actual screenshot of verbatim git-show/git-log text rendered in a local HTML page; source lines use syntax highlighting and display wrapping."
+  },
+  {
+    "name": "fig3-1",
+    "commit": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+    "path": "src/spmv_v2.c",
+    "lines": [
+      139,
+      166
+    ],
+    "sha256": "82734736b756a038d7214ccbb19e83ce605f24c4d5deaab1e204febf3fc8234f",
+    "kind": "verbatim source excerpt",
+    "png_sha256": "6f8af458489023714cd1e5ad26d2ac62e08739c03ff8c65ba010111191afd3fb",
+    "capture_method": "Chrome DevTools actual screenshot of verbatim git-show/git-log text rendered in a local HTML page; source lines use syntax highlighting and display wrapping."
+  },
+  {
+    "name": "fig3-2",
+    "commit": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+    "path": "src/spmv_v2.c",
+    "lines": [
+      60,
+      88
+    ],
+    "sha256": "27ba5cc9fed97dedf4a54d88803f2952f43e2754a3f1ff0292fb793198a8dd3b",
+    "kind": "verbatim source excerpt",
+    "png_sha256": "7dd2a8c997e6a8265e13b688d8365f3e3b4704e0d7279251345570362c039512",
+    "capture_method": "Chrome DevTools actual screenshot of verbatim git-show/git-log text rendered in a local HTML page; source lines use syntax highlighting and display wrapping."
+  },
+  {
+    "name": "fig3-3",
+    "commit": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+    "path": "src/spmv_v2.c",
+    "lines": [
+      171,
+      199
+    ],
+    "sha256": "5db999c5596fd2d9ef852c6b231ec016f228356071c22d580aa31e04c7a4b25e",
+    "kind": "verbatim source excerpt",
+    "png_sha256": "d88b4df4038bff33e1466738664ea4d98426972059285f60d487e46b15c918b7",
+    "capture_method": "Chrome DevTools actual screenshot of verbatim git-show/git-log text rendered in a local HTML page; source lines use syntax highlighting and display wrapping."
+  },
+  {
+    "name": "fig3-4",
+    "commit": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+    "path": "src/spmv_v2.c",
+    "lines": [
+      207,
+      235
+    ],
+    "sha256": "d9a939b4d801028f632769338e7e6655d3397edc553f7d15c79aade10ea10123",
+    "kind": "verbatim source excerpt",
+    "png_sha256": "6f0e9399d5541d815eae51c4add76a8aa7619ae3012c4f9ad726f5d9adf7914f",
+    "capture_method": "Chrome DevTools actual screenshot of verbatim git-show/git-log text rendered in a local HTML page; source lines use syntax highlighting and display wrapping."
+  },
+  {
+    "name": "fig7-1",
+    "repo": "/home/visiby/计算机组成原理课设/csrspmv",
+    "argv": [
+      "git",
+      "log",
+      "--all",
+      "--author=visiby",
+      "--date=short",
+      "--pretty=format:%h  %ad  %s"
+    ],
+    "output_sha256": "1c79e98d0642e608a69ab7b867ffc297a22c7483571a6d76c932c71dc3983dd3",
+    "kind": "verbatim git output",
+    "png_sha256": "610ac7c68b39f8361049c79491c4ddece6c86bc6182e5a7e8de3555db954ed4b",
+    "capture_method": "Chrome DevTools actual screenshot of verbatim git-show/git-log text rendered in a local HTML page; source lines use syntax highlighting and display wrapping."
+  },
+  {
+    "name": "fig7-2",
+    "repo": "/home/visiby/计算机组成原理课设/spmv-course-materials",
+    "argv": [
+      "git",
+      "log",
+      "--date=short",
+      "--pretty=format:%h  %ad  %s",
+      "-18"
+    ],
+    "output_sha256": "711003ffb2818548f270e961661d712b4e9ac07df4c8104e7641fcd483c22386",
+    "kind": "verbatim git output",
+    "png_sha256": "fca2bfec730889d8d06b13e9c97fcc3a3355f19fb2f080cf4a3a67c60634ca34",
+    "capture_method": "Chrome DevTools actual screenshot of verbatim git-show/git-log text rendered in a local HTML page; source lines use syntax highlighting and display wrapping."
+  },
+  {
+    "name": "fig7-3",
+    "url": "https://github.com/jamtrott/csrspmv/pull/1",
+    "kind": "actual public GitHub PR page screenshot",
+    "png_sha256": "a5b1e39ceba0a6a7fca7c9fae402f126e7ad083ee2a8a560ccfa3b1f547de3b1",
+    "state_at_capture": "Open"
+  },
+  {
+    "name": "fig5-1",
+    "kind": "Matplotlib bar chart generated from fixed v2 archived summary data",
+    "data": "chart-data.json",
+    "png_sha256": "d9306e41181c88c4a760024d385a6f70659e655678fc6e0cc1df3565ca70e406"
+  },
+  {
+    "name": "fig5-2",
+    "kind": "Matplotlib bar chart generated from fixed v2 archived summary data",
+    "data": "chart-data.json",
+    "png_sha256": "026bc90e8c595f8681300c048a2a94007e3d8fc713cdfd9748fd75987de88240"
+  },
+  {
+    "name": "fig5-3",
+    "kind": "Matplotlib bar chart generated from fixed v2 archived summary data",
+    "data": "chart-data.json",
+    "png_sha256": "242f103d1113d6b26069b092cb6fe094007898744adafc42cdbbbbf34c7cb65e"
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "review_date": "2026-11-01 Asia/Shanghai",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "all_final_page_images_opened_and_inspected": true,
+  "review_scale": "Individual full-page PNGs plus contact sheets; source/number/table/figure detail inspected.",
+  "result": "passed",
+  "checks": [
+    "No clipped source lines after browser wrap correction",
+    "No overlapping text or figures",
+    "No detached captions",
+    "Tables remain together with readable borders",
+    "No blank or nearly empty overflow page",
+    "No inherited blue title rules",
+    "Installed SimSun/Times New Roman confirmed in exported PDF"
+  ],
+  "page_image_sha256": {
+    "page-01.png": "4ed1f86263ec9569f743396d450479f02cd31d2d7d7edf4d4deac97ecc5751c7",
+    "page-02.png": "7b8185f04c6746591db3a11080ab51946cac6ccc888be8a0343e9d6b5ed2ee42",
+    "page-03.png": "31c3871c5bd35c16150b6794218d18b6a691cd0dd71c6f67353d0a4105a3dfca",
+    "page-04.png": "1267834749cfe30622cb0d647791230d1e13f989fe6ce1a781f3f9dfd5cfe76b",
+    "page-05.png": "d3d0958eedf3bbcb93c5d352e51c8efdd65e92296a3bb29368e847e96575bab1",
+    "page-06.png": "71589e957fb20ed01c4c07cbbe16704675d5b6de1a22316d415752c2d5798ea1",
+    "page-07.png": "8cb8641026ae584cf2ba6fcdb2df6c58efbf2029cf6fdfe076928d61014b454f",
+    "page-08.png": "57ad3a21a978ba5c8ef85abf59c39d6925c08249805d5a1258b7c13b9e0df3b4",
+    "page-09.png": "804b11a22b50c74c2e3c514c927ae78d9b61fdb56648595e41d1ddc6cd610c76",
+    "page-10.png": "4afbda6faee64625b60cdabf6545de694b619f27673a9a321e1d2a14c65ba855",
+    "page-11.png": "9d6f15089496ac282da1e0dc307fe05772065902efb5b745105ce71c0930e5a4",
+    "page-12.png": "201bc806e9ab78930634676e12bdc21060e408fa7e81c1bbccf32d66653aa119",
+    "page-13.png": "e429ef78d76abb771df8f25698c3adc51bee68c287a7a4bbf4856d1954970fc4",
+    "page-14.png": "1a163eee6a3789596ba6f6dc5b54b1eb8a30e698c4def7121f71b3692b299abd",
+    "page-15.png": "62bfd90c792b43b473b931df8602d8454be42f0ad42ba5752df90a0774e0129f"
+  },
+  "qa_pngs": "Internal QA only; final DOCX/PDF are the deliverables."
+}

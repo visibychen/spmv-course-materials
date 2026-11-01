@@ -1,0 +1,13 @@
+rm -f src/csr.o src/main.o src/matrix_market.o src/parse.o src/program_options.o src/spmv_plan.o src/spmv_v2.o src/vector.o csrspmv tests/test_spmv_v2
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/csr.c -o src/csr.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/main.c -o src/main.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/matrix_market.c -o src/matrix_market.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/parse.c -o src/parse.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/program_options.c -o src/program_options.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/spmv_plan.c -o src/spmv_plan.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp -ffp-contract=off src/spmv_v2.c -o src/spmv_v2.o
+cc -c -O3 -march=native -g -Wall -iquote src -fopenmp src/vector.c -o src/vector.o
+cc -O3 -march=native -g -Wall -iquote src -fopenmp src/csr.o src/main.o src/matrix_market.o src/parse.o src/program_options.o src/spmv_plan.o src/spmv_v2.o src/vector.o  -o csrspmv
+cc -O3 -march=native -g -Wall -iquote src -fopenmp -ffp-contract=off tests/test_spmv_v2.c src/csr.o src/matrix_market.o src/parse.o src/spmv_plan.o src/spmv_v2.o src/vector.o  -Wl,--wrap=malloc -lm -o tests/test_spmv_v2
+./tests/test_spmv_v2
+PASS v2: 5368 checks, max_threads=12

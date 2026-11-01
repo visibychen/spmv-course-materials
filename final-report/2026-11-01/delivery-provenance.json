@@ -1,0 +1,16 @@
+{
+  "code_branch": "optimization/v2",
+  "final_commit": "a566fd1fe68471f9360897f0a4c030c55e19a217",
+  "algorithm_base": "9b652e8da85b7a1ad255e0b4f8ddadc5e0558f1a",
+  "unchanged_algorithm_makefile_tests_docs": true,
+  "unchanged_master": "9352c865044f4c8b344d6fe5a277200a89f7a08b",
+  "core_clean": true,
+  "pr_url": "https://github.com/jamtrott/csrspmv/pull/1",
+  "pr_state": "open",
+  "merged": false,
+  "materials_commit": "Use the enclosing Git commit; no self-reference.",
+  "report_sha256": {
+    "csrspmv实验报告.docx": "b8c54b49f8e68ab4603c60f0b977517c90ad1da6d7afdef20264b74bd93dab72",
+    "csrspmv实验报告.pdf": "ed805c955a815c0e31c178cdd9b3ce971e953803f1df7355e3ef2660ab380474"
+  }
+}

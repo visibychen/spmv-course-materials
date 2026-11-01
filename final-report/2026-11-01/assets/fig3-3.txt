@@ -1,0 +1,29 @@
+/* Local ordered scalar operations. No global fast-math/novec. Short8 is a
+ * fixed-width adaptation of Trotter's published unrolling method, not ELL. */
+#if defined(__GNUC__) && !defined(__clang__)
+__attribute__((optimize("no-tree-loop-vectorize,no-tree-slp-vectorize")))
+#endif
+static void rows_f32(const struct csr_matrix_int32 *a, const float *restrict x,
+                     float *restrict y, int64_t begin, int64_t end, int short8, int d)
+{
+    const float *restrict v=a->values;
+    const int32_t *restrict j=a->column_indices;
+    int64_t stop=a->row_ptr[end];
+    for(int64_t r=begin;r<end;r++) {
+        int64_t k=short8 ? 8*r:a->row_ptr[r];
+        float sum=0;
+        if(short8) {
+            if(d && d<stop-k) __builtin_prefetch(x+j[k+d],0,1);
+            sum+=v[k]*x[j[k]]; sum+=v[k+1]*x[j[k+1]];
+            sum+=v[k+2]*x[j[k+2]]; sum+=v[k+3]*x[j[k+3]];
+            sum+=v[k+4]*x[j[k+4]]; sum+=v[k+5]*x[j[k+5]];
+            sum+=v[k+6]*x[j[k+6]]; sum+=v[k+7]*x[j[k+7]];
+        } else {
+            for(int64_t e=a->row_ptr[r+1];k<e;k++) {
+                if(d && d<stop-k) __builtin_prefetch(x+j[k+d],0,1);
+                sum+=v[k]*x[j[k]];
+            }
+        }
+        y[r]+=sum;
+    }
+}
