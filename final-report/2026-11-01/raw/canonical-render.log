@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "C:\Users\Nova\.codex\plugins\cache\openai-primary-runtime\documents\26.1026.10807\skills\documents\render_docx.py", line 16, in <module>
-    from pdf2image import convert_from_path, pdfinfo_from_path
-ModuleNotFoundError: No module named 'pdf2image'

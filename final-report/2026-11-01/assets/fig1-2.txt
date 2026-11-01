@@ -1,9 +1,0 @@
-    /* 5. Compute the sparse matrix-vector multiplication. */
-    int repeat = 0;
-    int64_t num_flops = 0;
-#pragma omp parallel reduction(err_add:err) reduction(max:num_flops) reduction(max:repeat)
-    for (repeat = 0, num_flops = 0; (repeat < args.repeat) || (num_flops < args.min_flops); repeat++) {
-        err = csr_matrix_int32_spmv(&csr_matrix, &x, &y, &num_flops);
-        if (err)
-            break;
-    }

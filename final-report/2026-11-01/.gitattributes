@@ -1,6 +1,0 @@
-* text=auto eol=lf
-*.docx -text
-*.pdf -text
-assets/*.png -text
-raw/** -text -whitespace
-assets/*.txt -whitespace
